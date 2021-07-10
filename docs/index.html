@@ -1,13 +1,150 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" hidden>
 
 <head>
-<meta charset="utf-8">
-<title>Hyper</title>
+  <meta charset="UTF-8">
+  <script type="module" src="https://cdn.skypack.dev/twind/shim"></script>
 </head>
 
 <body>
-Hyper.ag
+  <!-- Header -->
+  <div class="w-screen border-b p-4 flex flex-row items-center">
+    <div class=""><img style="width: 50%; height: 50%;" src="./logo.png" alt="HYPER" /></div>
+
+    <ul class="self-end ml-auto flex space-x-10 items-center">
+      <li><a href="#product">Product</a></li>
+      <li><a href="#customers">Customers</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://demo.hyper.ag" target="_blank">Log in</a></li>
+      <li>
+        <button class="bg-green-400 border border-green-400 text-white font-bold p-2">
+          Start free trial
+        </button>
+      </li>
+    </ul>
+
+  </div>
+
+  <!-- Call to action -->
+  <div class="flex flex-col items-center mx-auto"
+    style="width: 90%; height: 500px; background-image: url('./plants.png'); background-size: 300px auto; background-repeat: no-repeat; background-position-y: bottom; background-position-x: right;">
+    <h1 class="mt-20 mb-8 text(center 5xl gray-800)">
+      <span class="font-bold">Sensor analytics and automation
+        platform</span><br />for <span>sustainable</span> agriculture.
+    </h1>
+    <div>
+      <input class="border p-2 mr-2 w-64" type="text" placeholder="Enter your e-mail address" />
+      <button class="bg-green-400 border border-green-400 text-white font-bold p-2 mb-2">
+        Start free trial
+      </button>
+      <br />
+      <p class="text-xs font-light">Start using our data platform with sample sensors for free for 30
+        days.</p>
+    </div>
+  </div>
+
+  <!-- Product -->
+  <div id="product" class="bg-gray-200">
+    <div class="flex flex-row items-center justify-center mb-16">
+      <div class="mr-9">
+        <img class="" style="max-width: 700px; margin-top: -70px;" src="./dashboard.png" />
+      </div>
+      <div>
+        <h2 style="max-width: 25ex;" class="text(3xl) mb-5"><span class="font-bold">Focus on growing
+            plants</span>, not building
+          infrastructure.
+        </h2>
+        <p style="max-width: 400px;">
+          Use our data and automation platform for indoor farms to <span class="font-bold">increase yield</span> and
+          <span class="font-bold">reduce operating costs</span> by getting
+          access to crop growth metrics and optimiszed climate crop profiles <span class="font-bold">without a
+            dedicated engineering team</span>.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="flex space-x-10 justify-center">
+    <ul style="max-width: 400px;" class="space-y-5">
+      <li>
+        <h3 class="font-bold text(2xl)">🔬 Monitoring everything</h3>
+        <p>Battery-powered wireless realtime sensors integrate perfectly into your farm. If something is important to
+          keep your crops healthy, we'll monitor it and report it in our dashboard.</p>
+      </li>
+      <li>
+        <h3 class="font-bold text(2xl)">⚡️ Automate, automate</h3>
+        <p>The collected data is used to automatically adjust the environment to match the needs of your crops. Set up
+          custom schedules to water your plants or activate air flow, or let the system do that for you!</p>
+      </li>
+      <li>
+        <h3 class="font-bold text(2xl)">💡 Actionable insights</h3>
+        <p>With enough data we can predict what will happen to your crops. Want to know when they are ready to
+          harvest? Are they at risk of pest contamination or diseases? We'll keep you informed.</p>
+      </li>
+    </ul>
+    <ul class="w-96 space-y-5">
+      <li>
+        <h3 class="font-bold text(2xl)">🔔 Get notified</h3>
+        <p>Our smart sensor monitoring system detects patterns in the environment and allows you to set up alerts to
+          get notified before things go out of control.</p>
+      </li>
+      <li>
+        <h3 class="font-bold text(2xl)">🛰 Offline-first</h3>
+        <p>Our system operates off-line without depending on the internet connectivity for highest reliability. The
+          data is periodically synchronised to a cloud service for easy remote access.</p>
+      </li>
+      <li>
+        <h3 class="font-bold text(2xl)">🌍 Sustainable</h3>
+        <p>Our hardware was designed to be long lasting with reusable components.</p>
+      </li>
+    </ul>
+  </div>
+
+
+  <!-- Customers -->
+  <div id="customers" class="bg-gray-200 py-8 mt-20 flex flex-col align-center">
+    <h2 class="mb-6 text(center 3xl gray-800)">Trusted by customers and partners:</h2>
+    <ul class="flex flex-row justify-center space-x-20 items-center">
+      <li>
+        <img class="h-16" src="./drygro.png" alt="DryGro" />
+      </li>
+      <li>
+        <img class="h-16" src="./uprooted.png" alt="UpRooted" />
+      </li>
+      <li>
+        <img class="h-24" src="./esa.png" alt="ESA" />
+      </li>
+    </ul>
+  </div>
+
+  <!-- Contact -->
+  <div id="contact" class="mt-16 flex flex-col align-center">
+    <h2 class="mb-5 text(center 3xl gray-800)">Get in touch with us:</h2>
+    <div class="flex flex-row justify-center">
+      <div class="w-96 flex flex-col items-center justify-center text-center space-y-2">
+        <h4 class="font-bold">
+          Hyper Collective Ltd
+        </h4>
+        <p>
+          <a href="mailto:hello@hyper.ag">hello@hyper.ag</a>
+        </p>
+        <p>
+          101, 54 Three Colts Lane <br /> London, E2 6GN <br /> United Kingdom
+        </p>
+      </div>
+      <form class="flex flex-col w-96 space-y-5" action="">
+        <input class="border p-2" placeholder="Name" type="text" />
+        <input class="border p-2" placeholder="E-mail" type="email" />
+        <textarea class="border p-2" placeholder="Hello!" name="" id="" rows="5"></textarea>
+        <input class="bg-green-400 text-white font-bold p-2" type="submit" value="Send message" />
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="bg-gray-200 py-5 mt-20">
+    <p class="text-center text-gray-500 text-sm">&copy; 2021 Hyper Collective Ltd</p>
+  </div>
+
 </body>
 
 </html>
