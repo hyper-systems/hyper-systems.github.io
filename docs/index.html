@@ -1,158 +1,402 @@
 <!DOCTYPE html>
-<html lang="en" hidden>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <script type="module" src="https://cdn.skypack.dev/twind/shim"></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-67GJ7F3DEY"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-67GJ7F3DEY');
-  </script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .element {
+      background-image: url("data:image/svg+xml,%3Csvg width='240' height='6' viewBox='0 0 240 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4C95.2636 0.377807 198.943 2.49075 239 4' stroke='%232FDCC4' stroke-width='4'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: bottom;
+    }
+  </style>
 </head>
 
 <body>
+
   <!-- Header -->
-  <div class="w-screen border-b py-4 px-8 flex flex-row items-center">
-    <div class=""><a href="https://hyper.ag"><img style="width: 50%; height: 50%;" src="./logo.png" alt="HYPER" /></a>
-    </div>
+  <header class="lg:border-b border-zinc-200">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
+      <div class="w-full py-6 flex items-center justify-between border-b border-zinc-200 md:border-none">
+        <div class="flex justify-start lg:w-0 lg:flex-1">
+          <a href="#">
+            <span class="sr-only">Workflow</span>
 
-    <ul class="self-end ml-auto flex space-x-10 items-center">
-      <li><a class="p-2" href="#product">Product</a></li>
-      <li><a class="p-2" href="#customers">Customers</a></li>
-      <li><a class="p-2" href="#contact">Contact</a></li>
-      <li><a class="rounded border border-green-400 p-2" href="https://demo.hyper.ag" target="_blank">Log in</a></li>
-    </ul>
-
-  </div>
-
-  <!-- Call to action -->
-  <div class="flex flex-col items-center mx-auto"
-    style="width: 90%; height: 500px; background-image: url('./plants.png'); background-size: 300px auto; background-repeat: no-repeat; background-position-y: bottom; background-position-x: right;">
-    <h1 class="mt-20 mb-8 text(center 5xl gray-800)">
-      <span class="font-bold">Sensor analytics and automation
-        platform</span><br />for <span>sustainable</span> agriculture.
-    </h1>
-    <div>
-      <form action="https://formspree.io/f/xvodbojj" method="POST">
-        <input class="rounded border p-2 mr-2 w-64" type="email" name="_replyto"
-          placeholder="Enter your e-mail address" />
-        <button class="bg-green-400 rounded border border-green-400 text-white font-bold p-2 mb-2" type="submit">
-          Start free trial
-        </button>
-      </form>
-      <br />
-      <p class="text-xs font-light">Start using our data platform with sample sensors for free for 30
-        days.</p>
-    </div>
-  </div>
-
-  <!-- Product -->
-  <div id="product" class="bg-gray-200">
-    <div class="flex flex-row flex-wrap items-center justify-center mb-16">
-      <div class="mr-9">
-        <img class="" style="max-width: 700px; margin-top: -70px;" src="./dashboard.png" />
+            <svg width="100" viewBox="0 0 94 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M18.0429 27.851H12.8651V16.8414H5.1955V27.851H0V2.12085H5.1955V12.5295H12.8651V2.12085H18.0429V27.851Z"
+                fill="#4C4859" />
+              <path d="M44.1088 18.803V27.851H38.9133V2.12085H47.6785C50.2232 2.12085 52.2496 2.91019 53.7576 4.48887C55.2773 
+                6.06755 56.0372 8.11747 56.0372 10.6386C56.0372 13.1598 55.2891 15.1508 53.7929 16.6117C52.2967 18.0726 
+                50.2232 18.803 47.5724 18.803H44.1088ZM44.1088 14.4734H47.6785C48.6681 14.4734 49.4339 14.1494 49.9758 
+                13.5015C50.5177 12.8535 50.7887 11.911 50.7887 10.674C50.7887 9.38984 50.5118 8.37077 49.9581 7.61677C49.4044 
+                6.851 48.6622 6.46222 47.7315 6.45044H44.1088V14.4734Z" fill="#4C4859" />
+              <path
+                d="M72.0839 16.7177H63.9902V23.5391H73.5683V27.851H58.7947V2.12085H73.533V6.45044H63.9902V12.5295H72.0839V16.7177Z"
+                fill="#4C4859" />
+              <path d="M84.3658 18.4496H81.7857V27.851H76.5902V2.12085H84.8783C87.4819 2.12085 89.4906 2.79827 90.9044 4.1531C92.3299 
+                5.49616 93.0426 7.4106 93.0426 9.89643C93.0426 13.313 91.7997 15.7046 89.3139 17.0712L93.8202 27.6036V27.851H88.2359L84.3658
+                 18.4496ZM81.7857 14.12H84.7369C85.7737 14.12 86.5512 13.7783 87.0696 13.095C87.588 12.3999 87.8471 11.4751 87.8471 
+                 10.3206C87.8471 7.74048 86.8399 6.45044 84.8253 6.45044H81.7857V14.12Z" fill="#4C4859" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M33.2854 1.03077C33.5216 0.255676 32.4718 -0.234317 32.0294 0.444521L20.7397 
+                17.7669C20.4506 18.2105 20.7396 18.802 21.2671 18.8466L26.6746 19.3039L23.0044 30.9381C22.7651 31.6969 23.7757 
+                32.2034 24.2403 31.5575L36.4959 14.5186C36.8113 14.08 36.5321 13.4645 35.9943 13.4131L29.696 12.8103L33.2854 1.03077Z" fill="#2EDBAC" />
+            </svg>
+          </a>
+        </div>
+        <div class="hidden ml-10 space-x-8 md:block">
+          <a href="#product" class="text-base font-medium text-zinc-700 hover:text-zinc-500"> Product </a>
+          <a href="#customers" class="text-base font-medium text-zinc-700 hover:text-zinc-500"> Customers </a>
+          <a href="#contact" class="text-base font-medium text-zinc-700 hover:text-zinc-500"> Contact </a>
+        </div>
+        <div class="ml-10 space-x-4 flex justify-end md:flex-1 ">
+          <a href="#demo-request"
+            class="inline-block bg-zinc-700 py-2 px-6 rounded-sm text-normal font-light text-white hover:bg-opacity-75">
+            Request a Demo
+          </a>
+        </div>
       </div>
-      <div>
-        <h2 style="max-width: 25ex;" class="text(3xl) mb-5"><span class="font-bold">Focus on growing
-            plants</span>, not building
-          infrastructure.
+
+      <!-- Mobile navigation -->
+      <div class="py-4 flex flex-wrap justify-center space-x-6 md:hidden">
+        <a href="#product" class="text-base font-medium text-zinc-700 hover:text-zinc-500"> Product </a>
+        <a href="#customers" class="text-base font-medium text-zinc-700 hover:text-zinc-500"> Customers </a>
+        <a href="#contact" class="text-base font-medium text-zinc-700 hover:text-zinc-500"> Contact </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero section -->
+  <main class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24" id="demo-request">
+    <div class="text-center">
+      <h1 class="text-4xl tracking-tight font-bold font-sans text-zinc-700 sm:text-5xl md:text-6xl text-zinc-700">
+        <span class="inline xl:block">Sensor analytics and automation platform</span>
+        <span class="inline xl:block font-light mt-2">for <span class="element">sustainable</span> agriculture.</span>
+      </h1>
+      <div class="mt-10 sm:mt-12">
+        <form class="sm:max-w-xl sm:mx-auto" action="https://formspree.io/f/xvodbojj" method="POST">
+          <div class="sm:flex">
+            <div class="min-w-0 flex-1">
+              <label for="email" class="sr-only">Email address</label>
+              <input id="email" type="email" placeholder="Enter your email"
+                class="block w-full px-4 py-3 rounded-sm border border-gray-300 text-base text-zinc-900 placeholder-gray-500 focus:outline-none focus:ring focus:ring-teal-200">
+            </div>
+            <div class="mt-3 sm:mt-0 sm:ml-3">
+              <button type="submit"
+                class="block w-full rounded-sm shadow bg-zinc-700 py-3 px-6 rounded-sm text-normal font-light text-white hover:bg-opacity-75 focus:outline-none focus:ring focus:ring-teal-200">
+                Request a Demo
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl mt-28" id="product">
+    <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-5 lg:gap-8 lg:items-center">
+      <div class="lg:col-start-4 lg:col-span-2">
+        <h2 class="text-2xl font-semibold text-zinc-700 tracking-tight sm:text-4xl">
+          <span class="inline xl:block">Focus on growing plants,</span>
+          <span class="inline xl:block font-light">not building infrastructure.</span>
         </h2>
-        <p class="mb-8" style="max-width: 400px;">
-          Use our data and automation platform for indoor farms to <span class="font-bold">increase yield</span> and
-          <span class="font-bold">reduce operating costs</span> by getting
-          access to crop growth metrics and optimized crop profiles <span class="font-bold">without a
-            dedicated engineering team</span>.
-        </p>
+        <p class="mt-3 text-zinc-600 text-base">Use our data and automation platform for indoor farms to
+          increase yield and reduce operational costs by getting access to crop growth metrics and optimiszed climate
+          crop profiles without a dedicated engineering team.</p>
+      </div>
+
+      <div class="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1 lg:col-span-3">
+        <img class="relative mx-auto" src="./dashboard.png" alt="">
       </div>
     </div>
   </div>
-  <div class="flex flex-wrap space-y-5 justify-around" style="max-width: 960px; margin: auto">
-    <ul style="max-width: 400px;" class="space-y-5">
-      <li>
-        <h3 class="font-bold text(2xl)">🔬 Monitoring everything</h3>
-        <p>Battery-powered wireless realtime sensors integrate perfectly into your farm. If something is important to
-          keep your crops healthy, we'll monitor it and report it in our dashboard.</p>
-      </li>
-      <li>
-        <h3 class="font-bold text(2xl)">⚡️ Automate, automate</h3>
-        <p>The collected data is used to automatically adjust the environment to match the needs of your crops. Set up
-          custom schedules to water your plants or activate air flow, or let the system do that for you!</p>
-      </li>
-      <li>
-        <h3 class="font-bold text(2xl)">🧠 Actionable insights</h3>
-        <p>With enough data we can predict what will happen to your crops. Want to know when they are ready to
-          harvest? Are they at risk of pest contamination or diseases? We'll keep you informed.</p>
-      </li>
-    </ul>
-
-    <ul style="max-width: 400px;" class="space-y-5">
-      <li>
-        <h3 class="font-bold text(2xl)">🔔 Get notified</h3>
-        <p>Our smart sensor monitoring system detects patterns in the environment and allows you to set up alerts to
-          get notified before things go out of control.</p>
-      </li>
-      <li>
-        <h3 class="font-bold text(2xl)">🛰 Offline-first</h3>
-        <p>Our system operates off-line without depending on the internet connectivity for highest reliability. The
-          data is periodically synchronised to a cloud service for easy remote access.</p>
-      </li>
-      <li>
-        <h3 class="font-bold text(2xl)">🏗 Build on top</h3>
-        <p>Every functionality in the product is programmable and extensible – it’s a platform. Your technical team can
-          integrate your existing software and hardware with our platform.</p>
-      </li>
-    </ul>
-  </div>
 
 
-  <!-- Customers -->
-  <div id="customers" class="bg-gray-200 py-8 mt-20 flex flex-col">
-    <h2 class="mb-6 text(center 3xl gray-800)">Trusted by customers and partners:</h2>
-    <ul class="flex flex-wrap flex-row justify-around items-center">
-      <li>
-        <img class="h-16" src="./drygro.png" alt="DryGro" />
-      </li>
-      <li>
-        <img class="h-16" src="./uprooted.png" alt="UpRooted" />
-      </li>
-      <li>
-        <img class="h-24" src="./esa.png" alt="ESA" />
-      </li>
-    </ul>
-  </div>
-
-  <!-- Contact -->
-  <div id="contact" class="mt-16 flex flex-col align-center">
-    <h2 class="mb-5 text(center 3xl gray-800)">Get in touch with us:</h2>
-    <div class="flex flex-row flex-wrap justify-center">
-      <div class="w-96 flex flex-col items-center text-center space-y-2 mt-8">
-        <h4 class="font-bold">
-          Hyper Collective Ltd
-        </h4>
-        <p>
-          <a href="mailto:hello@hyper.ag">hello@hyper.ag</a>
-        </p>
-        <p>
-          101, 54 Three Colts Lane <br /> London, E2 6GN <br /> United Kingdom
-        </p>
+  <!-- Logo cloud -->
+  <div class="bg-zinc-200 bg-opacity-25" id="customers">
+    <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 mt-24">
+      <div class="lg:grid lg:grid-cols-5 lg:gap-8">
+        <h2
+          class="text-center mx-auto text-3xl font-light text-zinc-400 lg:max-w-xl lg:text-left  lg:col-start-1 lg:col-span-1">
+          Trusted by
+        </h2>
+        <div class="flow-root self-center mt-8 lg:mt-0 lg:col-start-3 lg:col-span-3">
+          <div class="-mt-4 -ml-8 flex flex-wrap justify-between lg:-ml-4">
+            <div class="mt-4 ml-8 flex flex-grow flex-shrink-0 justify-center lg:flex-grow-0 lg:ml-4 grayscale">
+              <img class="h-12" src="uprooted.png" alt="Workcation">
+            </div>
+            <div
+              class="mt-4 ml-8 flex flex-grow flex-shrink-0 justify-center lg:flex-grow-0 lg:ml-4 grayscale opacity-75">
+              <img class="h-12" src="drygro.png" alt="Tuple">
+            </div>
+            <div class="mt-4 ml-8 flex flex-grow flex-shrink-0 justify-center lg:flex-grow-0 lg:ml-4 grayscale">
+              <img class="h-12" src="esa_digital.png" alt="Level">
+            </div>
+          </div>
+        </div>
       </div>
-      <form class="flex flex-col w-96 space-y-5" action="https://formspree.io/f/xeqvlqbp" method="POST">
-        <input class="rounded border p-2" placeholder="Name" type="text" name="name" />
-        <input class="rounded border p-2" placeholder="E-mail" type="email" name="_replyto" />
-        <textarea class="rounded border p-2" placeholder="Hello!" id="" rows="5" name="message"></textarea>
-        <input class="rounded bg-green-400 text-white font-bold p-2" type="submit" value="Send message" />
-      </form>
     </div>
   </div>
+
+
+  <!-- Feature list -->
+  <div class="mt-28 mb-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mt-10">
+        <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+          <div class="relative">
+            <dt>
+              <div
+                class="absolute flex items-center justify-center h-12 w-12 rounded-sm text-zinc-700 border border-zinc-200">
+                <svg class="h-6 w-6 viewBox=" 0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                </svg>
+              </div>
+              <p class="ml-16 text-lg leading-6 font-semibold text-zinc-900">Monitoring everything</p>
+            </dt>
+            <dd class="mt-2 ml-16 text-zinc-600 text-base">Battery-powered wireless realtime sensors integrate perfectly
+              into your farm. If something is important to keep your crops healthy, we'll monitor it and report it in
+              our dashboard.</dd>
+          </div>
+
+          <div class="relative">
+            <dt>
+              <div
+                class="absolute flex items-center justify-center h-12 w-12 rounded-sm text-zinc-700 border border-zinc-200">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss">
+                  <path d="M4 11a9 9 0 0 1 9 9" />
+                  <path d="M4 4a16 16 0 0 1 16 16" />
+                  <circle cx="5" cy="19" r="1" />
+                </svg>
+              </div>
+              <p class="ml-16 text-lg leading-6 font-semibold text-zinc-900">Get notified</p>
+            </dt>
+            <dd class="mt-2 ml-16 text-zinc-600 text-base">Our smart sensor monitoring system detects patterns in the
+              environment and allows you to set up alerts to get notified before things go out of control.</dd>
+          </div>
+
+          <div class="relative">
+            <dt>
+              <div
+                class="absolute flex items-center justify-center h-12 w-12 rounded-sm text-zinc-700 border border-zinc-200">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" class="feather feather-zap">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                </svg>
+              </div>
+              <p class="ml-16 text-lg leading-6 font-semibold text-zinc-900">Automate, automate</p>
+            </dt>
+            <dd class="mt-2 ml-16 text-zinc-600 text-base">The collected data is used to automatically adjust the
+              environment to match the needs of your crops. Set up custom schedules to water your plants or activate air
+              flow, or let the system do that for you!</dd>
+          </div>
+
+          <div class="relative">
+            <dt>
+              <div
+                class="absolute flex items-center justify-center h-12 w-12 rounded-sm text-zinc-700 border border-zinc-200">
+
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" class="feather feather-cloud-off">
+                  <path d="M22.61 16.95A5 5 0 0 0 18 10h-1.26a8 8 0 0 0-7.05-6M5 5a8 8 0 0 0 4 15h9a5 5 0 0 0 1.7-.3" />
+                  <line x1="1" y1="1" x2="23" y2="23" />
+                </svg>
+              </div>
+              <p class="ml-16 text-lg leading-6 font-semibold text-zinc-900">Offline-first</p>
+            </dt>
+            <dd class="mt-2 ml-16 text-zinc-600 text-base">Our system operates off-line without depending on the
+              internet connectivity for highest reliability. The data is periodically synchronised to a cloud service
+              for easy remote access.</dd>
+          </div>
+
+          <div class="relative">
+            <dt>
+              <div
+                class="absolute flex items-center justify-center h-12 w-12 rounded-sm text-zinc-700 border border-zinc-200">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-octagon">
+                  <polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2" />
+                  <line x1="12" y1="8" x2="12" y2="12" />
+                  <line x1="12" y1="16" x2="12.01" y2="16" />
+                </svg>
+              </div>
+              <p class="ml-16 text-lg leading-6 font-semibold text-zinc-900">Actionable insights</p>
+            </dt>
+            <dd class="mt-2 ml-16 text-zinc-600 text-base">With enough data we can predict what will happen to your
+              crops. Want to know when they are ready to harvest? Are they at risk of pest contamination or diseases?
+              We'll keep you informed.</dd>
+          </div>
+
+          <div class="relative">
+            <dt>
+              <div
+                class="absolute flex items-center justify-center h-12 w-12 rounded-sm text-zinc-700 border border-zinc-200">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" class="feather feather-sliders">
+                  <line x1="4" y1="21" x2="4" y2="14" />
+                  <line x1="4" y1="10" x2="4" y2="3" />
+                  <line x1="12" y1="21" x2="12" y2="12" />
+                  <line x1="12" y1="8" x2="12" y2="3" />
+                  <line x1="20" y1="21" x2="20" y2="16" />
+                  <line x1="20" y1="12" x2="20" y2="3" />
+                  <line x1="1" y1="14" x2="7" y2="14" />
+                  <line x1="9" y1="8" x2="15" y2="8" />
+                  <line x1="17" y1="16" x2="23" y2="16" />
+                </svg>
+              </div>
+              <p class="ml-16 text-lg leading-6 font-semibold text-zinc-900">Build on top</p>
+            </dt>
+            <dd class="mt-2 ml-16 text-zinc-600 text-base">Every functionality in the product is programmable and
+              extensible - it's a platform. Your technical team can integrate your existing software and hardware with
+              our platform.</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="contact">
+    <div class="grid grid-cols-1 lg:grid-cols-3 ">
+      <!-- Contact information -->
+      <div class="relative overflow-hidden py-10 px-6 bg-zinc-700 sm:px-10 xl:p-12">
+        <div class="hidden absolute top-0 right-0 bottom-0 w-1/2 pointer-events-none sm:block lg:hidden"
+          aria-hidden="true">
+          <svg class="absolute inset-0 w-full h-full" width="359" height="339" viewBox="0 0 359 339" fill="none"
+            preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <path d="M-161 382.107L546.107-325l707.103 707.107-707.103 707.103L-161 382.107z" fill="url(#linear2)"
+              fill-opacity=".1" />
+            <defs>
+              <linearGradient id="linear2" x1="192.553" y1="28.553" x2="899.66" y2="735.66"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#fff"></stop>
+                <stop offset="1" stop-color="#fff" stop-opacity="0"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="hidden absolute top-0 right-0 bottom-0 w-1/2 pointer-events-none lg:block" aria-hidden="true">
+          <svg class="absolute inset-0 w-full h-full" width="160" height="678" viewBox="0 0 160 678" fill="none"
+            preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <path d="M-161 679.107L546.107-28l707.103 707.107-707.103 707.103L-161 679.107z" fill="url(#linear3)"
+              fill-opacity=".1" />
+            <defs>
+              <linearGradient id="linear3" x1="192.553" y1="325.553" x2="899.66" y2="1032.66"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#fff"></stop>
+                <stop offset="1" stop-color="#fff" stop-opacity="0"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-light text-white">Get in touch with us</h3>
+        <p class="mt-6 text-base text-zinc-50 max-w-3xl">Contact us to learn more about Hyper
+          and how we can help you.</p>
+        <dl class="mt-8 space-y-6">
+          <dt><span class="sr-only">Address</span></dt>
+          <dd class="flex text-base text-zinc-50">
+            <svg class="flex-shrink-0 w-6 h-6" style="color: #2edbac;" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-map-pin">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span class="ml-3">101, 54 Three Colts Lane <br> London, E2 6GN <br>United Kingdom </span>
+          </dd>
+          <dt><span class="sr-only">Email</span></dt>
+          <dd class="flex text-base text-zinc-50">
+            <svg class="flex-shrink-0 w-6 h-6" style="color: #2edbac;" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-mail">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            <span class="ml-3">hello@hyper.ag</span>
+          </dd>
+        </dl>
+      </div>
+
+      <!-- Contact form -->
+      <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12" style="background-color: #2edbac;">
+        <form action="https://formspree.io/f/xeqvlqbp" method="POST" accept-charset="UTF-8"
+          enctype="multipart/form-data" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+          <div class="sm:col-span-2">
+            <label for="subject" class="block text-sm font-medium text-zinc-700">Name</label>
+            <div class="mt-1">
+              <input type="text" name="name" id="name"
+                class="py-3 px-4 block w-full shadow-sm text-zinc-700 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-sm">
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="subject" class="block text-sm font-medium text-zinc-700">Email</label>
+            <div class="mt-1">
+              <input type="email" name="email" id="email"
+                class="py-3 px-4 block w-full shadow-sm text-zinc-700 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-sm">
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <div class="flex justify-between">
+              <label for="message" class="block text-sm font-medium text-zinc-700">Message</label>
+              <span id="message-max" class="text-sm text-zinc-600">Max. 500 characters</span>
+            </div>
+            <div class="mt-1">
+              <textarea id="message" name="message" rows="4"
+                class="py-3 px-4 block w-full shadow-sm text-zinc-700 focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-sm"
+                aria-describedby="message-max"></textarea>
+            </div>
+          </div>
+          <div class="sm:col-span-2 sm:flex sm:justify-end">
+            <button type="submit"
+              class="mt-2 w-full inline-flex items-center justify-center rounded-sm shadow bg-white py-3 px-6 rounded-sm text-normal font-bold text-zinc-700 hover:bg-opacity-75 focus:outline-none focus:ring focus:ring-teal-200 sm:w-auto">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
 
   <!-- Footer -->
-  <div class="bg-gray-200 py-5 mt-20">
-    <p class="text-center text-gray-500 text-sm">&copy; 2021 Hyper Collective Ltd</p>
-  </div>
+  <footer>
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+      <div class="flex justify-center space-x-4 md:order-2">
+
+        <a href="https://github.com/hyper-systems/" target="blank" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">GitHub</span>
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+
+        <a href="https://www.linkedin.com/company/hyper-collective/" target="blank"
+          class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">Linkedin</span>
+          <svg fill="currentColor" class="h-6 w-6" viewBox="0 0 24 24">
+            <path
+              d="M15.15 8.4a5.83 5.83 0 0 0-5.85 5.82v5.88a.9.9 0 0 0 .9.9h2.1a.9.9 0 0 0 .9-.9v-5.88a1.94 1.94 0 0 1 2.15-1.93 2 2 0 0 1 1.75 2v5.81a.9.9 0 0 0 .9.9h2.1a.9.9 0 0 0 .9-.9v-5.88a5.83 5.83 0 0 0-5.85-5.82z" />
+            <rect x="3" y="9.3" width="4.5" height="11.7" rx=".9" ry=".9" />
+            <circle cx="5.25" cy="5.25" r="2.25" />
+          </svg>
+        </a>
+
+      </div>
+      <div class="mt-8 md:mt-0 md:order-1">
+        <p class="text-center text-base text-gray-400">&copy; 2022 Hyper, LTD. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
 </body>
 
