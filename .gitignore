@@ -93,3 +93,4 @@ Thumbs.db
 
 # Hyper-specific ignores
 /antora/sources
+/antora/build

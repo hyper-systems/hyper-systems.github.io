@@ -5,9 +5,9 @@ site:
   start_page: hyper-link-arduino::index.adoc
 content:
   sources:
-  - url: ./hyper-link-arduino
-    branches: [master, antora-v42]
-    start_path: docs
+  - url: ./sources/hyper-link-arduino
+    branches: [master]
+    start_path: antora
     # setting edit_url to false disables the Edit this Page link for any page that originates from this repository
     # the same thing can be achieved by adding empty credentials (i.e., @) in front of the domain in the URL
     edit_url: false
