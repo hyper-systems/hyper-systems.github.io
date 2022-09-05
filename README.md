@@ -21,3 +21,18 @@ Currently the workflow for adding external documentaiton components is:
     - `npx antora generate antora-playbook.yml`
 4. Replace the developers docs with the built Antora documentation in `./docs`:
     - `rm -rf ./docs/developers && cp -r ./antora/build/site ./docs/developers`
+
+#### Modifying the UI
+
+Setup the UI build entironment:
+
+- `cd ./antora/antora-ui-default`
+- `npm install`
+
+Build the theme bundle:
+
+- `npx gulp bundle`
+
+After this the documentation can be built normally:
+
+- `npx antora generate antora-playbook.yml`
