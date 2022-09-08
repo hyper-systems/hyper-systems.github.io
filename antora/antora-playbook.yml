@@ -1,13 +1,19 @@
 site:
-  title: Hyper Developers Portal
+  title: Hyper Developers
   # the 404 page and sitemap files only get generated when the url property is set
   url: https://hyper.systems/developers
-  start_page: hyper-link-arduino::index.adoc
+  start_page: hyper-home::index.adoc
 content:
   sources:
   - url: ./sources/hyper-link-arduino
     branches: [master]
     start_path: antora
+    # setting edit_url to false disables the Edit this Page link for any page that originates from this repository
+    # the same thing can be achieved by adding empty credentials (i.e., @) in front of the domain in the URL
+    edit_url: false
+  - url: ./..
+    branches: [HEAD]
+    start_path: antora/sources/home
     # setting edit_url to false disables the Edit this Page link for any page that originates from this repository
     # the same thing can be achieved by adding empty credentials (i.e., @) in front of the domain in the URL
     edit_url: false
@@ -19,5 +25,5 @@ asciidoc:
     page-pagination: ''
 ui:
   bundle:
-    url: ./antora-ui-default/build/ui-bundle.zip
+    url: ./antora-ui-hyper/build/ui-bundle.zip
     snapshot: false
