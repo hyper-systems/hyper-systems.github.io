@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Quickstart :: Hyper Developers</title>
     <link rel="prev" href="index.html">
+    <link rel="next" href="hyper-link-wifi.html">
     <meta name="generator" content="Antora 3.1.0">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
@@ -43,6 +44,9 @@
   </li>
   <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="quickstart.html">Quickstart</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hyper-link-wifi.html">Hyper Link WiFi</a>
   </li>
 </ul>
   </li>
@@ -211,8 +215,9 @@ integration:</p>
 #include "HyperDeviceXXXI2CSlave.V1.h"</code></pre>
 </div>
 </div>
-<div class="sect3">
-<h4 id="2-define-the-global-device-variable"><a class="anchor" href="#2-define-the-global-device-variable"></a>2. Define the global device variable</h4>
+</div>
+<div class="sect2">
+<h3 id="2-define-the-global-device-variable"><a class="anchor" href="#2-define-the-global-device-variable"></a>2. Define the global device variable</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-cpp hljs" data-lang="cpp">// Define a variable for your Hyper device in the global scope to make it easy
@@ -221,8 +226,8 @@ HyperDeviceXXXI2CSlave hyperDevice;</code></pre>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="3-setup-the-device-identifier-and-bind-write-attributes"><a class="anchor" href="#3-setup-the-device-identifier-and-bind-write-attributes"></a>3. Setup the device identifier and bind write attributes</h4>
+<div class="sect2">
+<h3 id="3-setup-the-device-identifier-and-bind-write-attributes"><a class="anchor" href="#3-setup-the-device-identifier-and-bind-write-attributes"></a>3. Setup the device identifier and bind write attributes</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-cpp hljs" data-lang="cpp">void setup() {
@@ -241,8 +246,8 @@ HyperDeviceXXXI2CSlave hyperDevice;</code></pre>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="4-record-read-attribute-changes"><a class="anchor" href="#4-record-read-attribute-changes"></a>4. Record read attribute changes</h4>
+<div class="sect2">
+<h3 id="4-record-read-attribute-changes"><a class="anchor" href="#4-record-read-attribute-changes"></a>4. Record read attribute changes</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-cpp hljs" data-lang="cpp">void loop() {
@@ -274,8 +279,10 @@ integration.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="test-your-setup"><a class="anchor" href="#test-your-setup"></a>Test your setup</h3>
+</div>
+<div class="sect1">
+<h2 id="test-your-setup"><a class="anchor" href="#test-your-setup"></a>Test your setup</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Once you have completed the software integration and uploaded the code
 to your board, you can start testing the setup by connecting your board
@@ -299,43 +306,16 @@ LoRa or WiFi.</p>
 is easy to visualise the data coming in and out of your board. You can
 work with it offline or online.</p>
 </div>
-<div class="sect3">
-<h4 id="monitor-your-arduino-board-with-the-hyper-link-wifi-device"><a class="anchor" href="#monitor-your-arduino-board-with-the-hyper-link-wifi-device"></a>Monitor your Arduino board with the Hyper Link WiFi device</h4>
+<div class="sect2">
+<h3 id="monitor-your-arduino-board-with-the-hyper-link-wifi-device"><a class="anchor" href="#monitor-your-arduino-board-with-the-hyper-link-wifi-device"></a>Monitor your Arduino board with the Hyper Link WiFi device</h3>
 <div class="paragraph">
 <p>During development it is convenient to be able to inspect the
 communication channel between your Arduino board and the Hyper Link WiFi
 device.</p>
 </div>
 <div class="paragraph">
-<p>To start using Hyper Link WiFi:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Power the device on and hold the RESET button for 5 seconds.</p>
-</li>
-<li>
-<p>On your computer or mobile phone connect to the <code>Hyper Link WiFI
-Setup - XX:XX:XX:XX:XX:XX</code> WiFi network. There is no password.</p>
-</li>
-<li>
-<p>A network setup window will open where you can provide connection
-details for your local WiFi network.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Note: if the network setup window does not open automatically, you can
-go to <code><a href="http://192.168.8.1" class="bare">http://192.168.8.1</a></code> in your browser.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>The Hyper Link WiFi device will restart and connect to your network.
-You can now connect to it from your computer or mobile phone by opening
-<code><a href="http://hyper-link.local" class="bare">http://hyper-link.local</a></code> in your browser.</p>
-</li>
-</ol>
+<p>Refer to the <a href="hyper-link-wifi.html" class="xref page">Hyper Link WiFi</a> page for more details on how to
+set up the Hyper Wifi Link device.</p>
 </div>
 <div class="paragraph">
 <p>Having these steps, you can now connect your board via I2C and start
@@ -344,9 +324,9 @@ monitoring your Arduino board with the Hyper Link WiFi device.</p>
 </div>
 </div>
 </div>
-</div>
 <nav class="pagination">
   <span class="prev"><a href="index.html">Overview</a></span>
+  <span class="next"><a href="hyper-link-wifi.html">Hyper Link WiFi</a></span>
 </nav>
 </article>
   </div>

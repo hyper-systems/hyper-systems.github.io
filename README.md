@@ -19,8 +19,6 @@ Currently the workflow for adding external documentaiton components is:
 2. Add the new source to `./antora/antora-playbook.yml` file in the `sources` section.
 3. Build the documentation from the `./antora` folder:
     - `make build`
-4. Replace the developers docs with the built Antora documentation in `./docs`:
-    - `rm -rf ./docs/developers && cp -r ./antora/build/site ./docs/developers`
 
 #### Modifying the UI
 
