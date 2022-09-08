@@ -249,11 +249,19 @@ HyperDeviceXXXI2CSlave hyperDevice;</code></pre>
   int adcVal = analogRead(A0);
 
   // Record the values for your read attributes.
-  hyperDevice.setMyAttribute1(adcVal);
+  hyperDevice.setMyAttribute1(adcVal); <i class="conum" data-value="1"></i><b>(1)</b>
 
   delay(1000);
 }</code></pre>
 </div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The included header has setter functions for all the attributes of your device.</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Having completed these code changes your project is ready to start
