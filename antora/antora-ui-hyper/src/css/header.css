@@ -140,6 +140,13 @@ body {
   display: block;
 }
 
+.navbar-sub_logo {
+  font-size: 28px;
+  align-self: center;
+  color: #616473;
+  padding: 0 0.7rem;
+}
+
 .navbar-item .icon img,
 .navbar-item .icon svg {
   fill: currentColor;
