@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Integrate the Hyper Arduino library :: Hyper Developers</title>
+    <link rel="prev" href="setup-arduino-development-kit.html">
+    <link rel="next" href="configure-hyper-link-wifi-device.html">
+    <meta name="generator" content="Antora 3.1.0">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://hyper.systems/">
+        <svg height="26" viewBox="0 0 94 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M18.0429 27.851H12.8651V16.8414H5.1955V27.851H0V2.12085H5.1955V12.5295H12.8651V2.12085H18.0429V27.851Z"
+            fill="#4C4859" />
+          <path d="M44.1088 18.803V27.851H38.9133V2.12085H47.6785C50.2232 2.12085 52.2496 2.91019 53.7576 4.48887C55.2773 
+                6.06755 56.0372 8.11747 56.0372 10.6386C56.0372 13.1598 55.2891 15.1508 53.7929 16.6117C52.2967 18.0726 
+                50.2232 18.803 47.5724 18.803H44.1088ZM44.1088 14.4734H47.6785C48.6681 14.4734 49.4339 14.1494 49.9758 
+                13.5015C50.5177 12.8535 50.7887 11.911 50.7887 10.674C50.7887 9.38984 50.5118 8.37077 49.9581 7.61677C49.4044 
+                6.851 48.6622 6.46222 47.7315 6.45044H44.1088V14.4734Z" fill="#4C4859" />
+          <path
+            d="M72.0839 16.7177H63.9902V23.5391H73.5683V27.851H58.7947V2.12085H73.533V6.45044H63.9902V12.5295H72.0839V16.7177Z"
+            fill="#4C4859" />
+          <path d="M84.3658 18.4496H81.7857V27.851H76.5902V2.12085H84.8783C87.4819 2.12085 89.4906 2.79827 90.9044 4.1531C92.3299 
+                5.49616 93.0426 7.4106 93.0426 9.89643C93.0426 13.313 91.7997 15.7046 89.3139 17.0712L93.8202 27.6036V27.851H88.2359L84.3658
+                 18.4496ZM81.7857 14.12H84.7369C85.7737 14.12 86.5512 13.7783 87.0696 13.095C87.588 12.3999 87.8471 11.4751 87.8471 
+                 10.3206C87.8471 7.74048 86.8399 6.45044 84.8253 6.45044H81.7857V14.12Z" fill="#4C4859" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M33.2854 1.03077C33.5216 0.255676 32.4718 -0.234317 32.0294 0.444521L20.7397 
+                17.7669C20.4506 18.2105 20.7396 18.802 21.2671 18.8466L26.6746 19.3039L23.0044 30.9381C22.7651 31.6969 23.7757 
+                32.2034 24.2403 31.5575L36.4959 14.5186C36.8113 14.08 36.5321 13.4645 35.9943 13.4131L29.696 12.8103L33.2854 1.03077Z" fill="#2EDBAC" />
+        </svg>
+      </a>
+      <a class="navbar-sub_logo" href="https://hyper.systems/developers">Developers</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" target="_blank" href="https://github.com/hyper-systems/">GitHub</a>
+        <a class="navbar-item" href="mailto:support@hyper.systems">Support</a>
+      </div>
+    </div>
+  </nav>
+</header><div class="body">
+<div class="nav-container" data-component="hyper-link-arduino" data-version="1.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Hyper Link Arduino</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="setup-arduino-development-kit.html">Setup Arduino development kit</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="integrate-hyper-arduino-library.html">Integrate the Hyper Arduino library</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="configure-hyper-link-wifi-device.html">Configure Hyper Link WiFi device</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hyper-link-thread.html">Hyper Link Thread</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Hyper Link Arduino</span>
+    <span class="version">1.0-beta.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../hyper-home/1.0/index.html">Home</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../hyper-home/1.0/index.html">1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Hyper Link Arduino</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">1.0-beta.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../hyper-home/1.0/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Hyper Link Arduino</a></li>
+    <li><a href="integrate-hyper-arduino-library.html">Integrate the Hyper Arduino library</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Integrate the Hyper Arduino library</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This page will walk you through the steps necessary to get your first sensor readings recorded with Hyper&#8217;s platform.</p>
+</div>
+<div class="paragraph">
+<p>Make sure you have a working <a href="#">Arduino development kit</a> before following the instructions on this page.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="load-the-library-in-arduino-ide"><a class="anchor" href="#load-the-library-in-arduino-ide"></a>Load the library in Arduino IDE</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Instructions to start using the library in Arduino IDE:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Download the library ZIP archive provided by Hyper to your computer.</p>
+</li>
+<li>
+<p>Open Arduino IDE and select <span class="menuseq"><b class="menu">Sketch</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Include Library</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Add .ZIP Library&#8230;&#8203;</b></span> in the menu. Select the library ZIP file and the library should be loaded.</p>
+</li>
+<li>
+<p>Start a new Arduino project and select <span class="menuseq"><b class="menu">Sketch</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Include Library</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">HyperLink V1</b></span> in the menu (as illustrated in Figure 1 below).</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You can find complete examples of device integration in the <span class="menuseq"><b class="menu">File</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Examples</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">HyperLink V1</b></span> menu.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/hyper-link-arduino-include-library.png" alt="Include Hyper Arduino library" width="600">
+</div>
+<div class="title">Figure 1. Include Hyper Arduino Library</div>
+</div>
+<div class="paragraph">
+<p>Once completed you will see a new include line in the source code:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cpp hljs" data-lang="cpp">#include &lt;HyperDeviceXXI2CSlave.h&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The include file name will contain the identifier of your device class instead of <code>XX</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You can now define and configure your device using the included library API.</p>
+</div>
+<div class="sect2">
+<h3 id="define-the-global-device-variable"><a class="anchor" href="#define-the-global-device-variable"></a>Define the global device variable</h3>
+<div class="paragraph">
+<p>Define a variable for your Hyper device in the global scope to make it easy for your to access the device anywhere in your code. Remember to replace <code>XX</code> with your device class identifier.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cpp hljs" data-lang="cpp">HyperDeviceXXI2CSlave hyperDevice;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="setup-the-device-identifier-and-bind-write-attributes"><a class="anchor" href="#setup-the-device-identifier-and-bind-write-attributes"></a>Setup the device identifier and bind write attributes</h3>
+<div class="paragraph">
+<p>All devices must have a unique identifier composed of 6 hex characters.  If possible use your boards MAC address or find an equivalent unique identifier.</p>
+</div>
+<div class="paragraph">
+<p>In addition to publishing sensor values, your Hyper device can also receive commands from the server to trigger actions. This is achieved by "binding" a function to a write attribute as illustrated below. But if you only want to record sensor readings you can safely omit the attribute bindings.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cpp hljs" data-lang="cpp">void setup() {
+  // Set device id.
+  const uint8_t deviceId[6] = {0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x01};
+  hyperDevice.begin(deviceId);
+
+  // Bind write attributes.
+  hyperDevice.bindMyAttribute1(onMyAttribute1Update);
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="record-read-attribute-changes"><a class="anchor" href="#record-read-attribute-changes"></a>Record read attribute changes</h3>
+<div class="paragraph">
+<p>In the <code>loop</code> function, you can make any necessary call to the low-level APIs to read the measurements from your sensor. When you have the final value of the sensor measurement you can call the "set" function for the attribute that represents that sensor value.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cpp hljs" data-lang="cpp">void loop() {
+  int adcVal = analogRead(A0);
+
+  // Record the values for your read attributes.
+  hyperDevice.setMyAttribute1(adcVal); <i class="conum" data-value="1"></i><b>(1)</b>
+
+  delay(1000);
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The included header has setter functions for all the attributes of your device.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Having completed these code changes your project is ready to start
+publishing read attribute values and processing write attribute updates
+from the server.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="connect-and-flash-the-arduino-board"><a class="anchor" href="#connect-and-flash-the-arduino-board"></a>Connect and flash the Arduino board</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Assuming your Arduino-compatible board is connected and configured, you can now upload the code to the board.</p>
+</div>
+<div class="paragraph">
+<p>Having completed these steps you can connect the Hyper Link WiFi device to your Arduino-compatible device (as described on the "xref:integrate-hyper-arduino-library.adoc" page) and start monitoring the incoming data from your sensor.</p>
+</div>
+<div class="paragraph">
+<p>The "<a href="configure-hyper-link-wifi-device.html" class="xref page">Configure Hyper Link WiFi device</a>" page will help you setup the Link device.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="setup-arduino-development-kit.html">Setup Arduino development kit</a></span>
+  <span class="next"><a href="configure-hyper-link-wifi-device.html">Configure Hyper Link WiFi device</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer"></footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

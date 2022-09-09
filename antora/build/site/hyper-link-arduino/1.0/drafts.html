@@ -3,9 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Hyper Link WiFi :: Hyper Developers</title>
-    <link rel="prev" href="integrate-hyper-arduino-library.html">
-    <link rel="next" href="hyper-link-thread.html">
+    <title>Quickstart :: Hyper Developers</title>
     <meta name="generator" content="Antora 3.1.0">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
@@ -65,16 +63,13 @@
     <a class="nav-link" href="index.html">Overview</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="quickstart.html">Quickstart</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="setup-arduino-development-kit.html">Setup Arduino development kit</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="integrate-hyper-arduino-library.html">Integrate the Hyper Arduino library</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="hyper-link-wifi.html">Hyper Link WiFi</a>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="configure-hyper-link-wifi-device.html">Configure Hyper Link WiFi device</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="hyper-link-thread.html">Hyper Link Thread</a>
@@ -118,138 +113,99 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Hyper Link Arduino</a></li>
-    <li><a href="hyper-link-wifi.html">Hyper Link WiFi</a></li>
+    <li><a href="drafts.html">Quickstart</a></li>
   </ul>
 </nav>
-<<<<<<< HEAD
-=======
-  <div class="edit-this-page"><a href="file:///Users/rizo/Developer/Repositories/hyper-systems/hyper-systems.github.io/antora/sources/hyper-link-arduino/antora/modules/ROOT/pages/hyper-link-wifi.adoc">Edit this Page</a></div>
->>>>>>> 6a6898c (Doc changes.)
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Hyper Link WiFi</h1>
+<h1 class="page">Quickstart</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Hyper Link WiFi device is an ESP32-based development board that can be used
-for data collectin and automation with WiFi connectivity.</p>
+<p>Hyper Link is a hardware component that adds connectivity and easy data
+IO to your project. Read more on the <a href="#">Hyper Link</a> page.</p>
+</div>
+<div class="paragraph">
+<p>The Hyper Link Arduino library provides utilities specific to your
+device schema so that you can easily publish sensor or diagnostic values
+and receiving commands from other devices.</p>
+</div>
+<div class="paragraph">
+<p>A typical workflow for working with the Hyper Link Arduino library is:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="#define-your-device-schema"><strong>Define your device schema</strong></a>: define a
+device schema as a collection of read and write attributes that
+represent the capabilities of your device.</p>
+</li>
+<li>
+<p><a href="#download-the-arduino-library"><strong>Download the arduino library</strong></a>:
+download the Arduino library auto-generated specifically for device
+schema.</p>
+</li>
+<li>
+<p><a href="#setup-your-board"><strong>Setup your board</strong></a>: make sure you have
+Hyper-compatible components and configure your Arduino IDE.</p>
+</li>
+<li>
+<p><a href="#integrate-the-arduino-library"><strong>Integrate the arduino library</strong></a>:
+follow the instructions to include the library and start working with
+the software resprestation of your device to record sensor values and
+bind incoming command handlers.</p>
+</li>
+<li>
+<p><a href="#test-your-setup"><strong>Test your setup</strong></a>: connect everything together
+and start testing data publishing and command execution.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Below is a detailed description of every step.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="configure-your-wifi-connection"><a class="anchor" href="#configure-your-wifi-connection"></a>Configure your WiFi connection</h2>
+<h2 id="define-your-device-schema"><a class="anchor" href="#define-your-device-schema"></a>Define your device schema</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="1-reset-the-board"><a class="anchor" href="#1-reset-the-board"></a>1. Reset the board</h3>
 <div class="paragraph">
-<p>Power the device on and hold the <b class="button">0</b> button for 5 seconds. This will reset
-any previous configuration on the board. The LED on the board will start blinking
-quickly indicating that the device is ready to be configured.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/hyper-link-wifi-board.jpg" alt="ESP32" width="400">
-</div>
-<div class="title">Figure 1. Hyper Link WiFi board (ESP32, SparkFun Thing Plus)</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="2-configure-the-wifi-connection"><a class="anchor" href="#2-configure-the-wifi-connection"></a>2. Configure the WiFi connection</h3>
-<div class="paragraph">
-<p>On your computer or mobile phone connect to the
-<code>HyperLinkWiFISetupXXXXXXXXXXXX</code> WiFi network (no authentication is required).</p>
+<p>Head to <a href="https://hyper.systems" class="bare">https://hyper.systems</a> and log-in into your dashboard. In the
+sidebar menu select <b class="button">Device types</b> and click the <b class="button">Create new device type</b> button in the toolbar. A form for defining a new device type will
+appear where you can provide a detailed description about your device
+type, including the supported read/write attributes and their data
+types.</p>
 </div>
 <div class="paragraph">
-<p>A network setup window will open where you can provide connection
-details for your local WiFi network.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/hyper-link-wifi-setup.png" alt="WiFi Setup" width="800">
-</div>
-<div class="title">Figure 2. Hyper Link WiFi setup window</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If the network setup window does not open
-automatically, you can go to <code><a href="http://hyper-link.local" class="bare">http://hyper-link.local</a></code> in your browser.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>After completing the configuration, the Hyper Link WiFi device will restart and
-connect to your network.</p>
-</div>
-<div class="paragraph">
-<p>The LED on the board will stop blinking and stays on, indicating that the device is now connected
-to WiFi.</p>
-</div>
+<p>Once you are happy with the description of your device type press the
+<b class="button">Save</b> button. Congratulations you have completed the definition of
+your device type!</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="open-the-device-monitoring-ui"><a class="anchor" href="#open-the-device-monitoring-ui"></a>Open the device monitoring UI</h2>
+<h2 id="download-the-arduino-library"><a class="anchor" href="#download-the-arduino-library"></a>Download the arduino library</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can connect to the same network as the one you connected the Hyper Link WiFi in the previous step, and go to <code><a href="http://hyper-link.local" class="bare">http://hyper-link.local</a></code>
-in your browser.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/hyper-link-wifi-ui.png" alt="ESP32" width="800">
-</div>
-<div class="title">Figure 3. Hyper Link WiFi UI</div>
+<p>After completing the previous step you will be able to open your device
+type page. This page includes all of the details about the read and
+write attributes of your device type.</p>
 </div>
 <div class="paragraph">
-<p>This page lists all of the devices connected to the Hyper Link WiFi device,
-including the Hyper Like device itself (which is always the first device
-in the list).</p>
+<p>You can click the <b class="button">Download Arduino library</b> button in the toolbar to
+get a ZIP archieve containing an example Arduino project that
+demonstrates how to work with your device type.</p>
 </div>
 <div class="paragraph">
-<p>Every device entry is composed of the following details:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Device class identifier</strong> - an identifier of the device schema which represents
-a group of devices sharing the same attributes.</p>
-</li>
-<li>
-<p><strong>Unique device identifier</strong> - a 6-byte long device identifier which <em>must</em> be
-globally unique.</p>
-</li>
-<li>
-<p><strong>Last message time</strong> - the time when the last message was received from the device.</p>
-</li>
-<li>
-<p><strong>Attribute values</strong> - a list of all read attributes recorded by the device. Each
-attribute is annotated with an attribute slot number.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The data encoding used for messages and attributes is optimized to be as compact as
-possible, which means that no metadata is transmitted about the attributes, their
-names and characteristics. This is why the attributes are annotated with their slot
-numbers and not actual human-readable names. You can consult the device class
-definition to map the slot numbers to the respective attribute names.</p>
+<p>In addition to downloading the library you can also consult the
+library’s API documentation for your device type.</p>
 </div>
 </div>
 </div>
-<nav class="pagination">
-  <span class="prev"><a href="integrate-hyper-arduino-library.html">Integrate the Hyper Arduino library</a></span>
-  <span class="next"><a href="hyper-link-thread.html">Hyper Link Thread</a></span>
-</nav>
 </article>
   </div>
 </main>

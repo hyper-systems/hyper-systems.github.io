@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Arduino development kit :: Hyper Developers</title>
-    <link rel="prev" href="quickstart.html">
-    <link rel="next" href="hyper-link-wifi.html">
+    <title>Setup Arduino development kit :: Hyper Developers</title>
+    <link rel="prev" href="index.html">
+    <link rel="next" href="integrate-hyper-arduino-library.html">
     <meta name="generator" content="Antora 3.1.0">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
@@ -64,20 +64,17 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="index.html">Overview</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="quickstart.html">Quickstart</a>
-  </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="arduino-development-kit.html">Arduino development kit</a>
+    <a class="nav-link" href="setup-arduino-development-kit.html">Setup Arduino development kit</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="hyper-link-wifi.html">Hyper Link WiFi</a>
+    <a class="nav-link" href="integrate-hyper-arduino-library.html">Integrate the Hyper Arduino library</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="configure-hyper-link-wifi-device.html">Configure Hyper Link WiFi device</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="hyper-link-thread.html">Hyper Link Thread</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="hyper-arduino-library.html">Hyper Arduino library</a>
   </li>
 </ul>
   </li>
@@ -118,7 +115,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Hyper Link Arduino</a></li>
-    <li><a href="arduino-development-kit.html">Arduino development kit</a></li>
+    <li><a href="setup-arduino-development-kit.html">Setup Arduino development kit</a></li>
   </ul>
 </nav>
 </div>
@@ -127,15 +124,13 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Arduino development kit</h1>
+<h1 class="page">Setup Arduino development kit</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>This documents presents an overview of the Arduino development kit provided
-by Hyper. The development kit includes an Arduino development board with an
-example source code for sensor integration and a
-<a href="hyper-link-wifi.html" class="xref page">Hyper Link WiFi</a> device that can be connected to the Arduino
-development board to publish the data to the cloud deployment and allow local
+by Hyper and the instructions to connect all of the components. The development
+kit includes an Arduino development board with an example source code for sensor integration and a <a href="configure-hyper-link-wifi-device.html" class="xref page">Hyper Link WiFi</a> device that can be connected to the Arduino development board to publish the data to the cloud deployment and allow local
 monitoring during development.</p>
 </div>
 </div>
@@ -216,7 +211,7 @@ The device used in this example has the same pin layout and MCU as the "Arduino 
 <div class="title">Figure 2. Hyper Link WiFi board (ESP32, SparkFun Thing Plus)</div>
 </div>
 <div class="paragraph">
-<p>For more information see the <a href="hyper-link-wifi.html" class="xref page">Hyper Link WiFi</a> device page.</p>
+<p>For more information see the <a href="configure-hyper-link-wifi-device.html" class="xref page">Configure Hyper Link WiFi device</a> device page.</p>
 </div>
 </div>
 <div class="sect2">
@@ -255,8 +250,24 @@ The Hyper Link Thread device was originally called "Hyper Axon". Some developmen
 <h2 id="connect-the-kit"><a class="anchor" href="#connect-the-kit"></a>Connect the kit</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To connect the I2C cable to the I2C isolator board use the following mapping:</p>
+<p>The figure below demonstrates all of the components connected and ready to use.</p>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/hyper-link-wifi-arduino-i2c-isolator.jpeg" alt="Development kit" width="800">
+</div>
+<div class="title">Figure 4. Fully connected development kit</div>
+</div>
+<div class="paragraph">
+<p>Here are the steps you can follow to fully recreate this setup:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Position the breadboard with the Arduino-compatible device as illustrated on the image.</p>
+</li>
+<li>
+<p>Connect the pins of the I2C cable using the following mapping:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -273,17 +284,46 @@ The Hyper Link Thread device was originally called "Hyper Axon". Some developmen
 </li>
 </ul>
 </div>
+</li>
+<li>
+<p>Connect the opposite end of the I2C cable with pins to the I2C isolator board and use an I2C cable with STEMMA QT/Qwiic connectors on both ends to connect the Hyper Link WiFi board (the red board on the image).</p>
+</li>
+<li>
+<p>Connect the Arduino-compatible device to your computer using a mini USB cable.</p>
+</li>
+<li>
+<p>Power on the Hyper Link WiFi device using a 5V micro USB connection. You do not have to connect it to your computer.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="setup-the-board-in-arduino-ide"><a class="anchor" href="#setup-the-board-in-arduino-ide"></a>Setup the board in Arduino IDE</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Once the Arduino-compatible device is connected to your computer, you can open Arduino IDE and setup the environment.</p>
+</div>
+<div class="paragraph">
+<p>You will need to select the "Arduino Nano" board and a correct "Port" in the menu:[Tools] menu.</p>
+</div>
 <div class="imageblock">
 <div class="content">
-<img src="_images/hyper-link-wifi-arduino-i2c-isolator.jpeg" alt="Development kit" width="800">
+<img src="_images/hyper-arduino-board-menu-selection.png" alt="Select Arduino board" width="800">
 </div>
-<div class="title">Figure 4. Fully connected development kit</div>
+<div class="title">Figure 5. Select the "Arduino Nano" board</div>
+</div>
+<div class="paragraph">
+<p>Congratulations you should now have a working kit ready to be programmed and tested.</p>
+</div>
+<div class="paragraph">
+<p>Go to the <a href="integrate-hyper-arduino-library.html" class="xref page">Integrate the Hyper Arduino library</a> page to learn how you can start recording sensor values.</p>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="quickstart.html">Quickstart</a></span>
-  <span class="next"><a href="hyper-link-wifi.html">Hyper Link WiFi</a></span>
+  <span class="prev"><a href="index.html">Overview</a></span>
+  <span class="next"><a href="integrate-hyper-arduino-library.html">Integrate the Hyper Arduino library</a></span>
 </nav>
 </article>
   </div>
