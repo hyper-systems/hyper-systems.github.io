@@ -1,0 +1,5 @@
+name: hyper-home
+title: Home
+version: "1.0"
+nav:
+- modules/ROOT/nav.adoc

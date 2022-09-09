@@ -1,0 +1,21 @@
+= Documentation
+
+****
+Explore our guides and examples to integrate Hyper products.
+****
+
+== Learn about Hyper
+
+Hyper provides an end-to-end data infrastructure for industrial systems.
+
+== Browse by products
+
+[cols="1,2"]
+|===
+|xref:hyper-link-arduino::index.adoc[]
+|Arduino-compatible library for integration with the Hyper Link protocol and devices.
+
+|*Hyper Analytics*
+|Obtain computed metrics for your data.
+
+|=== 
