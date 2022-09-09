@@ -15,7 +15,12 @@
   }
 
   main > .content {
-    display: flex;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 4px;
+    grid-auto-flow: column;
+    grid-template-columns: minmax(auto, 50rem) 12rem;
   }
 
   aside.toc.embedded {
