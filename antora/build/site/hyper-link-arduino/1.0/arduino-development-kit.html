@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Arduino development kit :: Hyper Developers</title>
+    <link rel="prev" href="quickstart.html">
+    <link rel="next" href="hyper-link-wifi.html">
+    <meta name="generator" content="Antora 3.1.0">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://hyper.systems/developers">Hyper Developers</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" target="_blank" href="https://github.com/hyper-systems/">GitHub</a>
+        <a class="navbar-item" href="mailto:support@hyper.systems">Support</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="hyper-link-arduino" data-version="1.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Hyper Link Arduino</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="quickstart.html">Quickstart</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="arduino-development-kit.html">Arduino development kit</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hyper-link-wifi.html">Hyper Link WiFi</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hyper-link-thread.html">Hyper Link Thread</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Hyper Link Arduino</span>
+    <span class="version">1.0-beta.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../hyper-home/1.0/index.html">Home</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../hyper-home/1.0/index.html">1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Hyper Link Arduino</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">1.0-beta.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../hyper-home/1.0/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Hyper Link Arduino</a></li>
+    <li><a href="arduino-development-kit.html">Arduino development kit</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///Users/rizo/Developer/Repositories/hyper-systems/hyper-systems.github.io/antora/sources/hyper-link-arduino/antora/modules/ROOT/pages/arduino-development-kit.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Arduino development kit</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This documents presents an overview of the Arduino development kit provided
+by Hyper. The development kit includes an Arduino development board with an
+example source code for sensor integration and a
+<a href="hyper-link-wifi.html" class="xref page">Hyper Link WiFi</a> device that can be connected to the Arduino
+development board to publish the data to the cloud deployment and allow local
+monitoring during development.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="components"><a class="anchor" href="#components"></a>Components</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The development kit includes the following components and parts:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Arduino board</strong> - serves as an example external device programmed by users;</p>
+</li>
+<li>
+<p><strong>Hyper Link WiFi device</strong> - a device that provides WiFi connectivity and can be used during development to monitor the values recorded by the Arduino board;</p>
+</li>
+<li>
+<p><strong>Hyper Link Thread device</strong> - a device that provides <a href="https://en.wikipedia.org/wiki/Thread_(network_protocol)">Thread</a> connectivity and can be used in a production environment to connect the Arduino board to a Thread mesh network.</p>
+</li>
+<li>
+<p><strong>Bidirectional I2C isolator</strong> - an I2C isolator with two STEMMA QT/Qwiic connectors that should be used to connect the Hyper Link devices to the Arduino board.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The Hyper Link Thread device requires a Thread-compatible gateway device that creates the mesh network and forwards the data to Hyper&#8217;s cloud environment. The development kit does not include the gateway.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="arduino-board-and-i2c-isolator"><a class="anchor" href="#arduino-board-and-i2c-isolator"></a>Arduino board and I2C isolator</h3>
+<div class="paragraph">
+<p>The Arduino board included in the kit is meant to be a reference example of an external device to be integrated with the Hyper platform. The Arduino board is pre-configured as an external Hyper device with a number of sensor attributes.</p>
+</div>
+<div class="paragraph">
+<p>The source code of the the Arduino project is available at <a href="https://github.com/hyper-systems/hyper-link-arduino" class="bare">https://github.com/hyper-systems/hyper-link-arduino</a>.</p>
+</div>
+<div class="paragraph">
+<p>You can use this device to test the integration, program it in a way that suits your use case to collect any sensor measurements or even trigger execution of commands.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/hyper-arduino-board-and-i2c-isolator.jpeg" alt="Arduino board and I2C isolator" width="800">
+</div>
+<div class="title">Figure 1. Arduino board with an I2C isolator and STEMMA QT/Qwiic connectors</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="hyper-link-wifi-device"><a class="anchor" href="#hyper-link-wifi-device"></a>Hyper Link WiFi device</h3>
+<div class="paragraph">
+<p>Use this device to connect the Arduino board provided in the kit to establish a WiFi connection and start collecting sensor readings. The collected data can be viewed locally in a web UI provided by the Hyper Link WiFi device itself and, in addition to that, will be published to a cloud deployment associated with your account.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/hyper-link-wifi-board.jpg" alt="ESP32" width="400">
+</div>
+<div class="title">Figure 2. Hyper Link WiFi board (ESP32, SparkFun Thing Plus)</div>
+</div>
+<div class="paragraph">
+<p>For more information see the <a href="hyper-link-wifi.html" class="xref page">Hyper Link WiFi</a> device page.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="hyper-link-thread-device"><a class="anchor" href="#hyper-link-thread-device"></a>Hyper Link Thread device</h3>
+<div class="paragraph">
+<p>Use this device to connect the Arduino board provided in the kit to establish a Thread connection with a Thread gateway device (such as Hyper Edge). Similar to the Hyper Link WiFi board, this device provides an I2C STEMMA QT/Qwiic connector.</p>
+</div>
+<div class="paragraph">
+<p>Both Hyper Link Thread and Hyper Link WiFi devices implement the same data collection protocol allowing for seamless transition from WiFi to Thread connectivity.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/hyper-link-thread-board.png" alt="Hyper Link Thread" width="800">
+</div>
+<div class="title">Figure 3. Hyper Link Thread board</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The Hyper Link Thread device was originally called "Hyper Axon". Some development kits might included a board with the "Hyper Axon Board" label.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For more information see the <a href="hyper-link-thread.html" class="xref page">Hyper Link Thread</a> device page.</p>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="quickstart.html">Quickstart</a></span>
+  <span class="next"><a href="hyper-link-wifi.html">Hyper Link WiFi</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
