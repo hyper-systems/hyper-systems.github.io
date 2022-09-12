@@ -209,6 +209,9 @@ including the Hyper Like device itself (which is always the first device
 in the list).</p>
 </div>
 <div class="paragraph">
+<p>You can try disconnecting the I2C cable between the Arduino-compatible device and the Hyper Link device to see UI dynamically update.</p>
+</div>
+<div class="paragraph">
 <p>Every device entry is composed of the following details:</p>
 </div>
 <div class="ulist">
@@ -230,12 +233,27 @@ attribute is annotated with an attribute slot number.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>The data encoding used for messages and attributes is optimized to be as compact as
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The data encoding used for messages and attributes is optimized to be as compact as
 possible, which means that no metadata is transmitted about the attributes, their
 names and characteristics. This is why the attributes are annotated with their slot
 numbers and not actual human-readable names. You can consult the device class
-definition to map the slot numbers to the respective attribute names.</p>
+definition to map the slot numbers to the respective attribute names.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If you can see at least two device entries on the page and the values for your sensor, the integration is now complete!</p>
+</div>
+<div class="paragraph">
+<p>Please contact Hyper&#8217;s support if you need any assistance.</p>
 </div>
 </div>
 </div>
