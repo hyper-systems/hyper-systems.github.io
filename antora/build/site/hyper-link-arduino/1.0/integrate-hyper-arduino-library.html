@@ -241,7 +241,9 @@ HyperDeviceXXI2CSlave hyperDevice;</code></pre>
   int adcVal = analogRead(A0);
 
   // Record the values for your read attributes.
-  hyperDevice.setMyAttribute1(adcVal); <i class="conum" data-value="1"></i><b>(1)</b>
+  // Note: your "set" function name might be different depending on the
+  // name of your attribute.
+  hyperDevice.setTemperature1(adcVal); <i class="conum" data-value="1"></i><b>(1)</b>
 
   delay(1000);
 }</code></pre>
