@@ -222,7 +222,7 @@ HyperDeviceXXI2CSlave hyperDevice;</code></pre>
   const uint8_t deviceId[6] = {0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x01};
   hyperDevice.begin(deviceId);
 
-  // Bind write attributes.
+  // Optional: bind write attributes.
   hyperDevice.bindMyAttribute1(onMyAttribute1Update);
 }</code></pre>
 </div>
