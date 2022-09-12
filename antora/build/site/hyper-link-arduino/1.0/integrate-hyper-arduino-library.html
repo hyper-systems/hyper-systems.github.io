@@ -219,6 +219,7 @@ HyperDeviceXXI2CSlave hyperDevice;</code></pre>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-cpp hljs" data-lang="cpp">void setup() {
   // Set device id.
+  // The provided id is just a placeholder you can use for testing.
   const uint8_t deviceId[6] = {0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x01};
   hyperDevice.begin(deviceId);
 
