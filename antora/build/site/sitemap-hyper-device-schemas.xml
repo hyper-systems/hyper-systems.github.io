@@ -2,14 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://hyper.systems/developers/hyper-device-schemas/1.0/index.html</loc>
-<lastmod>2022-10-04T18:41:05.419Z</lastmod>
+<lastmod>2022-10-04T19:39:20.052Z</lastmod>
 </url>
 <url>
 <loc>https://hyper.systems/developers/hyper-device-schemas/1.0/schema-24.html</loc>
-<lastmod>2022-10-04T18:41:05.419Z</lastmod>
+<lastmod>2022-10-04T19:39:20.052Z</lastmod>
 </url>
 <url>
 <loc>https://hyper.systems/developers/hyper-device-schemas/1.0/schema-25.html</loc>
-<lastmod>2022-10-04T18:41:05.419Z</lastmod>
+<lastmod>2022-10-04T19:39:20.052Z</lastmod>
+</url>
+<url>
+<loc>https://hyper.systems/developers/hyper-device-schemas/1.0/schema-32.html</loc>
+<lastmod>2022-10-04T19:39:20.052Z</lastmod>
+</url>
+<url>
+<loc>https://hyper.systems/developers/hyper-device-schemas/1.0/schema-33.html</loc>
+<lastmod>2022-10-04T19:39:20.052Z</lastmod>
 </url>
 </urlset>

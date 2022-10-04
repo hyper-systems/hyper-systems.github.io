@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Aranet TDSPCL01 current sensor :: Hyper Developers</title>
-    <link rel="prev" href="schema-24.html">
-    <link rel="next" href="schema-32.html">
+    <title>Shelly Door Window 2 :: Hyper Developers</title>
+    <link rel="prev" href="schema-25.html">
+    <link rel="next" href="schema-33.html">
     <meta name="generator" content="Antora 3.1.1">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
@@ -67,10 +67,10 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="schema-24.html">Aranet TDSPC004 CO2 sensor</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="schema-25.html">Aranet TDSPCL01 current sensor</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="schema-32.html">Shelly Door Window 2</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -123,7 +123,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Device schemas</a></li>
-    <li><a href="schema-25.html">Aranet TDSPCL01 current sensor</a></li>
+    <li><a href="schema-32.html">Shelly Door Window 2</a></li>
   </ul>
 </nav>
 </div>
@@ -132,17 +132,20 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Aranet TDSPCL01 current sensor</h1>
+<h1 class="page">Shelly Door Window 2</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Aranet 4-20mA current sensor is battery-powered and energy-efficient solution designed to integrate with any 3rd party sensor that uses mA as an output. The use cases include monitoring of pH, liquid level, pressure, magnetic flow, velocity, acceleration, industrial vibration and many more.</p>
+<p>The Shelly door sensor detects and reports the opening and closing of door/windows, tilt angle, vibration, temperature and lux.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="_images/schema-25.png" alt="Aranet TDSPCL01" width="600">
+<img src="_images/schema-32.jpg" alt="Shelly Door Window 2" width="600">
 </div>
-<div class="title">Figure 1. Aranet TDSPCL01</div>
+<div class="title">Figure 1. Shelly Door Window 2</div>
+</div>
+<div class="paragraph">
+<p>Product page: <a href="https://shop.shelly.cloud/shelly-door-window-wifi-smart-home-automation" class="bare">https://shop.shelly.cloud/shelly-door-window-wifi-smart-home-automation</a></p>
 </div>
 </div>
 </div>
@@ -173,37 +176,64 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Aranet received signal strength</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Door/window state</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Decibel milliwatts</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Int16</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bool</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Aranet battery level</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Door/window tilt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Percent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Degree</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Float32</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Aranet current</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Electric current</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ampere</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Float32</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Door/window vibration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bool</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Aranet current derived</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Luminance level</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Illuminance</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lux</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Float32</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Battery level</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Percentage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Float32</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Temperature</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Temperature</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Degree celsius</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Float32</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Uint8</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
 </tr>
@@ -212,8 +242,8 @@
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="schema-24.html">Aranet TDSPC004 CO2 sensor</a></span>
-  <span class="next"><a href="schema-32.html">Shelly Door Window 2</a></span>
+  <span class="prev"><a href="schema-25.html">Aranet TDSPCL01 current sensor</a></span>
+  <span class="next"><a href="schema-33.html">Shelly Plus 1PM</a></span>
 </nav>
 </article>
   </div>
