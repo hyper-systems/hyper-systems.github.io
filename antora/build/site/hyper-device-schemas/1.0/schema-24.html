@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Hyper Link Thread :: Hyper Developers</title>
-    <link rel="prev" href="configure-hyper-link-wifi-device.html">
+    <title>Aranet TDSPC004 CO2 sensor :: Hyper Developers</title>
+    <link rel="prev" href="index.html">
+    <link rel="next" href="schema-25.html">
     <meta name="generator" content="Antora 3.1.1">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
@@ -51,29 +52,23 @@
     </div>
   </nav>
 </header><div class="body">
-<div class="nav-container" data-component="hyper-link-arduino" data-version="1.0">
+<div class="nav-container" data-component="hyper-device-schemas" data-version="1.0">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="index.html">Hyper Link Arduino</a></h3>
+    <h3 class="title"><a href="index.html">Device schemas</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="index.html">Overview</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="setup-arduino-development-kit.html">Setup Arduino development kit</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="integrate-hyper-arduino-library.html">Integrate the Hyper Arduino library</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="configure-hyper-link-wifi-device.html">Configure Hyper Link WiFi device</a>
-  </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="hyper-link-thread.html">Hyper Link Thread</a>
+    <a class="nav-link" href="schema-24.html">Aranet TDSPC004 CO2 sensor</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="schema-25.html">Aranet TDSPCL01 current sensor</a>
   </li>
 </ul>
   </li>
@@ -82,15 +77,15 @@
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
-    <span class="title">Hyper Link Arduino</span>
+    <span class="title">Device schemas</span>
     <span class="version">1.0-beta.1</span>
   </div>
   <ul class="components">
-    <li class="component">
-      <a class="title" href="../../hyper-device-schemas/1.0/index.html">Device schemas</a>
+    <li class="component is-current">
+      <a class="title" href="index.html">Device schemas</a>
       <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../hyper-device-schemas/1.0/index.html">1.0-beta.1</a>
+        <li class="version is-current is-latest">
+          <a href="index.html">1.0-beta.1</a>
         </li>
       </ul>
     </li>
@@ -102,11 +97,11 @@
         </li>
       </ul>
     </li>
-    <li class="component is-current">
-      <a class="title" href="index.html">Hyper Link Arduino</a>
+    <li class="component">
+      <a class="title" href="../../hyper-link-arduino/1.0/index.html">Hyper Link Arduino</a>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">1.0-beta.1</a>
+        <li class="version is-latest">
+          <a href="../../hyper-link-arduino/1.0/index.html">1.0-beta.1</a>
         </li>
       </ul>
     </li>
@@ -121,8 +116,8 @@
   <a href="../../hyper-home/1.0/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="index.html">Hyper Link Arduino</a></li>
-    <li><a href="hyper-link-thread.html">Hyper Link Thread</a></li>
+    <li><a href="index.html">Device schemas</a></li>
+    <li><a href="schema-24.html">Aranet TDSPC004 CO2 sensor</a></li>
   </ul>
 </nav>
 </div>
@@ -131,33 +126,66 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Hyper Link Thread</h1>
-<div class="paragraph">
-<p>The Hyper Link Thread device is a custom board provided by Hyper for connectivity with the Thread mesh network protocol.</p>
-</div>
-<div class="paragraph">
-<p>Devices that implement the Hyper Link protocol and have an I2C connector can be connected to the Hyper Link Thread board to start publishing data to a cloud environment using the Thread mesh network.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/hyper-link-thread-board.png" alt="Hyper Link Thread" width="800">
-</div>
-<div class="title">Figure 1. Hyper Link Thread board</div>
-</div>
-<div class="admonitionblock note">
-<table>
+<h1 class="page">Aranet TDSPC004 CO2 sensor</h1>
+<div class="sect1">
+<h2 id="attributes"><a class="anchor" href="#attributes"></a>Attributes</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 30%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
 <tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The Hyper Link Thread device was originally called "Hyper Axon". Some development kits might included a board with the "Hyper Axon Board" label.
-</td>
+<th class="tableblock halign-left valign-top">Slot</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Quantity</th>
+<th class="tableblock halign-left valign-top">Unit</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Read</th>
+<th class="tableblock halign-left valign-top">Write</th>
 </tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aranet received signal strength</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">decibel-milliwatts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Int16</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aranet battery level</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">percent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Float32</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aranet CO2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">parts-per-million</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Uint16</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
+</tr>
+</tbody>
 </table>
 </div>
+</div>
 <nav class="pagination">
-  <span class="prev"><a href="configure-hyper-link-wifi-device.html">Configure Hyper Link WiFi device</a></span>
+  <span class="prev"><a href="index.html">Overview</a></span>
+  <span class="next"><a href="schema-25.html">Aranet TDSPCL01 current sensor</a></span>
 </nav>
 </article>
   </div>

@@ -5,17 +5,17 @@ site:
   start_page: hyper-home::index.adoc
 content:
   sources:
-  - url: ./sources/hyper-link-arduino
-    branches: [master]
-    start_path: antora
-    # setting edit_url to false disables the Edit this Page link for any page that originates from this repository
-    # the same thing can be achieved by adding empty credentials (i.e., @) in front of the domain in the URL
-    edit_url: false
   - url: ./..
     branches: [HEAD]
     start_path: antora/sources/home
-    # setting edit_url to false disables the Edit this Page link for any page that originates from this repository
-    # the same thing can be achieved by adding empty credentials (i.e., @) in front of the domain in the URL
+    edit_url: false
+  - url: ./sources/hyper-link-arduino
+    branches: [master]
+    start_path: antora
+    edit_url: false
+  - url: ./sources/device-schemas
+    branches: [HEAD]
+    start_path: antora
     edit_url: false
 asciidoc:
   attributes:
