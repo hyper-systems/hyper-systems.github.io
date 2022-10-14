@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
+
+{%- include head.html -%}
+
+<body>
+    <div class="relative overflow-hidden">
+        {%- include header.html -%}
+
+        <main>
+
+            {{ content }}
+
+        </main>
+
+        {%- include footer.html -%}
+    </div>
+</body>
+
+<link rel="stylesheet" href="{{site.url}}/assets/css/custom.css">
+
+<script src="{{site.url}}/assets/js/main.js"></script>
+
+</html>

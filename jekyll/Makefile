@@ -8,6 +8,10 @@
 # Adding new packates example
 # nix-shell -p bundler --run 'bundle add <package-name>'
 
+.PHONY: shell
+shell:
+	nix-shell
+
 .PHONY: update
 update:
 	nix-shell -p bundler -p bundix --run 'bundler update; bundler lock; bundler package --no-install --path vendor; bundix; rm -rf vendor'
