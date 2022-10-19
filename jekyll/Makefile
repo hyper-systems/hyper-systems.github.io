@@ -31,3 +31,4 @@ watch:
 .PHONY: release
 release: build
 	ln -s ../antora/build/site ../docs/developers
+	touch ../.nojekyll
