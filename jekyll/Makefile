@@ -18,12 +18,16 @@ update:
 
 .PHONY: build
 build:
-	nix-shell --command "jekyll build --destination ../build/"
+	nix-shell --command "jekyll build --destination ../docs"
 
 .PHONY: serve
 serve:
-	nix-shell --command "jekyll serve --destination ../build/"
+	nix-shell --command "jekyll serve --destination ../docs"
 
 .PHONY: watch
 watch:
-	nix-shell --command "jekyll serve --watch --destination ../build/"
+	nix-shell --command "jekyll serve --watch --destination ../docs"
+
+.PHONY: release
+release: build
+	ln -s ../antora/build/site ../docs/developers
