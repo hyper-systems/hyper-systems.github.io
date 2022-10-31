@@ -1,0 +1,56 @@
+---
+title: Smart Agriculture
+description: Use our data and automation platform to increase yield and reduce operational.
+feature_icon: icons/thunder.svg
+layout: default
+categories: [solutions]
+---
+
+{% capture features_title %}
+Monitor and control <br /> your entire farm.
+{% endcapture %}
+
+{% capture features_description %}
+Use our data and automation platform for indoor farms to increase yield and reduce operational costs by
+getting access to crop growth metrics and optimized climate crop profiles without a dedicated engineering
+team.
+{% endcapture %}
+
+{%-
+include fold.html
+feature_one="solutions_feature-farming-1.png"
+feature_two="solutions_feature-farming-2.png"
+title=features_title
+description=features_description
+-%}
+
+{%-
+include features.html
+title="Why using Hyper can help you!"
+features=site.data.construction_features
+-%}
+
+{% include crop_vision.html %}
+
+{% capture benefits_description %}
+Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla nec.
+{% endcapture %}
+
+{%-
+include benefits.html
+letterhead="Everything you need"
+title="Why using Hyper can help you!"
+img="solutions_benefits_farming.jpg"
+benefits=site.data.construction_benefits
+-%}
+
+{%-
+include testimonial.html
+quote="Love the simplicity of the service and the prompt customer support. We can`t imagine working without it."
+name="Judith Black"
+title="CEO at PureInsights"
+logo="materra_logo.svg"
+-%}
+
+
+{% include cta.html %}

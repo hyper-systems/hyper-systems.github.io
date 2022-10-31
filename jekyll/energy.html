@@ -1,0 +1,53 @@
+---
+title: Smart Energy
+description: Collecting real-time insights on performance and consumption patterns.
+feature_icon: icons/thunder.svg
+layout: default
+categories: [solutions]
+---
+
+{% capture features_title %}
+Energy monitoring <br /> infrastructure.
+{% endcapture %}
+
+{% capture features_description %}
+Connect all of the modules in your energy system with our platform to start
+collecting real-time insights on performance and consumption patterns for
+your smart metering or grid management solution.
+{% endcapture %}
+
+{%-
+include fold.html
+feature_one="solutions_feature-farming-1.png"
+feature_two="solutions_feature-farming-2.png"
+title=features_title
+description=features_description
+-%}
+
+{%-
+include features.html
+title="Why using Hyper can help you!"
+features=site.data.construction_features
+-%}
+
+{% capture benefits_description %}
+Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla nec.
+{% endcapture %}
+
+{%-
+include benefits.html
+letterhead="Everything you need"
+title="Why using Hyper can help you!"
+benefits=site.data.construction_benefits
+-%}
+
+{%-
+include testimonial.html
+quote="Love the simplicity of the service and the prompt customer support. We can`t imagine working without it."
+name="Judith Black"
+title="CEO at PureInsights"
+logo="materra_logo.svg"
+-%}
+
+
+{% include cta.html %}

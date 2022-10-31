@@ -1,9 +1,9 @@
 <header class="relative">
-    <div class="pt-6">
+    <div class="pt-6 px-4">
         <nav class="relative mx-auto flex max-w-8xl items-center justify-between" aria-label="Global">
             <div class="flex flex-1 items-center">
                 <div class="flex w-full items-center justify-between md:w-auto">
-                    <a href="https://hyper.systems">
+                    <a href="/">
                         <img class="h-8 w-auto sm:h-10" src="{{site.url}}/assets/img/hyper_logo.svg"
                             alt="Hyper Systems">
                     </a>
@@ -21,6 +21,8 @@
                 </div>
             </div>
             <div class="hidden md:flex md:items-center md:space-x-6">
+
+                {% include dropdown_solutions.html %}
                 <a href="#home-features" class="text-base text-slate-800 hover:text-slate-500">Technology</a>
                 <a href="#why-hyper" class="text-base text-slate-800 hover:text-slate-500">Why Hyper</a>
                 <a href="https://hyper.systems/developers"
@@ -33,7 +35,7 @@
         </nav>
     </div>
     <!-- Mobile Menu -->
-    <div class="absolute inset-x-0 top-0 z-10 origin-top p-2 md:hidden" style="display: none;" id="mobileMenu">
+    <div class="absolute inset-x-0 top-0 z-30 origin-top p-2 md:hidden" style="display: none;" id="mobileMenu">
         <div class="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-1">
             <div class="flex items-center justify-between px-5 pt-4">
                 <div>
@@ -52,6 +54,30 @@
             </div>
             <div class="pt-5 pb-6">
                 <div class="space-y-1 px-2">
+
+                    <div class="bg-gray-50 p-4 sm:p-6">
+                        <h3 class="text-base font-medium text-gray-500">Solutions</h3>
+                        <ul role="list" class="mt-6 space-y-6">
+                            {% for page in site.pages %}
+                            {% if page.categories contains 'solutions' %}
+                            <li class="flow-root">
+                                <a href="{{ page.url}}"
+                                    class="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50">
+                                    <div
+                                        class="hidden sm:flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gray-100 text-gray-800 sm:h-12 sm:w-12">
+                                        {% include {{ page.feature_icon}} %}
+                                    </div>
+                                    <div class="sm:ml-4">
+                                        <p class="text-base font-medium text-gray-900">{{ page.title}}</p>
+                                        <p class="mt-1 text-sm text-gray-500">{{ page.description}}</p>
+                                    </div>
+                                </a>
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+
                     <a href="#home-features"
                         class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">Technology</a>
                     <a href="#why-hyper"

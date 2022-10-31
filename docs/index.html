@@ -23,14 +23,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head><body>
     <div class="relative overflow-hidden"><header class="relative">
-    <div class="pt-6">
+    <div class="pt-6 px-4">
         <nav class="relative mx-auto flex max-w-8xl items-center justify-between" aria-label="Global">
             <div class="flex flex-1 items-center">
                 <div class="flex w-full items-center justify-between md:w-auto">
-                    <a href="https://hyper.systems">
+                    <a href="/">
                         <img class="h-8 w-auto sm:h-10" src="/assets/img/hyper_logo.svg"
                             alt="Hyper Systems">
                     </a>
@@ -48,6 +50,98 @@
                 </div>
             </div>
             <div class="hidden md:flex md:items-center md:space-x-6">
+
+                <div class="relative" id="solutionsMenuContainer">
+    <button type="button"
+        class="text-slate-800 group inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none"
+        aria-expanded="false" id="solutionsMenuBtn">
+        <span>Solutions</span>
+        <svg class="text-gray-400 ml-2 h-5 w-5 transition duration-150 ease-in-out group-hover:text-gray-500"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+    <path fill-rule="evenodd"
+        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+        clip-rule="evenodd" />
+</svg>
+    </button>
+    <div class="absolute z-20 pt-3  w-screen max-w-md transform px-2 sm:px-0 lg:max-w-3xl left-1/2 -translate-x-1/2"
+        id="solutionsDropdown">
+        <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 ">
+            <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
+
+                
+                
+                
+                
+
+                <a href="/agriculture.html"
+                    class="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50">
+                    <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gray-100 text-gray-800 sm:h-12 sm:w-12">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round"
+        d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+</svg>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-base font-medium text-gray-900">Smart Agriculture</p>
+                        <p class="mt-1 text-sm text-gray-500">Use our data and automation platform to increase yield and reduce operational.</p>
+                    </div>
+                </a>
+
+                
+                
+                
+
+                <a href="/energy.html"
+                    class="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50">
+                    <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gray-100 text-gray-800 sm:h-12 sm:w-12">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round"
+        d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+</svg>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-base font-medium text-gray-900">Smart Energy</p>
+                        <p class="mt-1 text-sm text-gray-500">Collecting real-time insights on performance and consumption patterns.</p>
+                    </div>
+                </a>
+
+                
+                
+                
+                
+                
+
+                <a href="/logistics.html"
+                    class="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50">
+                    <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gray-100 text-gray-800 sm:h-12 sm:w-12">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round"
+        d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+</svg>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-base font-medium text-gray-900">Smart Logistics</p>
+                        <p class="mt-1 text-sm text-gray-500">Distribution network monitoring and optimization</p>
+                    </div>
+                </a>
+
+                
+                
+                
+                
+                
+                
+
+            </div>
+        </div>
+    </div>
+</div>
                 <a href="#home-features" class="text-base text-slate-800 hover:text-slate-500">Technology</a>
                 <a href="#why-hyper" class="text-base text-slate-800 hover:text-slate-500">Why Hyper</a>
                 <a href="https://hyper.systems/developers"
@@ -60,7 +154,7 @@
         </nav>
     </div>
     <!-- Mobile Menu -->
-    <div class="absolute inset-x-0 top-0 z-10 origin-top p-2 md:hidden" style="display: none;" id="mobileMenu">
+    <div class="absolute inset-x-0 top-0 z-30 origin-top p-2 md:hidden" style="display: none;" id="mobileMenu">
         <div class="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-1">
             <div class="flex items-center justify-between px-5 pt-4">
                 <div>
@@ -79,6 +173,82 @@
             </div>
             <div class="pt-5 pb-6">
                 <div class="space-y-1 px-2">
+
+                    <div class="bg-gray-50 p-4 sm:p-6">
+                        <h3 class="text-base font-medium text-gray-500">Solutions</h3>
+                        <ul role="list" class="mt-6 space-y-6">
+                            
+                            
+                            
+                            
+                            <li class="flow-root">
+                                <a href="/agriculture.html"
+                                    class="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50">
+                                    <div
+                                        class="hidden sm:flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gray-100 text-gray-800 sm:h-12 sm:w-12">
+                                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round"
+        d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+</svg>
+                                    </div>
+                                    <div class="sm:ml-4">
+                                        <p class="text-base font-medium text-gray-900">Smart Agriculture</p>
+                                        <p class="mt-1 text-sm text-gray-500">Use our data and automation platform to increase yield and reduce operational.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            
+                            
+                            
+                            <li class="flow-root">
+                                <a href="/energy.html"
+                                    class="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50">
+                                    <div
+                                        class="hidden sm:flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gray-100 text-gray-800 sm:h-12 sm:w-12">
+                                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round"
+        d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+</svg>
+                                    </div>
+                                    <div class="sm:ml-4">
+                                        <p class="text-base font-medium text-gray-900">Smart Energy</p>
+                                        <p class="mt-1 text-sm text-gray-500">Collecting real-time insights on performance and consumption patterns.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            
+                            
+                            
+                            
+                            
+                            <li class="flow-root">
+                                <a href="/logistics.html"
+                                    class="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50">
+                                    <div
+                                        class="hidden sm:flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gray-100 text-gray-800 sm:h-12 sm:w-12">
+                                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round"
+        d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+</svg>
+                                    </div>
+                                    <div class="sm:ml-4">
+                                        <p class="text-base font-medium text-gray-900">Smart Logistics</p>
+                                        <p class="mt-1 text-sm text-gray-500">Distribution network monitoring and optimization</p>
+                                    </div>
+                                </a>
+                            </li>
+                            
+                            
+                            
+                            
+                            
+                            
+                        </ul>
+                    </div>
+
                     <a href="#home-features"
                         class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">Technology</a>
                     <a href="#why-hyper"
@@ -97,8 +267,8 @@
     </div>
 </header><main>
 
-            <div class="pt-4 sm:pt-6 lg:overflow-hidden lg:pt-8 lg:pb-14" id="fold">
-    <div class="bg-alpha overflow-hidden rounded- mx-auto max-w-8xl lg:pl-8 xl:pl-16 lg:pr-0">
+            <div class="pt-4 px-4 sm:pt-6 lg:overflow-hidden lg:pt-8 lg:pb-14" id="fold">
+    <div class="bg-alpha overflow-hidden rounded pt-10 mx-auto max-w-8xl lg:pl-8 lg:pt-0 xl:pl-16 lg:pr-0">
         <div class="lg:grid lg:grid-cols-2 lg:gap-8">
             <div class=" mx-auto max-w-md 
                         px-4 sm:max-w-2xl sm:px-6 sm:text-center 
@@ -147,7 +317,120 @@
             </div>
         </div>
     </div>
-</div><div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8">
+</div><div class="py-12 px-4">
+    <div class="mx-auto max-w-8xl">
+        <div
+            class="border divide-y divide-gray-200 overflow-hidden rounded bg-gray-200 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-px sm:divide-y-0">
+            
+            
+            
+            
+            <div
+                class="relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500 hover:bg-gray-900 hover:text-white transition-all duration-200">
+                <div>
+                    <span class="rounded-lg inline-flex p-3 bg-gray-100 text-gray-800">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round"
+        d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+</svg>
+                    </span>
+                </div>
+                <div class="mt-8">
+                    <h3 class="text-lg font-medium">
+                        <a href="/agriculture.html" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            <span class="absolute inset-0" aria-hidden="true"></span>
+                            Smart Agriculture
+                        </a>
+                    </h3>
+                    <p class="mt-2 text-sm text-gray-500"> Use our data and automation platform to increase yield and reduce operational. </p>
+                </div>
+                <span class="pointer-events-none absolute top-6 right-6 text-gray-300 group-hover:text-gray-400"
+                    aria-hidden="true">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M20 4h1a1 1 0 00-1-1v1zm-1 12a1 1 0 102 0h-2zM8 3a1 1 0 000 2V3zM3.293 19.293a1 1 0 101.414 1.414l-1.414-1.414zM19 4v12h2V4h-2zm1-1H8v2h12V3zm-.707.293l-16 16 1.414 1.414 16-16-1.414-1.414z" />
+                    </svg>
+                </span>
+            </div>
+            
+            
+            
+            <div
+                class="relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500 hover:bg-gray-900 hover:text-white transition-all duration-200">
+                <div>
+                    <span class="rounded-lg inline-flex p-3 bg-gray-100 text-gray-800">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round"
+        d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+</svg>
+                    </span>
+                </div>
+                <div class="mt-8">
+                    <h3 class="text-lg font-medium">
+                        <a href="/energy.html" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            <span class="absolute inset-0" aria-hidden="true"></span>
+                            Smart Energy
+                        </a>
+                    </h3>
+                    <p class="mt-2 text-sm text-gray-500"> Collecting real-time insights on performance and consumption patterns. </p>
+                </div>
+                <span class="pointer-events-none absolute top-6 right-6 text-gray-300 group-hover:text-gray-400"
+                    aria-hidden="true">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M20 4h1a1 1 0 00-1-1v1zm-1 12a1 1 0 102 0h-2zM8 3a1 1 0 000 2V3zM3.293 19.293a1 1 0 101.414 1.414l-1.414-1.414zM19 4v12h2V4h-2zm1-1H8v2h12V3zm-.707.293l-16 16 1.414 1.414 16-16-1.414-1.414z" />
+                    </svg>
+                </span>
+            </div>
+            
+            
+            
+            
+            
+            <div
+                class="relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500 hover:bg-gray-900 hover:text-white transition-all duration-200">
+                <div>
+                    <span class="rounded-lg inline-flex p-3 bg-gray-100 text-gray-800">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round"
+        d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+</svg>
+                    </span>
+                </div>
+                <div class="mt-8">
+                    <h3 class="text-lg font-medium">
+                        <a href="/logistics.html" class="focus:outline-none">
+                            <!-- Extend touch target to entire panel -->
+                            <span class="absolute inset-0" aria-hidden="true"></span>
+                            Smart Logistics
+                        </a>
+                    </h3>
+                    <p class="mt-2 text-sm text-gray-500"> Distribution network monitoring and optimization </p>
+                </div>
+                <span class="pointer-events-none absolute top-6 right-6 text-gray-300 group-hover:text-gray-400"
+                    aria-hidden="true">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M20 4h1a1 1 0 00-1-1v1zm-1 12a1 1 0 102 0h-2zM8 3a1 1 0 000 2V3zM3.293 19.293a1 1 0 101.414 1.414l-1.414-1.414zM19 4v12h2V4h-2zm1-1H8v2h12V3zm-.707.293l-16 16 1.414 1.414 16-16-1.414-1.414z" />
+                    </svg>
+                </span>
+            </div>
+            
+            
+            
+            
+            
+            
+        </div>
+    </div>
+</div>
+
+<div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8">
     <div class="text-center">
         <h2 class="text-3xl font-medium tracking-tight text-slate-900 sm:text-4xl">
             Build the industry of tomorrow.
@@ -176,318 +459,350 @@
     </div>
 </div>
 
-<div id="home-features" class="mx-auto max-w-xl lg:max-w-7xl"><!-- Monitoring eveyrthing -->
-<div class="relative mx-auto max-w-xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-    <div class="relative mt-12 lg:mt-18 lg:grid lg:grid-cols-2 lg:items-center lg:gap-24">
-        <div class="relative">
-            <h3 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Monitor everything.
-            </h3>
-            <p class="mt-3 text-lg text-slate-800">
-                Collect events, measurements or tracking data from any device and
-                easily visualize graphs in a way that best adapts to the needs of
-                your operation.
-            </p>
-            <ul role="list" class="mt-8 space-y-5 lg:grid">
-                <li class="flex items-start lg:col-span-1">
-                    <div class="flex-shrink-0">
-                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="9" cy="9.745" r="8.5" fill="#EEF0F2" stroke="#D7DEE5" />
-                            <path d="M6 10.345L8.00568 12.5512C8.09439 12.6488 8.2516 12.6353 8.3224 12.5241L12 6.745"
-                                stroke="#2D2937" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
-                        </svg>
-                    </div>
-                    <p class="ml-3 text-sm text-gray-700">Realtime monitoring</p>
-                </li>
-                <li class="flex items-start lg:col-span-1">
-                    <div class="flex-shrink-0">
-                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="9" cy="9.745" r="8.5" fill="#EEF0F2" stroke="#D7DEE5" />
-                            <path d="M6 10.345L8.00568 12.5512C8.09439 12.6488 8.2516 12.6353 8.3224 12.5241L12 6.745"
-                                stroke="#2D2937" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
-                        </svg>
-                    </div>
-                    <p class="ml-3 text-sm text-gray-700">Historical data access</p>
-                </li>
-                <li class="flex items-start lg:col-span-1">
-                    <div class="flex-shrink-0">
-                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="9" cy="9.745" r="8.5" fill="#EEF0F2" stroke="#D7DEE5" />
-                            <path d="M6 10.345L8.00568 12.5512C8.09439 12.6488 8.2516 12.6353 8.3224 12.5241L12 6.745"
-                                stroke="#2D2937" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
-                        </svg>
-                    </div>
-                    <p class="ml-3 text-sm text-gray-700">Customizable dashboard</p>
-                </li>
-            </ul>
-        </div>
-        <div class="relative -mx-4 mt-10 lg:mt-0" aria-hidden="true">
-            <svg class="absolute left-1/2 -translate-x-1/2 translate-y-16 transform" width="600" height="450"
-                fill="none" viewBox="0 0 784 404">
-                <defs>
-                    <pattern id="ca9667ae-9f92-4be7-abcb-9e3d727f2941" x="0" y="0" width="20" height="20"
-                        patternUnits="userSpaceOnUse">
-                        <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
-                    </pattern>
-                </defs>
-                <rect width="784" height="404" fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)" />
-            </svg>
-            <img class="relative mx-auto" width="600" src="/assets/img/feature_monitoring.svg" alt="">
+<!-- <div id="home-features" class="mx-auto max-w-xl lg:max-w-7xl"> --><!-- Monitoring eveyrthing -->
+<div class="px-8">
+    <div class="relative mx-auto max-w-xl max-w-8xl">
+        <div class="relative mt-12 lg:grid lg:grid-cols-2 lg:items-center lg:gap-16 lg:mt-18 xl:grid-cols-5 xl:gap-0">
+            <div class="relative xl:col-span-2 max-w-xl mx-auto lg:max-w-none lg:mx-0">
+                <h3 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    Monitor everything.
+                </h3>
+                <p class="mt-3 text-lg text-slate-800">
+                    Collect events, measurements or tracking data from any device and
+                    easily visualize graphs in a way that best adapts to the needs of
+                    your operation.
+                </p>
+                <ul role="list" class="mt-8 space-y-5 lg:grid">
+                    <li class="flex items-start lg:col-span-1">
+                        <div class="flex-shrink-0">
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9" cy="9.745" r="8.5" fill="#EEF0F2" stroke="#D7DEE5" />
+                                <path
+                                    d="M6 10.345L8.00568 12.5512C8.09439 12.6488 8.2516 12.6353 8.3224 12.5241L12 6.745"
+                                    stroke="#2D2937" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <p class="ml-3 text-sm text-gray-700">Realtime monitoring</p>
+                    </li>
+                    <li class="flex items-start lg:col-span-1">
+                        <div class="flex-shrink-0">
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9" cy="9.745" r="8.5" fill="#EEF0F2" stroke="#D7DEE5" />
+                                <path
+                                    d="M6 10.345L8.00568 12.5512C8.09439 12.6488 8.2516 12.6353 8.3224 12.5241L12 6.745"
+                                    stroke="#2D2937" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <p class="ml-3 text-sm text-gray-700">Historical data access</p>
+                    </li>
+                    <li class="flex items-start lg:col-span-1">
+                        <div class="flex-shrink-0">
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9" cy="9.745" r="8.5" fill="#EEF0F2" stroke="#D7DEE5" />
+                                <path
+                                    d="M6 10.345L8.00568 12.5512C8.09439 12.6488 8.2516 12.6353 8.3224 12.5241L12 6.745"
+                                    stroke="#2D2937" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <p class="ml-3 text-sm text-gray-700">Customizable dashboard</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="xl:col-span-3 relative -mx-4 mt-10 lg:mt-0" aria-hidden="true">
+                <svg class="absolute left-1/2 -translate-x-1/2 translate-y-16 transform" width="600" height="450"
+                    fill="none" viewBox="0 0 784 404">
+                    <defs>
+                        <pattern id="ca9667ae-9f92-4be7-abcb-9e3d727f2941" x="0" y="0" width="20" height="20"
+                            patternUnits="userSpaceOnUse">
+                            <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                        </pattern>
+                    </defs>
+                    <rect width="784" height="404" fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)" />
+                </svg>
+                <img class="relative mx-auto" width="650" src="/assets/img/feature_monitoring.svg" alt="">
+            </div>
         </div>
     </div>
 </div>
 
 <!-- Actionable insights -->
-<div class="relative mx-auto max-w-xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-    <div class="relative mt-12 lg:mt-18 lg:grid lg:grid-cols-2 lg:items-center lg:gap-24">
-        <div class="relative">
-            <h3 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Actionable insights.
-            </h3>
-            <p class="mt-3 text-lg text-slate-800">
-                Analyze the collected historical and realtime data to detect
-                patterns and set up alerts that can help your boost the
-                performance of your operation.
-            </p>
-            <ul role="list" class="mt-8 space-y-5 lg:grid">
-                <li class="flex items-start lg:col-span-1">
-                    <div class="flex-shrink-0">
-                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="9" cy="9.745" r="8.5" fill="#EEF0F2" stroke="#D7DEE5" />
-                            <path d="M6 10.345L8.00568 12.5512C8.09439 12.6488 8.2516 12.6353 8.3224 12.5241L12 6.745"
-                                stroke="#2D2937" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
-                        </svg>
-                    </div>
-                    <p class="ml-3 text-sm text-gray-700">Pattern detection</p>
-                </li>
-                <li class="flex items-start lg:col-span-1">
-                    <div class="flex-shrink-0">
-                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="9" cy="9.745" r="8.5" fill="#EEF0F2" stroke="#D7DEE5" />
-                            <path d="M6 10.345L8.00568 12.5512C8.09439 12.6488 8.2516 12.6353 8.3224 12.5241L12 6.745"
-                                stroke="#2D2937" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
-                        </svg>
+<div class="px-8">
+    <div class="relative mx-auto max-w-xl max-w-8xl">
+        <div class="relative mt-12 lg:grid lg:grid-cols-2 lg:items-center lg:gap-16 lg:mt-18 xl:grid-cols-5 xl:gap-0">
+            <div class="relative xl:col-span-2 max-w-xl mx-auto lg:max-w-none lg:mx-0">
+                <h3 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    Actionable insights.
+                </h3>
+                <p class="mt-3 text-lg text-slate-800">
+                    Analyze the collected historical and realtime data to detect
+                    patterns and set up alerts that can help your boost the
+                    performance of your operation.
+                </p>
+                <ul role="list" class="mt-8 space-y-5 lg:grid">
+                    <li class="flex items-start lg:col-span-1">
+                        <div class="flex-shrink-0">
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9" cy="9.745" r="8.5" fill="#EEF0F2" stroke="#D7DEE5" />
+                                <path
+                                    d="M6 10.345L8.00568 12.5512C8.09439 12.6488 8.2516 12.6353 8.3224 12.5241L12 6.745"
+                                    stroke="#2D2937" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <p class="ml-3 text-sm text-gray-700">Pattern detection</p>
+                    </li>
+                    <li class="flex items-start lg:col-span-1">
+                        <div class="flex-shrink-0">
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9" cy="9.745" r="8.5" fill="#EEF0F2" stroke="#D7DEE5" />
+                                <path
+                                    d="M6 10.345L8.00568 12.5512C8.09439 12.6488 8.2516 12.6353 8.3224 12.5241L12 6.745"
+                                    stroke="#2D2937" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
 
-                    </div>
-                    <p class="ml-3 text-sm text-gray-700">Performance reports</p>
-                </li>
-                <li class="flex items-start lg:col-span-1">
-                    <div class="flex-shrink-0">
-                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="9" cy="9.745" r="8.5" fill="#EEF0F2" stroke="#D7DEE5" />
-                            <path d="M6 10.345L8.00568 12.5512C8.09439 12.6488 8.2516 12.6353 8.3224 12.5241L12 6.745"
-                                stroke="#2D2937" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
-                        </svg>
-                    </div>
-                    <p class="ml-3 text-sm text-gray-700">Notifications for important events</p>
-                </li>
-            </ul>
-        </div>
-        <div class="relative -mx-4 mt-10 lg:mt-0" aria-hidden="true">
-            <svg class="absolute left-1/2 -translate-x-1/2 translate-y-16 transform" width="600" height="450"
-                fill="none" viewBox="0 0 784 404">
-                <defs>
-                    <pattern id="ca9667ae-9f92-4be7-abcb-9e3d727f2941" x="0" y="0" width="20" height="20"
-                        patternUnits="userSpaceOnUse">
-                        <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
-                    </pattern>
-                </defs>
-                <rect width="784" height="404" fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)" />
-            </svg>
-            <img class="relative mx-auto" width="600" src="/assets/img/feature_insights.svg" alt="">
+                        </div>
+                        <p class="ml-3 text-sm text-gray-700">Performance reports</p>
+                    </li>
+                    <li class="flex items-start lg:col-span-1">
+                        <div class="flex-shrink-0">
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9" cy="9.745" r="8.5" fill="#EEF0F2" stroke="#D7DEE5" />
+                                <path
+                                    d="M6 10.345L8.00568 12.5512C8.09439 12.6488 8.2516 12.6353 8.3224 12.5241L12 6.745"
+                                    stroke="#2D2937" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <p class="ml-3 text-sm text-gray-700">Notifications for important events</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="xl:col-span-3 relative -mx-4 mt-10 lg:mt-0" aria-hidden="true">
+                <svg class="absolute left-1/2 -translate-x-1/2 translate-y-16 transform" width="600" height="450"
+                    fill="none" viewBox="0 0 784 404">
+                    <defs>
+                        <pattern id="ca9667ae-9f92-4be7-abcb-9e3d727f2941" x="0" y="0" width="20" height="20"
+                            patternUnits="userSpaceOnUse">
+                            <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                        </pattern>
+                    </defs>
+                    <rect width="784" height="404" fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)" />
+                </svg>
+                <img class="relative mx-auto" width="650" src="/assets/img/feature_insights.svg" alt="">
+            </div>
         </div>
     </div>
 </div>
-
 
 <!-- Automate, automate -->
-<div class="relative mx-auto max-w-xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-    <div class="relative mt-12 lg:mt-18 lg:grid lg:grid-cols-2 lg:items-center lg:gap-24">
-        <div class="relative">
-            <h3 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Automate, automate.
-            </h3>
-            <p class="mt-3 text-lg text-slate-800">
-                Define flexible scheduling and automation rules based on inputs
-                from any device to precisely control the connected equipment and
-                machines.
-            </p>
-            <ul role="list" class="mt-8 space-y-5 lg:grid">
-                <li class="flex items-start lg:col-span-1">
-                    <div class="flex-shrink-0">
-                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="9" cy="9.745" r="8.5" fill="#EEF0F2" stroke="#D7DEE5" />
-                            <path d="M6 10.345L8.00568 12.5512C8.09439 12.6488 8.2516 12.6353 8.3224 12.5241L12 6.745"
-                                stroke="#2D2937" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
-                        </svg>
-                    </div>
-                    <p class="ml-3 text-sm text-gray-700">Conditional automation</p>
-                </li>
-                <li class="flex items-start lg:col-span-1">
-                    <div class="flex-shrink-0">
-                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="9" cy="9.745" r="8.5" fill="#EEF0F2" stroke="#D7DEE5" />
-                            <path d="M6 10.345L8.00568 12.5512C8.09439 12.6488 8.2516 12.6353 8.3224 12.5241L12 6.745"
-                                stroke="#2D2937" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
-                        </svg>
-                    </div>
-                    <p class="ml-3 text-sm text-gray-700">Scheduling of control commands</p>
-                </li>
-                <li class="flex items-start lg:col-span-1">
-                    <div class="flex-shrink-0">
-                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="9" cy="9.745" r="8.5" fill="#EEF0F2" stroke="#D7DEE5" />
-                            <path d="M6 10.345L8.00568 12.5512C8.09439 12.6488 8.2516 12.6353 8.3224 12.5241L12 6.745"
-                                stroke="#2D2937" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
-                        </svg>
-                    </div>
-                    <p class="ml-3 text-sm text-gray-700">Offline execution</p>
-                </li>
-            </ul>
-        </div>
-        <div class="relative -mx-4 mt-10 lg:mt-0" aria-hidden="true">
-            <svg class="absolute left-1/2 -translate-x-1/2 translate-y-16 transform" width="600" height="400"
-                fill="none" viewBox="0 0 784 404">
-                <defs>
-                    <pattern id="ca9667ae-9f92-4be7-abcb-9e3d727f2941" x="0" y="0" width="20" height="20"
-                        patternUnits="userSpaceOnUse">
-                        <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
-                    </pattern>
-                </defs>
-                <rect width="784" height="404" fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)" />
-            </svg>
-            <img class="relative mx-auto" width="600" src="/assets/img/feature_alerting.svg" alt="">
+<div class="px-8">
+    <div class="relative mx-auto max-w-xl max-w-8xl">
+        <div class="relative mt-12 lg:grid lg:grid-cols-2 lg:items-center lg:gap-16 lg:mt-18 xl:grid-cols-5 xl:gap-0">
+            <div class="relative xl:col-span-2 max-w-xl mx-auto lg:max-w-none lg:mx-0">
+                <h3 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    Automate, automate.
+                </h3>
+                <p class="mt-3 text-lg text-slate-800">
+                    Define flexible scheduling and automation rules based on inputs
+                    from any device to precisely control the connected equipment and
+                    machines.
+                </p>
+                <ul role="list" class="mt-8 space-y-5 lg:grid">
+                    <li class="flex items-start lg:col-span-1">
+                        <div class="flex-shrink-0">
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9" cy="9.745" r="8.5" fill="#EEF0F2" stroke="#D7DEE5" />
+                                <path
+                                    d="M6 10.345L8.00568 12.5512C8.09439 12.6488 8.2516 12.6353 8.3224 12.5241L12 6.745"
+                                    stroke="#2D2937" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <p class="ml-3 text-sm text-gray-700">Conditional automation</p>
+                    </li>
+                    <li class="flex items-start lg:col-span-1">
+                        <div class="flex-shrink-0">
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9" cy="9.745" r="8.5" fill="#EEF0F2" stroke="#D7DEE5" />
+                                <path
+                                    d="M6 10.345L8.00568 12.5512C8.09439 12.6488 8.2516 12.6353 8.3224 12.5241L12 6.745"
+                                    stroke="#2D2937" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <p class="ml-3 text-sm text-gray-700">Scheduling of control commands</p>
+                    </li>
+                    <li class="flex items-start lg:col-span-1">
+                        <div class="flex-shrink-0">
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9" cy="9.745" r="8.5" fill="#EEF0F2" stroke="#D7DEE5" />
+                                <path
+                                    d="M6 10.345L8.00568 12.5512C8.09439 12.6488 8.2516 12.6353 8.3224 12.5241L12 6.745"
+                                    stroke="#2D2937" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <p class="ml-3 text-sm text-gray-700">Offline execution</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="xl:col-span-3 relative -mx-4 mt-10 lg:mt-0" aria-hidden="true">
+                <svg class="absolute left-1/2 -translate-x-1/2 translate-y-16 transform" width="600" height="400"
+                    fill="none" viewBox="0 0 784 404">
+                    <defs>
+                        <pattern id="ca9667ae-9f92-4be7-abcb-9e3d727f2941" x="0" y="0" width="20" height="20"
+                            patternUnits="userSpaceOnUse">
+                            <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                        </pattern>
+                    </defs>
+                    <rect width="784" height="404" fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)" />
+                </svg>
+                <img class="relative mx-auto" width="650" src="/assets/img/feature_alerting.svg" alt="">
+            </div>
         </div>
     </div>
 </div>
-
 <!-- Plug-and-play hardware -->
-<div class="relative mx-auto max-w-xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-    <div class="relative mt-12 lg:mt-18 lg:grid lg:grid-cols-2 lg:items-center lg:gap-24">
-        <div class="relative">
-            <h3 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Plug-and-play hardware.
-            </h3>
-            <p class="mt-3 text-lg text-slate-800">
-                Integrate any device, machine or industrial equipment using our
-                plug-and-play hardware connectors to start collecting
-                measurements and publishing automation commands.
-            </p>
-            <ul role="list" class="mt-8 space-y-5 lg:grid">
-                <li class="flex items-start lg:col-span-1">
-                    <div class="flex-shrink-0">
-                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="9" cy="9.745" r="8.5" fill="#EEF0F2" stroke="#D7DEE5" />
-                            <path d="M6 10.345L8.00568 12.5512C8.09439 12.6488 8.2516 12.6353 8.3224 12.5241L12 6.745"
-                                stroke="#2D2937" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
-                        </svg>
-                    </div>
-                    <p class="ml-3 text-sm text-gray-700">Hardware development kit</p>
-                </li>
-                <li class="flex items-start lg:col-span-1">
-                    <div class="flex-shrink-0">
-                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="9" cy="9.745" r="8.5" fill="#EEF0F2" stroke="#D7DEE5" />
-                            <path d="M6 10.345L8.00568 12.5512C8.09439 12.6488 8.2516 12.6353 8.3224 12.5241L12 6.745"
-                                stroke="#2D2937" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
-                        </svg>
-                    </div>
-                    <p class="ml-3 text-sm text-gray-700">Mesh network connectivity</p>
-                </li>
-                <li class="flex items-start lg:col-span-1">
-                    <div class="flex-shrink-0">
-                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="9" cy="9.745" r="8.5" fill="#EEF0F2" stroke="#D7DEE5" />
-                            <path d="M6 10.345L8.00568 12.5512C8.09439 12.6488 8.2516 12.6353 8.3224 12.5241L12 6.745"
-                                stroke="#2D2937" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
-                        </svg>
-                    </div>
-                    <p class="ml-3 text-sm text-gray-700">Bidirectional data I/O</p>
-                </li>
-            </ul>
-        </div>
-        <div class="relative -mx-4 mt-10 lg:mt-0" aria-hidden="true">
-            <svg class="absolute left-1/2 -translate-x-1/2 translate-y-16 transform" width="600" height="600"
-                fill="none" viewBox="0 0 784 404">
-                <defs>
-                    <pattern id="ca9667ae-9f92-4be7-abcb-9e3d727f2941" x="0" y="0" width="20" height="20"
-                        patternUnits="userSpaceOnUse">
-                        <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
-                    </pattern>
-                </defs>
-                <rect width="784" height="404" fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)" />
-            </svg>
-            <img class="relative mx-auto" width="600" src="/assets/img/feature_integration.svg" alt="">
+<div class="px-8">
+    <div class="relative mx-auto max-w-xl max-w-8xl">
+        <div class="relative mt-12 lg:grid lg:grid-cols-2 lg:items-center lg:gap-16 lg:mt-18 xl:grid-cols-5 xl:gap-0">
+            <div class="relative xl:col-span-2 max-w-xl mx-auto lg:max-w-none lg:mx-0">
+                <h3 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    Plug-and-play hardware.
+                </h3>
+                <p class="mt-3 text-lg text-slate-800">
+                    Integrate any device, machine or industrial equipment using our
+                    plug-and-play hardware connectors to start collecting
+                    measurements and publishing automation commands.
+                </p>
+                <ul role="list" class="mt-8 space-y-5 lg:grid">
+                    <li class="flex items-start lg:col-span-1">
+                        <div class="flex-shrink-0">
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9" cy="9.745" r="8.5" fill="#EEF0F2" stroke="#D7DEE5" />
+                                <path
+                                    d="M6 10.345L8.00568 12.5512C8.09439 12.6488 8.2516 12.6353 8.3224 12.5241L12 6.745"
+                                    stroke="#2D2937" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <p class="ml-3 text-sm text-gray-700">Hardware development kit</p>
+                    </li>
+                    <li class="flex items-start lg:col-span-1">
+                        <div class="flex-shrink-0">
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9" cy="9.745" r="8.5" fill="#EEF0F2" stroke="#D7DEE5" />
+                                <path
+                                    d="M6 10.345L8.00568 12.5512C8.09439 12.6488 8.2516 12.6353 8.3224 12.5241L12 6.745"
+                                    stroke="#2D2937" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <p class="ml-3 text-sm text-gray-700">Mesh network connectivity</p>
+                    </li>
+                    <li class="flex items-start lg:col-span-1">
+                        <div class="flex-shrink-0">
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9" cy="9.745" r="8.5" fill="#EEF0F2" stroke="#D7DEE5" />
+                                <path
+                                    d="M6 10.345L8.00568 12.5512C8.09439 12.6488 8.2516 12.6353 8.3224 12.5241L12 6.745"
+                                    stroke="#2D2937" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <p class="ml-3 text-sm text-gray-700">Bidirectional data I/O</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="xl:col-span-3 relative -mx-4 mt-10 lg:mt-0" aria-hidden="true">
+                <svg class="absolute left-1/2 -translate-x-1/2 translate-y-16 transform" width="600" height="600"
+                    fill="none" viewBox="0 0 784 404">
+                    <defs>
+                        <pattern id="ca9667ae-9f92-4be7-abcb-9e3d727f2941" x="0" y="0" width="20" height="20"
+                            patternUnits="userSpaceOnUse">
+                            <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                        </pattern>
+                    </defs>
+                    <rect width="784" height="404" fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)" />
+                </svg>
+                <img class="relative mx-auto" width="650" src="/assets/img/feature_integration.svg" alt="">
+            </div>
         </div>
     </div>
-</div></div>
+</div><!-- </div> -->
 
-<div id="why-hyper" class="bg-white py-12 mb-24 mt-12">
-    <div class="sm:text-center mb-20">
-        <h2 class="text-3xl font-medium tracking-tight text-slate-900 sm:text-4xl">Why businesses use Hyper.</h2>
-    </div>
-    <div class="mx-auto max-w-xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-        <dl class="space-y-10 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0 mt-12">
-            <div>
-                <dt>
-                    <div class="flex h-12 w-12 items-center justify-center rounded-md bg-gray-100 text-slate-600">
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-                        </svg>
-                    </div>
-                    <p class="mt-5 text-lg font-medium leading-6 text-gray-900">
-                        Fastest time to market
-                    </p>
-                </dt>
-                <dd class="mt-2 text-base text-gray-500">
-                    With Hyper’s platform your can focus on optimising your
-                    operations and delivering value to your customers instead of
-                    building a custom and costly low-level infrastructure.
-                </dd>
-            </div>
+<div class="py-12 px-4 mb-24 mt-12">
+    <div id="why-hyper" class="bg-white max-w-8xl mx-auto">
+        <div class="sm:text-center mb-20">
+            <h2 class="text-3xl font-medium tracking-tight text-slate-900 sm:text-4xl">Why businesses use Hyper.</h2>
+        </div>
+        <div class="">
+            <dl class="space-y-10 lg:grid lg:grid-cols-3 lg:gap-16 lg:space-y-0 mt-12">
+                <div>
+                    <dt>
+                        <div class="flex h-12 w-12 items-center justify-center rounded-md bg-gray-100 text-slate-600">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                            </svg>
+                        </div>
+                        <p class="mt-5 text-lg font-medium leading-6 text-gray-900">
+                            Fastest time to market
+                        </p>
+                    </dt>
+                    <dd class="mt-2 text-base text-gray-500">
+                        With Hyper’s platform your can focus on optimising your
+                        operations and delivering value to your customers instead of
+                        building a custom and costly low-level infrastructure.
+                    </dd>
+                </div>
 
-            <div>
-                <dt>
-                    <div class="flex h-12 w-12 items-center justify-center rounded-md bg-gray-100 text-slate-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-6 h-6" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
-                        </svg>
-                    </div>
-                    <p class="mt-5 text-lg font-medium leading-6 text-gray-900">
-                        Scales with your needs
-                    </p>
-                </dt>
-                <dd class="mt-2 text-base text-gray-500">
-                    Our platform scales from small prototypes to large-scale
-                    industrial applications while keeping excellent performance
-                    and high reliability.
-                </dd>
-            </div>
+                <div>
+                    <dt>
+                        <div class="flex h-12 w-12 items-center justify-center rounded-md bg-gray-100 text-slate-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                            </svg>
+                        </div>
+                        <p class="mt-5 text-lg font-medium leading-6 text-gray-900">
+                            Scales with your needs
+                        </p>
+                    </dt>
+                    <dd class="mt-2 text-base text-gray-500">
+                        Our platform scales from small prototypes to large-scale
+                        industrial applications while keeping excellent performance
+                        and high reliability.
+                    </dd>
+                </div>
 
-            <div>
-                <dt>
-                    <div class="flex h-12 w-12 items-center justify-center rounded-md bg-gray-100 text-slate-600">
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
-                        </svg>
-                    </div>
-                    <p class="mt-5 text-lg font-medium leading-6 text-gray-900">
-                        One platform to rule them all
-                    </p>
-                </dt>
-                <dd class="mt-2 text-base text-gray-500">
-                    Our system integrates with any external service or equipment
-                    helping you centralize access to all of your data and setup
-                    ubiquitous automations.
-                </dd>
-            </div>
-        </dl>
+                <div>
+                    <dt>
+                        <div class="flex h-12 w-12 items-center justify-center rounded-md bg-gray-100 text-slate-600">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                            </svg>
+                        </div>
+                        <p class="mt-5 text-lg font-medium leading-6 text-gray-900">
+                            One platform to rule them all
+                        </p>
+                    </dt>
+                    <dd class="mt-2 text-base text-gray-500">
+                        Our system integrates with any external service or equipment
+                        helping you centralize access to all of your data and setup
+                        ubiquitous automations.
+                    </dd>
+                </div>
+            </dl>
+        </div>
     </div>
 </div>
 
@@ -751,53 +1066,60 @@
 
 </div>-->
 
-<div class="px-6 max-w-7xl px-8 mx-auto bg-alpha px-6 py-10 sm:px-12 sm:py-12 rounded">
-    <div class="sm:text-center">
-        <h2 class="text-3xl font-medium tracking-tight text-slate-900 sm:text-4xl">Integrate with any
-            technology.</h2>
-        <p class="mx-auto mt-6 max-w-2xl text-lg text-slate-800">Publish data using any protocol or
-            format that suits your requirements and setup data integrations with dozens of services.</p>
+<div class="px-4">
+    <div class="max-w-8xl mx-auto bg-alpha px-8 py-10 sm:px-12 sm:py-12 rounded">
+        <div class="sm:text-center">
+            <h2 class="text-3xl font-medium tracking-tight text-slate-900 sm:text-4xl">Integrate with any
+                technology.</h2>
+            <p class="mx-auto mt-6 max-w-2xl text-lg text-slate-800">Publish data using any protocol or
+                format that suits your requirements and setup data integrations with dozens of services.</p>
+        </div>
+        <img class="mt-16 max-w-4xl w-full mx-auto" src="/assets/img/integration_logos.png" alt="">
     </div>
-    <img class="mt-16 max-w-4xl mx-auto" src="/assets/img/integration_logos.png" alt="">
 </div>
 
 
-<div
-    class="mt-12 bg-gray-900 rounded mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
-    <h2 class="text-3xl font-medium tracking-tight text-white sm:text-4xl">
-        <span class="block">Start digitalizing <br class="hidden lg:block" /> your operation today.</span>
-    </h2>
-    <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-        <form class="lg:mx-auto sm:max-w-xl lg:mx-0" action="https://formspree.io/f/xvodbojj" method="POST">
-            <div class="sm:flex">
-                <div class="min-w-0 flex-1">
-                    <input id="email" type="email" name="email" placeholder="Enter your email" class="block bg-gray-800 w-full rounded-sm border-0 
-                                border border-gray-700
-                                px-4 py-3 text-base text-white
-                                placeholder-gray-500 focus:outline-none 
-                                focus:ring-2 focus:ring-indigo-300 
-                                focus:ring-offset-2 focus:ring-offset-gray-700">
-                </div>
-                <div class="mt-3 sm:mt-0 sm:ml-3">
-                    <button type="submit" class="block w-full rounded-sm 
-                                bg-gradient py-3 px-4 font-medium text-white 
-                                hover:bg-indigo-600 focus:outline-none 
-                                focus:ring-2 focus:ring-indigo-300 
-                                focus:ring-offset-2 focus:ring-offset-gray-900">
-                        Get a demo
-                    </button>
+<div class="mt-16 px-4 xl:mt-28">
+    <div class="mx-auto max-w-8xl">
+        <div class="overflow-hidden rounded-lg bg-gray-900 lg:grid lg:grid-cols-2 lg:gap-4">
+            <div class="px-6 pt-10 pb-12 sm:px-16 sm:pt-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20">
+                <div class="lg:self-center">
+                    <h2 class="text-3xl font-medium tracking-tight text-white sm:text-4xl">
+                        <span class="block">Start digitalizing <br />
+                            your operation today.</span>
+                    </h2>
+                    <div class="mt-8 flex">
+                        <form action="https://formspree.io/f/xvodbojj" method="POST">
+                            <div class="sm:flex">
+                                <div class="min-w-0 flex-1">
+                                    <input id="email" type="email" name="email" placeholder="Enter your email"
+                                        class="block w-full rounded-sm px-5 py-3 text-base text-gray-900 placeholder-gray-500 border-0 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-500">
+                                </div>
+                                <div class="mt-3 sm:mt-0 sm:ml-3">
+                                    <button type="submit"
+                                        class="bg-gradient block w-full rounded-sm bg-gray-900 px-5 py-3 text-base font-medium text-white shadow hover:bg-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-500 sm:px-10">
+                                        Get a demo
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="mt-3 text-sm text-gray-400 sm:mt-4">
+                                You will recieve a confirmaton e-mail from our sales team to book
+                                a demo.
+                            </p>
+                        </form>
+                    </div>
                 </div>
             </div>
-            <p class="mt-3 text-sm text-slate-500 sm:mt-4">
-                You will recieve a confirmaton e-mail from our sales team to book
-                a demo.
-            </p>
-        </form>
+            <div class="aspect-w-5 aspect-h-3 -mt-6 md:aspect-w-2 md:aspect-h-1">
+                <img class="translate-x-6 translate-y-6 transform rounded-md object-cover object-left-top sm:translate-x-16 lg:translate-y-20"
+                    src="/assets/img/cta.png" alt="App screenshot">
+            </div>
+        </div>
     </div>
 </div>
 
-        </main><footer class="bg-white" aria-labelledby="footer-heading">
-    <div class="mx-auto max-w-7xl py-12 lg:pt-16 lg:pb-8">
+        </main><footer class="bg-white px-4 py-12 lg:pt-16 lg:pb-8" aria-labelledby="footer-heading">
+    <div class="mx-auto max-w-8xl">
         <div class="xl:grid xl:grid-cols-2 xl:gap-32">
             <div class="xl:col-span-1">
                 <img src="/assets/img/hyper_logo.svg" alt="Hyper Systems">
@@ -813,7 +1135,7 @@
                     <a href="mailto:hello@hyper.systems" class="text-gray-500 font-medium">hello@hyper.systems</a>
                 </div>
             </div>
-            <div class="mt-12 grid md:grid-cols-3 gap-8 md:col-span-1 md:mt-0">
+            <div class="mt-12 grid sm:grid-cols-3 gap-8 md:col-span-1 xl:mt-0">
                 <div>
                     <h3 class="text-base text-sm font-bold text-gray-600">Product</h3>
                     <ul role="list" class="mt-4 space-y-2">

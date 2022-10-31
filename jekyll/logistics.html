@@ -1,0 +1,54 @@
+---
+title: Smart Logistics
+description: Distribution network monitoring and optimization
+feature_icon: icons/thunder.svg
+layout: default
+categories: [solutions]
+---
+
+{% capture features_title %}
+Optimize your <br />logistics operations.
+{% endcapture %}
+
+{% capture features_description %}
+Precisely track the GPS location data of your high-value assets,
+quickly detect bottlenecks in the delivery process and measure
+the performance of your entire operations both indoors and outdoors.
+{% endcapture %}
+
+{%-
+include fold.html
+feature_one="solutions_feature-farming-1.png"
+feature_two="solutions_feature-farming-2.png"
+title=features_title
+description=features_description
+-%}
+
+{%-
+include features.html
+title="Why using Hyper can help you!"
+features=site.data.construction_features
+-%}
+
+{% capture benefits_description %}
+Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla nec.
+{% endcapture %}
+
+{%-
+include benefits.html
+letterhead="Everything you need"
+title="Why using Hyper can help you!"
+img="solutions_benefits_farming.jpg"
+benefits=site.data.construction_benefits
+-%}
+
+{%-
+include testimonial.html
+quote="Love the simplicity of the service and the prompt customer support. We can`t imagine working without it."
+name="Judith Black"
+title="CEO at PureInsights"
+logo="materra_logo.svg"
+-%}
+
+
+{% include cta.html %}
