@@ -1,0 +1,397 @@
+
+- product_name: "Wi-Fi Hydroponics Kit"
+  product_code: "Wi-Fi-HK"
+  product_page: "https://atlas-scientific.com/kits/wi-fi-hydroponics-kit/"
+  vendor: "Atlas Scientific"
+  vendor_website: "https://atlas-scientific.com"
+  connectivity: ["wifi", "mqtt"]
+  tags: ["ph", "conductivity", "temperature", "orp", "dissovled_oxygen"]
+  description: >
+    The Wi-Fi Hydroponics Kit reads pH, Conductivity, and temperature.
+    The pH and Conductivity readings are automatically temperature compensated and uploaded.
+  product_image: "wi_fi_hk.jpg"
+
+- product_name: "Wi-Fi Pool Kit"
+  product_code: "Wi-Fi-PK"
+  product_page: "https://atlas-scientific.com/kits/wi-fi-pool-kit/"
+  vendor: "Atlas Scientific"
+  vendor_website: "https://atlas-scientific.com"
+  connectivity: ["wifi", "mqtt"]
+  tags: ["ph", "conductivity", "temperature", "orp", "dissovled_oxygen"]
+  description: >
+    The Wi-Fi Pool Kit reads pH, ORP, and temperature.
+    The pH readings are automatically temperature compensated and uploaded.
+  product_image: "wi_fi_pk.jpg"
+
+- product_name: "Wi-Fi Aquaponics Kit"
+  product_code: "Wi-Fi-AK"
+  product_page: "https://atlas-scientific.com/product/wi-fi-aquaponics-kit/"
+  vendor: "Atlas Scientific"
+  vendor_website: "https://atlas-scientific.com"
+  connectivity: ["wifi", "mqtt"]
+  tags: ["ph", "conductivity", "temperature", "co2", "dissovled_oxygen", "humidity"]
+  description: >
+    The Wi-Fi Aquaponics Kit reads pH, Dissolved Oxygen, Temperature, Conductivity, CO2, and Humidity.
+    The pH, Dissolved Oxygen, and Conductivity readings are automatically temperature compensated and uploaded.
+  product_image: "wi_fi_ak.jpg"
+
+- product_name: "Industrial Monitoring Kit"
+  product_code: "WF8-SIS"
+  product_page: "https://atlas-scientific.com/kits/its-waterfeature-8/"
+  vendor: "Atlas Scientific"
+  vendor_website: "https://atlas-scientific.com"
+  connectivity: ["wifi", "mqtt"]
+  tags: ["ph", "conductivity", "temperature", "orp", "dissovled_oxygen", "flowmeter", "co2", "o2", "atmospheric_pressure", "humidity", "4_20ma", "air_temperature"]
+  description: >
+    The Industrial Monitoring Kit is a multi-parameter process monitor, capable of reading from eight probes at once.
+    Real-time values are easily visible through the 4×40 character LCD display, with a simple and intuitive menu screen for calibration and temperature compensation.
+    Real-time values can also be transmitted via 4-20mA signals or Serial data protocol.
+    The modular design allows for the operator to quickly add in any combination of probes.
+    This system can be used for basic water quality monitoring or integrated into a fully automated process control system.
+  product_image: "wf8_sis.jpg"
+
+- product_name: "EZO-CO2™ Embedded Carbon Dioxide Sensor"
+  product_code: "EZO-CO2"
+  product_page: "https://atlas-scientific.com/probes/co2-sensor/"
+  vendor: "Atlas Scientific"
+  vendor_website: "https://atlas-scientific.com"
+  connectivity: ["i2c"]
+  tags: ["co2"]
+  description: >
+    The Atlas Scientific EZO-CO2 sensor is a compact Non-Dispersive Infrared (NDIR) sensor that gets right to the point, giving you the Co2 readings in ppm.
+    With internal temperature and humidity compensation, the Atlas Scientific EZO-CO2 sensor easily brings advanced sensing to your next project.
+  product_image: "ezo_co2.jpg"
+
+- product_name: "EZO-O2™ Embedded Oxygen Sensor"
+  product_code: "EZO-O2"
+  product_page: "https://atlas-scientific.com/probes/oxygen-sensor/"
+  vendor: "Atlas Scientific"
+  vendor_website: "https://atlas-scientific.com"
+  connectivity: ["i2c"]
+  tags: ["o2"]
+  description: >
+    The Atlas Scientific gaseous oxygen sensor has been designed to read O2 levels from 0 – 420 ppt.
+    The sensor comes calibrated and ready to use right out of the box.
+  product_image: ""
+
+- product_name: "EZO™ Humidity Circuit"
+  product_code: "EZO-HUM-C"
+  product_page: "https://atlas-scientific.com/product/ezo-humidity-circuit/"
+  vendor: "Atlas Scientific"
+  vendor_website: "https://atlas-scientific.com"
+  connectivity: ["i2c"]
+  tags: ["humidity", "air_temperature"]
+  description: >
+    The EZO Humidity Circuit is designed to be embedded with your electronics, reading the humidity of your enclosure.
+    While there is no reason it can’t read the humidity of a room, it lacks the housing needed to protect the electronics.
+  product_image: "ezo_hum_c.jpg"
+
+- product_name: "EZO-HUM™ Embedded Humidity Probe"
+  product_code: "EZO-HUM-P"
+  product_page: "https://atlas-scientific.com/probes/humidity-probe/"
+  vendor: "Atlas Scientific"
+  vendor_website: "https://atlas-scientific.com"
+  connectivity: ["i2c"]
+  tags: ["humidity", "air_temperature"]
+  description: >
+    With a weather-resistant housing that allows for multiple mounting options, the EZO Embedded Humidity Probe is ready to go, whether you’re monitoring the humidity levels inside a home, workspace or even outside.
+  product_image: "ezo_hum_p.jpg"
+
+- product_name: "EZO-RGB™ Embedded Color Sensor"
+  product_code: "EZO-RGB"
+  product_page: "https://atlas-scientific.com/probes/color-sensor/"
+  vendor: "Atlas Scientific"
+  vendor_website: "https://atlas-scientific.com"
+  connectivity: ["i2c"]
+  tags: ["color"]
+  description: >
+    Your phone has a high-def camera capable of seeing everything. So, how hard could it be to accurately observe a single color and express the readings in true 8-Bit RGB or CIE? Well, as it turns out, it’s a lot harder than you may think.
+    Although there are many different types of RGB sensors out there, the Atlas Scientific EZO-RGB sensor is ready to go.
+    With a weather-resistant housing that gives multiple mounting options, on-board illuminator LEDs and an easy to use data protocol, your machine will be detecting colors like its 1979.
+  product_image: "ezo_rgb.jpg"
+
+- product_name: "EZO™ Embedded Flow Meter Totalizer"
+  product_code: "EZO-FLOW"
+  product_page: "https://atlas-scientific.com/embedded-solutions/ezo-embedded-flow-meter-totalizer/"
+  vendor: "Atlas Scientific"
+  vendor_website: "https://atlas-scientific.com"
+  connectivity: ["i2c"]
+  tags: ["flowmeter"]
+  description: >
+    Reading the signal from a flow meter is easy; until you actually try and do it. A few missed pulses here and there leads to massive inaccuracies over a relatively short time.
+    To accurately read and totalize flow rate, a subsystem must be used that has been specifically designed to do just that (hint don’t use your CPU to totalize flow; it’s busy doing other things).
+  product_image: "ezo_flow.jpg"
+
+- product_name: "EZO™ pH Circuit"
+  product_code: "EZO-pH"
+  product_page: "https://atlas-scientific.com/embedded-solutions/ezo-ph-circuit/"
+  vendor: "Atlas Scientific"
+  vendor_website: "https://atlas-scientific.com"
+  connectivity: ["i2c"]
+  tags: ["ph"]
+  description: >
+    Although it is a common measurement, accurately reading pH is very difficult.
+    Atlas Scientific’s EZO-pH circuit gives engineers the ability to read pH with the same accuracy and capabilities that were traditionally only found in expensive bench-top meters.
+  product_image: "ezo_ph.jpg"
+
+- product_name: "EZO™ ORP Circuit"
+  product_code: "EZO-ORP"
+  product_page: "https://atlas-scientific.com/embedded-solutions/ezo-orp-circuit/"
+  vendor: "Atlas Scientific"
+  vendor_website: "https://atlas-scientific.com"
+  connectivity: ["i2c"]
+  tags: ["orp"]
+  description: >
+    From water sterilization to chemical production, the reasons for needing to know the ORP of water are many.
+    Fortunately, Atlas Scientifics EZO-ORP circuit makes taking high accuracy ORP readings easy.
+    From calibration to timed readings, the Atlas Scientific EZO-ORP circuit is a drop-in solution to a complex measurement.
+  product_image: "ezo_orp.jpg"
+
+- product_name: "EZO™ Dissolved Oxygen Circuit"
+  product_code: "EZO-DO"
+  product_page: "https://atlas-scientific.com/embedded-solutions/ezo-dissolved-oxygen-circuit/"
+  vendor: "Atlas Scientific"
+  vendor_website: "https://atlas-scientific.com"
+  connectivity: ["i2c"]
+  tags: ["dissovled_oxygen"]
+  description: >
+    Accurately calculating the D.O. of water is quite difficult.
+    Once all the mathematical calculations are done, it takes hundreds of chemical titration tests to confirm that the readings are correct over the full scale.
+    The process is agonizing. Fortunately, you don’t have to do any of that.
+    The Atlas Scientific EZO-DO Circuit gives you accurate D.O. readings in Mg/L and percent saturation.
+    Using its temperature, salinity, and pressure compensation features, you can be sure the readings are correct no matter where in the world you are.
+  product_image: "ezo_do.jpg"
+
+- product_name: "EZO™ Conductivity Circuit"
+  product_code: "EZO-EC"
+  product_page: "https://atlas-scientific.com/embedded-solutions/ezo-conductivity-circuit/"
+  vendor: "Atlas Scientific"
+  vendor_website: "https://atlas-scientific.com"
+  connectivity: ["i2c"]
+  tags: ["ec"]
+  description: >
+    From chemical production to hydroponics, conductivity is a fundamental measurement of water chemistry.
+    The Atlas Scientific EZO-EC Circuit reads conductivity, salinity, and TDS (PPM).
+    Embedding this module into your machine gives you access to the same accuracy and functionality found in costly bench-top conductivity meters.
+    If you need accurate readings that you can rely on, the EZO-EC circuit is the drop-in solution you have been looking for.
+  product_image: "ezo_ec.jpg"
+
+- product_name: "EZO™ RTD Temperature Circuit"
+  product_code: "EZO-RTD"
+  product_page: "https://atlas-scientific.com/embedded-solutions/ezo-rtd-temperature-circuit/"
+  vendor: "Atlas Scientific"
+  vendor_website: "https://atlas-scientific.com"
+  connectivity: ["i2c"]
+  tags: ["temperature"]
+  description: >
+    There is no shortage of temperature probes out there, and the most accurate of all is the platinum RTD probe.
+    But, converting the resistance of platinum to an actual temperature is unusually complicated.
+    Fortunately, the Atlas Scientific EZO-RTD Circuit makes taking high accuracy readings from a platinum RTD probes easy.
+    The EZO-RTD Circuit can work with any class of 2, 3, or 4 wire platinum RTD probes and has a sensing range of -126.000 °C to +1,254 °C.
+  product_image: "ezo_rtd.jpg"
+
+- product_name: "Atlas Scientific Float Switches"
+  product_code: "AS-FS"
+  product_page: "https://atlas-scientific.com/float-switches/"
+  vendor: "Atlas Scientific"
+  vendor_website: "https://atlas-scientific.com"
+  connectivity: ["i2c"]
+  tags: ["float_switch", "water_level", "liquid_level"]
+  description: >
+    There are many ways of monitoring the amount of liquid in a tank.
+    Pressure sensors give you high accuracy; ultrasonic sensors are contact-free but, the simplicity and low cost of a float switch cannot be beat.
+    Float switches monitor the level of liquid in a tank by using a float, magnet, and reed switch system that automatically closes and opens when water levels lower and rise within the tank.
+  product_image: "as_fs.jpg"
+
+- product_name: "Atlas Scientific Flow Meters"
+  product_code: "KIT-F"
+  product_page: "https://atlas-scientific.com/flow-meters/"
+  vendor: "Atlas Scientific"
+  vendor_website: "https://atlas-scientific.com"
+  connectivity: ["i2c"]
+  tags: ["flowmeter"]
+  description: >
+    Whether you need to measure the flow of water in a hydroponics system or within a large manufacturing facility, you are going to need a flow meter.
+    Flow meters are tools that are used to accurately measure the flow rate and the amount of water that is flowing through a pipe.
+    Keep in mind, that accurate flow monitoring requires two major components, a precision flow meter, and a well-designed totalizer.
+  product_image: "kit_f.jpg"
+
+- product_name: "Shelly Plus 1PM"
+  product_code: "plus1pm"
+  product_page: "https://www.shelly.cloud/knowledge-base/devices/shelly-plus-1pm/"
+  vendor: "Shelly"
+  vendor_website: "https://www.shelly.cloud"
+  connectivity: ["wifi", "mqtt"]
+  tags: ["relay", "power_meter", "voltage_meter", "current_meter"]
+  description: >
+    But Co2 only consists of 0.04% of the atmosphere meaning; it’s a trace gas that’s quite difficult to detect.
+    The Atlas Scientific EZO-CO2 sensor is a compact Non-Dispersive Infrared (NDIR) sensor that gets right to the point, giving you the Co2 readings in ppm.
+    With internal temperature and humidity compensation, the Atlas Scientific EZO-CO2 sensor easily brings advanced sensing to your next project.
+  product_image: "plus1pm.jpg"
+
+- product_name: "Shelly Door/Window 2"
+  product_code: "dw2"
+  product_page: "https://www.shelly.cloud/knowledge-base/devices/shelly-door-window-2/?_gl=1*10kiqd6*_ga*MTM2Nzk2MzQyMy4xNjY2MjY4ODY2*_ga_RG1ZWH9CCQ*MTY2Njk1MTUzMS4zLjEuMTY2Njk1NTA5OC4wLjAuMA.."
+  vendor: "Shelly"
+  vendor_website: "https://www.shelly.cloud"
+  connectivity: ["wifi", "mqtt"]
+  tags: ["door_sensor", "window_sensor"]
+  description: >
+    The lightning fast smart, door and window sensor.
+  product_image: "dw2.jpg"
+
+- product_name: "RuuviTag"
+  product_code: "RuuviTag"
+  product_page: "https://ruuvi.com/ruuvitag/"
+  vendor: "Ruuvi"
+  vendor_website: "https://ruuvi.com"
+  connectivity: ["bluetooth"]
+  tags: ["air_temperature", "humidity", "atmospheric_pressure", "acceleration"]
+  description: >
+    RuuviTag is a wireless Bluetooth sensor node that measures temperature, air humidity, air pressure and movement.
+  product_image: "ruuvitag.jpg"
+
+- product_name: "RuuviTag Pro"
+  product_code: "RuuviTagPro"
+  product_page: "https://ruuvi.com/ruuvitag-pro/"
+  vendor: "Ruuvi"
+  vendor_website: "https://ruuvi.com"
+  connectivity: ["bluetooth"]
+  tags: ["air_temperature", "humidity", "acceleration"]
+  description: >
+    RuuviTag Pro is a rugged IP certified environmental sensor for temperature, humidity and acceleration monitoring.
+  product_image: "ruuvitagpro.jpg"
+
+- product_name: "SDM120-Modbus"
+  product_code: "SDM120M"
+  product_page: "http://www.eastrongroup.com/product_detail.php?id=115&menu1=&menu2="
+  vendor: "Eastron"
+  vendor_website: "http://www.eastrongroup.com/"
+  connectivity: ["modbus"]
+  tags: ["power_meter", "voltage_meter", "current_meter", "frequency_meter", "energy_meter"]
+  description: >
+    SDM120 series is a range of 1 module single phase multi-function DIN rail MID energy meter, which measures active energy, reactive energy, current, voltage, power, power factor, frequency, etc.
+    Suitable for monitoring energy consumption in residential, solar PV, industrial and utility applications.
+  product_image: "sdm120m.jpg"
+
+- product_name: "Davis WeatherLink Live"
+  product_code: "6100"
+  product_page: "https://www.davisinstruments.com/collections/data-collection-1/products/weatherlink-live"
+  vendor: "Davis"
+  vendor_website: "https://www.davisinstruments.com"
+  connectivity: ["ethernet", "wifi"]
+  tags: ["davis_gateway", "air_temperature", "humidity", "wind_speed", "wind_direction", "solar_irradiance", "uv_index", "atmospheric_pressure", "soil_moisture"]
+  description: >
+    Weatherlink Live can receive and upload data from up to 8 Vantage Vue or Vantage Pro2 sensor suites, or other Davis transmitting stations, in any combination.
+  product_image: "6100.jpg"
+
+- product_name: "Aranet PRO base station"
+  product_code: "TDSBWP"
+  product_page: "https://aranet.com/products/aranet-pro-base-station/"
+  vendor: "aranet"
+  vendor_website: "https://aranet.com"
+  connectivity: ["ethernet", "wifi"]
+  tags: ["aranet_gateway"]
+  description: >
+    An indoor environmental monitoring solution that acts as a gateway, data storage and web server.
+  product_image: "tdsbwp.png"
+
+
+- product_name: "Aranet T/RH IP67 sensor"
+  product_code: "TDSPT802"
+  product_page: "https://aranet.com/products/aranet-t-rh-ip67-sensor/"
+  vendor: "aranet"
+  vendor_website: "https://aranet.com"
+  connectivity: ["aranet_gateway"]
+  tags: ["air_temperature", "humidity"]
+  description: >
+    Temperature and relative humidity sensor that can be placed in harsh environmental conditions.
+  product_image: "tdspt802.png"
+
+- product_name: "Aranet PAR sensor"
+  product_code: "TDSKAR02"
+  product_page: "https://aranet.com/products/aranet-par-sensor/"
+  vendor: "aranet"
+  vendor_website: "https://aranet.com"
+  connectivity: ["aranet_gateway"]
+  tags: ["par"]
+  description: >
+    Measure photosynthetically active radiation to determine the amount of light plants are exposed to.
+  product_image: "tdskar02.png"
+
+- product_name: "Aranet 4-20mA transmitter"
+  product_code: "TDSPCL02"
+  product_page: "https://aranet.com/products/aranet-4-20ma-transmitter/"
+  vendor: "aranet"
+  vendor_website: "https://aranet.com"
+  connectivity: ["aranet_gateway"]
+  tags: ["4_20ma"]
+  description: >
+    Battery-powered and energy-efficient solution designed to integrate with any third party sensor that uses mA as an output.
+  product_image: "tdspcl02.png"
+
+- product_name: "Aranet CO2 and Temperature sensor"
+  product_code: "TDSPC005"
+  product_page: "https://aranet.com/products/aranet-co2-and-temperature-sensor/"
+  vendor: "aranet"
+  vendor_website: "https://aranet.com"
+  connectivity: ["aranet_gateway"]
+  tags: ["air_temperature", "humidity", "atmospheric_pressure", "co2"]
+  description: >
+    CO2 concentration, atmospheric pressure and temperature sensor for industrial settings.
+  product_image: "tdspc005.png"
+
+- product_name: "DULCONNEX Gateway"
+  product_code: "dulconnex"
+  product_page: "https://www.prominent.com/en/Products/Products/Digital-Solutions/p-dulconnex-gateway.html"
+  vendor: "ProMinent"
+  vendor_website: "https://www.prominent.com"
+  connectivity: ["wifi"]
+  tags: ["dulconnex_gateway"]
+  description: >
+    The DULCONNEX Gateway safely and reliably transfers the data of all products supported as standard to the DULCONNEX Cloud.
+  product_image: "dulconnex.jpg"
+
+- product_name: "Controller AEGIS II"
+  product_code: "controlleraegisii"
+  product_page: "https://www.prominent.com/en/Products/Products/Measuring-Control-and-Sensor-Technology/Controllers/p-aegis-ii.html"
+  vendor: "ProMinent"
+  vendor_website: "https://www.prominent.com"
+  connectivity: ["modbus-rtu", "dulconnex_gateway", "wifi"]
+  tags: ["ec", "peroxide", "dissolved_oxygen", "ph", "turbidity_ntu", "temperature"]
+  description: >
+    Controller AEGIS II continuously measures and controls the conductivity and biocide concentration to keep pipework and heat exchangers clean.
+  product_image: "controlleraegisii.jpg"
+
+- product_name: "Teltonika FMC001"
+  product_code: "FMC001"
+  product_page: "https://teltonika-gps.com/product/fmc001/"
+  vendor: "Teltonika"
+  vendor_website: "https://teltonika-gps.com"
+  connectivity: ["lte", "gsm"]
+  tags: ["gnss", "gps", "glonass", "galileo", "beidou", "qzss", "agps", "obd"]
+  description: >
+    LTE/GNSS/BLE plug and play OBD tracker.
+  product_image: "fmc001.webp"
+
+- product_name: "Traccar Client app for iOS"
+  product_code: "traccarios"
+  product_page: "https://apps.apple.com/us/app/traccar-client/id843156974"
+  vendor: "Traccar"
+  vendor_website: "https://www.traccar.org"
+  connectivity: ["lte", "gsm", "wifi"]
+  tags: ["gnss", "gps", "ios_app"]
+  description: >
+    Traccar Client is an app that allows you to use your mobile device as a GPS tracker.
+  product_image: "traccarapp.webp"
+
+- product_name: "Traccar Client app for Android"
+  product_code: "traccarandroid"
+  product_page: "https://www.traccar.org/client/"
+  vendor: "Traccar"
+  vendor_website: "https://www.traccar.org/client/"
+  connectivity: ["lte", "gsm", "wifi"]
+  tags: ["gnss", "gps", "android_app"]
+  description: >
+    Traccar Client is an app that allows you to use your mobile device as a GPS tracker.
+  product_image: "traccarapp.webp"
