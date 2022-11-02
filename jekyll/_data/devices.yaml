@@ -372,7 +372,7 @@
   tags: ["gnss", "gps", "glonass", "galileo", "beidou", "qzss", "agps", "obd"]
   description: >
     LTE/GNSS/BLE plug and play OBD tracker.
-  product_image: "fmc001.webp"
+  product_image: "fmc001.png"
 
 - product_name: "Traccar Client app for iOS"
   product_code: "traccarios"
@@ -383,7 +383,7 @@
   tags: ["gnss", "gps", "ios_app"]
   description: >
     Traccar Client is an app that allows you to use your mobile device as a GPS tracker.
-  product_image: "traccarapp.webp"
+  product_image: "traccarapp.jpg"
 
 - product_name: "Traccar Client app for Android"
   product_code: "traccarandroid"
@@ -394,4 +394,4 @@
   tags: ["gnss", "gps", "android_app"]
   description: >
     Traccar Client is an app that allows you to use your mobile device as a GPS tracker.
-  product_image: "traccarapp.webp"
+  product_image: "traccarapp.jpg"
