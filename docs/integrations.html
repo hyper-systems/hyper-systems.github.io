@@ -139,6 +139,8 @@
                     33 items</p>
             </div>
 
+            <div class="progressCss progress-struct progress-anim"></div>
+
             <div class="pt-5 lg:pt-8 lg:grid lg:grid-cols-3 lg:gap-x-8 xl:grid-cols-4">
                 <aside>
                     <div class="hidden lg:block rounded bg-gray-100 p-6">
@@ -1297,6 +1299,15 @@
 
             mixer.filter(outputString)
 
+
+            // Very basic progress animation restart
+            const progressEl = document.querySelector(".progressCss")
+            progressEl.classList.add("progress-anim");
+            setTimeout(() => {
+                progressEl.classList.remove("progress-anim");
+            }, "400")
+
+
             const countEl = document.querySelector('.filterCount')
             const emptyPlaceholderEl = document.querySelector('.filterEmptySearch')
             if (mixer.getState().totalShow == 0) {
@@ -1311,6 +1322,11 @@
             }
         };
     };
+
+    // On load, remove class to clear for the filter control
+    setTimeout(() => {
+        document.querySelector(".progressCss").classList.remove("progress-anim");
+    }, "400")
 
 
     var mixer = mixitup(document.querySelector('.filterContainer'), {
