@@ -40,7 +40,7 @@ layout: default
                     {{ site.data.devices | size }} items</p>
             </div>
 
-            <div class="progressCss progress-struct progress-anim"></div>
+            <div class="progressCss progress-struct"></div>
 
             <div class="pt-5 lg:pt-8 lg:grid lg:grid-cols-3 lg:gap-x-8 xl:grid-cols-4">
                 <aside>
@@ -281,12 +281,6 @@ layout: default
             }
         };
     };
-
-    // On load, remove class to clear for the filter control
-    setTimeout(() => {
-        document.querySelector(".progressCss").classList.remove("progress-anim");
-    }, "400")
-
 
     var mixer = mixitup(document.querySelector('.filterContainer'), {
         animation: {
