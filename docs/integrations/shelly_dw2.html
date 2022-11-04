@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang=" en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Hyper - The ultimate data platform for IoT | A unified data platform to monitor, automate and manage your entire physical infrastructure in a single place.</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Hyper - The ultimate data platform for IoT" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The lightning fast smart, door and window sensor." />
+<meta property="og:description" content="The lightning fast smart, door and window sensor." />
+<link rel="canonical" href="/integrations/shelly_dw2.html" />
+<meta property="og:url" content="/integrations/shelly_dw2.html" />
+<meta property="og:site_name" content="Hyper - The ultimate data platform for IoT" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Hyper - The ultimate data platform for IoT" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"The lightning fast smart, door and window sensor.","headline":"Hyper - The ultimate data platform for IoT","url":"/integrations/shelly_dw2.html"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- <link rel="stylesheet" href="/assets/main.css"> --><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Hyper - The ultimate data platform for IoT" /><script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+</head><body>
+    <div class="relative overflow-hidden"><header class="relative">
+    <div class="pt-6">
+        <nav class="relative mx-auto flex max-w-8xl items-center justify-between" aria-label="Global">
+            <div class="flex flex-1 items-center">
+                <div class="flex w-full items-center justify-between md:w-auto">
+                    <a href="https://hyper.systems">
+                        <img class="h-8 w-auto sm:h-10" src="/assets/img/hyper_logo.svg"
+                            alt="Hyper Systems">
+                    </a>
+                    <div class="-mr-2 flex items-center md:hidden">
+                        <button type="button" id="openMenuBtn"
+                            class="focus-ring-inset inline-flex items-center justify-center rounded-md p-2 text-slate-400 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-white"
+                            aria-expanded="false">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:flex md:items-center md:space-x-6">
+                <a href="/integrations" class="text-base text-slate-800 hover:text-slate-500">Explore</a>
+                <a href="/#home-features" class="text-base text-slate-800 hover:text-slate-500">Technology</a>
+                <a href="/#why-hyper" class="text-base text-slate-800 hover:text-slate-500">Why Hyper</a>
+                <a href="https://hyper.systems/developers"
+                    class="text-base text-slate-800 hover:text-slate-500">Developers</a>
+                <a href="/#fold"
+                    class="rounded-sm bg-slate-800 px-4 py-2 text-base font-medium text-white hover:bg-slate-700">
+                    Get a demo
+                </a>
+            </div>
+        </nav>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="absolute inset-x-0 top-0 z-10 origin-top p-2 md:hidden" style="display: none;" id="mobileMenu">
+        <div class="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-1">
+            <div class="flex items-center justify-between px-5 pt-4">
+                <div>
+                    <img src="/assets/img/hyper_logo.svg" alt="Hyper Systems">
+                </div>
+                <div class="-mr-2">
+                    <button type="button" id="closeMenuBtn"
+                        class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="pt-5 pb-6">
+                <div class="space-y-1 px-2">
+                    <a href="/integrations"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">Explore</a>
+                    <a href="/#home-features"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">Technology</a>
+                    <a href="/#why-hyper"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">Explore</a>
+                    <a href="/https://hyper.systems/developers"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">Developers</a>
+                </div>
+                <div class="mt-6 px-5">
+                    <a href="/#fold"
+                        class="block w-full rounded-sm bg-slate-800 py-3 px-4 text-center font-medium text-white shadow hover:bg-slate-700">
+                        Get a demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header><main>
+
+            <div class="px-4 pt-6 pb-16 sm:pb-24">
+    <nav aria-label="Breadcrumb" class="mx-auto max-w-8xl ">
+        <ol role="list" class="flex items-center space-x-4">
+            <li>
+                <div class="flex items-center">
+                    <a href="/integrations" class="mr-4 text-sm font-medium text-gray-900">Integrations</a>
+                    <svg viewBox="0 0 6 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                        class="h-5 w-auto text-gray-300">
+                        <path d="M4.878 4.34H3.551L.27 16.532h1.327l3.281-12.19z" fill="currentColor" />
+                    </svg>
+                </div>
+            </li>
+            <li class="text-sm">
+                <a href="#" aria-current="page" class="font-medium text-gray-500 hover:text-gray-600">
+                    Shelly Door/Window 2
+                </a>
+            </li>
+        </ol>
+    </nav>
+    <div class="mx-auto mt-8 max-w-8xl">
+        <div class=" md:grid md:auto-rows-min md:grid-cols-2 md:gap-x-10 xl:gap-x-16">
+            <div class="xl:col-span-1 xl:col-start-2 xl:flex xl:justify-between xl:gap-8 xl:items-start">
+                <h1 class="text-xl font-medium text-gray-900">Shelly Door/Window 2</h1>
+
+                <a href="https://www.shelly.cloud/knowledge-base/devices/shelly-door-window-2/?_gl=1*10kiqd6*_ga*MTM2Nzk2MzQyMy4xNjY2MjY4ODY2*_ga_RG1ZWH9CCQ*MTY2Njk1MTUzMS4zLjEuMTY2Njk1NTA5OC4wLjAuMA.." target="_blank"
+                    class="mt-4 xl:mt-0 hidden md:inline-flex items-center rounded-sm border border-transparent bg-gray-100 px-8 py-2.5 text-sm font-medium text-gray-800 shadow-sm hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 whitespace-nowrap">
+
+                    Go to vendor product page
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="-mr-1 ml-2 h-4 w-4">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Image gallery -->
+            <div class="mt-8 md:col-span-1 md:col-start-1 md:row-span-3 md:row-start-1 md:mt-0">
+                <h2 class="sr-only">Images</h2>
+                <img class="w-full rounded-lg border" src="/assets/img/devices/dw2.jpg">
+
+            </div>
+
+            <div class="mt-8 md:col-span-1">
+                <!-- Product details -->
+                <div>
+                    <h2 class="text-sm font-medium text-gray-900">Description</h2>
+
+                    <div class="prose prose-sm mt-4 text-gray-500">
+                        <p>The lightning fast smart, door and window sensor.
+</p>
+                    </div>
+                </div>
+
+
+                <div class="py-3 columns-3 mt-8 space-y-4">
+                    
+                    <div class="flex items-center text-sm font-medium text-gray-900">
+                        
+                        
+                        <img class="w-6 h-6 mr-1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAABEklEQVR4nO3awU6DQABF0Wfjx0maGP9/oxHc1I/QhQsJIcDYgTuGexKSLlrmzesQKCWRJEna7ppkSPIFb32Sbibf9H3V9QdMbuv2PpOvqICHoqn/DtCS6Rym+RbneKmb5f95rLCPv6yiJWvfYNUVePoVYAF0AJoF0AFoFkAHoNW4Dqjt3uuKos+ffgVYAB2AZgF0AJoF0AFoLRbwkuQzyS3JM5xl1t43HT9G+x72Hr/GPUH6jtBd47d4CBzKAugAtBYLeBu9fsVSLNj7LNDl59+nPsnT3uO3eBY4dPwWD4FDWQAdgGYBdACaBdABaBZAB6BZAB2AZgF0AJoF0AFoW35Lt/Zk6BqfDyhhAXQASZIkyje9YnJxc8dziwAAAABJRU5ErkJggg==">
+                        
+                        <p class="capitalize">door sensor</p>
+                    </div>
+                    
+                    <div class="flex items-center text-sm font-medium text-gray-900">
+                        
+                        
+                        <img class="w-6 h-6 mr-1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAA10lEQVR4nO3aUQqCQABF0Ve0uKT9b8BxH/bXRyTMiMN18h7wr+R5kcAwkSRJ2vZKsiRZT36UJFOPAOUEF1d7zK0Xd6v4zNp6UljNNX3ce60YxWPHd5oK//B9Rx19viaXvwMMQA+gGYAeQDMAPYBmAHoAzQD0ANqeZ4GjoU+bl78DDEAPoJ3hN8D/A0gGoAfQDEAPoBmAHkAzAD2AZgB6AM0A9ACaAegBNAPQA2gGoAfQDEAPoBmAHkDzTdFeK0ZRE2DpvuI4pcdJp4zxxvic5NkjgCRJ+k9vthmIIdrRXDAAAAAASUVORK5CYII=">
+                        
+                        <p class="capitalize">window sensor</p>
+                    </div>
+                    
+                </div>
+
+
+
+                <div class="mt-8">
+                    <h2 class="text-sm font-medium text-gray-900">Connectivity</h2>
+                    <div class="prose prose-sm mt-4 text-gray-500 space-x-2">
+                        
+                        <span
+                            class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-gray-200 text-gray-900">
+                            wifi
+                        </span>
+                        
+                        <span
+                            class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-gray-200 text-gray-900">
+                            mqtt
+                        </span>
+                        
+                    </div>
+                </div>
+
+                <a href="https://www.shelly.cloud/knowledge-base/devices/shelly-door-window-2/?_gl=1*10kiqd6*_ga*MTM2Nzk2MzQyMy4xNjY2MjY4ODY2*_ga_RG1ZWH9CCQ*MTY2Njk1MTUzMS4zLjEuMTY2Njk1NTA5OC4wLjAuMA.." target="_blank"
+                    class="md:hidden mt-8 w-full justify-center flex rounded border border-gray-300 px-8 py-3 text-sm font-medium text-gray-800 shadow-sm hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 whitespace-nowrap">
+
+                    Go to vendor product page
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="-mr-1 ml-2 h-4 w-4">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>
+
+
+                <div class="relative mt-8">
+                    <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                        <div class="w-full border-t border-gray-200"></div>
+                    </div>
+                    <div class="relative flex justify-center">
+                        <span class="bg-white px-4 text font-medium text-gray-900">
+                            Tell us how you want to use it
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Policies -->
+                <section aria-labelledby="policies-heading" class="mt-10">
+                    <div class="mt-10">
+                        <form action="https://formspree.io/f/xeqvlqbp" method="POST"
+                            class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+                            <div>
+                                <label for="first-name" class="block text-sm font-medium text-gray-700">First
+                                    name</label>
+                                <div class="mt-1">
+                                    <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                                        class="block w-full rounded border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="last-name" class="block text-sm font-medium text-gray-700">Last name</label>
+                                <div class="mt-1">
+                                    <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+                                        class="block w-full rounded border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm">
+                                </div>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label for="company" class="block text-sm font-medium text-gray-700">Company</label>
+                                <div class="mt-1">
+                                    <input type="text" name="company" id="company" autocomplete="organization"
+                                        class="block w-full rounded border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm">
+                                </div>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                                <div class="mt-1">
+                                    <input id="email" name="email" type="email" autocomplete="email"
+                                        class="block w-full rounded border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm">
+                                </div>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                                <div class="mt-1">
+                                    <textarea id="message" name="message" rows="4"
+                                        class="block w-full rounded border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm"></textarea>
+                                </div>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <button type="submit" class=" inline-flex w-full items-center justify-center rounded-sm border border-transparent
+                                            bg-gray-800 px-6 py-3 text-base font-medium text-white hover:bg-gray-900 
+                                            focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+                                    Let's talk
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<img src="" alt="" />
+
+        </main><footer class="bg-white" aria-labelledby="footer-heading">
+    <div class="mx-auto max-w-7xl py-12 lg:pt-16 lg:pb-8">
+        <div class="xl:grid xl:grid-cols-2 xl:gap-32">
+            <div class="xl:col-span-1">
+                <img src="/assets/img/hyper_logo.svg" alt="Hyper Systems">
+                <p class="text-base text-gray-500 mt-4">We'd love to hear from you!</p>
+                <div class="inline-flex pt-1 pb-1 px-3 rounded items-center gap-1.5 bg-zinc-100 mt-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                        class="text-sky-500" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-mail">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                        </path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <a href="mailto:hello@hyper.systems" class="text-gray-500 font-medium">hello@hyper.systems</a>
+                </div>
+            </div>
+            <div class="mt-12 grid md:grid-cols-3 gap-8 md:col-span-1 md:mt-0">
+                <div>
+                    <h3 class="text-base text-sm font-bold text-gray-600">Product</h3>
+                    <ul role="list" class="mt-4 space-y-2">
+                        <li>
+                            <a href="/#home-features"
+                                class="text-base text-gray-500 text-sm hover:text-gray-900">Technology</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-base text-sm font-bold text-gray-600">Developers</h3>
+                    <ul role="list" class="mt-4 space-y-2">
+                        <li>
+                            <a href="https://hyper.systems/developers"
+                                class="text-base text-gray-500 text-sm hover:text-gray-900">Documentation</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/hyper-systems"
+                                class="text-base text-gray-500 text-sm hover:text-gray-900">GitHub</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-base text-sm font-bold text-gray-600">Hyper</h3>
+                    <ul role="list" class="mt-4 space-y-2">
+                        <li>
+                            <a href="https://www.linkedin.com/company/hypersystemsltd"
+                                class="text-base text-gray-500 text-sm hover:text-gray-900">LinkedIn</a>
+                        </li>
+                        <li>
+                            <a href="mailto:hello@hyper.systems"
+                                class="text-base text-gray-500 text-sm hover:text-gray-900">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mt-28 border-t border-gray-200 pt-4">
+            <p class="font-light text-sm text-gray-400">
+                &copy; 2022 Hyper Systems Ltd, All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer></div>
+</body>
+
+<link rel="stylesheet" href="/assets/css/custom.css">
+
+<script src="/assets/js/main.js"></script>
+
+</html>
