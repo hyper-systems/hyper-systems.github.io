@@ -31,6 +31,32 @@
     -moz-text-fill-color: transparent;
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
 #applications-dropdown {
     opacity: 0;
     visibility: hidden;
@@ -42,15 +68,48 @@
     opacity: 1;
 }
 
-.strong::after {
-    content: '';
-    position: absolute;
-    bottom: -0.3rem;
-    left: -0.5rem;
-    right: -0.5rem;
-    height: 0.75rem;
-    z-index: -1;
-    background-image: url('/assets/img/underline.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
+:root {
+    --progress-duration: .3s;
+    --progress-height: 3px;
+    --progress-color: rgb(35, 163, 255);
+    --progress-color-ending: rgba(35, 163, 255, 0.2);
+    --progress-shadow: 0 0 3px 2px rgba(0, 148, 255, 0.23)
+}
+
+.progress-struct {
+    top: 0;
+    left: 0;
+    height: var(--progress-height);
+    width: 100%;
+    background-color: transparent;
+    z-index: 99999;
+    box-shadow: none;
+    animation-timing-function: ease-in-out
+}
+
+.progress-anim {
+    animation: progress-load var(--progress-duration);
+    -webkit-animation: progress-load var(--progress-duration);
+}
+
+@keyframes progress-load {
+    0% {
+        background-color: var(--progress-color);
+        box-shadow: var(--progress-shadow);
+        width: 0%
+    }
+
+    20% {
+        background-color: var(--progress-color);
+    }
+
+    50% {
+        background-color: var(--progress-color);
+    }
+
+    100% {
+        width: 100%;
+        background-color: var(--progress-color-ending);
+        box-shadow: none
+    }
 }
