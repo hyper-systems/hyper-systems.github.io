@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang=" en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Hyper - The ultimate data platform for IoT | A unified data platform to monitor, automate and manage your entire physical infrastructure in a single place.</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Hyper - The ultimate data platform for IoT" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Industrial Monitoring Kit is a multi-parameter process monitor, capable of reading from eight probes at once. Real-time values are easily visible through the 4×40 character LCD display, with a simple and intuitive menu screen for calibration and temperature compensation. Real-time values can also be transmitted via 4-20mA signals or Serial data protocol. The modular design allows for the operator to quickly add in any combination of probes. This system can be used for basic water quality monitoring or integrated into a fully automated process control system." />
+<meta property="og:description" content="The Industrial Monitoring Kit is a multi-parameter process monitor, capable of reading from eight probes at once. Real-time values are easily visible through the 4×40 character LCD display, with a simple and intuitive menu screen for calibration and temperature compensation. Real-time values can also be transmitted via 4-20mA signals or Serial data protocol. The modular design allows for the operator to quickly add in any combination of probes. This system can be used for basic water quality monitoring or integrated into a fully automated process control system." />
+<link rel="canonical" href="/integrations/atlas-scientific_wf8-sis.html" />
+<meta property="og:url" content="/integrations/atlas-scientific_wf8-sis.html" />
+<meta property="og:site_name" content="Hyper - The ultimate data platform for IoT" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Hyper - The ultimate data platform for IoT" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"The Industrial Monitoring Kit is a multi-parameter process monitor, capable of reading from eight probes at once. Real-time values are easily visible through the 4×40 character LCD display, with a simple and intuitive menu screen for calibration and temperature compensation. Real-time values can also be transmitted via 4-20mA signals or Serial data protocol. The modular design allows for the operator to quickly add in any combination of probes. This system can be used for basic water quality monitoring or integrated into a fully automated process control system.","headline":"Hyper - The ultimate data platform for IoT","url":"/integrations/atlas-scientific_wf8-sis.html"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- <link rel="stylesheet" href="/assets/main.css"> --><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Hyper - The ultimate data platform for IoT" /><script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+</head><body>
+    <div class="relative overflow-hidden"><header class="relative">
+    <div class="pt-6">
+        <nav class="relative mx-auto flex max-w-8xl items-center justify-between" aria-label="Global">
+            <div class="flex flex-1 items-center">
+                <div class="flex w-full items-center justify-between md:w-auto">
+                    <a href="https://hyper.systems">
+                        <img class="h-8 w-auto sm:h-10" src="/assets/img/hyper_logo.svg"
+                            alt="Hyper Systems">
+                    </a>
+                    <div class="-mr-2 flex items-center md:hidden">
+                        <button type="button" id="openMenuBtn"
+                            class="focus-ring-inset inline-flex items-center justify-center rounded-md p-2 text-slate-400 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-white"
+                            aria-expanded="false">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:flex md:items-center md:space-x-6">
+                <a href="/integrations" class="text-base text-slate-800 hover:text-slate-500">Explore</a>
+                <a href="/#home-features" class="text-base text-slate-800 hover:text-slate-500">Technology</a>
+                <a href="/#why-hyper" class="text-base text-slate-800 hover:text-slate-500">Why Hyper</a>
+                <a href="https://hyper.systems/developers"
+                    class="text-base text-slate-800 hover:text-slate-500">Developers</a>
+                <a href="/#fold"
+                    class="rounded-sm bg-slate-800 px-4 py-2 text-base font-medium text-white hover:bg-slate-700">
+                    Get a demo
+                </a>
+            </div>
+        </nav>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="absolute inset-x-0 top-0 z-10 origin-top p-2 md:hidden" style="display: none;" id="mobileMenu">
+        <div class="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-1">
+            <div class="flex items-center justify-between px-5 pt-4">
+                <div>
+                    <img src="/assets/img/hyper_logo.svg" alt="Hyper Systems">
+                </div>
+                <div class="-mr-2">
+                    <button type="button" id="closeMenuBtn"
+                        class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="pt-5 pb-6">
+                <div class="space-y-1 px-2">
+                    <a href="/integrations"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">Explore</a>
+                    <a href="/#home-features"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">Technology</a>
+                    <a href="/#why-hyper"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">Explore</a>
+                    <a href="/https://hyper.systems/developers"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">Developers</a>
+                </div>
+                <div class="mt-6 px-5">
+                    <a href="/#fold"
+                        class="block w-full rounded-sm bg-slate-800 py-3 px-4 text-center font-medium text-white shadow hover:bg-slate-700">
+                        Get a demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header><main>
+
+            <div class="px-4 pt-6 pb-16 sm:pb-24">
+    <nav aria-label="Breadcrumb" class="mx-auto max-w-8xl ">
+        <ol role="list" class="flex items-center space-x-4">
+            <li>
+                <div class="flex items-center">
+                    <a href="/integrations" class="mr-4 text-sm font-medium text-gray-900">Integrations</a>
+                    <svg viewBox="0 0 6 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                        class="h-5 w-auto text-gray-300">
+                        <path d="M4.878 4.34H3.551L.27 16.532h1.327l3.281-12.19z" fill="currentColor" />
+                    </svg>
+                </div>
+            </li>
+            <li class="text-sm">
+                <a href="#" aria-current="page" class="font-medium text-gray-500 hover:text-gray-600">
+                    Industrial Monitoring Kit
+                </a>
+            </li>
+        </ol>
+    </nav>
+    <div class="mx-auto mt-8 max-w-8xl">
+        <div class=" md:grid md:auto-rows-min md:grid-cols-2 md:gap-x-10 xl:gap-x-16">
+            <div class="xl:col-span-1 xl:col-start-2 xl:flex xl:justify-between xl:gap-8 xl:items-start">
+                <h1 class="text-xl font-medium text-gray-900">Industrial Monitoring Kit</h1>
+
+                <a href="https://atlas-scientific.com/kits/its-waterfeature-8/" target="_blank"
+                    class="mt-4 xl:mt-0 hidden md:inline-flex items-center rounded-sm border border-transparent bg-gray-100 px-8 py-2.5 text-sm font-medium text-gray-800 shadow-sm hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 whitespace-nowrap">
+
+                    Go to vendor product page
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="-mr-1 ml-2 h-4 w-4">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Image gallery -->
+            <div class="mt-8 md:col-span-1 md:col-start-1 md:row-span-3 md:row-start-1 md:mt-0">
+                <h2 class="sr-only">Images</h2>
+                <img class="w-full rounded-lg border" src="/assets/img/devices/wf8_sis.jpg">
+
+            </div>
+
+            <div class="mt-8 md:col-span-1">
+                <!-- Product details -->
+                <div>
+                    <h2 class="text-sm font-medium text-gray-900">Description</h2>
+
+                    <div class="prose prose-sm mt-4 text-gray-500">
+                        <p>The Industrial Monitoring Kit is a multi-parameter process monitor, capable of reading from eight probes at once. Real-time values are easily visible through the 4×40 character LCD display, with a simple and intuitive menu screen for calibration and temperature compensation. Real-time values can also be transmitted via 4-20mA signals or Serial data protocol. The modular design allows for the operator to quickly add in any combination of probes. This system can be used for basic water quality monitoring or integrated into a fully automated process control system.
+</p>
+                    </div>
+                </div>
+
+
+                <div class="py-3 columns-3 mt-8 space-y-4">
+                    
+                    <div class="flex items-center text-sm font-medium text-gray-900">
+                        
+                        
+                        <img class="w-6 h-6 mr-1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAB6UlEQVR4nO2asU4CQRCGP42hw4JaSkMhDyKxMsHXMkTDSxDiE+BTiIUt0FKIlhgsOIwsd7t7y+1NjpsvmQZ+bv4Z5ja7B6AoimLnDlgAm5JjDvRKqM/JnPKL38UsdnFnHppNbBMOfDwGcx7z4qeCOZbS+UpfM6rSgKA1I2QNiHpPeuRzfQm5/NV+DbiQNhBA3omwUvsJ0AZIG5AmRgO6wACYAt9JTJPXuhHyRcd3H9AAhsBPymd2sQaeE+2x+UL1ufFJ0ABeU7RZMSG7CZVswDBF54qnI/Ido8+NK0GX7Wib+/I+0EziHvgwNGvgJiAfQBsYA6sU/Qp4ATq5qrTgMjTgsPhWiq7F4bOFx4B8bWCZojNjCVx51OfEZejdeL9vudaDoX0LyDdO0WTFyFqZJy5D5hg2Lde6NLSrAvLZ4tNaGad5GjSx+tWdoLQBabQB0gak0QZIG5Cm9g0IeSYY5cCRgy/sm63/ODdCVZyASSRtJnmPuUWHSQf/w9D1KTYAtqe8EdsRT9v/j32Lr+JZ4Fj9HlVcAwpFGyBtQJoifhss9Z4tmtpPgDZA2oA0RawBee9h0XvepPYToA2QNiBNFZ8HFErtJ8CnAYvoLrKZC+b+o4fMP8ZnwK2HP5/nB4qiKIqiKIqiKHv8AgHDnCML/1CKAAAAAElFTkSuQmCC">
+                        
+                        <p class="capitalize">ph</p>
+                    </div>
+                    
+                    <div class="flex items-center text-sm font-medium text-gray-900">
+                        
+                        
+                        <img class="w-6 h-6 mr-1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAEP0lEQVR4nO2ayY8NQRjAf7Y58CwxsVyEC/MYW4JEjIndyUFMZJIJVwcuHMTtRZyQWMJf4CDBYGwHMvYtLjIRISHWzMUSB9tgZhiHqpb3qqu6qrr7eS36l3yH7v62qq6u/rqqIScn539mUA1iDmQghz8MrmXwLJB3QK0TqDVDEtiWgInAI4teAVgDbAS2AdOU6wuAmcBooBvotfhrBVqAG575pspOxGTWJxPS0Qy0Az1S10V6pM1ig89WGXNA5lATSlQmrXbCHOAy7o02Saf0FVDe+EBKVWifFV0ifUAbsAP4QfLGB/JD+mwzxDSNvqqj64QouY+4W0uBIjBCSlGeK0kdV381bXyArRN+IZ7nBg+fDcBJaZvpxge0oU/yBbAwgd9FwEuD77YEfkMkrQMma87dQTT+XgK/d4H5wDXNtUkJ/KbKHMIT3g2gLsKmEf1d7TLo10mf5brfgdnJ00+O+qp7CYyz2AT1gypbI2zqgWeK/qUkiadBM+EJz+WZf0S48b3YO24R4YmxKU7iadGuJNPuYGMa/h2OMU8pdsf9Uk6PAvCVyrvv8qozDf+1jnGnK3ZfELXEX6dFSeS+o51u+L8DhnnE7iJe5xmJ8xqcpxyfcbBpBGZozh9FFDaunLXk4k2cDlBfQbccbNYbzh/xjH1TOZ7raR8LW10+1cGHbvjrxDaxNTj4SB1bwILF3jT7q/IeGG/xVXDw40UaS2K2VV3T8FfZjJgUo6jJEp6tx9UlLhWX4e/6Ti86+Ko6F5SAyzztxyj277BXggHLFdvznrFDxBlSD5TjZk/7KcrxFsTz78IS5dj0EVVV1hGvEApYW2Z7wtM29UIoDnFL4YCt+A990JfCwz3sU0X9GDrpYXtA2ri+HQJOKzGPedqnymIlmV+IT1YXOvAf+k1KvAGPeFWjk8qEXmEvZAI7F72AeuC5EuuiV6ZVIs6SGMAqjxh1iPq/PMZ3YJZvstViB+GheRuYkILveuCqxv/2FHynRtSyeJJntAnxSOl8p7osngSXjZFTiNeXK9MJz/aqZGJjxHdrrAuxJLYcUc8XpBTluZ2Ei5zMdsJ6wo3vR+z/b6KySEoq3xDzjK7D+4ENVW6rFtv2+AzCmxlx5DqVy2iZ2R4Htx8kmoBzwE/cG/1T2pjW/FP/QSLJL2ol4An2b/l6YAWwGjHJTUD8WgPwBngLPEYUSFeADxZ/rYhvj12xss7Jycmx8InKmXlkhO5owjN5lvQ/RegC+jXBbuU46uttpeZclvRfR+gaCVZsAnkCjNXojQWeEr5DWdLfZ2mrlkZEmVnuqBtRAo+S0mJILkv6/eg3ZJ04HBH8X5GDcRsPYiXG53fXDilZ0e/E778DYyccIvw4lEsvsBsYKmWPPFcr/T7EnU/c+HIagf3AQ+Az8BGxO7QH/X5AEdgrdT7+Bf3PMrd9JHjmc3JycnJycv4/fgOQxxmK4UwS+gAAAABJRU5ErkJggg==">
+                        
+                        <p class="capitalize">conductivity</p>
+                    </div>
+                    
+                    <div class="flex items-center text-sm font-medium text-gray-900">
+                        
+                        
+                        <img class="w-6 h-6 mr-1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAADY0lEQVR4nO2bO2gVQRSGvzyID0IKA4oPjKaQGAQjBpEoCiJopykkYMDEysZCY6cgamOlIhbaCBaKRkWxMSI2xicqhBQJVqIYjZLGR3zcmORazI3snL25e9ed2fHifDDF2Tln7n/O7s6+5oLH4/HYpwLYDlwABoEvwCjwErgMtAFVztRZZgswAGQj2itghyONVigDDgGTRCcfbCdRR0zJc5B4iQfbKQd6jbIZmEBPagw4C7QA1cBsoBk4AXwnXIS21FUbohzoR0/mI7CmQMxy1BwQjHkDzLSq1BJb0RP5BawtIq4BdWUIxu6ypNEq59CTOB8j9riIvWFcXQq8QE9iU4zYFSL2rXF1KTCMnsS8GLEVwDj66WP1klhuYcxqYX+LETsB/AjYlcCsxIoKYKMAJYUvgGsBrvEFcC3ANZUOfjMr7DIHGv7w3x8BvgCuBbjGF8C1ANf4ArgW4BpfANcCXOML4FqAa3wBXAtwjS+AawGuMV2AuZj/zl9reDxrVAG96N8EPhEusvwIKnkt+h9RIosnThNObk8ev6gCdObxOWNBr1EaUV9xgqKPTeMbVQCAo8JnAlhlUK9xbqMLvpvHpwLoIFyADvLPRT3Cr8e4akPUoS+DGUN96g5SCzwnnPxUewbMETHLgEzAZxJYYiWDhBxAT+aW6K+kcPLBIsi31DeFT5eVDBJyD11ku+jfTXTyU61TxLaL/jtWMkjIe3SRjaL/AcUX4KmIbRT9g1YySEjwPM0CNaJ/hOILMCpia0T/Z9PiTdwJZoQ9Kew4C50mEmqJjYkCDAt7gbDjHLbSd37EbyXGRAHeCXu1sC/GGOuSsJuFPRRjrNQ4gn6eXhH9M4A+os//PsL3/N3C57CVDBLShC4yAywVPgspXIS+nE+QesIT7EorGRhgEF3o1Tw+VcBe4AnwNdce57ble9q7LsYcMK7aIK2E9+q+BOPJu8sssC2hRus8RBc8Duz/i3G60NcKZlHvGf556lCLouWeu4Y6n6OoJ3zYZ4EPwGILeq2wHvhJOIkMakbfiXpSrM61hty2bsITXjY31rpUMzBAC2qvFXv7O10bATamrN0YdcR7CJKtlxI67AvRSvgSWagNoP5dlhppLVFrQl3GNqCeFRbltg+hHqfvo16k9Kekx+PxeAD4DShPlSZwVo6nAAAAAElFTkSuQmCC">
+                        
+                        <p class="capitalize">temperature</p>
+                    </div>
+                    
+                    <div class="flex items-center text-sm font-medium text-gray-900">
+                        
+                        
+                        <img class="w-6 h-6 mr-1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAB6UlEQVR4nO2asU4CQRCGP42hw4JaSkMhDyKxMsHXMkTDSxDiE+BTiIUt0FKIlhgsOIwsd7t7y+1NjpsvmQZ+bv4Z5ja7B6AoimLnDlgAm5JjDvRKqM/JnPKL38UsdnFnHppNbBMOfDwGcx7z4qeCOZbS+UpfM6rSgKA1I2QNiHpPeuRzfQm5/NV+DbiQNhBA3omwUvsJ0AZIG5AmRgO6wACYAt9JTJPXuhHyRcd3H9AAhsBPymd2sQaeE+2x+UL1ufFJ0ABeU7RZMSG7CZVswDBF54qnI/Ido8+NK0GX7Wib+/I+0EziHvgwNGvgJiAfQBsYA6sU/Qp4ATq5qrTgMjTgsPhWiq7F4bOFx4B8bWCZojNjCVx51OfEZejdeL9vudaDoX0LyDdO0WTFyFqZJy5D5hg2Lde6NLSrAvLZ4tNaGad5GjSx+tWdoLQBabQB0gak0QZIG5Cm9g0IeSYY5cCRgy/sm63/ODdCVZyASSRtJnmPuUWHSQf/w9D1KTYAtqe8EdsRT9v/j32Lr+JZ4Fj9HlVcAwpFGyBtQJoifhss9Z4tmtpPgDZA2oA0RawBee9h0XvepPYToA2QNiBNFZ8HFErtJ8CnAYvoLrKZC+b+o4fMP8ZnwK2HP5/nB4qiKIqiKIqiKHv8AgHDnCML/1CKAAAAAElFTkSuQmCC">
+                        
+                        <p class="capitalize">orp</p>
+                    </div>
+                    
+                    <div class="flex items-center text-sm font-medium text-gray-900">
+                        
+                        
+                        <img class="w-6 h-6 mr-1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAABnklEQVR4nO2aXW7CMBCEp5VKz9CSEzbcrr0ChYfS3qXhnT4kSGA5xHYWz6aaT1qJn7AeD0HyrACEECLOCsAGwB7AEcDJeR0B7AC0g/ZZvAL4cbCp0voe9lDE89CAvYm5dUDhnbBxIN6q2hID9kGTdwDrkkaVWaPXeql9V9KoC5osYfNnGlxr/536wEPktVPCNZ7J0v94RyGLQAawBbCRAWwBbGQAWwAbGcAWwKamAeF8wTS/WxImKgum5guz8nvAbP3WBqTOF4rze4A7A3LmC0X5PcCdAWPzBbP8HuDOgFvzhez8nkCW/hrzgKl+tde7QucAtgA2MoAtgI0MYAtgIwMqrNEFz5uRx7FrKdQ6CjcAPoL3Pg3Wc3cUbiM9x+rNYD13BqyQFoe/ADwZrOfOAKAfdhwivS83/2K0lksDgP5OaNH/zruhtuhve4tv/oy7NFgbpcEcZABbABsZwBbARgawBbCRAWwBbGIG3Mrv3jGZLyz1r7Jm84Wc/O69iuYLqfnde82aL0zld+9lMl8I8zt7U1N1r/mCEEIIIf4pf0ckUepvR8cVAAAAAElFTkSuQmCC">
+                        
+                        <p class="capitalize">dissovled oxygen</p>
+                    </div>
+                    
+                    <div class="flex items-center text-sm font-medium text-gray-900">
+                        
+                        
+                        <img class="w-6 h-6 mr-1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAEVklEQVR4nO2bTWwVVRTHf9S2IqWo1UKAjSVBDKGa+JEKCTRIMNEFxEjC2hhoJa7csBA2ajDsqjZujMadsBG6UUwUFiSusF2YmFKCEQRbTcAUmn6A7WNx5+n0vNPH3HvPTJs4v+Smue/N/Z8z/3lzP2ZuoaSk5P/Mspz130z+fp5jjIrn8Xmf87/sB/5Jyv4c41Q8SyHsBKZTQe8AL+cUa8kZ0An8rQS+BTybQ7wlZUAHMFon+GhyTJEUZsAq4GcloCy/AI/kmYigEAMage+UYF8lRX5+JmlTBIUY0K8EOgs8CDThTlh+/1leyQhyN+AtJcgFoDV1TGvymTyuJ4d8Cu0EtwIzIsAVYI1y7Jrku/SxM8CLxjkVZsBq4Hchfht4pk6bzcC4aPMHsNYwr0IMaATOCeFZYE+GtnuTY2V/YdUpFmLAcUX4PY/27yvtj1slJzA3YDe1V/B74AEPjQbgW6ExB7xqkaDA1IDHcfdsWvBq8rkvbcCvQmsMvQONwcyAZcCAEJsFuiM0t+FWi2nNb7BdspoZ8LYidiw2O+BDRfdQhF4uneBTwKQQGgKaIxKt0pxopbUngU2BeuYGNADnhcg08HRgghqbqTX4xyS2L+YGHFJEDocI3YfDSpzeAB1TA9qAG0LgEm6RY00zMCxi3SRshEkTZcCnisArkQnVY7cSrz9SM9iAJ4G7ovFAZDJZkEPt3SSXUIIN+FI0nAE2RiSSlQ3AlIj9RYRekAEd1F79xSx3gCcCT7iuAQsNMwco7pFVFpr47yVL7jTg5veLfdVluUa2BVf0MNi9BE52obLD2gDtFtgp6oO4xclilKH75KYhNeqiGbBd1L/OEDQvZGyZWy5cZv5PxvqhpQ9bRS6XAjS8+4AJ0aAtIKgVj4lcJgI06hqgDXVNoh4S1AoZO8vQnOkqV9H6ABl0lY+gMQ+L+m3rAJoBo6K+wTqoBzK2zC0azYCLom754MMXGVvmFo1mwAVRzzL25sUuUZe5aXjNAzS6mN9rjgMPhQhF0oK759O5PB+g4z0MamuBNwICx9IrcvgNm2eEmTgmGg1T7OqwhdoXMB8EagUZsJ75u7wqwDuBCYRwVMSeIvsb5OjVYBW562MSeMFHIJBOah+Rf+TR3syANuAv0fg6sM5HxJN23Hw/HXMMv01VZgYA7FMEBpNErWkHfhKx5oDXPHVMDQD4RBEZAbaEiC1AJ7VXvgL0GWhHG9AInFaEJoF3cT12KC3AEWrv+QpwCr89BwsRbQDAcnQTqv1CD7DCQ28FbpyXQ1365JeHJiswMQDc1fhYEayWW8AJ4CBuNtmOe93VjNtQ1YUz6iS1M7z0Pd+HzZWvYmZAldeBPxXh2DKGf4dHQBwTHsX9GuQbnJAyhRvnQ/cPL4oBVdbhpqhyA2SWciVpG7tHMMoAq704DcBzwEu4Fdsm3HR6ZfL9BO7FxghuSfsDbj4xZxDb96oW9i8zJSUlJSUlJUubezK3MMQaZ3mfAAAAAElFTkSuQmCC">
+                        
+                        <p class="capitalize">flowmeter</p>
+                    </div>
+                    
+                    <div class="flex items-center text-sm font-medium text-gray-900">
+                        
+                        
+                        <img class="w-6 h-6 mr-1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAD0klEQVR4nO2bTUsVURjHf3a9tlChKIjULxBpLaIXSKiVFYFCSVBBHyD9EK0sWpguaxHpdV9Q0K6VmaC9EJXiC1FBrSroaoaLe1ucMzGeOy/nzJyZuTfnDw/c8f7P8/yfZ2bOOfPMFXLkyJHDHEVgEJgCFoA1YB1YAUrABaDg4hfk30qSs+7iT/rwLyr8sow1JWMXE8lMAwPAElANsRXgjLQVDf4y0Cf5qxr8JaklNewAbmoIS9MqwIjUljjqLXm3jSSYNyAutYoSdAMYBY4BrcAeoBe4D2x6iFT5rfLzHfmdyt+Uvnql7yB+BehPKvkitff8J+CgD7+AmKx0+QDdkuMes8DWiTGMv0RCE+MgtWcyKJkBQ76DbmrPbNBZ9eIPasQxxpQSZDSEXzLkuzGmjC1Z5kfCohLkaAhfXfLC+G4cV8YuG/IXDWJpo6wEaQvhq5dlGN+NNmXsb0N+2SAWoLd+Vg19mvLdUPWE+VL5lbgBvfBVOT5gmR/EVX2F8b8ZxAL0CjCvHF8J4b8w5LtxWTmeNeTPGcTShtcy2B3A7zfkO+gB/ihjg5ZBL34iy6DfRsgvKb+NUFARejDbCHnxE9sIgf9WeAw4gZiNdbbCbn6b/DxO7Zn02goH8RPdCjvY1g9DICbMEWqvhDAz4UfxndrjsIN+9BsiZ4HTwDsN/nvJPYd+QyTxy94PakusjGhbLePd4ioC54EJahOZkN+5JzCnJTYpfTotsQ+I/b61lliTDSeGqNaBhn9I9d6pR+QFyFpA1ggqQAswjNiPr2FvzVZhy+8a4jlkSGqPhQ7gtUVxadsrmUMk7JQOsk4irr0k4pUwXAfibdlQlALMKk4eA51RHKWMToRWt3a1N6EFtQfYCMk76GKr9l9hA7x2YVUNTj3DSP+23wc0J+i7CdG5OSLtEKKxsVsawA/gJ/AdeIOYuecRDz2ZQZ1JTXES0bX57OFL11aB24jCpa0/koMCcBVx9mwvZdOIR2PduSj1AvQBbz3G2bY54FQC+iM7aAceGCYR1yrAPYJft6VWgEeWkzOxhxb0x3bQTjZFeArssqDfioMm4Abm3dyoNo7/y5Io+q05uIRoXOokERbPyzaAawnqt+LgMPDRY3zcAnzB7EcWmRUAYC/wzMNH1AJMA/tS1G/FQTNwy8OPaQHuEq2hYaQ/fxpMUEhDwKsA6g+NutIQYgmqVuMfTUHjtsS6gCds1T4TxdEQ/hNTo9n1KAVo4f9oi88T4w1yB6I7k3UScZLfHzV5By2I22GG2k5xPVoZeI647DP7d5ocOXLkyJEjR+PgL4o6rCmz5frHAAAAAElFTkSuQmCC">
+                        
+                        <p class="capitalize">co2</p>
+                    </div>
+                    
+                    <div class="flex items-center text-sm font-medium text-gray-900">
+                        
+                        
+                        <img class="w-6 h-6 mr-1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAD0klEQVR4nO2bTUsVURjHf3a9tlChKIjULxBpLaIXSKiVFYFCSVBBHyD9EK0sWpguaxHpdV9Q0K6VmaC9EJXiC1FBrSroaoaLe1ucMzGeOy/nzJyZuTfnDw/c8f7P8/yfZ2bOOfPMFXLkyJHDHEVgEJgCFoA1YB1YAUrABaDg4hfk30qSs+7iT/rwLyr8sow1JWMXE8lMAwPAElANsRXgjLQVDf4y0Cf5qxr8JaklNewAbmoIS9MqwIjUljjqLXm3jSSYNyAutYoSdAMYBY4BrcAeoBe4D2x6iFT5rfLzHfmdyt+Uvnql7yB+BehPKvkitff8J+CgD7+AmKx0+QDdkuMes8DWiTGMv0RCE+MgtWcyKJkBQ76DbmrPbNBZ9eIPasQxxpQSZDSEXzLkuzGmjC1Z5kfCohLkaAhfXfLC+G4cV8YuG/IXDWJpo6wEaQvhq5dlGN+NNmXsb0N+2SAWoLd+Vg19mvLdUPWE+VL5lbgBvfBVOT5gmR/EVX2F8b8ZxAL0CjCvHF8J4b8w5LtxWTmeNeTPGcTShtcy2B3A7zfkO+gB/ihjg5ZBL34iy6DfRsgvKb+NUFARejDbCHnxE9sIgf9WeAw4gZiNdbbCbn6b/DxO7Zn02goH8RPdCjvY1g9DICbMEWqvhDAz4UfxndrjsIN+9BsiZ4HTwDsN/nvJPYd+QyTxy94PakusjGhbLePd4ioC54EJahOZkN+5JzCnJTYpfTotsQ+I/b61lliTDSeGqNaBhn9I9d6pR+QFyFpA1ggqQAswjNiPr2FvzVZhy+8a4jlkSGqPhQ7gtUVxadsrmUMk7JQOsk4irr0k4pUwXAfibdlQlALMKk4eA51RHKWMToRWt3a1N6EFtQfYCMk76GKr9l9hA7x2YVUNTj3DSP+23wc0J+i7CdG5OSLtEKKxsVsawA/gJ/AdeIOYuecRDz2ZQZ1JTXES0bX57OFL11aB24jCpa0/koMCcBVx9mwvZdOIR2PduSj1AvQBbz3G2bY54FQC+iM7aAceGCYR1yrAPYJft6VWgEeWkzOxhxb0x3bQTjZFeArssqDfioMm4Abm3dyoNo7/y5Io+q05uIRoXOokERbPyzaAawnqt+LgMPDRY3zcAnzB7EcWmRUAYC/wzMNH1AJMA/tS1G/FQTNwy8OPaQHuEq2hYaQ/fxpMUEhDwKsA6g+NutIQYgmqVuMfTUHjtsS6gCds1T4TxdEQ/hNTo9n1KAVo4f9oi88T4w1yB6I7k3UScZLfHzV5By2I22GG2k5xPVoZeI647DP7d5ocOXLkyJEjR+PgL4o6rCmz5frHAAAAAElFTkSuQmCC">
+                        
+                        <p class="capitalize">o2</p>
+                    </div>
+                    
+                    <div class="flex items-center text-sm font-medium text-gray-900">
+                        
+                        
+                        <img class="w-6 h-6 mr-1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAADQklEQVR4nO2aW0sVURTHf2mWUh1Is7cuYBwt6im6UJ6wqPBBksDKbxB9giKQHvoMBX2Csiv1ktFFSgUJKSLMB6UoKujyVGBJdk4PexLPmj3OmZl99oy4fzAPc86s9V9r7Vl7z+xzwOFwLGWWWdBoAY4CBaAN2AjkvO9+AB+ACWAYeAC8tRBT1akFelFJFYFShUfRszkF1FiP2hCHUSNaadJBxzhwyHLsiWgArpA8cXlcBuot5hGLZuA5wbf1GNAHdACtwCrvaPM+6/OuCWqXUWCdtWwi0gy8QZ/4NSAfwVce6EdfiHEyWIQG9CM/CexK4Hc3MKXxO0rG2kHX84+BRgO+Gz1f0v8lA76NcAR98nUGNerQFyH11aEW/1I3iZmRlzThb4dxUn5O6BUBFUnW82HswT8xnqyiXigjIpirFjT7heYzC5paWigfjSLRljrJMeAT8AU4vsB1eY3u5gS6sTlD+UiMJfDVA/yZ5+tryPVjQvt0Am0g3kTSLs7vxtTuQbXO8nmf/Q2xuRcSixVeUD4KHTF8yJEveefdIXYHMXf3xea7CCJq/3ehT76nAttWYRfWMlVhRgSxJqL9e+Ilj6c13/Z3RG0jJC3AZ+IlD/4CzETUNkLSFugGPqK2vroi2uaF9reI9kYwMQnGxfgkGGcZnBDnhaRBROCAOJexRCZOAUbEedjSZRKpNWRRe45NmH0UrpRWje4GC7pahijvxX4LmjeE5lMLmoGcEMEUUdtY1WIv/tfhhV6cqk4N/heTd6gNUtM04t8QeUkGfjgpALP4t8RWGNRYATwRGrPAfoMaiejDv183DKw34LsJGNT4P2/AtzFqgAH8QU4B+xL4LaCeFKXf+2Tg1pfk8N+m/yfGm8DWCL62A3c0vkqeRi7YNF3qgdvoAy8Br4ALQCewDVgNrAV2oN4HLqJ2eoPsbwErrWUTk1rgHDBNcCJRj2ngrOd70bAFeETy5B96vhYtO1E/nf2k8qR/AdexuMzZ+ItMDvUa246a5DrF9wPAa9TyOYgqmDVsFEBSykAMc2RuTbWNK0DaAaSNrv9kjy52Fpxjlvwd4AqQdgAOh8ORJu45wFYUWcUVIO0AHA6Hw+FwONLiH04Om3gVvQMbAAAAAElFTkSuQmCC">
+                        
+                        <p class="capitalize">atmospheric pressure</p>
+                    </div>
+                    
+                    <div class="flex items-center text-sm font-medium text-gray-900">
+                        
+                        
+                        <img class="w-6 h-6 mr-1" src="data:image/png;base64,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">
+                        
+                        <p class="capitalize">humidity</p>
+                    </div>
+                    
+                    <div class="flex items-center text-sm font-medium text-gray-900">
+                        
+                        
+                        <img class="w-6 h-6 mr-1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAC0UlEQVR4nO2aP2gUQRSHPzV3GAWxsNEERGwUQSwFsbEKWAh2ggTLSAKWtrGzE6zUKtgIdpJ0ChLwT9SoIIiNIAErRSReQorEjMXc4WXz9m5m9+3tjM4HUxy3+3vv/e7Nzt7uQCKRSCQSiUR/msAUsACsACawsQK8BCbbuapyCHgXQJGu4y1wUKv4ZmTFd8Yi0NAwYCqAYoqOqxoGLGREZ4ERDWEHzgPfkIu7B+zpOnaknVv3MS80kmhlRAdR/G7gNrDJ9sJ/ABdzzhvNHPtLI5lsAlVzHHgvxDXAU2yRvVDPd5AGjAOrQsx1YBrY5aARpQEHgEdCLAN8Ac54aEVnwDngqxDHAA+B/Z560RgwhG3r30KMZeByQd0oDDiCXaKkX/0VcLSEdvAGjLF9aTXABnAD2xllCN6AJUFzCTiroI2g3ZOdSkF9kJJqAMODTsSVQU2BTeAW9i6wDMFPAbAXwWeCtgE+AqdKaEdhAPxdBjeEGGvAdYpN0WgM6HAa+CzEMcBj7MMYH6IzAGAfcFeIZYDvwAUPrSgN6HAJ+CnENMAd3FaKqA0AOAzMC3EN8MDh/OgNAPu394kQe9nh3OgN2AvMCHH/iw44gb0PkIqfYeszwDyiNWAc+YXLGnDNQ6d2A2566g+TvwR+Ak566tVugMHdhGPAByGGAe5jrwe+BGGAiwlaLZ8Xv3YD8kzQbvmy+aoLZo/vNqGKli+br7qgVNw0cAW55Vfb32kRpAF5Q6Ply+arLuhavFbLl81XXbBf4evotny/+D2p46HoEPZiGA1VTQHfO0ZXgp8CVZsQlQFVmBCdAdomeOVb9j2cxI4KNCujjlUgKFwMaGU+99ujUyfZ3LK5F6LObXI+jAJzbM1VZZvcJMUubCGMCQ0Dmti9t3UX4zteo7RVFuzG48UAinIdb1DcLN2hgd17+xz5/X7do9XObQLFXz6RSCQSicS/yx+Wu5MAD3gkNwAAAABJRU5ErkJggg==">
+                        
+                        <p class="capitalize">4 20ma</p>
+                    </div>
+                    
+                    <div class="flex items-center text-sm font-medium text-gray-900">
+                        
+                        
+                        <img class="w-6 h-6 mr-1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAADY0lEQVR4nO2bO2gVQRSGvzyID0IKA4oPjKaQGAQjBpEoCiJopykkYMDEysZCY6cgamOlIhbaCBaKRkWxMSI2xicqhBQJVqIYjZLGR3zcmORazI3snL25e9ed2fHifDDF2Tln7n/O7s6+5oLH4/HYpwLYDlwABoEvwCjwErgMtAFVztRZZgswAGQj2itghyONVigDDgGTRCcfbCdRR0zJc5B4iQfbKQd6jbIZmEBPagw4C7QA1cBsoBk4AXwnXIS21FUbohzoR0/mI7CmQMxy1BwQjHkDzLSq1BJb0RP5BawtIq4BdWUIxu6ypNEq59CTOB8j9riIvWFcXQq8QE9iU4zYFSL2rXF1KTCMnsS8GLEVwDj66WP1klhuYcxqYX+LETsB/AjYlcCsxIoKYKMAJYUvgGsBrvEFcC3ANZUOfjMr7DIHGv7w3x8BvgCuBbjGF8C1ANf4ArgW4BpfANcCXOML4FqAa3wBXAtwjS+AawGuMV2AuZj/zl9reDxrVAG96N8EPhEusvwIKnkt+h9RIosnThNObk8ev6gCdObxOWNBr1EaUV9xgqKPTeMbVQCAo8JnAlhlUK9xbqMLvpvHpwLoIFyADvLPRT3Cr8e4akPUoS+DGUN96g5SCzwnnPxUewbMETHLgEzAZxJYYiWDhBxAT+aW6K+kcPLBIsi31DeFT5eVDBJyD11ku+jfTXTyU61TxLaL/jtWMkjIe3SRjaL/AcUX4KmIbRT9g1YySEjwPM0CNaJ/hOILMCpia0T/Z9PiTdwJZoQ9Kew4C50mEmqJjYkCDAt7gbDjHLbSd37EbyXGRAHeCXu1sC/GGOuSsJuFPRRjrNQ4gn6eXhH9M4A+os//PsL3/N3C57CVDBLShC4yAywVPgspXIS+nE+QesIT7EorGRhgEF3o1Tw+VcBe4AnwNdce57ble9q7LsYcMK7aIK2E9+q+BOPJu8sssC2hRus8RBc8Duz/i3G60NcKZlHvGf556lCLouWeu4Y6n6OoJ3zYZ4EPwGILeq2wHvhJOIkMakbfiXpSrM61hty2bsITXjY31rpUMzBAC2qvFXv7O10bATamrN0YdcR7CJKtlxI67AvRSvgSWagNoP5dlhppLVFrQl3GNqCeFRbltg+hHqfvo16k9Kekx+PxeAD4DShPlSZwVo6nAAAAAElFTkSuQmCC">
+                        
+                        <p class="capitalize">air temperature</p>
+                    </div>
+                    
+                </div>
+
+
+
+                <div class="mt-8">
+                    <h2 class="text-sm font-medium text-gray-900">Connectivity</h2>
+                    <div class="prose prose-sm mt-4 text-gray-500 space-x-2">
+                        
+                        <span
+                            class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-gray-200 text-gray-900">
+                            wifi
+                        </span>
+                        
+                        <span
+                            class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-gray-200 text-gray-900">
+                            mqtt
+                        </span>
+                        
+                    </div>
+                </div>
+
+                <a href="https://atlas-scientific.com/kits/its-waterfeature-8/" target="_blank"
+                    class="md:hidden mt-8 w-full justify-center flex rounded border border-gray-300 px-8 py-3 text-sm font-medium text-gray-800 shadow-sm hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 whitespace-nowrap">
+
+                    Go to vendor product page
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="-mr-1 ml-2 h-4 w-4">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>
+
+
+                <div class="relative mt-8">
+                    <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                        <div class="w-full border-t border-gray-200"></div>
+                    </div>
+                    <div class="relative flex justify-center">
+                        <span class="bg-white px-4 text font-medium text-gray-900">
+                            Tell us how you want to use it
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Policies -->
+                <section aria-labelledby="policies-heading" class="mt-10">
+                    <div class="mt-10">
+                        <form action="https://formspree.io/f/xeqvlqbp" method="POST"
+                            class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+                            <div>
+                                <label for="first-name" class="block text-sm font-medium text-gray-700">First
+                                    name</label>
+                                <div class="mt-1">
+                                    <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                                        class="block w-full rounded border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="last-name" class="block text-sm font-medium text-gray-700">Last name</label>
+                                <div class="mt-1">
+                                    <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+                                        class="block w-full rounded border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm">
+                                </div>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label for="company" class="block text-sm font-medium text-gray-700">Company</label>
+                                <div class="mt-1">
+                                    <input type="text" name="company" id="company" autocomplete="organization"
+                                        class="block w-full rounded border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm">
+                                </div>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                                <div class="mt-1">
+                                    <input id="email" name="email" type="email" autocomplete="email"
+                                        class="block w-full rounded border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm">
+                                </div>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                                <div class="mt-1">
+                                    <textarea id="message" name="message" rows="4"
+                                        class="block w-full rounded border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm"></textarea>
+                                </div>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <button type="submit" class=" inline-flex w-full items-center justify-center rounded-sm border border-transparent
+                                            bg-gray-800 px-6 py-3 text-base font-medium text-white hover:bg-gray-900 
+                                            focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+                                    Let's talk
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<img src="" alt="" />
+
+        </main><footer class="bg-white" aria-labelledby="footer-heading">
+    <div class="mx-auto max-w-7xl py-12 lg:pt-16 lg:pb-8">
+        <div class="xl:grid xl:grid-cols-2 xl:gap-32">
+            <div class="xl:col-span-1">
+                <img src="/assets/img/hyper_logo.svg" alt="Hyper Systems">
+                <p class="text-base text-gray-500 mt-4">We'd love to hear from you!</p>
+                <div class="inline-flex pt-1 pb-1 px-3 rounded items-center gap-1.5 bg-zinc-100 mt-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                        class="text-sky-500" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-mail">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                        </path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <a href="mailto:hello@hyper.systems" class="text-gray-500 font-medium">hello@hyper.systems</a>
+                </div>
+            </div>
+            <div class="mt-12 grid md:grid-cols-3 gap-8 md:col-span-1 md:mt-0">
+                <div>
+                    <h3 class="text-base text-sm font-bold text-gray-600">Product</h3>
+                    <ul role="list" class="mt-4 space-y-2">
+                        <li>
+                            <a href="/#home-features"
+                                class="text-base text-gray-500 text-sm hover:text-gray-900">Technology</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-base text-sm font-bold text-gray-600">Developers</h3>
+                    <ul role="list" class="mt-4 space-y-2">
+                        <li>
+                            <a href="https://hyper.systems/developers"
+                                class="text-base text-gray-500 text-sm hover:text-gray-900">Documentation</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/hyper-systems"
+                                class="text-base text-gray-500 text-sm hover:text-gray-900">GitHub</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-base text-sm font-bold text-gray-600">Hyper</h3>
+                    <ul role="list" class="mt-4 space-y-2">
+                        <li>
+                            <a href="https://www.linkedin.com/company/hypersystemsltd"
+                                class="text-base text-gray-500 text-sm hover:text-gray-900">LinkedIn</a>
+                        </li>
+                        <li>
+                            <a href="mailto:hello@hyper.systems"
+                                class="text-base text-gray-500 text-sm hover:text-gray-900">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mt-28 border-t border-gray-200 pt-4">
+            <p class="font-light text-sm text-gray-400">
+                &copy; 2022 Hyper Systems Ltd, All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer></div>
+</body>
+
+<link rel="stylesheet" href="/assets/css/custom.css">
+
+<script src="/assets/js/main.js"></script>
+
+</html>

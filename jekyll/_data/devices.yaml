@@ -1,4 +1,3 @@
-
 - product_name: "Wi-Fi Hydroponics Kit"
   product_code: "Wi-Fi-HK"
   product_page: "https://atlas-scientific.com/kits/wi-fi-hydroponics-kit/"
@@ -29,7 +28,8 @@
   vendor: "Atlas Scientific"
   vendor_website: "https://atlas-scientific.com"
   connectivity: ["wifi", "mqtt"]
-  tags: ["ph", "conductivity", "temperature", "co2", "dissovled_oxygen", "humidity"]
+  tags:
+    ["ph", "conductivity", "temperature", "co2", "dissovled_oxygen", "humidity"]
   description: >
     The Wi-Fi Aquaponics Kit reads pH, Dissolved Oxygen, Temperature, Conductivity, CO2, and Humidity.
     The pH, Dissolved Oxygen, and Conductivity readings are automatically temperature compensated and uploaded.
@@ -41,7 +41,21 @@
   vendor: "Atlas Scientific"
   vendor_website: "https://atlas-scientific.com"
   connectivity: ["wifi", "mqtt"]
-  tags: ["ph", "conductivity", "temperature", "orp", "dissovled_oxygen", "flowmeter", "co2", "o2", "atmospheric_pressure", "humidity", "4_20ma", "air_temperature"]
+  tags:
+    [
+      "ph",
+      "conductivity",
+      "temperature",
+      "orp",
+      "dissovled_oxygen",
+      "flowmeter",
+      "co2",
+      "o2",
+      "atmospheric_pressure",
+      "humidity",
+      "4_20ma",
+      "air_temperature",
+    ]
   description: >
     The Industrial Monitoring Kit is a multi-parameter process monitor, capable of reading from eight probes at once.
     Real-time values are easily visible through the 4×40 character LCD display, with a simple and intuitive menu screen for calibration and temperature compensation.
@@ -72,7 +86,7 @@
   description: >
     The Atlas Scientific gaseous oxygen sensor has been designed to read O2 levels from 0 – 420 ppt.
     The sensor comes calibrated and ready to use right out of the box.
-  product_image: ""
+  product_image: "ezo_o2.jpg"
 
 - product_name: "EZO™ Humidity Circuit"
   product_code: "EZO-HUM-C"
@@ -268,7 +282,14 @@
   vendor: "Eastron"
   vendor_website: "http://www.eastrongroup.com/"
   connectivity: ["modbus"]
-  tags: ["power_meter", "voltage_meter", "current_meter", "frequency_meter", "energy_meter"]
+  tags:
+    [
+      "power_meter",
+      "voltage_meter",
+      "current_meter",
+      "frequency_meter",
+      "energy_meter",
+    ]
   description: >
     SDM120 series is a range of 1 module single phase multi-function DIN rail MID energy meter, which measures active energy, reactive energy, current, voltage, power, power factor, frequency, etc.
     Suitable for monitoring energy consumption in residential, solar PV, industrial and utility applications.
@@ -280,7 +301,18 @@
   vendor: "Davis"
   vendor_website: "https://www.davisinstruments.com"
   connectivity: ["ethernet", "wifi"]
-  tags: ["davis_gateway", "air_temperature", "humidity", "wind_speed", "wind_direction", "solar_irradiance", "uv_index", "atmospheric_pressure", "soil_moisture"]
+  tags:
+    [
+      "davis_gateway",
+      "air_temperature",
+      "humidity",
+      "wind_speed",
+      "wind_direction",
+      "solar_irradiance",
+      "uv_index",
+      "atmospheric_pressure",
+      "soil_moisture",
+    ]
   description: >
     Weatherlink Live can receive and upload data from up to 8 Vantage Vue or Vantage Pro2 sensor suites, or other Davis transmitting stations, in any combination.
   product_image: "6100.jpg"
@@ -295,7 +327,6 @@
   description: >
     An indoor environmental monitoring solution that acts as a gateway, data storage and web server.
   product_image: "tdsbwp.png"
-
 
 - product_name: "Aranet T/RH IP67 sensor"
   product_code: "TDSPT802"
@@ -358,7 +389,8 @@
   vendor: "ProMinent"
   vendor_website: "https://www.prominent.com"
   connectivity: ["modbus-rtu", "dulconnex_gateway", "wifi"]
-  tags: ["ec", "peroxide", "dissolved_oxygen", "ph", "turbidity_ntu", "temperature"]
+  tags:
+    ["ec", "peroxide", "dissolved_oxygen", "ph", "turbidity_ntu", "temperature"]
   description: >
     Controller AEGIS II continuously measures and controls the conductivity and biocide concentration to keep pipework and heat exchangers clean.
   product_image: "controlleraegisii.jpg"

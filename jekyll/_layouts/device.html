@@ -1,0 +1,177 @@
+---
+layout: default
+---
+
+<div class="px-4 pt-6 pb-16 sm:pb-24">
+    <nav aria-label="Breadcrumb" class="mx-auto max-w-8xl ">
+        <ol role="list" class="flex items-center space-x-4">
+            <li>
+                <div class="flex items-center">
+                    <a href="/integrations" class="mr-4 text-sm font-medium text-gray-900">Integrations</a>
+                    <svg viewBox="0 0 6 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                        class="h-5 w-auto text-gray-300">
+                        <path d="M4.878 4.34H3.551L.27 16.532h1.327l3.281-12.19z" fill="currentColor" />
+                    </svg>
+                </div>
+            </li>
+            <li class="text-sm">
+                <a href="#" aria-current="page" class="font-medium text-gray-500 hover:text-gray-600">
+                    {{ page.product_name }}
+                </a>
+            </li>
+        </ol>
+    </nav>
+    <div class="mx-auto mt-8 max-w-8xl">
+        <div class=" md:grid md:auto-rows-min md:grid-cols-2 md:gap-x-10 xl:gap-x-16">
+            <div class="xl:col-span-1 xl:col-start-2 xl:flex xl:justify-between xl:gap-8 xl:items-start">
+                <h1 class="text-xl font-medium text-gray-900">{{ page.product_name }}</h1>
+
+                <a href="{{ page.product_page }}" target="_blank"
+                    class="mt-4 xl:mt-0 hidden md:inline-flex items-center rounded-sm border border-transparent bg-gray-100 px-8 py-2.5 text-sm font-medium text-gray-800 shadow-sm hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 whitespace-nowrap">
+
+                    Go to vendor product page
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="-mr-1 ml-2 h-4 w-4">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Image gallery -->
+            <div class="mt-8 md:col-span-1 md:col-start-1 md:row-span-3 md:row-start-1 md:mt-0">
+                <h2 class="sr-only">Images</h2>
+                <img class="w-full rounded-lg border" src="{{site.url}}/assets/img/devices/{{ page.product_image }}">
+
+            </div>
+
+            <div class="mt-8 md:col-span-1">
+                <!-- Product details -->
+                <div>
+                    <h2 class="text-sm font-medium text-gray-900">Description</h2>
+
+                    <div class="prose prose-sm mt-4 text-gray-500">
+                        <p>{{ page.description }}</p>
+                    </div>
+                </div>
+
+
+                <div class="py-3 columns-3 mt-8 space-y-4">
+                    {% for tag in page.tags %}
+                    <div class="flex items-center text-sm font-medium text-gray-900">
+                        {% assign graphic = site.data.device_feature_icons | find:"tag",tag %}
+                        {% if graphic %}
+                        <img class="w-6 h-6 mr-1" src="{{ graphic.icon }}">
+                        {% else %}
+                        <svg class="mr-2 h-6 w-6 flex-none" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+                        </svg>
+                        {% endif %}
+                        <p class="capitalize">{{ tag | replace: '_', ' ' }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+
+
+
+                <div class="mt-8">
+                    <h2 class="text-sm font-medium text-gray-900">Connectivity</h2>
+                    <div class="prose prose-sm mt-4 text-gray-500 space-x-2">
+                        {% for tag in page.connectivity %}
+                        <span
+                            class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-gray-200 text-gray-900">
+                            {{ tag | replace: '_', ' ' }}
+                        </span>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <a href="{{ page.product_page }}" target="_blank"
+                    class="md:hidden mt-8 w-full justify-center flex rounded border border-gray-300 px-8 py-3 text-sm font-medium text-gray-800 shadow-sm hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 whitespace-nowrap">
+
+                    Go to vendor product page
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="-mr-1 ml-2 h-4 w-4">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>
+
+
+                <div class="relative mt-8">
+                    <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                        <div class="w-full border-t border-gray-200"></div>
+                    </div>
+                    <div class="relative flex justify-center">
+                        <span class="bg-white px-4 text font-medium text-gray-900">
+                            Tell us how you want to use it
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Policies -->
+                <section aria-labelledby="policies-heading" class="mt-10">
+                    <div class="mt-10">
+                        <form action="https://formspree.io/f/xeqvlqbp" method="POST"
+                            class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+                            <div>
+                                <label for="first-name" class="block text-sm font-medium text-gray-700">First
+                                    name</label>
+                                <div class="mt-1">
+                                    <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                                        class="block w-full rounded border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="last-name" class="block text-sm font-medium text-gray-700">Last name</label>
+                                <div class="mt-1">
+                                    <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+                                        class="block w-full rounded border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm">
+                                </div>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label for="company" class="block text-sm font-medium text-gray-700">Company</label>
+                                <div class="mt-1">
+                                    <input type="text" name="company" id="company" autocomplete="organization"
+                                        class="block w-full rounded border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm">
+                                </div>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                                <div class="mt-1">
+                                    <input id="email" name="email" type="email" autocomplete="email"
+                                        class="block w-full rounded border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm">
+                                </div>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                                <div class="mt-1">
+                                    <textarea id="message" name="message" rows="4"
+                                        class="block w-full rounded border-gray-300 focus:border-gray-500 focus:ring-gray-500 sm:text-sm"></textarea>
+                                </div>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <button type="submit" class=" inline-flex w-full items-center justify-center rounded-sm border border-transparent
+                                            bg-gray-800 px-6 py-3 text-base font-medium text-white hover:bg-gray-900 
+                                            focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+                                    Let's talk
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<img src="{{ page.product_photo_link }}" alt="" />
