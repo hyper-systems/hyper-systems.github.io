@@ -1,9 +1,9 @@
 ---
 title: Smart Agriculture
 description: Monitor and control your entire farm
-feature_icon: icons/thunder.svg
+feature_icon: icons/agriculture.svg
 layout: default
-categories: [solutions]
+categories: [applications]
 ---
 
 {% capture features_title %}
@@ -17,16 +17,15 @@ costs by getting access to unified climate and crop growth metrics.
 
 {%-
 include fold.html
-feature_one="solutions_feature-farming-1.png"
-feature_two="solutions_feature-farming-2.png"
+img="vertical-farm-crops-1.jpeg"
 title=features_title
 description=features_description
 -%}
 
 {%-
-include features.html
+include benefits.html
 title="Embrace the digital agriculture."
-features=site.data.agriculture_features
+benefits=site.data.agriculture_benefits
 -%}
 
 {% include crop_vision.html %}
@@ -36,16 +35,19 @@ Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipis
 {% endcapture %}
 
 {%-
-include benefits.html
+include features.html
 letterhead="FEATURES"
 title="The last data platform you will need."
-img="solutions_benefits_farming.jpg"
-benefits=site.data.agriculture_benefits
+img="platform-logo-green-w.png"
+features=site.data.generic_features
 -%}
 
 {%-
 include testimonial.html
-quote="Hyper.systems was able to integrate nine different data streams from horticultural parameter sensors in a matter of just a few weeks. allowed us to completely consolidate our data platform into one for the first time, which in turn advanced our analytical capabilities and will save us thousands of pounds per year on cloud services. Their support and speed of execution is exemplary and I could not recommend them more."
+quote="Hyper.systems was able to integrate nine different data streams from horticultural parameter sensors in a matter
+of just a few weeks. allowed us to completely consolidate our data platform into one for the first time, which in turn
+advanced our analytical capabilities and will save us thousands of pounds per year on cloud services. Their support and
+speed of execution is exemplary and I could not recommend them more."
 name="Jakob Thomas"
 title="Chief Information Officer at Zero Carbon Farms"
 logo="zcf_logo.svg"

@@ -1,0 +1,17 @@
+- title: Track everything
+  description: End-to-end delivery monitoring solution to preciesly track your
+    assets at any scale. Detailed performance metrics for your entire collection or
+    distribution process.
+  icon: icons/globe.svg
+
+- title: Real-time fleet monitoring
+  description: Increase the visibility of the your delivery or collection fleet by
+    leveraging real-time vehicle telematics. Monitor route efficiency, vehicle fuel
+    consumption and the safety of your drivers and the cargo.
+  icon: icons/location.svg
+
+- title: Predictive maintenance
+  description: The historical data patterns can be used to detect
+    similar future events and help your forecast performance bottlenecks and
+    schedule maintenance interventions.
+  icon: icons/thunder.svg

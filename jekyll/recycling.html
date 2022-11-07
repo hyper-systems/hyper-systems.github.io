@@ -1,0 +1,40 @@
+---
+title: Smart Recycling
+description: Optimize your recycling operation
+feature_icon: icons/recycling.svg
+layout: default
+categories: [applications]
+---
+
+{% capture features_title %}
+Optimize your waste management process.
+{% endcapture %}
+
+{% capture features_description %}
+Collect operational metrics from all data capture and processing points across your entire
+plant to optimize your performance.
+{% endcapture %}
+
+{%-
+include fold.html
+img="nick-fewings-ywVgG0lDbOk-unsplash.jpg"
+title=features_title
+description=features_description
+-%}
+
+{%-
+include benefits.html
+title="A Digital twin for your operation."
+img="applications_benefits_farming.jpg"
+benefits=site.data.recycling_benefits
+-%}
+
+{%-
+include features.html
+letterhead="FEATURES"
+title="The last data platform you will need."
+features=site.data.generic_features
+img="platform-logo-green-w.png"
+-%}
+
+{% include cta.html %}

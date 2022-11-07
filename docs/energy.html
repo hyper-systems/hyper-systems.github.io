@@ -7,8 +7,8 @@
 <meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Smart Energy" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Collecting real-time insights on performance and consumption patterns." />
-<meta property="og:description" content="Collecting real-time insights on performance and consumption patterns." />
+<meta name="description" content="Data-driven energy infrastructure" />
+<meta property="og:description" content="Data-driven energy infrastructure" />
 <link rel="canonical" href="http://localhost:4000/energy.html" />
 <meta property="og:url" content="http://localhost:4000/energy.html" />
 <meta property="og:site_name" content="Hyper - The ultimate data platform for IoT" />
@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Smart Energy" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Collecting real-time insights on performance and consumption patterns.","headline":"Smart Energy","url":"http://localhost:4000/energy.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Data-driven energy infrastructure","headline":"Smart Energy","url":"http://localhost:4000/energy.html"}</script>
 <!-- End Jekyll SEO tag -->
 <!-- <link rel="stylesheet" href="/assets/main.css"> --><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Hyper - The ultimate data platform for IoT" /><script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 
@@ -28,417 +28,700 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head><body>
     <div class="relative overflow-hidden"><header class="relative">
-    <div class="pt-6 px-4">
-        <nav class="relative mx-auto flex max-w-8xl items-center justify-between" aria-label="Global">
-            <div class="flex flex-1 items-center">
-                <div class="flex w-full items-center justify-between md:w-auto">
-                    <a href="/">
-                        <img class="h-8 w-auto sm:h-10" src="http://localhost:4000/assets/img/hyper_logo.svg"
-                            alt="Hyper Systems">
-                    </a>
-                    <div class="-mr-2 flex items-center md:hidden">
-                        <button type="button" id="openMenuBtn"
-                            class="focus-ring-inset inline-flex items-center justify-center rounded-md p-2 text-slate-400 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-white"
-                            aria-expanded="false">
-                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="hidden md:flex md:items-center md:space-x-6">
+  <div class="pt-6 px-4">
+    <nav class="relative mx-auto flex max-w-8xl items-center justify-between" aria-label="Global">
+      <div class="flex flex-1 items-center">
+        <div class="flex w-full items-center justify-between md:w-auto">
+          <a href="/">
+            <img class="h-8 w-auto sm:h-10" src="http://localhost:4000/assets/img/hyper_logo.svg" alt="Hyper Systems">
+          </a>
+          <div class="-mr-2 flex items-center md:hidden">
+            <button type="button" id="openMenuBtn"
+              class="focus-ring-inset inline-flex items-center justify-center rounded-md p-2 text-slate-400 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-white"
+              aria-expanded="false">
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="hidden md:flex md:items-center md:space-x-6">
 
-                <div class="relative" id="solutionsMenuContainer">
-    <button type="button"
-        class="text-slate-800 group inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none"
-        aria-expanded="false" id="solutionsMenuBtn">
-        <span>Solutions</span>
-        <svg class="text-gray-400 ml-2 h-5 w-5 transition duration-150 ease-in-out group-hover:text-gray-500"
+        <div class="relative" id="applications-menu-container">
+  <button type="button"
+    class="text-slate-800 group inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none"
+    aria-expanded="false">
+    <span>Applications</span>
+    <svg class="text-gray-400 ml-2 h-5 w-5 transition duration-150 ease-in-out group-hover:text-gray-500"
             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd"
         d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
         clip-rule="evenodd" />
 </svg>
-    </button>
-    <div class="absolute z-20 pt-3  w-screen max-w-md transform px-2 sm:px-0 lg:max-w-3xl left-1/2 -translate-x-1/2"
-        id="solutionsDropdown">
-        <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 ">
-            <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
+  </button>
+  <div class="absolute z-20 pt-3  w-screen max-w-md transform px-2 sm:px-0 lg:max-w-3xl left-1/2 -translate-x-1/2"
+    id="applications-dropdown">
+    <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 ">
+      <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
 
-                
-                
-                
-                
+        
+        
+        
+        
 
-                <a href="/agriculture.html"
-                    class="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50">
-                    <div
-                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gray-100 text-gray-800 sm:h-12 sm:w-12">
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-    <path stroke-linecap="round" stroke-linejoin="round"
-        d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+        <a href="/agriculture.html"
+          class="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50">
+          <div
+            class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gray-100 text-gray-800 sm:h-12 sm:w-12">
+            <?xml version="1.0" encoding="UTF-8"?>
+<svg class="h-6 w-6" version="1.1" viewBox="-50 -100 700 700" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g>
+  <path d="m568.96 28c-13.441 0-334.88 5.6016-427.84 163.52-37.52 63.281-32.48 141.12 14 231.84-21.281 59.922-27.441 102.48-27.441 104.72l25.199 3.3594c0-0.55859 5.0391-35.84 22.398-87.359 20.719 12.879 66.078 36.398 121.52 36.398 21.84 0 44.801-3.9219 68.32-13.441 106.4-43.121 179.2-185.92 216.72-425.04l2.2422-13.996zm-406 176.4c55.438-94.078 207.2-129.36 309.12-142.8-139.44 62.719-221.76 169.12-268.8 254.24-14.559 26.32-26.32 51.52-35.84 75.039-32.477-73.359-34.719-136.08-4.4766-186.48zm192.64 239.68c-77.84 31.922-152.88-11.758-171.92-24.078 10.641-28.559 24.078-59.922 42.559-92.961 75.039-136.64 185.36-226.8 327.6-268.8-36.961 215.04-105.28 348.32-198.24 385.84z"/>
+  <use x="70" y="644" />
+  <use x="90.550781" y="644" />
+  <use x="104.359375" y="644" />
+  <use x="123.347656" y="644" />
+  <use x="142.242188" y="644" />
+  <use x="155.628906" y="644" />
+  <use x="174.617188" y="644" />
+  <use x="204.410156" y="644" />
+  <use x="224.453125" y="644" />
+  <use x="252.453125" y="644" />
+  <use x="275.1875" y="644" />
+  <use x="298.621094" y="644" />
+  <use x="308.21875" y="644" />
+  <use x="328.765625" y="644" />
+  <use x="352.570312" y="644" />
+  <use x="374.132812" y="644" />
+  <use x="70" y="672" />
+  <use x="82.183594" y="672" />
+  <use x="95.992188" y="672" />
+  <use x="115.226562" y="672" />
+  <use x="154.152344" y="672" />
+  <use x="167.535156" y="672" />
+  <use x="187.46875" y="672" />
+  <use x="216.207031" y="672" />
+  <use x="239.640625" y="672" />
+  <use x="258.878906" y="672" />
+  <use x="278.8125" y="672" />
+  <use x="308.492188" y="672" />
+  <use x="329.015625" y="672" />
+  <use x="342.820312" y="672" />
+  <use x="362.058594" y="672" />
+  <use x="371.65625" y="672" />
+  <use x="390.648438" y="672" />
+  <use x="407.242188" y="672" />
+ </g>
 </svg>
-                    </div>
-                    <div class="ml-4">
-                        <p class="text-base font-medium text-gray-900">Smart Agriculture</p>
-                        <p class="mt-1 text-sm text-gray-500">Monitor and control your entire farm</p>
-                    </div>
-                </a>
 
-                
-                
-                
+          </div>
+          <div class="ml-4">
+            <p class="text-base font-medium text-gray-900">Smart Agriculture</p>
+            <p class="mt-1 text-sm text-gray-500">Monitor and control your entire farm</p>
+          </div>
+        </a>
 
-                <a href="/energy.html"
-                    class="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50">
-                    <div
-                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gray-100 text-gray-800 sm:h-12 sm:w-12">
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-    <path stroke-linecap="round" stroke-linejoin="round"
-        d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+        
+        
+        
+
+        <a href="/energy.html"
+          class="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50">
+          <div
+            class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gray-100 text-gray-800 sm:h-12 sm:w-12">
+            <?xml version="1.0" encoding="UTF-8"?>
+<svg class="h-6 w-6" version="1.1" viewBox="50 0 550 550" xmlns="http://www.w3.org/2000/svg">
+ <path d="m510.07 184.33c-1.3438-2.5234-3.9844-4.0859-6.8438-4.043h-114.02l54.133-158.36c0.32031-2.2969-0.35938-4.6172-1.8672-6.3789-1.4844-2.0391-3.8516-3.2539-6.375-3.2656h-158.82c-3.4141-0.019531-6.4414 2.1875-7.4648 5.4453l-79.488 259.93c-0.79688 2.3906-0.32812 5.0234 1.2422 7 1.4844 1.9375 3.7812 3.0859 6.2227 3.1094h104.22l-44.332 251.38c-0.69141 3.6445 1.3438 7.2578 4.8203 8.5547 0.97266 0.23047 1.9844 0.23047 2.957 0 2.5664 0.007812 4.9609-1.2812 6.375-3.4219l238.93-351.87c1.5781-2.4375 1.6953-5.5391 0.3125-8.0898zm-231.31 321.85 39.199-224.78 0.003906-0.003906c0.32422-2.2695-0.29688-4.5742-1.7109-6.375-1.5-1.7109-3.6406-2.7227-5.9141-2.8008h-103.13l74.824-245h142.33l-53.355 158.36c-0.79688 2.3633-0.41406 4.9688 1.0352 7 1.4453 2.0312 3.7812 3.2461 6.2773 3.2656h110.29z"/>
 </svg>
-                    </div>
-                    <div class="ml-4">
-                        <p class="text-base font-medium text-gray-900">Smart Energy</p>
-                        <p class="mt-1 text-sm text-gray-500">Collecting real-time insights on performance and consumption patterns.</p>
-                    </div>
-                </a>
 
-                
-                
-                
-                
-                
+          </div>
+          <div class="ml-4">
+            <p class="text-base font-medium text-gray-900">Smart Energy</p>
+            <p class="mt-1 text-sm text-gray-500">Data-driven energy infrastructure</p>
+          </div>
+        </a>
 
-                <a href="/logistics.html"
-                    class="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50">
-                    <div
-                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gray-100 text-gray-800 sm:h-12 sm:w-12">
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-    <path stroke-linecap="round" stroke-linejoin="round"
-        d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+        
+        
+        
+        
+        
+
+        <a href="/logistics.html"
+          class="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50">
+          <div
+            class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gray-100 text-gray-800 sm:h-12 sm:w-12">
+            <?xml version="1.0" encoding="UTF-8"?>
+<svg class="h-6 w-6" version="1.1" viewBox="100 25 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g>
+  <path d="m418.77 134.4c13.953 0 25.199 11.824 25.199 26.074v1.2266h59.852c7.7734 0 14.18 4.9492 20.125 11.375 5.9453 6.4258 11.543 14.934 16.977 24.148 10.863 18.43 20.715 39.969 27.301 53.375 0.14063 0.28125 0.25781 0.57422 0.35156 0.875h9.625c10.09 0 18.199 8.4336 18.199 18.551v90.824c0 10.117-7.9844 18.898-18.199 18.898h-43.926c-2.7148 25.633-23.977 45.852-50.051 45.852-26.074 0-47.336-20.219-50.051-45.852h-162.05c-2.7422 25.652-24.152 45.852-50.227 45.852-25.891 0-47.312-20.195-50.051-45.852h-43.051c-14.031 0-25.199-11.992-25.199-26.074v-193.2c0-14.254 11.25-26.074 25.199-26.074zm0 11.199h-289.98c-7.7227 0-14 6.4102-14 14.875v193.2c0 8.1719 6.3555 14.875 14 14.875h43.051c2.6602-25.738 24.102-46.199 50.051-46.199 26.156 0 47.383 20.438 50.051 46.199h160.82v-208.07c0-8.4648-6.2773-14.875-14-14.875zm85.051 27.301h-59.852v78.574h112.18c-6.6133-13.652-15.312-32.297-24.852-48.477-5.207-8.8359-10.562-16.809-15.574-22.227-5.0117-5.4141-9.5117-7.875-11.898-7.875zm74.375 89.773h-134.23v80.5c9.1484-12.57 23.703-20.824 40.25-20.824 27.117 0.71875 48.051 17.234 49.875 46.199h44.102c3.7852 0 7-3.4492 7-7.6992v-90.824c0-4.2539-3.0898-7.3516-7-7.3516zm-93.977 70.875c-21.734 0-39.199 18.012-39.199 40.602 0 22.328 17.465 40.25 39.199 40.25s39.023-17.922 39.023-40.25c-1.5742-26.969-18.695-40.371-39.023-40.602zm-262.32 0c-21.816-0.40234-38.656 21.98-39.199 40.602 0 22.297 17.719 40.25 39.199 40.25 21.734 0 39.199-17.953 39.199-40.25 0.625-25.887-20.055-40.023-39.199-40.602z" fill-rule="evenodd"/>
+  <use x="70" y="644" />
+  <use x="90.550781" y="644" />
+  <use x="104.359375" y="644" />
+  <use x="123.347656" y="644" />
+  <use x="142.242188" y="644" />
+  <use x="155.628906" y="644" />
+  <use x="174.617188" y="644" />
+  <use x="204.410156" y="644" />
+  <use x="224.453125" y="644" />
+  <use x="252.453125" y="644" />
+  <use x="274.011719" y="644" />
+  <use x="293.25" y="644" />
+  <use x="311.5" y="644" />
+  <use x="329.75" y="644" />
+  <use x="348.648438" y="644" />
+  <use x="378.328125" y="644" />
+  <use x="399.890625" y="644" />
+  <use x="418.78125" y="644" />
+  <use x="435.078125" y="644" />
+  <use x="453.703125" y="644" />
+  <use x="70" y="672" />
+  <use x="82.183594" y="672" />
+  <use x="95.992188" y="672" />
+  <use x="115.226562" y="672" />
+  <use x="154.152344" y="672" />
+  <use x="167.535156" y="672" />
+  <use x="187.46875" y="672" />
+  <use x="216.207031" y="672" />
+  <use x="239.640625" y="672" />
+  <use x="258.878906" y="672" />
+  <use x="278.8125" y="672" />
+  <use x="308.492188" y="672" />
+  <use x="329.015625" y="672" />
+  <use x="342.820312" y="672" />
+  <use x="362.058594" y="672" />
+  <use x="371.65625" y="672" />
+  <use x="390.648438" y="672" />
+  <use x="407.242188" y="672" />
+ </g>
 </svg>
-                    </div>
-                    <div class="ml-4">
-                        <p class="text-base font-medium text-gray-900">Smart Logistics</p>
-                        <p class="mt-1 text-sm text-gray-500">Distribution network monitoring and optimization</p>
-                    </div>
-                </a>
 
-                
-                
-                
-                
-                
-                
+          </div>
+          <div class="ml-4">
+            <p class="text-base font-medium text-gray-900">Smart Logistics</p>
+            <p class="mt-1 text-sm text-gray-500">End-to-end fleet and asset tracking</p>
+          </div>
+        </a>
 
-            </div>
-        </div>
+        
+        
+        
+
+        <a href="/recycling.html"
+          class="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50">
+          <div
+            class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gray-100 text-gray-800 sm:h-12 sm:w-12">
+            <?xml version="1.0" encoding="UTF-8"?>
+<svg class="h-6 w-6" version="1.1" viewBox="175 100 350 350" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g>
+  <path d="m254.98 204.46 56.152 32.418v0.003907c1.0312 0.59375 2.2578 0.75781 3.4102 0.44922 1.1523-0.30859 2.1328-1.0625 2.7305-2.0938l32.727-56.684 23.023 39.879-15.754 9.0938c-1.7266 0.99609-2.5898 3.0117-2.1211 4.9492s2.1602 3.3359 4.1523 3.4336l65.473 3.1992c0.074218 0.003907 0.14844 0.003907 0.21875 0.003907 1.6875 0 3.2305-0.94141 4-2.4414l29.965-58.301c0.91016-1.7734 0.54688-3.9336-0.89844-5.3086-1.4453-1.375-3.6211-1.6367-5.3477-0.63672l-15.75 9.0938-13.793-23.895h-0.003907c-7.7852-13.434-22.129-21.715-37.656-21.742h-71.02c-15.527 0.027343-29.871 8.3086-37.656 21.742l-23.496 40.699c-0.59375 1.0312-0.75781 2.2578-0.44922 3.4102 0.30859 1.1523 1.0625 2.1328 2.0938 2.7266zm130.52-59.59 0.003906 0.003906c12.316 0.019532 23.695 6.5859 29.871 17.246l16.043 27.785c0.59375 1.0312 1.5781 1.7852 2.7266 2.0938 1.1523 0.30859 2.3789 0.14844 3.4141-0.44922l6.418-3.7031-21.66 42.141-47.324-2.3125 6.418-3.7031-0.003906-0.003906c1.0312-0.59375 1.7852-1.5742 2.0938-2.7266s0.14844-2.3789-0.44922-3.4102l-28.945-50.137v-0.003907c-0.12891-0.28906-0.28516-0.56641-0.47266-0.82031-0.29688-0.51172-0.58984-1.0039-0.88281-1.5078-0.30859-0.52344-0.61719-1.0586-0.92188-1.5742-0.32031-0.53906-0.64062-1.0625-0.95703-1.5898-0.33203-0.55078-0.66406-1.1055-0.99609-1.6445-0.30469-0.49609-0.61328-0.97656-0.92188-1.4609-0.33984-0.53906-0.68359-1.0859-1.0234-1.6133-0.30469-0.46875-0.61328-0.91797-0.92188-1.375-0.34375-0.51562-0.69141-1.0352-1.0391-1.5352-0.3125-0.44531-0.625-0.86719-0.94141-1.3008-0.35156-0.48438-0.69922-0.97266-1.0508-1.4375-0.32031-0.41797-0.64453-0.81641-0.96875-1.2227-0.35938-0.44922-0.71484-0.90625-1.0781-1.3398-0.32812-0.39063-0.66797-0.75781-1.0039-1.1367-0.36719-0.41406-0.73438-0.83594-1.1094-1.2344-0.34375-0.36328-0.69922-0.69922-1.0508-1.0469-0.32812-0.32422-0.64453-0.66406-0.97656-0.97656zm-100.89 17.246v0.003906c6.1758-10.66 17.555-17.227 29.875-17.246 13.273 0 20.09 7.3164 30.312 24.699l-33.07 57.273-48.363-27.922zm-39.871 217.56 0.003906 0.007812c7.7852 13.438 22.129 21.715 37.656 21.742h46.996c1.1914 0 2.3359-0.47266 3.1758-1.3164 0.84375-0.84375 1.3164-1.9883 1.3164-3.1797v-64.836c0-1.1914-0.47266-2.3359-1.3164-3.1797-0.83984-0.84375-1.9844-1.3164-3.1758-1.3164h-65.453l23.023-39.879 15.75 9.0938h0.003906c0.67969 0.39453 1.457 0.60547 2.2461 0.60156h0.035156c1.6641 0 3.1914-0.91797 3.9727-2.3867 0.77734-1.4688 0.68359-3.25-0.25-4.625l-29.727-57.836v-0.003906c-0.80859-1.5625-2.457-2.5156-4.2188-2.4336l-65.473 3.1992c-1.9922 0.097657-3.6797 1.4961-4.1484 3.4336s0.39453 3.9531 2.1211 4.9492l15.75 9.0938-13.797 23.895h0.003907c-7.7422 13.461-7.7422 30.023 0 43.484l35.492 61.477zm80.16-43.086v55.848l-42.5-0.003906c-12.316-0.019531-23.695-6.5859-29.871-17.246-6.6367-11.496-3.707-21.055 6.2344-38.602zm-81.039 9.4414c-0.19531 0.46094-0.36328 0.91406-0.54688 1.375-0.22266 0.5625-0.46094 1.1289-0.66406 1.6914-0.16797 0.45703-0.30469 0.90625-0.45703 1.3594-0.1875 0.55859-0.38672 1.1172-0.55469 1.6719-0.13281 0.44922-0.23828 0.89063-0.35547 1.3398-0.13672 0.51172-0.29297 1.0273-0.41016 1.5391l-23.852-41.32c-6.1406-10.676-6.1406-23.816 0-34.492l16.043-27.785c0.59766-1.0352 0.75781-2.2617 0.44922-3.4141-0.30859-1.1484-1.0625-2.1328-2.0938-2.7266l-6.418-3.7031 47.324-2.3125 21.66 42.137-6.418-3.7031c-1.0312-0.59766-2.2578-0.76172-3.4102-0.45312-1.1523 0.30859-2.1328 1.0625-2.7305 2.0977l-29.164 50.516c-0.65625 1.1406-1.3008 2.2656-1.9258 3.375-0.28125 0.49609-0.54297 0.98438-0.81641 1.4727-0.33984 0.61328-0.6875 1.2305-1.0117 1.832-0.25391 0.46484-0.48438 0.92188-0.73047 1.3828-0.32422 0.61719-0.66016 1.2383-0.97266 1.8438-0.23828 0.46484-0.45312 0.92188-0.67969 1.3789-0.29297 0.59766-0.59766 1.1953-0.875 1.7852-0.21875 0.46094-0.41016 0.91797-0.61719 1.375-0.25781 0.58203-0.52734 1.1641-0.77344 1.7383zm159.46-75.117 32.727 56.684h-46.047v-18.188c0-1.9961-1.3125-3.75-3.2266-4.3125-1.9141-0.56641-3.9688 0.19922-5.0469 1.875l-35.508 55.102c-0.95703 1.4844-0.95703 3.3867 0 4.8711l35.508 55.102c1.0781 1.6758 3.1328 2.4414 5.0469 1.8789 1.9141-0.5625 3.2266-2.3203 3.2266-4.3125v-18.188h27.59c15.527-0.027344 29.871-8.3086 37.656-21.742l35.508-61.5 0.003907-0.003906-0.003907-0.003906c7.7422-13.457 7.7422-30.02 0-43.477l-23.496-40.699c-0.59766-1.0312-1.5781-1.7852-2.7305-2.0938s-2.3789-0.14844-3.4102 0.44922l-56.152 32.418c-1.0312 0.59766-1.7852 1.5781-2.0938 2.7305-0.30859 1.1523-0.14844 2.3789 0.44922 3.4102zm44.141 104.27c-6.1758 10.656-17.555 17.227-29.871 17.246h-32.086c-1.1914 0-2.3359 0.47266-3.1797 1.3164s-1.3164 1.9883-1.3164 3.1797v7.4102l-25.664-39.828 25.664-39.828v7.4102c0 1.1914 0.47266 2.3359 1.3164 3.1758 0.84375 0.84375 1.9883 1.3164 3.1797 1.3164h58.328c1.3203 0 2.6211-0.007813 3.8984-0.019532 0.38672-0.003906 0.75781-0.015624 1.1406-0.019531 0.88281-0.011719 1.7695-0.027343 2.6328-0.050781 0.46094-0.011719 0.90234-0.035156 1.3555-0.050781 0.76562-0.027344 1.5391-0.050781 2.2891-0.089844 0.48047-0.023437 0.94141-0.0625 1.4141-0.09375 0.70312-0.042969 1.4141-0.085937 2.1016-0.14062 0.49219-0.042969 0.96484-0.10156 1.4531-0.14844 0.64844-0.066406 1.3008-0.12109 1.9336-0.20312 0.48828-0.0625 0.95312-0.14063 1.4336-0.21094 0.60938-0.089844 1.2305-0.16797 1.8281-0.27344 0.47266-0.082031 0.92969-0.1875 1.3906-0.28125 0.57812-0.11719 1.168-0.22266 1.7344-0.35937 0.46484-0.10938 0.91406-0.24609 1.3711-0.37109 0.50391-0.13672 1.0156-0.25391 1.5078-0.40625zm14.258-132.8 21.25 36.805c6.1406 10.68 6.1406 23.816 0 34.496-6.6367 11.496-16.379 13.738-36.547 13.902l-33.066-57.277z"/>
+  <use x="70" y="625.625" />
+  <use x="86.054688" y="625.625" />
+  <use x="96.839844" y="625.625" />
+  <use x="111.679687" y="625.625" />
+  <use x="126.4375" y="625.625" />
+  <use x="136.894531" y="625.625" />
+  <use x="151.730469" y="625.625" />
+  <use x="175.007812" y="625.625" />
+  <use x="190.664062" y="625.625" />
+  <use x="212.539062" y="625.625" />
+  <use x="230.847656" y="625.625" />
+  <use x="245.609375" y="625.625" />
+  <use x="261.265625" y="625.625" />
+  <use x="268.765625" y="625.625" />
+  <use x="283.878906" y="625.625" />
+  <use x="300.808594" y="625.625" />
+  <use x="313.828125" y="625.625" />
+  <use x="328.378906" y="625.625" />
+  <use x="70" y="647.5" />
+  <use x="79.515625" y="647.5" />
+  <use x="90.304688" y="647.5" />
+  <use x="105.332031" y="647.5" />
+  <use x="135.742188" y="647.5" />
+  <use x="146.199219" y="647.5" />
+  <use x="161.773438" y="647.5" />
+  <use x="184.222656" y="647.5" />
+  <use x="202.53125" y="647.5" />
+  <use x="217.558594" y="647.5" />
+  <use x="233.132812" y="647.5" />
+  <use x="256.320312" y="647.5" />
+  <use x="272.355469" y="647.5" />
+  <use x="283.140625" y="647.5" />
+  <use x="298.171875" y="647.5" />
+  <use x="305.667969" y="647.5" />
+  <use x="320.503906" y="647.5" />
+  <use x="333.472656" y="647.5" />
+ </g>
+</svg>
+
+          </div>
+          <div class="ml-4">
+            <p class="text-base font-medium text-gray-900">Smart Recycling</p>
+            <p class="mt-1 text-sm text-gray-500">Optimize your recycling operation</p>
+          </div>
+        </a>
+
+        
+        
+        
+        
+        
+        
+
+      </div>
     </div>
+  </div>
 </div>
-                <!-- <a href="/#home-features" class="text-base text-slate-800 hover:text-slate-500">Technology</a> -->
-                <a href="/#why-hyper" class="text-base text-slate-800 hover:text-slate-500">Why Hyper</a>
-                <a href="https://hyper.systems/developers"
-                    class="text-base text-slate-800 hover:text-slate-500">Developers</a>
-                <a href="#fold"
-                    class="rounded-sm bg-slate-800 px-4 py-2 text-base font-medium text-white hover:bg-slate-700">
-                    Get a demo
-                </a>
-            </div>
-        </nav>
-    </div>
-    <!-- Mobile Menu -->
-    <div class="absolute inset-x-0 top-0 z-30 origin-top p-2 md:hidden" style="display: none;" id="mobileMenu">
-        <div class="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-1">
-            <div class="flex items-center justify-between px-5 pt-4">
-                <div>
-                    <img src="http://localhost:4000/assets/img/hyper_logo.svg" alt="Hyper Systems">
-                </div>
-                <div class="-mr-2">
-                    <button type="button" id="closeMenuBtn"
-                        class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
-                        <span class="sr-only">Close menu</span>
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <div class="pt-5 pb-6">
-                <div class="space-y-1 px-2">
-
-                    <div class="bg-gray-50 p-4 sm:p-6">
-                        <h3 class="text-base font-medium text-gray-500">Solutions</h3>
-                        <ul role="list" class="mt-6 space-y-6">
-                            
-                            
-                            
-                            
-                            <li class="flow-root">
-                                <a href="/agriculture.html"
-                                    class="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50">
-                                    <div
-                                        class="hidden sm:flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gray-100 text-gray-800 sm:h-12 sm:w-12">
-                                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-    <path stroke-linecap="round" stroke-linejoin="round"
-        d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-</svg>
-                                    </div>
-                                    <div class="sm:ml-4">
-                                        <p class="text-base font-medium text-gray-900">Smart Agriculture</p>
-                                        <p class="mt-1 text-sm text-gray-500">Monitor and control your entire farm</p>
-                                    </div>
-                                </a>
-                            </li>
-                            
-                            
-                            
-                            <li class="flow-root">
-                                <a href="/energy.html"
-                                    class="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50">
-                                    <div
-                                        class="hidden sm:flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gray-100 text-gray-800 sm:h-12 sm:w-12">
-                                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-    <path stroke-linecap="round" stroke-linejoin="round"
-        d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-</svg>
-                                    </div>
-                                    <div class="sm:ml-4">
-                                        <p class="text-base font-medium text-gray-900">Smart Energy</p>
-                                        <p class="mt-1 text-sm text-gray-500">Collecting real-time insights on performance and consumption patterns.</p>
-                                    </div>
-                                </a>
-                            </li>
-                            
-                            
-                            
-                            
-                            
-                            <li class="flow-root">
-                                <a href="/logistics.html"
-                                    class="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50">
-                                    <div
-                                        class="hidden sm:flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gray-100 text-gray-800 sm:h-12 sm:w-12">
-                                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-    <path stroke-linecap="round" stroke-linejoin="round"
-        d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-</svg>
-                                    </div>
-                                    <div class="sm:ml-4">
-                                        <p class="text-base font-medium text-gray-900">Smart Logistics</p>
-                                        <p class="mt-1 text-sm text-gray-500">Distribution network monitoring and optimization</p>
-                                    </div>
-                                </a>
-                            </li>
-                            
-                            
-                            
-                            
-                            
-                            
-                        </ul>
-                    </div>
-
-                    <a href="#home-features"
-                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">Technology</a>
-                    <a href="#why-hyper"
-                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">Explore</a>
-                    <a href="https://hyper.systems/developers"
-                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">Developers</a>
-                </div>
-                <div class="mt-6 px-5">
-                    <a href="#fold"
-                        class="block w-full rounded-sm bg-slate-800 py-3 px-4 text-center font-medium text-white shadow hover:bg-slate-700">
-                        Get a demo
-                    </a>
-                </div>
-            </div>
+        <!-- <a href="/#home-features" class="text-base text-slate-800 hover:text-slate-500">Technology</a> -->
+        <!-- <a href="/#why-hyper" class="text-base text-slate-800 hover:text-slate-500">Why Hyper</a> -->
+        <a href="https://hyper.systems/developers" class="text-base text-slate-800 hover:text-slate-500">Developers</a>
+        <a href="https://demo.hyper.systems"
+          class="rounded-sm bg-slate-800 px-4 py-2 text-base font-medium text-white hover:bg-slate-700">
+          Sign in
+        </a>
+      </div>
+    </nav>
+  </div>
+  <!-- Mobile Menu -->
+  <div class="absolute inset-x-0 top-0 z-30 origin-top p-2 md:hidden" style="display: none;" id="mobileMenu">
+    <div class="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-1">
+      <div class="flex items-center justify-between px-5 pt-4">
+        <div>
+          <img src="http://localhost:4000/assets/img/hyper_logo.svg" alt="Hyper Systems">
         </div>
+        <div class="-mr-2">
+          <button type="button" id="closeMenuBtn"
+            class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
+            <span class="sr-only">Close menu</span>
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="pt-5 pb-6">
+        <div class="space-y-1 px-2">
+
+          <div class="bg-gray-50 p-4 sm:p-6">
+            <h3 class="text-base font-medium text-gray-500">Applications</h3>
+            <ul role="list" class="mt-6 space-y-6">
+              
+              
+              
+              
+              <li class="flow-root">
+                <a href="/agriculture.html"
+                  class="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50">
+                  <div
+                    class="hidden sm:flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gray-100 text-gray-800 sm:h-12 sm:w-12">
+                    <?xml version="1.0" encoding="UTF-8"?>
+<svg class="h-6 w-6" version="1.1" viewBox="-50 -100 700 700" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g>
+  <path d="m568.96 28c-13.441 0-334.88 5.6016-427.84 163.52-37.52 63.281-32.48 141.12 14 231.84-21.281 59.922-27.441 102.48-27.441 104.72l25.199 3.3594c0-0.55859 5.0391-35.84 22.398-87.359 20.719 12.879 66.078 36.398 121.52 36.398 21.84 0 44.801-3.9219 68.32-13.441 106.4-43.121 179.2-185.92 216.72-425.04l2.2422-13.996zm-406 176.4c55.438-94.078 207.2-129.36 309.12-142.8-139.44 62.719-221.76 169.12-268.8 254.24-14.559 26.32-26.32 51.52-35.84 75.039-32.477-73.359-34.719-136.08-4.4766-186.48zm192.64 239.68c-77.84 31.922-152.88-11.758-171.92-24.078 10.641-28.559 24.078-59.922 42.559-92.961 75.039-136.64 185.36-226.8 327.6-268.8-36.961 215.04-105.28 348.32-198.24 385.84z"/>
+  <use x="70" y="644" />
+  <use x="90.550781" y="644" />
+  <use x="104.359375" y="644" />
+  <use x="123.347656" y="644" />
+  <use x="142.242188" y="644" />
+  <use x="155.628906" y="644" />
+  <use x="174.617188" y="644" />
+  <use x="204.410156" y="644" />
+  <use x="224.453125" y="644" />
+  <use x="252.453125" y="644" />
+  <use x="275.1875" y="644" />
+  <use x="298.621094" y="644" />
+  <use x="308.21875" y="644" />
+  <use x="328.765625" y="644" />
+  <use x="352.570312" y="644" />
+  <use x="374.132812" y="644" />
+  <use x="70" y="672" />
+  <use x="82.183594" y="672" />
+  <use x="95.992188" y="672" />
+  <use x="115.226562" y="672" />
+  <use x="154.152344" y="672" />
+  <use x="167.535156" y="672" />
+  <use x="187.46875" y="672" />
+  <use x="216.207031" y="672" />
+  <use x="239.640625" y="672" />
+  <use x="258.878906" y="672" />
+  <use x="278.8125" y="672" />
+  <use x="308.492188" y="672" />
+  <use x="329.015625" y="672" />
+  <use x="342.820312" y="672" />
+  <use x="362.058594" y="672" />
+  <use x="371.65625" y="672" />
+  <use x="390.648438" y="672" />
+  <use x="407.242188" y="672" />
+ </g>
+</svg>
+
+                  </div>
+                  <div class="sm:ml-4">
+                    <p class="text-base font-medium text-gray-900">Smart Agriculture</p>
+                    <p class="mt-1 text-sm text-gray-500">Monitor and control your entire farm</p>
+                  </div>
+                </a>
+              </li>
+              
+              
+              
+              <li class="flow-root">
+                <a href="/energy.html"
+                  class="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50">
+                  <div
+                    class="hidden sm:flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gray-100 text-gray-800 sm:h-12 sm:w-12">
+                    <?xml version="1.0" encoding="UTF-8"?>
+<svg class="h-6 w-6" version="1.1" viewBox="50 0 550 550" xmlns="http://www.w3.org/2000/svg">
+ <path d="m510.07 184.33c-1.3438-2.5234-3.9844-4.0859-6.8438-4.043h-114.02l54.133-158.36c0.32031-2.2969-0.35938-4.6172-1.8672-6.3789-1.4844-2.0391-3.8516-3.2539-6.375-3.2656h-158.82c-3.4141-0.019531-6.4414 2.1875-7.4648 5.4453l-79.488 259.93c-0.79688 2.3906-0.32812 5.0234 1.2422 7 1.4844 1.9375 3.7812 3.0859 6.2227 3.1094h104.22l-44.332 251.38c-0.69141 3.6445 1.3438 7.2578 4.8203 8.5547 0.97266 0.23047 1.9844 0.23047 2.957 0 2.5664 0.007812 4.9609-1.2812 6.375-3.4219l238.93-351.87c1.5781-2.4375 1.6953-5.5391 0.3125-8.0898zm-231.31 321.85 39.199-224.78 0.003906-0.003906c0.32422-2.2695-0.29688-4.5742-1.7109-6.375-1.5-1.7109-3.6406-2.7227-5.9141-2.8008h-103.13l74.824-245h142.33l-53.355 158.36c-0.79688 2.3633-0.41406 4.9688 1.0352 7 1.4453 2.0312 3.7812 3.2461 6.2773 3.2656h110.29z"/>
+</svg>
+
+                  </div>
+                  <div class="sm:ml-4">
+                    <p class="text-base font-medium text-gray-900">Smart Energy</p>
+                    <p class="mt-1 text-sm text-gray-500">Data-driven energy infrastructure</p>
+                  </div>
+                </a>
+              </li>
+              
+              
+              
+              
+              
+              <li class="flow-root">
+                <a href="/logistics.html"
+                  class="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50">
+                  <div
+                    class="hidden sm:flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gray-100 text-gray-800 sm:h-12 sm:w-12">
+                    <?xml version="1.0" encoding="UTF-8"?>
+<svg class="h-6 w-6" version="1.1" viewBox="100 25 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g>
+  <path d="m418.77 134.4c13.953 0 25.199 11.824 25.199 26.074v1.2266h59.852c7.7734 0 14.18 4.9492 20.125 11.375 5.9453 6.4258 11.543 14.934 16.977 24.148 10.863 18.43 20.715 39.969 27.301 53.375 0.14063 0.28125 0.25781 0.57422 0.35156 0.875h9.625c10.09 0 18.199 8.4336 18.199 18.551v90.824c0 10.117-7.9844 18.898-18.199 18.898h-43.926c-2.7148 25.633-23.977 45.852-50.051 45.852-26.074 0-47.336-20.219-50.051-45.852h-162.05c-2.7422 25.652-24.152 45.852-50.227 45.852-25.891 0-47.312-20.195-50.051-45.852h-43.051c-14.031 0-25.199-11.992-25.199-26.074v-193.2c0-14.254 11.25-26.074 25.199-26.074zm0 11.199h-289.98c-7.7227 0-14 6.4102-14 14.875v193.2c0 8.1719 6.3555 14.875 14 14.875h43.051c2.6602-25.738 24.102-46.199 50.051-46.199 26.156 0 47.383 20.438 50.051 46.199h160.82v-208.07c0-8.4648-6.2773-14.875-14-14.875zm85.051 27.301h-59.852v78.574h112.18c-6.6133-13.652-15.312-32.297-24.852-48.477-5.207-8.8359-10.562-16.809-15.574-22.227-5.0117-5.4141-9.5117-7.875-11.898-7.875zm74.375 89.773h-134.23v80.5c9.1484-12.57 23.703-20.824 40.25-20.824 27.117 0.71875 48.051 17.234 49.875 46.199h44.102c3.7852 0 7-3.4492 7-7.6992v-90.824c0-4.2539-3.0898-7.3516-7-7.3516zm-93.977 70.875c-21.734 0-39.199 18.012-39.199 40.602 0 22.328 17.465 40.25 39.199 40.25s39.023-17.922 39.023-40.25c-1.5742-26.969-18.695-40.371-39.023-40.602zm-262.32 0c-21.816-0.40234-38.656 21.98-39.199 40.602 0 22.297 17.719 40.25 39.199 40.25 21.734 0 39.199-17.953 39.199-40.25 0.625-25.887-20.055-40.023-39.199-40.602z" fill-rule="evenodd"/>
+  <use x="70" y="644" />
+  <use x="90.550781" y="644" />
+  <use x="104.359375" y="644" />
+  <use x="123.347656" y="644" />
+  <use x="142.242188" y="644" />
+  <use x="155.628906" y="644" />
+  <use x="174.617188" y="644" />
+  <use x="204.410156" y="644" />
+  <use x="224.453125" y="644" />
+  <use x="252.453125" y="644" />
+  <use x="274.011719" y="644" />
+  <use x="293.25" y="644" />
+  <use x="311.5" y="644" />
+  <use x="329.75" y="644" />
+  <use x="348.648438" y="644" />
+  <use x="378.328125" y="644" />
+  <use x="399.890625" y="644" />
+  <use x="418.78125" y="644" />
+  <use x="435.078125" y="644" />
+  <use x="453.703125" y="644" />
+  <use x="70" y="672" />
+  <use x="82.183594" y="672" />
+  <use x="95.992188" y="672" />
+  <use x="115.226562" y="672" />
+  <use x="154.152344" y="672" />
+  <use x="167.535156" y="672" />
+  <use x="187.46875" y="672" />
+  <use x="216.207031" y="672" />
+  <use x="239.640625" y="672" />
+  <use x="258.878906" y="672" />
+  <use x="278.8125" y="672" />
+  <use x="308.492188" y="672" />
+  <use x="329.015625" y="672" />
+  <use x="342.820312" y="672" />
+  <use x="362.058594" y="672" />
+  <use x="371.65625" y="672" />
+  <use x="390.648438" y="672" />
+  <use x="407.242188" y="672" />
+ </g>
+</svg>
+
+                  </div>
+                  <div class="sm:ml-4">
+                    <p class="text-base font-medium text-gray-900">Smart Logistics</p>
+                    <p class="mt-1 text-sm text-gray-500">End-to-end fleet and asset tracking</p>
+                  </div>
+                </a>
+              </li>
+              
+              
+              
+              <li class="flow-root">
+                <a href="/recycling.html"
+                  class="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50">
+                  <div
+                    class="hidden sm:flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gray-100 text-gray-800 sm:h-12 sm:w-12">
+                    <?xml version="1.0" encoding="UTF-8"?>
+<svg class="h-6 w-6" version="1.1" viewBox="175 100 350 350" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g>
+  <path d="m254.98 204.46 56.152 32.418v0.003907c1.0312 0.59375 2.2578 0.75781 3.4102 0.44922 1.1523-0.30859 2.1328-1.0625 2.7305-2.0938l32.727-56.684 23.023 39.879-15.754 9.0938c-1.7266 0.99609-2.5898 3.0117-2.1211 4.9492s2.1602 3.3359 4.1523 3.4336l65.473 3.1992c0.074218 0.003907 0.14844 0.003907 0.21875 0.003907 1.6875 0 3.2305-0.94141 4-2.4414l29.965-58.301c0.91016-1.7734 0.54688-3.9336-0.89844-5.3086-1.4453-1.375-3.6211-1.6367-5.3477-0.63672l-15.75 9.0938-13.793-23.895h-0.003907c-7.7852-13.434-22.129-21.715-37.656-21.742h-71.02c-15.527 0.027343-29.871 8.3086-37.656 21.742l-23.496 40.699c-0.59375 1.0312-0.75781 2.2578-0.44922 3.4102 0.30859 1.1523 1.0625 2.1328 2.0938 2.7266zm130.52-59.59 0.003906 0.003906c12.316 0.019532 23.695 6.5859 29.871 17.246l16.043 27.785c0.59375 1.0312 1.5781 1.7852 2.7266 2.0938 1.1523 0.30859 2.3789 0.14844 3.4141-0.44922l6.418-3.7031-21.66 42.141-47.324-2.3125 6.418-3.7031-0.003906-0.003906c1.0312-0.59375 1.7852-1.5742 2.0938-2.7266s0.14844-2.3789-0.44922-3.4102l-28.945-50.137v-0.003907c-0.12891-0.28906-0.28516-0.56641-0.47266-0.82031-0.29688-0.51172-0.58984-1.0039-0.88281-1.5078-0.30859-0.52344-0.61719-1.0586-0.92188-1.5742-0.32031-0.53906-0.64062-1.0625-0.95703-1.5898-0.33203-0.55078-0.66406-1.1055-0.99609-1.6445-0.30469-0.49609-0.61328-0.97656-0.92188-1.4609-0.33984-0.53906-0.68359-1.0859-1.0234-1.6133-0.30469-0.46875-0.61328-0.91797-0.92188-1.375-0.34375-0.51562-0.69141-1.0352-1.0391-1.5352-0.3125-0.44531-0.625-0.86719-0.94141-1.3008-0.35156-0.48438-0.69922-0.97266-1.0508-1.4375-0.32031-0.41797-0.64453-0.81641-0.96875-1.2227-0.35938-0.44922-0.71484-0.90625-1.0781-1.3398-0.32812-0.39063-0.66797-0.75781-1.0039-1.1367-0.36719-0.41406-0.73438-0.83594-1.1094-1.2344-0.34375-0.36328-0.69922-0.69922-1.0508-1.0469-0.32812-0.32422-0.64453-0.66406-0.97656-0.97656zm-100.89 17.246v0.003906c6.1758-10.66 17.555-17.227 29.875-17.246 13.273 0 20.09 7.3164 30.312 24.699l-33.07 57.273-48.363-27.922zm-39.871 217.56 0.003906 0.007812c7.7852 13.438 22.129 21.715 37.656 21.742h46.996c1.1914 0 2.3359-0.47266 3.1758-1.3164 0.84375-0.84375 1.3164-1.9883 1.3164-3.1797v-64.836c0-1.1914-0.47266-2.3359-1.3164-3.1797-0.83984-0.84375-1.9844-1.3164-3.1758-1.3164h-65.453l23.023-39.879 15.75 9.0938h0.003906c0.67969 0.39453 1.457 0.60547 2.2461 0.60156h0.035156c1.6641 0 3.1914-0.91797 3.9727-2.3867 0.77734-1.4688 0.68359-3.25-0.25-4.625l-29.727-57.836v-0.003906c-0.80859-1.5625-2.457-2.5156-4.2188-2.4336l-65.473 3.1992c-1.9922 0.097657-3.6797 1.4961-4.1484 3.4336s0.39453 3.9531 2.1211 4.9492l15.75 9.0938-13.797 23.895h0.003907c-7.7422 13.461-7.7422 30.023 0 43.484l35.492 61.477zm80.16-43.086v55.848l-42.5-0.003906c-12.316-0.019531-23.695-6.5859-29.871-17.246-6.6367-11.496-3.707-21.055 6.2344-38.602zm-81.039 9.4414c-0.19531 0.46094-0.36328 0.91406-0.54688 1.375-0.22266 0.5625-0.46094 1.1289-0.66406 1.6914-0.16797 0.45703-0.30469 0.90625-0.45703 1.3594-0.1875 0.55859-0.38672 1.1172-0.55469 1.6719-0.13281 0.44922-0.23828 0.89063-0.35547 1.3398-0.13672 0.51172-0.29297 1.0273-0.41016 1.5391l-23.852-41.32c-6.1406-10.676-6.1406-23.816 0-34.492l16.043-27.785c0.59766-1.0352 0.75781-2.2617 0.44922-3.4141-0.30859-1.1484-1.0625-2.1328-2.0938-2.7266l-6.418-3.7031 47.324-2.3125 21.66 42.137-6.418-3.7031c-1.0312-0.59766-2.2578-0.76172-3.4102-0.45312-1.1523 0.30859-2.1328 1.0625-2.7305 2.0977l-29.164 50.516c-0.65625 1.1406-1.3008 2.2656-1.9258 3.375-0.28125 0.49609-0.54297 0.98438-0.81641 1.4727-0.33984 0.61328-0.6875 1.2305-1.0117 1.832-0.25391 0.46484-0.48438 0.92188-0.73047 1.3828-0.32422 0.61719-0.66016 1.2383-0.97266 1.8438-0.23828 0.46484-0.45312 0.92188-0.67969 1.3789-0.29297 0.59766-0.59766 1.1953-0.875 1.7852-0.21875 0.46094-0.41016 0.91797-0.61719 1.375-0.25781 0.58203-0.52734 1.1641-0.77344 1.7383zm159.46-75.117 32.727 56.684h-46.047v-18.188c0-1.9961-1.3125-3.75-3.2266-4.3125-1.9141-0.56641-3.9688 0.19922-5.0469 1.875l-35.508 55.102c-0.95703 1.4844-0.95703 3.3867 0 4.8711l35.508 55.102c1.0781 1.6758 3.1328 2.4414 5.0469 1.8789 1.9141-0.5625 3.2266-2.3203 3.2266-4.3125v-18.188h27.59c15.527-0.027344 29.871-8.3086 37.656-21.742l35.508-61.5 0.003907-0.003906-0.003907-0.003906c7.7422-13.457 7.7422-30.02 0-43.477l-23.496-40.699c-0.59766-1.0312-1.5781-1.7852-2.7305-2.0938s-2.3789-0.14844-3.4102 0.44922l-56.152 32.418c-1.0312 0.59766-1.7852 1.5781-2.0938 2.7305-0.30859 1.1523-0.14844 2.3789 0.44922 3.4102zm44.141 104.27c-6.1758 10.656-17.555 17.227-29.871 17.246h-32.086c-1.1914 0-2.3359 0.47266-3.1797 1.3164s-1.3164 1.9883-1.3164 3.1797v7.4102l-25.664-39.828 25.664-39.828v7.4102c0 1.1914 0.47266 2.3359 1.3164 3.1758 0.84375 0.84375 1.9883 1.3164 3.1797 1.3164h58.328c1.3203 0 2.6211-0.007813 3.8984-0.019532 0.38672-0.003906 0.75781-0.015624 1.1406-0.019531 0.88281-0.011719 1.7695-0.027343 2.6328-0.050781 0.46094-0.011719 0.90234-0.035156 1.3555-0.050781 0.76562-0.027344 1.5391-0.050781 2.2891-0.089844 0.48047-0.023437 0.94141-0.0625 1.4141-0.09375 0.70312-0.042969 1.4141-0.085937 2.1016-0.14062 0.49219-0.042969 0.96484-0.10156 1.4531-0.14844 0.64844-0.066406 1.3008-0.12109 1.9336-0.20312 0.48828-0.0625 0.95312-0.14063 1.4336-0.21094 0.60938-0.089844 1.2305-0.16797 1.8281-0.27344 0.47266-0.082031 0.92969-0.1875 1.3906-0.28125 0.57812-0.11719 1.168-0.22266 1.7344-0.35937 0.46484-0.10938 0.91406-0.24609 1.3711-0.37109 0.50391-0.13672 1.0156-0.25391 1.5078-0.40625zm14.258-132.8 21.25 36.805c6.1406 10.68 6.1406 23.816 0 34.496-6.6367 11.496-16.379 13.738-36.547 13.902l-33.066-57.277z"/>
+  <use x="70" y="625.625" />
+  <use x="86.054688" y="625.625" />
+  <use x="96.839844" y="625.625" />
+  <use x="111.679687" y="625.625" />
+  <use x="126.4375" y="625.625" />
+  <use x="136.894531" y="625.625" />
+  <use x="151.730469" y="625.625" />
+  <use x="175.007812" y="625.625" />
+  <use x="190.664062" y="625.625" />
+  <use x="212.539062" y="625.625" />
+  <use x="230.847656" y="625.625" />
+  <use x="245.609375" y="625.625" />
+  <use x="261.265625" y="625.625" />
+  <use x="268.765625" y="625.625" />
+  <use x="283.878906" y="625.625" />
+  <use x="300.808594" y="625.625" />
+  <use x="313.828125" y="625.625" />
+  <use x="328.378906" y="625.625" />
+  <use x="70" y="647.5" />
+  <use x="79.515625" y="647.5" />
+  <use x="90.304688" y="647.5" />
+  <use x="105.332031" y="647.5" />
+  <use x="135.742188" y="647.5" />
+  <use x="146.199219" y="647.5" />
+  <use x="161.773438" y="647.5" />
+  <use x="184.222656" y="647.5" />
+  <use x="202.53125" y="647.5" />
+  <use x="217.558594" y="647.5" />
+  <use x="233.132812" y="647.5" />
+  <use x="256.320312" y="647.5" />
+  <use x="272.355469" y="647.5" />
+  <use x="283.140625" y="647.5" />
+  <use x="298.171875" y="647.5" />
+  <use x="305.667969" y="647.5" />
+  <use x="320.503906" y="647.5" />
+  <use x="333.472656" y="647.5" />
+ </g>
+</svg>
+
+                  </div>
+                  <div class="sm:ml-4">
+                    <p class="text-base font-medium text-gray-900">Smart Recycling</p>
+                    <p class="mt-1 text-sm text-gray-500">Optimize your recycling operation</p>
+                  </div>
+                </a>
+              </li>
+              
+              
+              
+              
+              
+              
+            </ul>
+          </div>
+
+          <a href="#home-features"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">Technology</a>
+          <a href="#why-hyper"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">Explore</a>
+          <a href="https://hyper.systems/developers"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">Developers</a>
+        </div>
+        <div class="mt-6 px-5">
+          <a href="#fold"
+            class="block w-full rounded-sm bg-slate-800 py-3 px-4 text-center font-medium text-white shadow hover:bg-slate-700">
+            Get a demo
+          </a>
+        </div>
+      </div>
     </div>
-</header>
-<main>
+  </div>
+</header><main>
 
             
 
 <div class="px-4 mt-12 lg:mt-32 ">
-    <div class="mx-auto max-w-8xl grid lg:grid-cols-2 gap-12">
-        <div class="z-10">
-            <h2 id="sale-heading" class="text-4xl font-bold md:text-6xl md:mt-4">
-                
-Energy monitoring infrastructure.
+  <div class="mx-auto max-w-8xl grid lg:grid-cols-2 gap-12">
+    <div class="z-10">
+      <h2 id="sale-heading" class="text-4xl font-bold md:text-6xl md:mt-4">
+        
+Supercharge your energy infrastructure with data.
 
-            </h2>
-            <p class="mt-6 text-base text-gray-600 md:text-xl md:leading-[150%]">
-                
-Connect all of the modules in your energy system with our platform to start
+      </h2>
+      <p class="mt-6 text-base text-gray-600 md:text-xl md:leading-[150%]">
+        
+Connect every module in your energy system with our platform to start
 collecting real-time insights on performance and consumption patterns for
 your smart metering or grid management solution.
 
-            </p>
-        </div>
-        <div class="relative flex flex-row gap-6 md:gap-16 lg:px-12 place-content-center">
-            <img src="http://localhost:4000/assets/img/bg_blob.svg"
-                class="absolute max-w-none w-full lg:top-1/2 left-1/2 transform -translate-y-48 lg:-translate-y-1/2 -translate-x-1/2" />
-
-            <span class="flex-1 h-72 max-w-xs lg:h-96 -mb-4 lg:-mb-10 rounded relative 
-        bg-[url('http://localhost:4000/assets/img/solutions_feature-farming-1.png')] bg-cover 
+      </p>
+    </div>
+    <div class="relative flex flex-row gap-6 md:gap-16 lg:px-12 place-content-center">
+      <img src="http://localhost:4000/assets/img/bg_blob.svg"
+        class="absolute max-w-none w-full lg:top-1/2 left-1/2 transform -translate-y-48 lg:-translate-y-1/2 -translate-x-1/2" />
+      <span class="flex-1 h-72 lg:h-96 -mb-4 lg:-mb-10 rounded relative 
+        bg-[url('http://localhost:4000/assets/img/matt-artz-2dCdOoYDjOQ-unsplash.jpg')] bg-cover 
         shadow-lg animate__animated animate__fadeInDown animate__fast">
-
-            </span>
-            <span class="flex-1 h-72 max-w-xs lg:h-96 -mt-4 lg:-mt-10 rounded relative 
-        bg-[url('http://localhost:4000/assets/img/solutions_feature-farming-2.png')] bg-cover shadow-lg 
-        animate__animated animate__fadeInUp animate__fast">
-            </span>
-        </div>
+      </span>
     </div>
-</div>
-<div class="mx-auto px-4 sm:px-6 max-w-8xl lg:px-0 mt-12 lg:mt-32">
-    <div>
-        <p class="mt-2 text-3xl font-medium leading-8 tracking-tight text-gray-900 sm:text-4xl">
-            Embrace the digital energy revolution.
+  </div>
+</div><div class="mx-auto px-4 sm:px-6 max-w-8xl lg:px-0 mt-12 lg:mt-32">
+  <div>
+    <p class="mt-2 text-3xl font-medium leading-8 tracking-tight text-gray-900 sm:text-4xl">
+      Embrace the digital energy revolution.
+    </p>
+  </div>
+  <h2 class="text-sm text-blue-600 mt-8">BENEFITS</h2>
+  <dl
+    class="space-y-10 lg:grid  lg:grid-cols-3  lg:gap-8 lg:space-y-0 mt-5">
+    
+    <div class=" bg-gray-100 p-6 rounded ">
+      <dt>
+        <div
+          class="flex h-12 w-12 items-center justify-center rounded-md text-slate-600  bg-white ">
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+    stroke="currentColor" aria-hidden="true">
+  <path stroke-linecap="round" stroke-linejoin="round"
+    d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+</svg>
+        </div>
+        <p class="mt-8 text-lg font-medium leading-6 text-gray-900">
+          A single platform for all your data
         </p>
+      </dt>
+      <dd class="mt-2 text-base text-gray-500"> Unify data across your entire operation in a single platform that provides reliable historical and real-time access to collected performance metrics. </dd>
     </div>
-    <h2 class="text-sm text-blue-600 mt-8">BENEFITS</h2>
-    <dl
-        class="space-y-10 lg:grid  lg:grid-cols-3  lg:gap-8 lg:space-y-0 mt-5">
-        
-        <div class=" bg-gray-100 p-6 rounded ">
-            <dt>
-                <div
-                    class="flex h-12 w-12 items-center justify-center rounded-md text-slate-600  bg-white ">
-                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-    <path stroke-linecap="round" stroke-linejoin="round"
-        d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+    
+    <div class=" bg-gray-100 p-6 rounded ">
+      <dt>
+        <div
+          class="flex h-12 w-12 items-center justify-center rounded-md text-slate-600  bg-white ">
+          <?xml version="1.0" encoding="UTF-8"?>
+<svg class="h-6 w-6" version="1.1" viewBox="100 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g>
+  <path d="m511.84 458.08h-305.2c-8.3984 0-15.68-4.4805-20.16-11.199s-5.0391-15.68-1.1211-22.961l152.32-305.2c3.9219-8.3984 12.32-13.441 21.281-13.441 8.9609 0 17.359 5.0391 21.281 13.441l152.32 305.2c3.9219 7.2812 3.3594 16.238-1.1211 22.961-4.4805 6.7227-11.203 11.199-19.602 11.199zm-152.32-341.6c-5.0391 0-8.9609 2.8008-11.199 6.7188l-152.88 305.2c-2.2383 3.9219-1.6797 8.3984 0.55859 12.32s6.1602 6.1602 10.641 6.1602h305.2c4.4805 0 8.3984-2.2383 10.641-6.1602 2.2383-3.9219 2.8008-8.3984 0.55859-12.32l-152.32-304.64c-2.2383-4.4805-6.7188-7.2812-11.199-7.2812zm-19.039 262.08v18.48c0 5.6016 4.4805 10.078 10.078 10.078h17.922c5.6016 0 10.078-4.4805 10.078-10.078v-18.48c0-5.6016-4.4805-10.078-10.078-10.078h-17.922c-5.5977 0-10.078 4.4805-10.078 10.078zm25.758-154h-14.559c-5.6016 0-10.078 4.4805-9.5195 10.078l4.4805 106.4c0 5.0391 4.4805 8.9609 9.5195 8.9609h6.1602c5.0391 0 9.5195-3.9219 9.5195-9.5195l4.4805-106.4c0-4.4766-4.4805-9.5195-10.082-9.5195z"/>
+  <use x="70" y="644" />
+  <use x="90.550781" y="644" />
+  <use x="104.359375" y="644" />
+  <use x="123.347656" y="644" />
+  <use x="142.242188" y="644" />
+  <use x="155.628906" y="644" />
+  <use x="174.617188" y="644" />
+  <use x="204.410156" y="644" />
+  <use x="224.453125" y="644" />
+  <use x="252.453125" y="644" />
+  <use x="271.550781" y="644" />
+  <use x="290.539062" y="644" />
+  <use x="304.351562" y="644" />
+  <use x="323.339844" y="644" />
+  <use x="339.636719" y="644" />
+  <use x="368.28125" y="644" />
+  <use x="396.140625" y="644" />
+  <use x="415.378906" y="644" />
+  <use x="429.1875" y="644" />
+  <use x="448.082031" y="644" />
+  <use x="466.335937" y="644" />
+  <use x="482.929687" y="644" />
+  <use x="502.167969" y="644" />
+  <use x="520.421875" y="644" />
+  <use x="70" y="672" />
+  <use x="82.183594" y="672" />
+  <use x="95.992188" y="672" />
+  <use x="115.226562" y="672" />
+  <use x="154.152344" y="672" />
+  <use x="167.535156" y="672" />
+  <use x="187.46875" y="672" />
+  <use x="216.207031" y="672" />
+  <use x="239.640625" y="672" />
+  <use x="258.878906" y="672" />
+  <use x="278.8125" y="672" />
+  <use x="308.492188" y="672" />
+  <use x="329.015625" y="672" />
+  <use x="342.820312" y="672" />
+  <use x="362.058594" y="672" />
+  <use x="371.65625" y="672" />
+  <use x="390.648438" y="672" />
+  <use x="407.242188" y="672" />
+ </g>
 </svg>
-                </div>
-                <p class="mt-8 text-lg font-medium leading-6 text-gray-900">
-                    A single platform for all your data
-                </p>
-            </dt>
-            <dd class="mt-2 text-base text-gray-500"> Unify data across your entire operation in a single platform that provides reliable historical and real-time access to collected performance metrics. </dd>
-        </div>
-        
-        <div class=" bg-gray-100 p-6 rounded ">
-            <dt>
-                <div
-                    class="flex h-12 w-12 items-center justify-center rounded-md text-slate-600  bg-white ">
-                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-    <path stroke-linecap="round" stroke-linejoin="round"
-        d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-</svg>
-                </div>
-                <p class="mt-8 text-lg font-medium leading-6 text-gray-900">
-                    Detect anomalies
-                </p>
-            </dt>
-            <dd class="mt-2 text-base text-gray-500"> Set up flexible alerting rules on any input variable and get notified when anomalies are detected. Alerts can be dilevered both directly to your team or sent as programmable notifications to your software services. </dd>
-        </div>
-        
-        <div class=" bg-gray-100 p-6 rounded ">
-            <dt>
-                <div
-                    class="flex h-12 w-12 items-center justify-center rounded-md text-slate-600  bg-white ">
-                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-    <path stroke-linecap="round" stroke-linejoin="round"
-        d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-</svg>
-                </div>
-                <p class="mt-8 text-lg font-medium leading-6 text-gray-900">
-                    Predictive analytics
-                </p>
-            </dt>
-            <dd class="mt-2 text-base text-gray-500"> The historical energy usage patterns can be used to detect similar future events and help your forecast performance bottlenecks and schedule maintenance interventions. </dd>
-        </div>
-        
-    </dl>
-</div>
-<div class="mt-12 px-4 lg:mt-28">
-    <div class="mx-auto max-w-8xl">
-        <div class="relative grid gap-12  lg:grid-cols-3 lg:items-center ">
-            
-            <div>
-                <img src="http://localhost:4000/assets/img/solutions_benefits_farming.jpg" alt=""
-                    class="relative rounded-md max-w-screen-sm mx-auto w-full">
-            </div>
-            
 
-            <div class="lg:col-span-2 ">
-                <div class="mb-10">
-                    
-                    <p class="mt-2 text-3xl tracking-tight text-gray-900">Why using Hyper can help you!</p>
-                    
-                    
-                </div>
-                
-                <h2 class="text-sm text-blue-600">Everything you need</h2>
-                
-                <div class=" mt-4  ">
-                    <dl class="space-y-10 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 sm:space-y-0 lg:gap-x-12">
-                        
-                        <div class="relative">
-                            <dt>
-                                <p class="text font-bold leading-6 text-gray-900">Fastest time to market</p>
-                            </dt>
-                            <dd class="mt-2 text-base text-gray-700">With Hyper`s platform your can focus on optimising your operations and delivering value to your customers instead of building a custom and costly low-level infrastructure.</dd>
-                        </div>
-                        
-                        <div class="relative">
-                            <dt>
-                                <p class="text font-bold leading-6 text-gray-900">Fastest time to market</p>
-                            </dt>
-                            <dd class="mt-2 text-base text-gray-700">With Hyper`s platform your can focus on optimising your operations and delivering value to your customers instead of building a custom and costly low-level infrastructure.</dd>
-                        </div>
-                        
-                        <div class="relative">
-                            <dt>
-                                <p class="text font-bold leading-6 text-gray-900">Fastest time to market</p>
-                            </dt>
-                            <dd class="mt-2 text-base text-gray-700">With Hyper`s platform your can focus on optimising your operations and delivering value to your customers instead of building a custom and costly low-level infrastructure.</dd>
-                        </div>
-                        
-                        <div class="relative">
-                            <dt>
-                                <p class="text font-bold leading-6 text-gray-900">Fastest time to market</p>
-                            </dt>
-                            <dd class="mt-2 text-base text-gray-700">With Hyper`s platform your can focus on optimising your operations and delivering value to your customers instead of building a custom and costly low-level infrastructure.</dd>
-                        </div>
-                        
-                    </dl>
-                </div>
+        </div>
+        <p class="mt-8 text-lg font-medium leading-6 text-gray-900">
+          Detect anomalies
+        </p>
+      </dt>
+      <dd class="mt-2 text-base text-gray-500"> Set up flexible alerting rules on any input variable and get notified when anomalies are detected. Alerts can be dilevered both directly to your team or sent as programmable notifications to your software services. </dd>
+    </div>
+    
+    <div class=" bg-gray-100 p-6 rounded ">
+      <dt>
+        <div
+          class="flex h-12 w-12 items-center justify-center rounded-md text-slate-600  bg-white ">
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round"
+        d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+</svg>
+        </div>
+        <p class="mt-8 text-lg font-medium leading-6 text-gray-900">
+          Predictive analytics
+        </p>
+      </dt>
+      <dd class="mt-2 text-base text-gray-500"> The historical energy usage patterns can be used to detect similar future events and help your forecast performance bottlenecks and schedule maintenance interventions. </dd>
+    </div>
+    
+  </dl>
+</div><div class="mt-12 px-4 lg:mt-28">
+  <div class="mx-auto max-w-8xl">
+    <div class="relative grid gap-12  lg:grid-cols-3 lg:items-center ">
+      
+      <div>
+        <img src="http://localhost:4000/assets/img/platform-logo-green-w.png" alt=""
+          class="relative rounded-md max-w-screen-sm mx-auto w-full">
+      </div>
+      
+
+      <div class="lg:col-span-2 ">
+        <div class="mb-10">
+          
+          <p class="mt-2 text-3xl tracking-tight text-gray-900">The last data platform you will need.</p>
+          
+          
+        </div>
+        
+        <h2 class="text-sm text-blue-600">FEATURES</h2>
+        
+        <div class=" mt-4  ">
+          <dl class="space-y-10 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 sm:space-y-0 lg:gap-x-12">
+            
+            <div class="relative">
+              <dt>
+                <p class="text font-bold leading-6 text-gray-900">Connect your infrastructure</p>
+              </dt>
+              <dd class="mt-2 text-base text-gray-700">Our data platform is extensible and can collect data from any device, like a senror, machine or controller. Integrate your existing technology infrastructure to precisely monitor your operation in a single place.</dd>
             </div>
+            
+            <div class="relative">
+              <dt>
+                <p class="text font-bold leading-6 text-gray-900">Automate anything</p>
+              </dt>
+              <dd class="mt-2 text-base text-gray-700">Add automation rules to precisely control what and when should be turned on and off based on input readings across your deployment. Control relay actuators, heaters, lights or any other critical equipment.</dd>
+            </div>
+            
+            <div class="relative">
+              <dt>
+                <p class="text font-bold leading-6 text-gray-900">Actionable insights</p>
+              </dt>
+              <dd class="mt-2 text-base text-gray-700">With enough records we can detect and predict recurring patterns in the data. Want to forecast your production throughput? Detect anomalies in the operational conditions? We'll keep you informed.</dd>
+            </div>
+            
+            <div class="relative">
+              <dt>
+                <p class="text font-bold leading-6 text-gray-900">Offline-first operation</p>
+              </dt>
+              <dd class="mt-2 text-base text-gray-700">Our system operates off-line without depending on the internet connectivity for highest reliability. The data is periodically synchronised to a cloud service for easy remote access.</dd>
+            </div>
+            
+          </dl>
         </div>
+      </div>
     </div>
-</div>
-<div class="relative mx-auto max-w-8xl mt-32">
-    <div class="rounded bg-gray-50 mx-4 p-6 xl:mx-0 md:p-10 md:flex md:items-start md:justify-between xl:p-14">
-        <div class="max-w-4xl">
-            <blockquote>
-                <p class="text-xl italic font-light text-black">"Love the simplicity of the service and the prompt customer support. We can`t imagine working without it."</p>
-                <footer class="mt-6">
-                    <p class="text-base font-medium text-black">Judith Black</p>
-                    <p class="text-base font-medium text-gray-500">CEO at PureInsights</p>
-                </footer>
-            </blockquote>
-        </div>
-        
-        <img src="http://localhost:4000/assets/img/materra_logo.svg" class="mt-4 md:mt-0 md:ml-10">
-        
-    </div>
-</div>
-<div class="mt-16 px-4 xl:mt-28">
+  </div>
+</div><div class="mt-16 px-4 xl:mt-28">
     <div class="mx-auto max-w-8xl">
         <div class="overflow-hidden rounded-lg bg-gray-900 lg:grid lg:grid-cols-2 lg:gap-4">
             <div class="px-6 pt-10 pb-12 sm:px-16 sm:pt-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20">
@@ -477,68 +760,66 @@ your smart metering or grid management solution.
     </div>
 </div>
 
-
         </main><footer class="bg-white px-4 py-12 lg:pt-16 lg:pb-8" aria-labelledby="footer-heading">
-    <div class="mx-auto max-w-8xl">
-        <div class="xl:grid xl:grid-cols-2 xl:gap-32">
-            <div class="xl:col-span-1">
-                <img src="http://localhost:4000/assets/img/hyper_logo.svg" alt="Hyper Systems">
-                <p class="text-base text-gray-500 mt-4">We'd love to hear from you!</p>
-                <div class="inline-flex pt-1 pb-1 px-3 rounded items-center gap-1.5 bg-zinc-100 mt-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                        class="text-sky-500" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="feather feather-mail">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                        </path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
-                    <a href="mailto:hello@hyper.systems" class="text-gray-500 font-medium">hello@hyper.systems</a>
-                </div>
-            </div>
-            <div class="mt-12 grid sm:grid-cols-3 gap-8 md:col-span-1 xl:mt-0">
-                <div>
-                    <h3 class="text-base text-sm font-bold text-gray-600">Product</h3>
-                    <ul role="list" class="mt-4 space-y-2">
-                        <li>
-                            <a href="#home-features"
-                                class="text-base text-gray-500 text-sm hover:text-gray-900">Technology</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-base text-sm font-bold text-gray-600">Developers</h3>
-                    <ul role="list" class="mt-4 space-y-2">
-                        <li>
-                            <a href="https://hyper.systems/developers"
-                                class="text-base text-gray-500 text-sm hover:text-gray-900">Documentation</a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/hyper-systems"
-                                class="text-base text-gray-500 text-sm hover:text-gray-900">GitHub</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-base text-sm font-bold text-gray-600">Hyper</h3>
-                    <ul role="list" class="mt-4 space-y-2">
-                        <li>
-                            <a href="https://www.linkedin.com/company/hypersystemsltd"
-                                class="text-base text-gray-500 text-sm hover:text-gray-900">LinkedIn</a>
-                        </li>
-                        <li>
-                            <a href="mailto:hello@hyper.systems"
-                                class="text-base text-gray-500 text-sm hover:text-gray-900">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+  <div class="mx-auto max-w-8xl">
+    <div class="xl:grid xl:grid-cols-2 xl:gap-32">
+      <div class="xl:col-span-1">
+        <img src="http://localhost:4000/assets/img/hyper_logo.svg" alt="Hyper Systems">
+        <p class="text-base text-gray-500 mt-4">We'd love to hear from you!</p>
+        <div class="inline-flex pt-1 pb-1 px-3 rounded items-center gap-1.5 bg-zinc-100 mt-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="text-sky-500"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-mail">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+            </path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <a href="mailto:hello@hyper.systems" class="text-gray-500 font-medium">hello@hyper.systems</a>
         </div>
-        <div class="mt-28 border-t border-gray-200 pt-4">
-            <p class="font-light text-sm text-gray-400">
-                &copy; 2022 Hyper Systems Ltd, All rights reserved.
-            </p>
+      </div>
+      <div class="mt-12 grid sm:grid-cols-3 gap-8 md:col-span-1 xl:mt-0">
+        <div class="invisible">
+          <h3 class="text-base text-sm font-bold text-gray-600">Product</h3>
+          <ul role="list" class="mt-4 space-y-2">
+            <li>
+              <a href="#home-features" class="text-base text-gray-500 text-sm hover:text-gray-900">Technology</a>
+            </li>
+          </ul>
         </div>
+        <div>
+          <h3 class="text-base text-sm font-bold text-gray-600">Developers</h3>
+          <ul role="list" class="mt-4 space-y-2">
+            <li>
+              <a href="https://hyper.systems/developers"
+                class="text-base text-gray-500 text-sm hover:text-gray-900">Documentation</a>
+            </li>
+            <li>
+              <a href="https://github.com/hyper-systems"
+                class="text-base text-gray-500 text-sm hover:text-gray-900">GitHub</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-base text-sm font-bold text-gray-600">Hyper</h3>
+          <ul role="list" class="mt-4 space-y-2">
+            <li>
+              <a href="https://www.linkedin.com/company/hypersystemsltd"
+                class="text-base text-gray-500 text-sm hover:text-gray-900">LinkedIn</a>
+            </li>
+            <li>
+              <a href="mailto:hello@hyper.systems"
+                class="text-base text-gray-500 text-sm hover:text-gray-900">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
+    <div class="mt-28 border-t border-gray-200 pt-4">
+      <p class="font-light text-sm text-gray-400">
+        &copy; 2022 Hyper Systems Ltd, All rights reserved.
+      </p>
+    </div>
+  </div>
 </footer></div>
 </body>
 

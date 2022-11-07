@@ -57,13 +57,13 @@
     }
 }
 
-#solutionsDropdown {
+#applications-dropdown {
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s;
 }
 
-#solutionsMenuContainer:hover #solutionsDropdown {
+#applications-menu-container:hover #applications-dropdown {
     visibility: visible;
     opacity: 1;
 }

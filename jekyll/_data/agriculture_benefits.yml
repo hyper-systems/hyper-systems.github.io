@@ -1,19 +1,17 @@
-- title: Connect all your sensors
-  description: Our data platform is extensible and can collect data from any
-    sensor on the market. Integrate your existing sensor technology or add new
-    sensors to precisely monitor the climate in your farm in a single place.
+- title: A single platform for all your data
+  description: Unify the data from multiple sensor monitoring systems in a
+    single place to help you optimise reporting and save money on subscription
+    costs from multiple providers.
+  icon: icons/globe.svg
 
-- title: Automate anything
-  description: Add automation rules to precisely control what and when should
-    be turned on and off based on sensor readings across your farm. Control
-    heaters, lights or any other critical equipment in your farm.
+- title: Lower your energy bill
+  description: Our high resolution energy monitoring solution can help you
+    optimise and automate energy consumption patterns for lighting and heating
+    systems in your farm.
+  icon: icons/thunder.svg
 
-- title: Actionable insights
-  description: With enough data we can predict what will happen to your crops.
-    Want to know when they are ready to harvest? Are they getting enough light
-    exposure and nutrients? We'll keep you informed.
-
-- title: Offline-first operation
-  description: Our system operates off-line without depending on the internet
-    connectivity for highest reliability. The data is periodically synchronised
-    to a cloud service for easy remote access.
+- title: Detect problems early
+  description: Set up thresholds for deviations in the climate and growing
+    conditions of your crops. Detect low nutrient levels, insufficient light
+    exposure or abnormal temperature and humidity distribution in your farm.
+  icon: icons/alert.svg

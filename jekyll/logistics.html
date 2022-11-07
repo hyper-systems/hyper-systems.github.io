@@ -1,13 +1,13 @@
 ---
 title: Smart Logistics
-description: Distribution network monitoring and optimization
-feature_icon: icons/thunder.svg
+description: End-to-end fleet and asset tracking
+feature_icon: icons/logistics.svg
 layout: default
-categories: [solutions]
+categories: [applications]
 ---
 
 {% capture features_title %}
-Optimize your <br />logistics operations.
+Optimize your logistics operations.
 {% endcapture %}
 
 {% capture features_description %}
@@ -18,16 +18,14 @@ the performance of your entire operations both indoors and outdoors.
 
 {%-
 include fold.html
-feature_one="solutions_feature-farming-1.png"
-feature_two="solutions_feature-farming-2.png"
+img="guillaume-bolduc-uBe2mknURG4-unsplash.jpg"
 title=features_title
 description=features_description
 -%}
 
 {%-
-include features.html
-title="Why using Hyper can help you!"
-features=site.data.construction_features
+include benefits.html
+benefits=site.data.logistics_benefits
 -%}
 
 {% capture benefits_description %}
@@ -35,20 +33,11 @@ Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipis
 {% endcapture %}
 
 {%-
-include benefits.html
-letterhead="Everything you need"
-title="Why using Hyper can help you!"
-img="solutions_benefits_farming.jpg"
-benefits=site.data.construction_benefits
+include features.html
+letterhead="FEATURES"
+title="The last data platform you will need."
+features=site.data.generic_features
+img="platform-logo-green-w.png"
 -%}
-
-{%-
-include testimonial.html
-quote="Love the simplicity of the service and the prompt customer support. We can`t imagine working without it."
-name="Judith Black"
-title="CEO at PureInsights"
-logo="materra_logo.svg"
--%}
-
 
 {% include cta.html %}
