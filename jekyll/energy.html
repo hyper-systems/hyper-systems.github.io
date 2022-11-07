@@ -1,0 +1,40 @@
+---
+title: Smart Energy
+description: Data-driven energy infrastructure
+feature_icon: icons/energy.svg
+layout: default
+categories: [applications]
+---
+
+{% capture features_title %}
+Supercharge your energy infrastructure with data.
+{% endcapture %}
+
+{% capture features_description %}
+Connect every module in your energy system with our platform to start
+collecting real-time insights on performance and consumption patterns for
+your smart metering or grid management solution.
+{% endcapture %}
+
+{%-
+include fold.html
+img="matt-artz-2dCdOoYDjOQ-unsplash.jpg"
+title=features_title
+description=features_description
+-%}
+
+{%-
+include benefits.html
+title="Embrace the digital energy revolution."
+benefits=site.data.energy_benefits
+-%}
+
+{%-
+include features.html
+letterhead="FEATURES"
+title="The last data platform you will need."
+features=site.data.generic_features
+img="platform-logo-green-w.png"
+-%}
+
+{% include cta.html %}

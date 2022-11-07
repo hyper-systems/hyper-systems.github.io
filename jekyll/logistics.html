@@ -1,0 +1,39 @@
+---
+title: Smart Logistics
+description: End-to-end fleet and asset tracking
+feature_icon: icons/logistics.svg
+layout: default
+categories: [applications]
+---
+
+{% capture features_title %}
+Optimize your logistics operations.
+{% endcapture %}
+
+{% capture features_description %}
+Precisely track the GPS location data of your high-value assets,
+quickly detect bottlenecks in the delivery process and measure
+the performance of your entire operations both indoors and outdoors.
+{% endcapture %}
+
+{%-
+include fold.html
+img="guillaume-bolduc-uBe2mknURG4-unsplash.jpg"
+title=features_title
+description=features_description
+-%}
+
+{%-
+include benefits.html
+benefits=site.data.logistics_benefits
+-%}
+
+{%-
+include features.html
+letterhead="FEATURES"
+title="The last data platform you will need."
+features=site.data.generic_features
+img="platform-logo-green-w.png"
+-%}
+
+{% include cta.html %}

@@ -1,0 +1,53 @@
+---
+title: Smart Agriculture
+description: Monitor and control your entire farm
+feature_icon: icons/agriculture.svg
+layout: default
+categories: [applications]
+---
+
+{% capture features_title %}
+Monitor and control your entire farm.
+{% endcapture %}
+
+{% capture features_description %}
+Use our data and automation platform to increase yield and reduce operational
+costs by getting access to unified climate and crop growth metrics.
+{% endcapture %}
+
+{%-
+include fold.html
+img="vertical-farm-crops-1.jpeg"
+title=features_title
+description=features_description
+-%}
+
+{%-
+include benefits.html
+title="Embrace the digital agriculture."
+benefits=site.data.agriculture_benefits
+-%}
+
+{% include crop_vision.html %}
+
+{%-
+include features.html
+letterhead="FEATURES"
+title="The last data platform you will need."
+img="platform-logo-green-w.png"
+features=site.data.generic_features
+-%}
+
+{%-
+include testimonial.html
+quote="Hyper.systems was able to integrate nine different data streams from horticultural parameter sensors in a matter
+of just a few weeks. allowed us to completely consolidate our data platform into one for the first time, which in turn
+advanced our analytical capabilities and will save us thousands of pounds per year on cloud services. Their support and
+speed of execution is exemplary and I could not recommend them more."
+name="Jakob Thomas"
+title="Chief Information Officer at Zero Carbon Farms"
+logo="zcf_logo.svg"
+-%}
+
+
+{% include cta.html %}

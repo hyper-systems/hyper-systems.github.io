@@ -1,0 +1,17 @@
+- title: A single platform for all your data
+  description: Unify the data from multiple sensor monitoring systems in a
+    single place to help you optimise reporting and save money on subscription
+    costs from multiple providers.
+  icon: icons/globe.svg
+
+- title: Lower your energy bill
+  description: Our high resolution energy monitoring solution can help you
+    optimise and automate energy consumption patterns for lighting and heating
+    systems in your farm.
+  icon: icons/thunder.svg
+
+- title: Detect problems early
+  description: Set up thresholds for deviations in the climate and growing
+    conditions of your crops. Detect low nutrient levels, insufficient light
+    exposure or abnormal temperature and humidity distribution in your farm.
+  icon: icons/alert.svg
