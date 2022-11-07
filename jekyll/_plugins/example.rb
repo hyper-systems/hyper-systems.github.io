@@ -19,7 +19,7 @@ module Jekyll
 			datas.each do |data|
 				name = "#{data["vendor"].downcase.tr(" ","-") + "_" + data["product_code"].downcase}.html"
 				page = Jekyll::DataPage.new(site, site.source, "/integrations", name)
-        page.data = data
+        		page.data = data
 				page.data['layout'] = 'device'
 				site.pages << page
 			end

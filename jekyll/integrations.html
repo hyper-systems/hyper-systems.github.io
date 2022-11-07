@@ -44,20 +44,48 @@ layout: default
 
             <div class="pt-5 lg:pt-8 lg:grid lg:grid-cols-3 lg:gap-x-8 xl:grid-cols-4">
                 <aside>
-                    <div class="hidden lg:block rounded bg-gray-100 p-6">
-                        <h2 class="text-md font-medium">Missing a device?</h2>
-                        <p class="text-sm mt-2 text-gray-500">
-                            Tell us what device you'd like and let's talk about adding it.
-                        </p>
-
-                        <a href="#"
-                            class="mt-4 flex w-full items-center justify-center rounded-sm bg-gray-800 px-4 py-2.5 text-sm font-medium text-white hover:bg-gray-700">
-                            Get in touch
-                        </a>
-                    </div>
-
                     <form
                         class="space-y-5 divide-y divide-gray-200 md:grid md:grid-cols-2 lg:block md:divide-y-0 md:space-y-0 lg:space-y-10 lg:divide-y">
+
+                        <div class="">
+                            <fieldset class="filterGroup">
+                                <legend class="block text-sm font-medium text-gray-900">Tags</legend>
+                                <div class="space-y-3 pt-6 ">
+                                    {% assign tags = site.data.devices | map: 'tags' | join: ',' | split: ',' |
+                                    uniq %}
+
+                                    {% for tag in tags %}
+                                    <div {% if forloop.index> 8 %}
+                                        class="hidden flex items-center hiddenListItem"
+                                        {% else %}
+                                        class="flex items-center"
+                                        {% endif %}
+                                        >
+                                        <input id="{{ tag }}" value=".{{ tag }}" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="{{ tag }}" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            {{ tag | replace: '_', ' ' }}
+                                        </label>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </fieldset>
+
+                            <button type="button"
+                                class="mt-8 w-full justify-between flex rounded border border-gray-300 px-4 py-2 text-sm font-medium text-gray-800 shadow-sm hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 whitespace-nowra hiddenListBtn">
+
+                                <span>
+                                    Show all {{ tags.size }} tags
+                                </span>
+
+                                <svg class="h-5 w-5 transform" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                </svg>
+                            </button>
+                        </div>
+
                         <div class="lg:pt-5">
                             <fieldset class="filterGroup">
                                 <legend class="block text-sm font-medium text-gray-900">Vendor</legend>
@@ -86,15 +114,15 @@ layout: default
                             <fieldset class="filterGroup">
                                 <legend class="block text-sm font-medium text-gray-900">Connectivity</legend>
                                 <div class="space-y-3 pt-6">
-                                    {% assign tags = site.data.devices | map: 'connectivity' | join: ',' | split: ',' |
+                                    {% assign conns = site.data.devices | map: 'connectivity' | join: ',' | split: ',' |
                                     uniq %}
 
-                                    {% for tag in tags %}
+                                    {% for conn in conns %}
                                     <div class="flex items-center">
-                                        <input id="{{ tag }}" value=".{{ tag }}" type="checkbox"
+                                        <input id="{{ conn }}" value=".{{ conn }}" type="checkbox"
                                             class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
-                                        <label for="{{ tag }}" class="ml-3 text-sm text-gray-600 cursor-pointer">
-                                            {{ tag | replace: '_', ' ' }}
+                                        <label for="{{ conn }}" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            {{ conn | replace: '_', ' ' }}
                                         </label>
                                     </div>
                                     {% endfor %}
@@ -103,6 +131,17 @@ layout: default
                         </div>
                     </form>
 
+                    <div class="hidden lg:block rounded bg-gray-100 p-6 mt-10">
+                        <h2 class="text-md font-medium">Missing a device?</h2>
+                        <p class="text-sm mt-2 text-gray-500">
+                            Tell us what device you'd like and let's talk about adding it.
+                        </p>
+
+                        <a href="#"
+                            class="mt-4 flex w-full items-center justify-center rounded-sm bg-gray-800 px-4 py-2.5 text-sm font-medium text-white hover:bg-gray-700">
+                            Get in touch
+                        </a>
+                    </div>
                 </aside>
 
                 <!-- Product grid -->
@@ -111,9 +150,9 @@ layout: default
                         <h2 id="product-heading" class="sr-only">Products</h2>
 
                         <div
-                            class="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:gap-x-8 xl:grid-cols-3 filterContainer">
+                            class="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:gap-x-8 xl:grid-cols-4 filterContainer">
 
-                            <div class="text-center sm:col-span-2 xl:col-span-3 bg-gray-50 rounded-md py-16 filterEmptySearch"
+                            <div class="text-center sm:col-span-2 xl:col-span-4 bg-gray-50 rounded-md py-16 filterEmptySearch"
                                 style="display: none;">
 
                                 <svg class="mx-auto h-10 w-10  text-gray-400" fill="none" viewBox="0 0 24 24"
@@ -141,7 +180,8 @@ layout: default
                             {% for device in site.data.devices %}
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 {{ device.vendor | replace: ' ', '-' | downcase }} 
-                                {% for tag in device.connectivity %} {{ tag }} {% endfor %}">
+                                {% for conn in device.connectivity %} {{ conn }} {% endfor %}
+                                {% for tag in device.tags %} {{ tag }} {% endfor %}">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="{{site.url}}/assets/img/devices/{{ device.product_image }}"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -175,6 +215,28 @@ layout: default
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.js"></script>
 <script>
+    // Toggle list logic for the tag filters
+
+    var hiddenListBtn = document.querySelector(".hiddenListBtn");
+    var hiddenListBtnText = hiddenListBtn.querySelector("span").textContent;
+    var hiddenListItems = document.querySelectorAll(".hiddenListItem");
+
+    hiddenListBtn.addEventListener('click', (event) => {
+        hiddenListBtn.classList.toggle("hiddenListBtnExpanded")
+        if (hiddenListBtn.classList.contains("hiddenListBtnExpanded")) {
+            hiddenListBtn.querySelector("span").textContent = `Collapse tag list`;
+        } else {
+            hiddenListBtn.querySelector("span").textContent = hiddenListBtnText
+        }
+        hiddenListBtn.querySelector("svg").classList.toggle("-rotate-180")
+        hiddenListItems.forEach((el) => {
+            el.classList.toggle("hidden")
+        });
+    });
+
+
+
+    // Fish the tags that should be filteres as a string
     var multiFilterTwo = mixer => {
         var filterGroups = document.querySelectorAll(".filterGroup");
         var groups = [];
