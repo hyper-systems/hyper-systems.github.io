@@ -1,0 +1,19 @@
+- title: Connect all your sensors
+  description: Our data platform is extensible and can collect data from any
+    sensor on the market. Integrate your existing sensor technology or add new
+    sensors to precisely monitor the climate in your farm in a single place.
+
+- title: Automate anything
+  description: Add automation rules to precisely control what and when should
+    be turned on and off based on sensor readings across your farm. Control
+    heaters, lights or any other critical equipment in your farm.
+
+- title: Actionable insights
+  description: With enough data we can predict what will happen to your crops.
+    Want to know when they are ready to harvest? Are they getting enough light
+    exposure and nutrients? We'll keep you informed.
+
+- title: Offline-first operation
+  description: Our system operates off-line without depending on the internet
+    connectivity for highest reliability. The data is periodically synchronised
+    to a cloud service for easy remote access.

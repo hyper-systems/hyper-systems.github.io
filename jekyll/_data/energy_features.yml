@@ -1,0 +1,18 @@
+- title: A single platform for all your data
+  description: Unify data across your entire operation in a single platform
+    that provides reliable historical and real-time access to collected
+    performance metrics.
+  icon: icons/thunder.svg
+
+- title: Detect anomalies
+  description: Set up flexible alerting rules on any input variable and get
+    notified when anomalies are detected. Alerts can be dilevered both directly
+    to your team or sent as programmable notifications to your software
+    services.
+  icon: icons/thunder.svg
+
+- title: Predictive analytics
+  description: The historical energy usage patterns can be used to detect
+    similar future events and help your forecast performance bottlenecks and
+    schedule maintenance interventions.
+  icon: icons/thunder.svg
