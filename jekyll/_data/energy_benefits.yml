@@ -6,7 +6,7 @@
 
 - title: Detect anomalies
   description: Set up flexible alerting rules on any input variable and get
-    notified when anomalies are detected. Alerts can be dilevered both directly
+    notified when anomalies are detected. Alerts can be delivered both directly
     to your team or sent as programmable notifications to your software
     services.
   icon: icons/alert.svg

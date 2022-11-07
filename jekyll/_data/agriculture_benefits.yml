@@ -5,7 +5,7 @@
   icon: icons/globe.svg
 
 - title: Lower your energy bill
-  description: Our high resolution energy monitoring solution can help you
+  description: Our high-resolution energy monitoring solution can help you
     optimise and automate energy consumption patterns for lighting and heating
     systems in your farm.
   icon: icons/thunder.svg
@@ -13,5 +13,5 @@
 - title: Detect problems early
   description: Set up thresholds for deviations in the climate and growing
     conditions of your crops. Detect low nutrient levels, insufficient light
-    exposure or abnormal temperature and humidity distribution in your farm.
+    exposure, or abnormal temperature and humidity distribution in your farm.
   icon: icons/alert.svg
