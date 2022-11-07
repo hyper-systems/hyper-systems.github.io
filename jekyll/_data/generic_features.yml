@@ -1,6 +1,6 @@
 - title: Connect your infrastructure
   description: Our data platform is extensible and can collect data from any
-    device, like a senror, machine or controller. Integrate your existing
+    device, like a sensor, machine or controller. Integrate your existing
     technology infrastructure to precisely monitor your operation in a single place.
 
 - title: Automate anything
@@ -15,5 +15,5 @@
 
 - title: Offline-first operation
   description: Our system operates offline without depending on the internet
-    connectivity for highest reliability. The data is periodically synchronised
+    connectivity for highest reliability. The data is periodically synchronized
     to a cloud service for easy remote access.
