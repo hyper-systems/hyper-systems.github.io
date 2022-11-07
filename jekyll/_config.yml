@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Hyper - The ultimate data platform for IoT
+title: Hyper - The Ultimate Data Platform for IoT
 email: hello@hyper.systems
 description: >- # this means to ignore newlines until "baseurl:"
   A unified data platform to monitor, automate and manage your entire physical infrastructure in a single place.
