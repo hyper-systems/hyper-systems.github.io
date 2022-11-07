@@ -6,7 +6,7 @@
 - title: Automate anything
   description: Add automation rules to precisely control what and when should
     be turned on and off based on input readings across your deployment.
-    Control relay actuators, heaters, lights or any other critical equipment.
+    Control relays, actuators, heaters, lights or any other critical equipment.
 
 - title: Actionable insights
   description: With enough records we can detect and predict recurring patterns in the data.
@@ -14,6 +14,6 @@
     We'll keep you informed.
 
 - title: Offline-first operation
-  description: Our system operates off-line without depending on the internet
+  description: Our system operates offline without depending on the internet
     connectivity for highest reliability. The data is periodically synchronised
     to a cloud service for easy remote access.
