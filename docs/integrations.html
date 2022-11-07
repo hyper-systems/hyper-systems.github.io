@@ -143,20 +143,562 @@
 
             <div class="pt-5 lg:pt-8 lg:grid lg:grid-cols-3 lg:gap-x-8 xl:grid-cols-4">
                 <aside>
-                    <div class="hidden lg:block rounded bg-gray-100 p-6">
-                        <h2 class="text-md font-medium">Missing a device?</h2>
-                        <p class="text-sm mt-2 text-gray-500">
-                            Tell us what device you'd like and let's talk about adding it.
-                        </p>
-
-                        <a href="#"
-                            class="mt-4 flex w-full items-center justify-center rounded-sm bg-gray-800 px-4 py-2.5 text-sm font-medium text-white hover:bg-gray-700">
-                            Get in touch
-                        </a>
-                    </div>
-
                     <form
                         class="space-y-5 divide-y divide-gray-200 md:grid md:grid-cols-2 lg:block md:divide-y-0 md:space-y-0 lg:space-y-10 lg:divide-y">
+
+                        <div class="">
+                            <fieldset class="filterGroup">
+                                <legend class="block text-sm font-medium text-gray-900">Tags</legend>
+                                <div class="space-y-3 pt-6 ">
+                                    
+
+                                    
+                                    <div 
+                                        class="flex items-center"
+                                        
+                                        >
+                                        <input id="ph" value=".ph" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="ph" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            ph
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="flex items-center"
+                                        
+                                        >
+                                        <input id="conductivity" value=".conductivity" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="conductivity" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            conductivity
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="flex items-center"
+                                        
+                                        >
+                                        <input id="temperature" value=".temperature" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="temperature" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            temperature
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="flex items-center"
+                                        
+                                        >
+                                        <input id="orp" value=".orp" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="orp" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            orp
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="flex items-center"
+                                        
+                                        >
+                                        <input id="dissovled_oxygen" value=".dissovled_oxygen" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="dissovled_oxygen" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            dissovled oxygen
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="flex items-center"
+                                        
+                                        >
+                                        <input id="co2" value=".co2" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="co2" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            co2
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="flex items-center"
+                                        
+                                        >
+                                        <input id="humidity" value=".humidity" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="humidity" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            humidity
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="flex items-center"
+                                        
+                                        >
+                                        <input id="flowmeter" value=".flowmeter" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="flowmeter" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            flowmeter
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="o2" value=".o2" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="o2" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            o2
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="atmospheric_pressure" value=".atmospheric_pressure" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="atmospheric_pressure" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            atmospheric pressure
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="4_20ma" value=".4_20ma" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="4_20ma" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            4 20ma
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="air_temperature" value=".air_temperature" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="air_temperature" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            air temperature
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="color" value=".color" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="color" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            color
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="ec" value=".ec" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="ec" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            ec
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="float_switch" value=".float_switch" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="float_switch" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            float switch
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="water_level" value=".water_level" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="water_level" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            water level
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="liquid_level" value=".liquid_level" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="liquid_level" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            liquid level
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="relay" value=".relay" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="relay" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            relay
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="power_meter" value=".power_meter" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="power_meter" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            power meter
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="voltage_meter" value=".voltage_meter" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="voltage_meter" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            voltage meter
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="current_meter" value=".current_meter" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="current_meter" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            current meter
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="door_sensor" value=".door_sensor" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="door_sensor" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            door sensor
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="window_sensor" value=".window_sensor" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="window_sensor" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            window sensor
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="acceleration" value=".acceleration" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="acceleration" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            acceleration
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="frequency_meter" value=".frequency_meter" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="frequency_meter" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            frequency meter
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="energy_meter" value=".energy_meter" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="energy_meter" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            energy meter
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="davis_gateway" value=".davis_gateway" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="davis_gateway" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            davis gateway
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="wind_speed" value=".wind_speed" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="wind_speed" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            wind speed
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="wind_direction" value=".wind_direction" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="wind_direction" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            wind direction
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="solar_irradiance" value=".solar_irradiance" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="solar_irradiance" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            solar irradiance
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="uv_index" value=".uv_index" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="uv_index" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            uv index
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="soil_moisture" value=".soil_moisture" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="soil_moisture" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            soil moisture
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="aranet_gateway" value=".aranet_gateway" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="aranet_gateway" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            aranet gateway
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="par" value=".par" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="par" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            par
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="dulconnex_gateway" value=".dulconnex_gateway" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="dulconnex_gateway" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            dulconnex gateway
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="peroxide" value=".peroxide" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="peroxide" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            peroxide
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="dissolved_oxygen" value=".dissolved_oxygen" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="dissolved_oxygen" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            dissolved oxygen
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="turbidity_ntu" value=".turbidity_ntu" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="turbidity_ntu" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            turbidity ntu
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="gnss" value=".gnss" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="gnss" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            gnss
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="gps" value=".gps" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="gps" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            gps
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="glonass" value=".glonass" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="glonass" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            glonass
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="galileo" value=".galileo" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="galileo" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            galileo
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="beidou" value=".beidou" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="beidou" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            beidou
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="qzss" value=".qzss" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="qzss" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            qzss
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="agps" value=".agps" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="agps" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            agps
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="obd" value=".obd" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="obd" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            obd
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="ios_app" value=".ios_app" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="ios_app" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            ios app
+                                        </label>
+                                    </div>
+                                    
+                                    <div 
+                                        class="hidden flex items-center hiddenListItem"
+                                        
+                                        >
+                                        <input id="android_app" value=".android_app" type="checkbox"
+                                            class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
+                                        <label for="android_app" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                            android app
+                                        </label>
+                                    </div>
+                                    
+                                </div>
+                            </fieldset>
+
+                            <button type="button"
+                                class="mt-8 w-full justify-between flex rounded border border-gray-300 px-4 py-2 text-sm font-medium text-gray-800 shadow-sm hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 whitespace-nowra hiddenListBtn">
+
+                                <span>
+                                    Show all 48 tags
+                                </span>
+
+                                <svg class="h-5 w-5 transform" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                </svg>
+                            </button>
+                        </div>
+
                         <div class="lg:pt-5">
                             <fieldset class="filterGroup">
                                 <legend class="block text-sm font-medium text-gray-900">Vendor</legend>
@@ -375,6 +917,17 @@
                         </div>
                     </form>
 
+                    <div class="hidden lg:block rounded bg-gray-100 p-6 mt-10">
+                        <h2 class="text-md font-medium">Missing a device?</h2>
+                        <p class="text-sm mt-2 text-gray-500">
+                            Tell us what device you'd like and let's talk about adding it.
+                        </p>
+
+                        <a href="#"
+                            class="mt-4 flex w-full items-center justify-center rounded-sm bg-gray-800 px-4 py-2.5 text-sm font-medium text-white hover:bg-gray-700">
+                            Get in touch
+                        </a>
+                    </div>
                 </aside>
 
                 <!-- Product grid -->
@@ -383,9 +936,9 @@
                         <h2 id="product-heading" class="sr-only">Products</h2>
 
                         <div
-                            class="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:gap-x-8 xl:grid-cols-3 filterContainer">
+                            class="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:gap-x-8 xl:grid-cols-4 filterContainer">
 
-                            <div class="text-center sm:col-span-2 xl:col-span-3 bg-gray-50 rounded-md py-16 filterEmptySearch"
+                            <div class="text-center sm:col-span-2 xl:col-span-4 bg-gray-50 rounded-md py-16 filterEmptySearch"
                                 style="display: none;">
 
                                 <svg class="mx-auto h-10 w-10  text-gray-400" fill="none" viewBox="0 0 24 24"
@@ -413,7 +966,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 atlas-scientific 
-                                 wifi  mqtt ">
+                                 wifi  mqtt 
+                                 ph  conductivity  temperature  orp  dissovled_oxygen ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/wi_fi_hk.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -437,7 +991,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 atlas-scientific 
-                                 wifi  mqtt ">
+                                 wifi  mqtt 
+                                 ph  conductivity  temperature  orp  dissovled_oxygen ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/wi_fi_pk.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -461,7 +1016,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 atlas-scientific 
-                                 wifi  mqtt ">
+                                 wifi  mqtt 
+                                 ph  conductivity  temperature  co2  dissovled_oxygen  humidity ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/wi_fi_ak.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -485,7 +1041,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 atlas-scientific 
-                                 wifi  mqtt ">
+                                 wifi  mqtt 
+                                 ph  conductivity  temperature  orp  dissovled_oxygen  flowmeter  co2  o2  atmospheric_pressure  humidity  4_20ma  air_temperature ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/wf8_sis.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -509,7 +1066,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 atlas-scientific 
-                                 i2c ">
+                                 i2c 
+                                 co2 ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/ezo_co2.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -533,7 +1091,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 atlas-scientific 
-                                 i2c ">
+                                 i2c 
+                                 o2 ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/ezo_o2.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -557,7 +1116,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 atlas-scientific 
-                                 i2c ">
+                                 i2c 
+                                 humidity  air_temperature ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/ezo_hum_c.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -581,7 +1141,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 atlas-scientific 
-                                 i2c ">
+                                 i2c 
+                                 humidity  air_temperature ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/ezo_hum_p.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -605,7 +1166,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 atlas-scientific 
-                                 i2c ">
+                                 i2c 
+                                 color ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/ezo_rgb.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -629,7 +1191,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 atlas-scientific 
-                                 i2c ">
+                                 i2c 
+                                 flowmeter ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/ezo_flow.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -653,7 +1216,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 atlas-scientific 
-                                 i2c ">
+                                 i2c 
+                                 ph ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/ezo_ph.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -677,7 +1241,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 atlas-scientific 
-                                 i2c ">
+                                 i2c 
+                                 orp ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/ezo_orp.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -701,7 +1266,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 atlas-scientific 
-                                 i2c ">
+                                 i2c 
+                                 dissovled_oxygen ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/ezo_do.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -725,7 +1291,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 atlas-scientific 
-                                 i2c ">
+                                 i2c 
+                                 ec ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/ezo_ec.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -749,7 +1316,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 atlas-scientific 
-                                 i2c ">
+                                 i2c 
+                                 temperature ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/ezo_rtd.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -773,7 +1341,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 atlas-scientific 
-                                 i2c ">
+                                 i2c 
+                                 float_switch  water_level  liquid_level ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/as_fs.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -797,7 +1366,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 atlas-scientific 
-                                 i2c ">
+                                 i2c 
+                                 flowmeter ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/kit_f.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -821,7 +1391,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 shelly 
-                                 wifi  mqtt ">
+                                 wifi  mqtt 
+                                 relay  power_meter  voltage_meter  current_meter ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/plus1pm.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -845,7 +1416,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 shelly 
-                                 wifi  mqtt ">
+                                 wifi  mqtt 
+                                 door_sensor  window_sensor ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/dw2.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -870,7 +1442,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 ruuvi 
-                                 bluetooth ">
+                                 bluetooth 
+                                 air_temperature  humidity  atmospheric_pressure  acceleration ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/ruuvitag.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -894,7 +1467,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 ruuvi 
-                                 bluetooth ">
+                                 bluetooth 
+                                 air_temperature  humidity  acceleration ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/ruuvitagpro.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -918,7 +1492,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 eastron 
-                                 modbus ">
+                                 modbus 
+                                 power_meter  voltage_meter  current_meter  frequency_meter  energy_meter ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/sdm120m.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -942,7 +1517,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 davis 
-                                 ethernet  wifi ">
+                                 ethernet  wifi 
+                                 davis_gateway  air_temperature  humidity  wind_speed  wind_direction  solar_irradiance  uv_index  atmospheric_pressure  soil_moisture ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/6100.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -966,7 +1542,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 aranet 
-                                 ethernet  wifi ">
+                                 ethernet  wifi 
+                                 aranet_gateway ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/tdsbwp.png"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -990,7 +1567,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 aranet 
-                                 aranet_gateway ">
+                                 aranet_gateway 
+                                 air_temperature  humidity ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/tdspt802.png"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -1014,7 +1592,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 aranet 
-                                 aranet_gateway ">
+                                 aranet_gateway 
+                                 par ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/tdskar02.png"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -1038,7 +1617,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 aranet 
-                                 aranet_gateway ">
+                                 aranet_gateway 
+                                 4_20ma ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/tdspcl02.png"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -1062,7 +1642,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 aranet 
-                                 aranet_gateway ">
+                                 aranet_gateway 
+                                 air_temperature  humidity  atmospheric_pressure  co2 ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/tdspc005.png"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -1086,7 +1667,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 prominent 
-                                 wifi ">
+                                 wifi 
+                                 dulconnex_gateway ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/dulconnex.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -1110,7 +1692,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 prominent 
-                                 modbus-rtu  dulconnex_gateway  wifi ">
+                                 modbus-rtu  dulconnex_gateway  wifi 
+                                 ec  peroxide  dissolved_oxygen  ph  turbidity_ntu  temperature ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/controlleraegisii.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -1134,7 +1717,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 teltonika 
-                                 lte  gsm ">
+                                 lte  gsm 
+                                 gnss  gps  glonass  galileo  beidou  qzss  agps  obd ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/fmc001.png"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -1159,7 +1743,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 traccar 
-                                 lte  gsm  wifi ">
+                                 lte  gsm  wifi 
+                                 gnss  gps  ios_app ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/traccarapp.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -1183,7 +1768,8 @@
                             
                             <div class="group relative flex flex-col rounded-lg overflow-hidden border border-gray-200 bg-white mix 
                                 traccar 
-                                 lte  gsm  wifi ">
+                                 lte  gsm  wifi 
+                                 gnss  gps  android_app ">
                                 <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
                                     <img src="/assets/img/devices/traccarapp.jpg"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
@@ -1216,6 +1802,28 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.js"></script>
 <script>
+    // Toggle list logic for the tag filters
+
+    var hiddenListBtn = document.querySelector(".hiddenListBtn");
+    var hiddenListBtnText = hiddenListBtn.querySelector("span").textContent;
+    var hiddenListItems = document.querySelectorAll(".hiddenListItem");
+
+    hiddenListBtn.addEventListener('click', (event) => {
+        hiddenListBtn.classList.toggle("hiddenListBtnExpanded")
+        if (hiddenListBtn.classList.contains("hiddenListBtnExpanded")) {
+            hiddenListBtn.querySelector("span").textContent = `Collapse tag list`;
+        } else {
+            hiddenListBtn.querySelector("span").textContent = hiddenListBtnText
+        }
+        hiddenListBtn.querySelector("svg").classList.toggle("-rotate-180")
+        hiddenListItems.forEach((el) => {
+            el.classList.toggle("hidden")
+        });
+    });
+
+
+
+    // Fish the tags that should be filteres as a string
     var multiFilterTwo = mixer => {
         var filterGroups = document.querySelectorAll(".filterGroup");
         var groups = [];
