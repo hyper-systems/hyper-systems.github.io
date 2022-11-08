@@ -10,6 +10,9 @@
 
       <div class="lg:col-span-2 {% if include.img == nill %} lg:grid lg:grid-cols-3 lg:gap-x-12 {% endif %}">
         <div class="mb-10">
+          {% if include.letterhead %}
+          <h2 class="text-sm text-blue-600">{{ include.letterhead }}</h2>
+          {% endif %}
           {% if include.title %}
           <p class="mt-2 text-3xl tracking-tight text-gray-900">{{ include.title }}</p>
           {% endif %}
@@ -17,9 +20,6 @@
           <p class="mt-4 text-lg text-gray-500 max-w-screen-sm">{{ include.description }}</p>
           {% endif %}
         </div>
-        {% if include.letterhead %}
-        <h2 class="text-sm text-blue-600">{{ include.letterhead }}</h2>
-        {% endif %}
         <div class="{% if include.img %} mt-4  {% else %} lg:col-span-2 {% endif %}">
           <dl class="space-y-10 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 sm:space-y-0 lg:gap-x-12">
             {% for feature in include.features %}
