@@ -137,7 +137,7 @@ layout: default
                             Tell us what device you'd like and let's talk about adding it.
                         </p>
 
-                        <a href="#"
+                        <a href="/company#contact"
                             class="mt-4 flex w-full items-center justify-center rounded-sm bg-gray-800 px-4 py-2.5 text-sm font-medium text-white hover:bg-gray-700">
                             Get in touch
                         </a>
@@ -164,7 +164,7 @@ layout: default
                                 <h3 class="mt-2 text-sm font-medium text-gray-900">No devices available.</h3>
                                 <p class="mt-1 text-sm text-gray-500">Are we missing a device you want to see?</p>
                                 <div class="mt-6">
-                                    <button type="button"
+                                    <a href="/company#contact"
                                         class="inline-flex items-center rounded-sm border border-transparent bg-gray-800 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
                                         <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -172,7 +172,7 @@ layout: default
                                                 d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
                                         </svg>
                                         Request device
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
 
@@ -182,7 +182,7 @@ layout: default
                                 {{ device.vendor | replace: ' ', '-' | downcase }} 
                                 {% for conn in device.connectivity %} {{ conn }} {% endfor %}
                                 {% for tag in device.tags %} {{ tag }} {% endfor %}">
-                                <div class="aspect-w-2 aspect-h-2 bg-gray-100 group-hover:opacity-75">
+                                <div class="aspect-w-2 aspect-h-2 bg-white group-hover:opacity-75">
                                     <img src="{{site.url}}/assets/img/devices/{{ device.product_image }}"
                                         class="h-full w-full object-cover object-center sm:h-full sm:w-full">
                                 </div>
