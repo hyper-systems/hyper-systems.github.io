@@ -53,20 +53,19 @@
 
         <div class="relative" id="applications-menu-container">
   <button type="button"
-    class="text-slate-800 group inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none"
-    aria-expanded="false">
+    class="text-slate-800 group inline-flex items-center text-base hover:text-slate-500 cursor-default">
     <span>Applications</span>
-    <svg class="text-gray-400 ml-2 h-5 w-5 transition duration-150 ease-in-out group-hover:text-gray-500"
+    <!-- <svg class="text-gray-400 ml-2 h-5 w-5 transition duration-150 ease-in-out group-hover:text-gray-500"
             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd"
         d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
         clip-rule="evenodd" />
-</svg>
+</svg> -->
   </button>
-  <div class="absolute z-20 pt-3  w-screen max-w-md transform px-2 sm:px-0 2xl:max-w-3xl left-1/2 -translate-x-1/2"
+  <div class="absolute z-20 pt-3  w-screen max-w-md transform px-2 sm:px-0 left-1/2 -translate-x-1/2"
     id="applications-dropdown">
     <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 ">
-      <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 2xl:grid-cols-2">
+      <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
 
         
         
@@ -370,7 +369,7 @@
       <div
         class="relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500 hover:bg-gray-900 hover:text-white transition-all duration-200">
         <div>
-          <span class="rounded-lg inline-flex p-3 bg-gray-100 text-gray-800">
+          <span class="rounded-lg inline-flex p-3 bg-gradient-to-r from-blue-500 to-blue-400 text-white">
             <svg class="h-6 w-6" viewBox="0 0 24 24" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg"  
     stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
 	<path d="M7 21s.5-4.5 4-8.5M19.13 4.242l.594 6.175c.374 3.886-2.54 7.346-6.425 7.72-3.813.367-7.267-2.42-7.634-6.233a6.936 6.936 0 016.239-7.569l6.571-.632a.6.6 0 01.655.54z"></path>
@@ -403,7 +402,7 @@
       <div
         class="relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500 hover:bg-gray-900 hover:text-white transition-all duration-200">
         <div>
-          <span class="rounded-lg inline-flex p-3 bg-gray-100 text-gray-800">
+          <span class="rounded-lg inline-flex p-3 bg-gradient-to-r from-blue-500 to-blue-400 text-white">
             <svg class="h-6 w-6" viewBox="0 0 24 24" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg"  
     stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
@@ -437,7 +436,7 @@
       <div
         class="relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500 hover:bg-gray-900 hover:text-white transition-all duration-200">
         <div>
-          <span class="rounded-lg inline-flex p-3 bg-gray-100 text-gray-800">
+          <span class="rounded-lg inline-flex p-3 bg-gradient-to-r from-blue-500 to-blue-400 text-white">
             <svg class="h-6 w-6" viewBox="0 0 24 24" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg"  
     stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
 	<path d="M8 19a2 2 0 100-4 2 2 0 000 4zM18 19a2 2 0 100-4 2 2 0 000 4z"></path>
@@ -471,7 +470,7 @@
       <div
         class="relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500 hover:bg-gray-900 hover:text-white transition-all duration-200">
         <div>
-          <span class="rounded-lg inline-flex p-3 bg-gray-100 text-gray-800">
+          <span class="rounded-lg inline-flex p-3 bg-gradient-to-r from-blue-500 to-blue-400 text-white">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" aria-hidden="true" fill="none"
     stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
 	<path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"></path>
@@ -889,7 +888,7 @@ speed of execution is exemplary and I could not recommend them more."</p>
       <p class="mx-auto mt-6 max-w-2xl text-lg text-slate-800">Publish data using any protocol or
         format that suits your requirements and setup data integrations with dozens of services.</p>
     </div>
-    <img class="mt-16 max-w-4xl w-full mx-auto" src="/assets/img/integration_logos.png" alt="">
+    <img class="mt-16 max-w-6xl w-full mx-auto" src="/assets/img/integration_logos.png" alt="">
   </div>
 </div>
 
