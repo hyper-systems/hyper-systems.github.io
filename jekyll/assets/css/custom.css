@@ -31,32 +31,6 @@
     -moz-text-fill-color: transparent;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translate3d(0, 100px, 0);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-
-
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translate3d(0, -100px, 0);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
 #applications-dropdown {
     opacity: 0;
     visibility: hidden;
@@ -66,4 +40,17 @@
 #applications-menu-container:hover #applications-dropdown {
     visibility: visible;
     opacity: 1;
+}
+
+.strong::after {
+    content: '';
+    position: absolute;
+    bottom: -0.3rem;
+    left: -0.5rem;
+    right: -0.5rem;
+    height: 0.75rem;
+    z-index: -1;
+    background-image: url('/assets/img/underline.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }

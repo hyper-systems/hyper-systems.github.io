@@ -28,14 +28,3 @@ const closeMenuAnim = anime({
 
 document.querySelector("#openMenuBtn").onclick = openMenuAnim.play;
 document.querySelector("#closeMenuBtn").onclick = closeMenuAnim.play;
-
-// const slider = tns({
-//   startIndex: 1,
-//   fixedWidth: 410,
-//   rewind: true,
-//   container: ".testimonialsCarousel",
-//   center: true,
-//   gutter: 24,
-//   controls: false,
-//   nav: false,
-// });
