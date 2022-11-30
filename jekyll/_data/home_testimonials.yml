@@ -1,5 +1,5 @@
 - name: Jakob Thomas
-  title: Chief Information Officer at Zero Carbon Farms
+  title: Chief Information Officer
   quote:
     Hyper was able to integrate nine different data streams from horticultural parameter sensors in a matter of just a few weeks.
     Allowed us to completely consolidate our data platform into one for the first time.
@@ -7,14 +7,14 @@
   logo: zcf_alt_logo.svg
 
 - name: Dr Ruchi Choudhary
-  title: Data-Centric Engineering Group Leader at Alan Turing Institute
+  title: Data-Centric Engineering Group Leader
   quote:
     Hyper's integrated data platform provides us an efficient and secure system for our Digital Twin,
     thus enabling easy data curation and management.
   logo: ati_logo.svg
 
 - name: Brendan Cawley
-  title: Chief Technology Officer at DryGro
+  title: Chief Technology Officer
   quote:
     Hyper's platform is a simple but powerful way for us to collect data from our farm.
     By outsourcing the farm-to-cloud pipeline, we've been able to focus on the challenges
