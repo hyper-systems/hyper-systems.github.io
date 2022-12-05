@@ -45,7 +45,6 @@
     [
       "ph",
       "conductivity",
-      "temperature",
       "orp",
       "dissovled_oxygen",
       "flowmeter",
@@ -53,8 +52,7 @@
       "o2",
       "atmospheric_pressure",
       "humidity",
-      "4_20ma",
-      "air_temperature",
+      "temperature",
     ]
   description: >
     The Industrial Monitoring Kit is a multi-parameter process monitor, capable of reading from eight probes at once.
@@ -94,7 +92,7 @@
   vendor: "Atlas Scientific"
   vendor_website: "https://atlas-scientific.com"
   connectivity: ["i2c"]
-  tags: ["humidity", "air_temperature"]
+  tags: ["humidity", "temperature"]
   description: >
     The EZO Humidity Circuit is designed to be embedded with your electronics, reading the humidity of your enclosure.
     While there is no reason it can’t read the humidity of a room, it lacks the housing needed to protect the electronics.
@@ -106,7 +104,7 @@
   vendor: "Atlas Scientific"
   vendor_website: "https://atlas-scientific.com"
   connectivity: ["i2c"]
-  tags: ["humidity", "air_temperature"]
+  tags: ["humidity", "temperature"]
   description: >
     With a weather-resistant housing that allows for multiple mounting options, the EZO Embedded Humidity Probe is ready to go, whether you’re monitoring the humidity levels inside a home, workspace or even outside.
   product_image: "ezo_hum_p.jpg"
@@ -210,7 +208,7 @@
   vendor: "Atlas Scientific"
   vendor_website: "https://atlas-scientific.com"
   connectivity: ["i2c"]
-  tags: ["float_switch", "water_level", "liquid_level"]
+  tags: ["float_switch", "liquid_level"]
   description: >
     There are many ways of monitoring the amount of liquid in a tank.
     Pressure sensors give you high accuracy; ultrasonic sensors are contact-free but, the simplicity and low cost of a float switch cannot be beat.
@@ -236,7 +234,7 @@
   vendor: "Shelly"
   vendor_website: "https://www.shelly.cloud"
   connectivity: ["wifi", "mqtt"]
-  tags: ["relay", "power_meter", "voltage_meter", "current_meter"]
+  tags: ["relay", "power", "voltage", "current"]
   description: >
     But Co2 only consists of 0.04% of the atmosphere meaning; it’s a trace gas that’s quite difficult to detect.
     The Atlas Scientific EZO-CO2 sensor is a compact Non-Dispersive Infrared (NDIR) sensor that gets right to the point, giving you the Co2 readings in ppm.
@@ -260,7 +258,7 @@
   vendor: "Ruuvi"
   vendor_website: "https://ruuvi.com"
   connectivity: ["bluetooth"]
-  tags: ["air_temperature", "humidity", "atmospheric_pressure", "acceleration"]
+  tags: ["temperature", "humidity", "atmospheric_pressure", "acceleration"]
   description: >
     RuuviTag is a wireless Bluetooth sensor node that measures temperature, air humidity, air pressure and movement.
   product_image: "ruuvitag.jpg"
@@ -271,7 +269,7 @@
   vendor: "Ruuvi"
   vendor_website: "https://ruuvi.com"
   connectivity: ["bluetooth"]
-  tags: ["air_temperature", "humidity", "acceleration"]
+  tags: ["temperature", "humidity", "acceleration"]
   description: >
     RuuviTag Pro is a rugged IP certified environmental sensor for temperature, humidity and acceleration monitoring.
   product_image: "ruuvitagpro.jpg"
@@ -284,11 +282,11 @@
   connectivity: ["modbus"]
   tags:
     [
-      "power_meter",
-      "voltage_meter",
-      "current_meter",
-      "frequency_meter",
-      "energy_meter",
+      "power",
+      "voltage",
+      "current",
+      "frequency",
+      "energy",
     ]
   description: >
     SDM120 series is a range of 1 module single phase multi-function DIN rail MID energy meter, which measures active energy, reactive energy, current, voltage, power, power factor, frequency, etc.
@@ -303,8 +301,7 @@
   connectivity: ["ethernet", "wifi"]
   tags:
     [
-      "davis_gateway",
-      "air_temperature",
+      "temperature",
       "humidity",
       "wind_speed",
       "wind_direction",
@@ -322,8 +319,8 @@
   product_page: "https://aranet.com/products/aranet-pro-base-station/"
   vendor: "aranet"
   vendor_website: "https://aranet.com"
-  connectivity: ["ethernet", "wifi"]
-  tags: ["aranet_gateway"]
+  connectivity: ["proprietary", "ethernet", "wifi"]
+  tags: []
   description: >
     An indoor environmental monitoring solution that acts as a gateway, data storage and web server.
   product_image: "tdsbwp.png"
@@ -333,8 +330,8 @@
   product_page: "https://aranet.com/products/aranet-t-rh-ip67-sensor/"
   vendor: "aranet"
   vendor_website: "https://aranet.com"
-  connectivity: ["aranet_gateway"]
-  tags: ["air_temperature", "humidity"]
+  connectivity: ["proprietary"]
+  tags: ["temperature", "humidity"]
   description: >
     Temperature and relative humidity sensor that can be placed in harsh environmental conditions.
   product_image: "tdspt802.png"
@@ -344,7 +341,7 @@
   product_page: "https://aranet.com/products/aranet-par-sensor/"
   vendor: "aranet"
   vendor_website: "https://aranet.com"
-  connectivity: ["aranet_gateway"]
+  connectivity: ["proprietary"]
   tags: ["par"]
   description: >
     Measure photosynthetically active radiation to determine the amount of light plants are exposed to.
@@ -355,8 +352,8 @@
   product_page: "https://aranet.com/products/aranet-4-20ma-transmitter/"
   vendor: "aranet"
   vendor_website: "https://aranet.com"
-  connectivity: ["aranet_gateway"]
-  tags: ["4_20ma"]
+  connectivity: ["proprietary"]
+  tags: ["current"]
   description: >
     Battery-powered and energy-efficient solution designed to integrate with any third party sensor that uses mA as an output.
   product_image: "tdspcl02.png"
@@ -366,8 +363,8 @@
   product_page: "https://aranet.com/products/aranet-co2-and-temperature-sensor/"
   vendor: "aranet"
   vendor_website: "https://aranet.com"
-  connectivity: ["aranet_gateway"]
-  tags: ["air_temperature", "humidity", "atmospheric_pressure", "co2"]
+  connectivity: ["proprietary"]
+  tags: ["temperature", "humidity", "atmospheric_pressure", "co2"]
   description: >
     CO2 concentration, atmospheric pressure and temperature sensor for industrial settings.
   product_image: "tdspc005.png"
@@ -377,8 +374,8 @@
   product_page: "https://www.prominent.com/en/Products/Products/Digital-Solutions/p-dulconnex-gateway.html"
   vendor: "ProMinent"
   vendor_website: "https://www.prominent.com"
-  connectivity: ["wifi"]
-  tags: ["dulconnex_gateway"]
+  connectivity: ["wifi", "proprietary"]
+  tags: []
   description: >
     The DULCONNEX Gateway safely and reliably transfers the data of all products supported as standard to the DULCONNEX Cloud.
   product_image: "dulconnex.jpg"
@@ -388,9 +385,9 @@
   product_page: "https://www.prominent.com/en/Products/Products/Measuring-Control-and-Sensor-Technology/Controllers/p-aegis-ii.html"
   vendor: "ProMinent"
   vendor_website: "https://www.prominent.com"
-  connectivity: ["modbus-rtu", "dulconnex_gateway", "wifi"]
+  connectivity: ["modbus", "proprietary", "wifi"]
   tags:
-    ["ec", "peroxide", "dissolved_oxygen", "ph", "turbidity_ntu", "temperature"]
+    ["ec", "peroxide", "dissolved_oxygen", "ph", "turbidity", "temperature"]
   description: >
     Controller AEGIS II continuously measures and controls the conductivity and biocide concentration to keep pipework and heat exchangers clean.
   product_image: "controlleraegisii.jpg"
@@ -412,7 +409,7 @@
   vendor: "Traccar"
   vendor_website: "https://www.traccar.org"
   connectivity: ["lte", "gsm", "wifi"]
-  tags: ["gnss", "gps", "ios_app"]
+  tags: ["gnss", "gps", "ios"]
   description: >
     Traccar Client is an app that allows you to use your mobile device as a GPS tracker.
   product_image: "traccarapp.jpg"
@@ -434,7 +431,7 @@
   vendor: "Efento"
   vendor_website: "https://getefento.com/"
   connectivity: ["nb-iot"]
-  tags: ["0-10V"]
+  tags: ["analog_input"]
   description: >
     Efento 4-20 mA / 0-10 V sensor interface allows users to connect any type of analog sensor. Device can be equipped with up to four analog interfaces (2 x 4-20 mA and 2 x 0-10 V). Sensors can be powered either from the device’s battery or by an external power source. Data from the analog sensors is presented as current (4-20 mA) or voltage (0-10 V).
   product_image: "wireless-4-20-ma-0-10v-sensor-interface-nb-iot.png"
@@ -698,7 +695,7 @@
   vendor: "Efento"
   vendor_website: "https://getefento.com/"
   connectivity: ["nb-iot"]
-  tags: ["water_leak"]
+  tags: ["leak_detector"]
   description: >
     Water leak sensors are used in places where uncontrolled leakage can cause large damage, e.g. in archives, museums, server rooms, warehouses, laboratories. They are ideal for monitoring leakage from heating devices, air conditioning systems, dishwashers, washing machines, pumps and refrigerators or freezers.
   product_image: "wireless-water-leak-logger-nb-iot.png"
@@ -709,7 +706,7 @@
   vendor: "Efento"
   vendor_website: "https://getefento.com/"
   connectivity: ["nb-iot"]
-  tags: ["water_leak"]
+  tags: ["leak_detector"]
   description: >
     Wireless water rope sensors are used in places where uncontrolled leakage can cause large damage, e.g. in archives, museums, server rooms, warehouses, laboratories. They are ideal for monitoring leakage from heating devices, air conditioning systems, dishwashers, washing machines, pumps and refrigerators or freezers. The sensors are equipped with a detection cable that allows you to designate a zone monitored for leakage.
   product_image: "wireless-water-rope-logger-nb-iot.png"
@@ -819,7 +816,7 @@
   vendor: "Tekelek"
   vendor_website: "https://tekelek.com"
   connectivity: ["nb-iot"]
-  tags: ["lpg_tank_monitor"]
+  tags: ["liquid_level"]
   description: >
     Remotely monitor fuel tank levels and flow rate with the NB-IoT LPG tank monitor for Tekelek. Using ultrasonic technology, this smart ATEX rated logger enables you to measure liquid levels wherever you may be.
   product_image: "tek822.jpg"
@@ -962,7 +959,7 @@
   vendor: "Dragino"
   vendor_website: "https://www.dragino.com/"
   connectivity: ["nb-iot"]
-  tags: ["leaf_temperature", "leaf_moisture", "dew_point", "watering", "frozen"]
+  tags: ["leaf_temperature", "leaf_moisture", "dew_point"]
   description: >
     The Dragino NLMS01 is a NB-IoT Leaf Moisture Sensor for IoT of Agriculture. It is designed to measure the leaf moisture and temperature, so to send to the platform to analyze the leaf status such as: watering, moisturizing, dew, frozen. The probe is IP67 waterproof
   product_image: "nlms01.jpg"
@@ -973,7 +970,7 @@
   vendor: "Dragino"
   vendor_website: "https://www.dragino.com/"
   connectivity: ["nb-iot"]
-  tags: ["soil_ph"]
+  tags: ["ph"]
   description: >
     The Dragino NSPH01 is a NB-IoT soil pH sensor for IoT of Agriculture. It is designed to measure the soil pH and soil temperature, so to send to the platform to analyze the soil acid or alkali level. The probe is IP68 waterproof.
   product_image: "nsph01.jpg"
@@ -984,7 +981,7 @@
   vendor: "Dragino"
   vendor_website: "https://www.dragino.com/"
   connectivity: ["lorawan"]
-  tags: ["multidepth_soil_temperature", "multidepth_soil_moisture"]
+  tags: ["soil_temperature", "soil_moisture"]
   description: >
     The Dragino GroPoint is a LoRaWAN Multi Soil Segment Converter for IoT of Agriculture. It is designed to connect to GroPoint Profile Multi-depth Soil moisture and temperature profile Sensorand get GroPoint Profile’s reading and send it to IoT server via LoRaWAN wireless network.
   product_image: "gropoint-air-m.jpg"
@@ -1006,7 +1003,7 @@
   vendor: "Dragino"
   vendor_website: "https://www.dragino.com/"
   connectivity: ["rs485"]
-  tags: ["total_solar_radiation"]
+  tags: ["solar_radiation"]
   description: >
     WSS-06 is Total Radiation Sensor can be used to measure the total solar radiation in the spectral range of 0.3 to 3 μm (300 to 3000 nm). If the sensor face is down, the reflected radiation can be measured, and the shading ring can also be used to measure the scattered radiation.
   product_image: "wss-06.jpg"
@@ -1039,7 +1036,7 @@
   vendor: "Dragino"
   vendor_website: "https://www.dragino.com/"
   connectivity: ["rs485"]
-  tags: ["air_quality", "c02", "pm2.5", "pm10"]
+  tags: ["air_quality", "co2"]
   description: >
     WSS-03 is a RS485 Air Quality sensor. It can monitor CO2, PM2.5 and PM10 at the same time.
   product_image: "wss-03.jpg"
@@ -1127,7 +1124,7 @@
   vendor: "Dragino"
   vendor_website: "https://www.dragino.com/"
   connectivity: ["lorawan"]
-  tags: ["water_leak"]
+  tags: ["leak_detector"]
   description: >
     The Dragino LWL03A is a LoRaWAN None-Position Rope Type Water Leak Controller. User can lay the LWL03A + Water Leak Cable on the ground to detect water leakage. The water leak cable is sensitivity, when there is water over the leak cable. LWL03A will indicates a water leak event and uplink to IoT server via LoRaWAN network.
   product_image: "lwl03a.jpg"
@@ -1138,7 +1135,7 @@
   vendor: "Dragino"
   vendor_website: "https://www.dragino.com/"
   connectivity: ["nb-iot"]
-  tags: ["dry_contact_sensor", "alarm"]
+  tags: ["dry_contact_sensor"]
   description: >
     The Dragino CPN01 is an NB-IoT Dry Contact Sensor. It detects open/close status and uplinks the info to IoT server via NB-IoT network. User can see the dry contact status, open time, and opencounts in the IoT Server.
   product_image: "cpn01.jpg"
@@ -1160,7 +1157,7 @@
   vendor: "Dragino"
   vendor_website: "https://www.dragino.com/"
   connectivity: ["lorawan"]
-  tags: ["dry_contact_sensor", "alarm"]
+  tags: ["dry_contact_sensor"]
   description: >
     The Dragino CPL01 is a LoRaWAN Contact Sensor. It detects open/close status and uplinks to IoT server via LoRaWAN network. user can see the dry contact status, open time, open counts in the IoT Server.
   product_image: "cpl01.jpg"
@@ -1193,7 +1190,7 @@
   vendor: "Dragino"
   vendor_website: "https://www.dragino.com/"
   connectivity: ["lorawan"]
-  tags: ["water_leak"]
+  tags: ["leak_detector"]
   description: >
     The Dragino LWL02 is a LoRaWAN Water Sensor. When there is water between the two metal probes, LWL02 indicates a water leak event and uplink to IoT server via LoRaWAN network.
   product_image: "lwl02.jpg"
@@ -1204,7 +1201,7 @@
   vendor: "Dragino"
   vendor_website: "https://www.dragino.com/"
   connectivity: ["lorawan"]
-  tags: ["water_leak"]
+  tags: ["leak_detector"]
   description: >
     The Dragino LWL01 is a LoRaWAN Water Leak Sensor. It detects the water leak status and send it to LoRaWAN network. The LWL01 is small sensor, the dimension is as small as 64 x 30 x 14 mm.
   product_image: "lwl01.jpg"
@@ -1226,7 +1223,7 @@
   vendor: "Dragino"
   vendor_website: "https://www.dragino.com/"
   connectivity: ["lorawan"]
-  tags: ["flow_sensor"]
+  tags: ["flowmeter"]
   description: >
     The Dragino SW3L is a LoRaWAN Flow Sensor. It detects water flow volume and uplink to IoT server via LoRaWAN network. User can use this to monitor the water usage for buildings.
   product_image: "sw3l.jpg"
@@ -1237,7 +1234,7 @@
   vendor: "Dragino"
   vendor_website: "https://www.dragino.com/"
   connectivity: ["lorawan"]
-  tags: ["distance_sensor"]
+  tags: ["distance"]
   description: >
     The Dragino LLDS40 is a LoRaWAN LiDAR ToF (Time of Flight) Distance Sensor for Internet of Things solution. It is capable of measuring the distance to objects as close as 0m to 40m. The LiDAR probe uses laser induction technology for distance measurement.
   product_image: "llds40.jpg"
@@ -1248,7 +1245,7 @@
   vendor: "Dragino"
   vendor_website: "https://www.dragino.com/"
   connectivity: ["lorawan"]
-  tags: ["microwave_radar", "distance_sensor"]
+  tags: ["distance"]
   description: >
     The Dragino LMDS200 is a LoRaWAN Microwave Radar distance sensor. It uses 24Ghz Microwave to detect the distance between the sensor and different objects. Compare vs the ultrasonic or Lidar measurement method, Microwave Radar is more reliable for condensation / dusty environments. It can sense the correct distance even there is water or thick dust on top of the sensor.
   product_image: "lmds200.jpg"
@@ -1259,7 +1256,7 @@
   vendor: "Dragino"
   vendor_website: "https://www.dragino.com/"
   connectivity: ["lorawan"]
-  tags: ["distance_sensor", "ultrasonic_sensor"]
+  tags: ["distance"]
   description: >
     The Dragino LDDS04 is a LoRaWAN 4-Channels Distance Sensor for Internet of Things solution. It is capable to add up to four Ultrasonic Sensors to measure four distances at the same time. The LDDS04 can be applied to scenarios such as horizontal distance measurement, liquid level measurement, parking management system, object proximity and presence detection, intelligent trash can management system, robot obstacle avoidance, automatic control, sewer, bottom water level monitoring, etc.
   product_image: "ldds04.jpg"
@@ -1270,7 +1267,7 @@
   vendor: "Dragino"
   vendor_website: "https://www.dragino.com/"
   connectivity: ["lorawan"]
-  tags: ["distance_sensor", "ultrasonic_sensor"]
+  tags: ["distance"]
   description: >
     The Dragino LDDS45 is a LoRaWAN Distance Detection Sensor for Internet of Things solution. It is used to measure the distance between the sensor and a flat object. The distance detection sensor is a module that uses ultrasonic sensing technology for distance measurement, and temperature compensation is performed internally to improve the reliability of data.
   product_image: "ldds45.jpg"
@@ -1281,7 +1278,7 @@
   vendor: "Dragino"
   vendor_website: "https://www.dragino.com/"
   connectivity: ["lorawan"]
-  tags: ["distance_sensor", "lidar"]
+  tags: ["distance"]
   description: >
     The Dragino LLDS12 is a LoRaWAN LiDAR ToF (Time of Flight) Distance Sensor for Internet of Things solution. It is capable to measure the distance to an object as close as 10 centimeters (+/- 5cm up to 6m) and as far as 12 meters (+/-1% starting at 6m)! The LiDAR probe uses laser induction technology for distance measurement.
   product_image: "ldds12.jpg"
@@ -1292,7 +1289,7 @@
   vendor: "Dragino"
   vendor_website: "https://www.dragino.com/"
   connectivity: ["nb-iot"]
-  tags: ["distance_sensor"]
+  tags: ["distance"]
   description: >
     The Dragino NDDS75 is a NB-IoT Distance Detection Sensor for Internet of Things solution. It is designed to measure the distance between the sensor and a flat object. The distance detection sensor is a module that uses ultrasonic sensing technology for distance measurement, and temperature compensation is performed internally to improve the reliability of data.
   product_image: "ndds75.jpg"
@@ -1303,7 +1300,7 @@
   vendor: "Dragino"
   vendor_website: "https://www.dragino.com/"
   connectivity: ["nb-iot"]
-  tags: ["liquid_level_sensor"]
+  tags: ["liquid_level"]
   description: >
     The Dragino NDDS20 is a LoRaWAN Ultrasonic liquid level sensor for Internet of Things solution. It uses non contact method to measure the height of liquid in a container without opening the container, and send the value via LoRaWAN network to IoT Server.
   product_image: "ndds20.jpg"
@@ -1314,7 +1311,7 @@
   vendor: "Dragino"
   vendor_website: "https://www.dragino.com/"
   connectivity: ["lorawan"]
-  tags: ["liquid_level_sensor"]
+  tags: ["liquid_level"]
   description: >
     The Dragino LDDS20 is a LoRaWAN Ultrasonic liquid level sensor for Internet of Things solution. It uses non contact method to measure the height of liquid in a container without opening the container, and send the value via LoRaWAN network to IoT Server
   product_image: "ldds20.jpg"
@@ -1325,7 +1322,7 @@
   vendor: "Dragino"
   vendor_website: "https://www.dragino.com/"
   connectivity: ["lorawan"]
-  tags: ["distance_detection_sensor", "ultrasonic_sensor"]
+  tags: ["distance"]
   description: >
     The Dragino LDDS75 is a LoRaWAN Distance Detection Sensor for Internet of Things solution. It is used to measure the distance between the sensor and a flat object. The distance detection sensor is a module that uses ultrasonic sensing technology for distance measurement, and temperature compensation is performed internally to improve the reliability of data.
   product_image: "ldds75.jpg"
@@ -1391,7 +1388,7 @@
   vendor: "Dragino"
   vendor_website: "https://www.dragino.com/"
   connectivity: ["lorawan", "rs485"]
-  tags: ["rs485_converter"]
+  tags: ["rs485"]
   description: >
     The Dragino RS485-BL is a RS485 / UART to LoRaWAN Converter for Internet of Things solutions.User can connect RS485 or UART sensor to RS485-BL converter, and configure RS485-BL to periodically read sensor data and upload via LoRaWAN network to IoT server.
   product_image: "rs486-bl.jpg"
@@ -1402,7 +1399,7 @@
   vendor: "Dragino"
   vendor_website: "https://www.dragino.com/"
   connectivity: ["lorawan"]
-  tags: ["io_controller"]
+  tags: ["relay", "digital_input", "digital_output"]
   description: >
     The Dragino LT series I/O Modules are Long Range LoRa I/O Controller. It contains different I/O Interfaces such as: analog current Input, analog voltage input, relay output, digital input and digital output etc. The LT I/O Modules are designed to simplify the installation of I/O monitoring.
   product_image: "lt-22222-l.jpg"
@@ -1413,7 +1410,7 @@
   vendor: "Dragino"
   vendor_website: "https://www.dragino.com/"
   connectivity: ["lorawan", "rs485"]
-  tags: ["rs486_converter", "modbus_converter"]
+  tags: ["rs486", "modbus"]
   description: >
     The Dragino RS485-LN is a RS485 to LoRaWAN Converter.It converts the RS485 devices into LoRaWAN wireless network which simplify the IoT installation and reduce the installation/maintaining cost.
   product_image: "rs486-ln.jpg"
@@ -1424,7 +1421,7 @@
   vendor: "Dragino"
   vendor_website: "https://www.dragino.com/"
   connectivity: ["lorawan"]
-  tags: ["io_controller"]
+  tags: ["relay", "digital_input", "digital_output"]
   description: >
     The Dragino LT series I/O Modules are Long Range LoRa I/O Controller. It contains different I/O Interfaces such as: analog current Input, analog voltage input, relay output, digital input and digital output etc. The LT I/O Modules are designed to simplify the installation of I/O monitoring.
   product_image: "lt-33222-l.jpg"
@@ -1435,7 +1432,7 @@
   vendor: "Dragino"
   vendor_website: "https://www.dragino.com/"
   connectivity: ["lora"]
-  tags: ["sensor_node"]
+  tags: ["gateway"]
   description: >
     LSN50 LoRa Sensor Node is a Long Range LoRa Sensor Node. It is designed for outdoor use and powered by 4000mA or 8500mA Li/SOCl2 battery for long term use.LSN50 is designed to facilitate developers to quickly deploy industrial level LoRa and IoT solutions. It help users to turn the idea into a practical application and make the Internet of Things a reality. It is easy to program, create and connect your things everywhere.
   product_image: "lsn50-v2.jpg"
@@ -1456,8 +1453,8 @@
   product_page: "https://www.nexy.net/en/components/wireless-tilting-sensor-rf-rw-net.html"
   vendor: "Steute"
   vendor_website: "https://www.steute.com/us/index.html"
-  connectivity: ["swave.net"]
-  tags: ["tilting_sensor"]
+  connectivity: ["proprietary"]
+  tags: ["tilting"]
   description: >
     For the monitoring of small load carriers (SLC) in FILO or FIFO racks, steute has developed a wireless tilting sensor. Thanks to a universal bracket to suit roller conveyors from different leading manufacturers, the sensor can be mounted quickly and easily, as well as integrated in existing rack systems.
   product_image: "rfrw.png"
@@ -1467,8 +1464,8 @@
   product_page: "https://www.nexy.net/en/components/wireless-laser-sensor-rf-96-sds-net.html"
   vendor: "Steute"
   vendor_website: "https://www.steute.com/us/index.html"
-  connectivity: ["swave.net"]
-  tags: ["laser_sensor"]
+  connectivity: ["proprietary"]
+  tags: ["distance", "motion"]
   description: >
     Wireless laser sensors for short distances facilitate non-contact monitoring of all movements. This makes sense, for example, with large load carriers (LLC) which are so heavy that they would subject other sensors to an unacceptable level of wear and tear. Or for small load carriers (SLC) which are so light that they cannot be detected by mechanical sensors.
   product_image: "rf96sdsnet.jpg"
@@ -1478,8 +1475,8 @@
   product_page: "https://www.nexy.net/en/components/wireless-laser-sensor-rf-lds.html"
   vendor: "Steute"
   vendor_website: "https://www.steute.com/us/index.html"
-  connectivity: ["swave.net"]
-  tags: ["laser_sensor"]
+  connectivity: ["proprietary"]
+  tags: ["distance", "motion"]
   description: >
     With wireless laser sensors for longer distances, random objects can be detected independently of their colour, material or surface, facilitating non-contact monitoring. This particularly makes sense for large load carriers (LLC), pallets or other sizeable means of transporting goods. The optical sensors provide reliable detection without being inside work areas, thus avoiding damage through collisions with shop floor vehicles, for example.
   product_image: "rflds-spot.jpg"
@@ -1489,8 +1486,8 @@
   product_page: "https://www.nexy.net/en/components/wireless-actor-rf-ubr-net.html"
   vendor: "Steute"
   vendor_website: "https://www.steute.com/us/index.html"
-  connectivity: ["swave.net"]
-  tags: ["actor"]
+  connectivity: ["proprietary"]
+  tags: ["switch"]
   description: >
     In the field of intralogistics, this wireless actor with separate switching outputs facilitates the management and switching of various signalling devices. It can also function as an IIoT-enabled add-on for stack lights, visualising malfunctions or impending material shortages when activated by the central IT system via remote control.
   product_image: "rfubr-net.jpg"
@@ -1500,7 +1497,7 @@
   product_page: "https://www.nexy.net/en/components/wireless-andon-push-button-rf-makd-3f-net.html"
   vendor: "Steute"
   vendor_website: "https://www.steute.com/us/index.html"
-  connectivity: ["swave.net"]
+  connectivity: ["proprietary"]
   tags: ["button"]
   description: >
     Andon push buttons can optimise processes throughout assembly, packaging and dispatch zones. These devices facilitate an efficient flow of information and are used for tasks such as the manual notification of errors and requirements, as well as to request an automated guided vehicle to collect or deliver goods in intralogistics applications.
@@ -1511,8 +1508,8 @@
   product_page: "https://www.nexy.net/en/components/wireless-position-switch-rf-96-net.html"
   vendor: "Steute"
   vendor_website: "https://www.steute.com/us/index.html"
-  connectivity: ["swave.net"]
-  tags: ["position_switch"]
+  connectivity: ["proprietary"]
+  tags: ["switch"]
   description: >
     Wireless position switches are used wherever moving machinery or plant parts must be positioned, monitored or switched off. The many different application fields range from monitoring of small load carrier movements in intralogistics to security tasks in various areas of industrial building automation, drinking water storage and regenerative energy supply.
   product_image: "rf96-net.png"
@@ -1522,8 +1519,8 @@
   product_page: "https://www.nexy.net/en/components/wireless-command-device-rf-bf-74-net.html"
   vendor: "Steute"
   vendor_website: "https://www.steute.com/us/index.html"
-  connectivity: ["swave.net"]
-  tags: ["command_device"]
+  connectivity: ["proprietary"]
+  tags: ["control"]
   description: >
     Wireless controls serve as command devices for the performing of tasks from machines and plants, such as acknowledging confirmation. The many different application fields include, for example, materials requests or error notifications, but also security-related tasks in various areas of industrial building automation and railway systems.
   product_image: "rfbf74-net.jpg"
@@ -1533,8 +1530,8 @@
   product_page: "https://www.nexy.net/en/components/wireless-actor-rf-rx-net-4s-a-48v-24v.html"
   vendor: "Steute"
   vendor_website: "https://www.steute.com/us/index.html"
-  connectivity: ["swave.net"]
-  tags: ["actor"]
+  connectivity: ["proprietary"]
+  tags: ["switch"]
   description: >
     The wireless actor is used to switch selected electrical consumers. It has four separate outputs which can be used to control a variety of functions. The sWave.NET® wireless system and the Sensor Bridge connect the wireless actor simply and easily to the system. The Sensor Bridge serves as a central database for management of the output status. As a standard feature it provides a REST-API via http(s) to control the outputs and to request new status updates.
   product_image: "rfrx-net-4s-a.png"
@@ -1544,8 +1541,8 @@
   product_page: "https://www.nexy.net/en/components/wireless-pull-wire-switch-rf-96-wh/90-net.html"
   vendor: "Steute"
   vendor_website: "https://www.steute.com/us/index.html"
-  connectivity: ["swave.net"]
-  tags: ["pull_wire_switch"]
+  connectivity: ["proprietary"]
+  tags: ["switch"]
   description: >
     Wireless pull-wire switches are control devices used to communicate events occurring in machines, plants and production systems. Such events could be a malfunction, a lack of materials or a machine standstill, but also the completion of a particular process step. Staff working at a machine or work station fitted with a wireless pull-wire switch can react immediately to such events without having to leave their location.
   product_image: "rf96wh-90-net.png"
@@ -1555,7 +1552,7 @@
   product_page: "https://store.rakwireless.com/products/sensor-probe"
   vendor: "RAK"
   vendor_website: "https://www.rakwireless.com"
-  connectivity: ["rak_one_wire"]
+  connectivity: ["proprietary"]
   tags: ["temperature", "humidity"]
   description: >
     Sensor Probe Temperature & Humidity. RAK1901 sensor.
@@ -1566,7 +1563,7 @@
   product_page: "https://store.rakwireless.com/products/sensor-probe"
   vendor: "RAK"
   vendor_website: "https://www.rakwireless.com"
-  connectivity: ["rak_one_wire"]
+  connectivity: ["proprietary"]
   tags: ["atmospheric_pressure"]
   description: >
     Sensor Probe PR (Barometric Pressure). RAK1902 Sensor.
@@ -1577,7 +1574,7 @@
   product_page: "https://store.rakwireless.com/products/sensor-probe"
   vendor: "RAK"
   vendor_website: "https://www.rakwireless.com"
-  connectivity: ["rak_one_wire"]
+  connectivity: ["proprietary"]
   tags: ["accelerometer"]
   description: >
     Sensor Probe 3-Axis. RAK1904 Sensor.
@@ -1588,7 +1585,7 @@
   product_page: "https://store.rakwireless.com/products/sensor-probe"
   vendor: "RAK"
   vendor_website: "https://www.rakwireless.com"
-  connectivity: ["rak_one_wire"]
+  connectivity: ["proprietary"]
   tags: ["temperature", "humidity", "atmospheric_pressure"]
   description: >
     Sensor Probe Temperature, Humidity and Pressure. RAK1901 and RAK1902 sensors.
@@ -1599,7 +1596,7 @@
   product_page: "https://store.rakwireless.com/products/sensor-probe"
   vendor: "RAK"
   vendor_website: "https://www.rakwireless.com"
-  connectivity: ["rak_one_wire"]
+  connectivity: ["proprietary"]
   tags: ["temperature", "humidity"]
   description: >
     Sensor Probe Temperature, Humidity and 3-Axis. RAK1901 and RAK1904 sensors.
@@ -1610,7 +1607,7 @@
   product_page: "https://store.rakwireless.com/products/sensor-probe"
   vendor: "RAK"
   vendor_website: "https://www.rakwireless.com"
-  connectivity: ["rak_one_wire"]
+  connectivity: ["proprietary"]
   tags: ["atmospheric_pressure"]
   description: >
     Sensor Probe Pressure and 3-Axis. RAK1902 and RAK1904 sensors.
@@ -1668,7 +1665,7 @@
   vendor: "SeedStudio"
   vendor_website: "https://www.seeedstudio.com"
   connectivity: ["lorawan"]
-  tags: ["sensecap_rs485", "sensecap_analog", "sensecap_gpio"]
+  tags: ["rs485", "analog_input", "gpio"]
   description: >
     SenseCAP S2100 data logger can collect data from multiple sensors and transfer the data through the LoRaWAN network. It is a LoRaWAN converter that converts MODBUS RS485/Analog/GPIO sensors into LoRa-enabled sensors, and therefore transfers data through the LoRaWAN protocol. You can easily enjoy the advantages such as low power consumption and long transmission range, without affording the cost of changing the sensors you are using.
   product_image: "s2100.jpg"
@@ -1679,7 +1676,7 @@
   vendor: "SeedStudio"
   vendor_website: "https://www.seeedstudio.com"
   connectivity: ["lorawan"]
-  tags: ["air_temperature", "humidity"]
+  tags: ["temperature", "humidity"]
   description: >
     SenseCAP LoRaWAN S2101 Air temperature and humidity Sensor satisfies industrial wireless long-distance data acquisition with from -40°C to 85°C and 0 to 100% RH respectively. It enables low maintenance cost for its robustness, long battery usage, and built-in Bluetooth for OTA configuration and remote device management. Air Temperature and humidity control are important in ambient air monitoring, facilities management, and warehouse conditions control, to name a few. SenseCAP S2101 wireless LoRaWAN temperature and humidity sensor enables accurate sensing of surroundings.
   product_image: "s2101.jpg"
@@ -1701,7 +1698,7 @@
   vendor: "SeedStudio"
   vendor_website: "https://www.seeedstudio.com"
   connectivity: ["lorawan"]
-  tags: ["air_temperature", "humidity", "co2"]
+  tags: ["temperature", "humidity", "co2"]
   description: >
     SenseCAP LoRaWAN® S2103 CO2, Temperature, and Humidity Sensor satisfies industrial wireless long-distance data acquisition with a wide measuring range of 400 to 10000 ppm, -40°C to 85°C and 0 to 100% RH respectively. It enables low maintenance cost for its robustness, long battery usage, and built-in Bluetooth for OTA configuration and remote device management.
   product_image: "s2103.jpg"
@@ -1733,8 +1730,8 @@
   product_page: "https://www.seeedstudio.com/ORCH-S4-A1B-p-4856.html"
   vendor: "SeedStudio"
   vendor_website: "https://www.seeedstudio.com"
-  connectivity: ["sensecap_rs485", "rs485", "sdi_12"]
-  tags: ["air_temperature", "humidity", "atmospheric_pressure", "illuminance"]
+  connectivity: ["rs485", "sdi"]
+  tags: ["temperature", "humidity", "atmospheric_pressure", "illuminance"]
   description: >
     SenseCAP ORCH S4 is a four-in-one weather sensor monitoring parameters of air temperature, humidity, barometric pressure, and light intensity. It supports both MODBUS (MODBUS-RTU/MODBUS-ASCII) and SDI-12 and a wide range of power voltage from 3.6V to 16V.
   product_image: "orchs4.png"
@@ -1744,7 +1741,7 @@
   product_page: "https://www.seeedstudio.com/RS485-pH-Sensor-S-pH-01A-p-4632.html"
   vendor: "SeedStudio"
   vendor_website: "https://www.seeedstudio.com"
-  connectivity: ["sensecap_rs485", "rs485"]
+  connectivity: ["rs485"]
   tags: ["ph"]
   description: >
     This industrial-grade MODBUS-RTU RS485 pH meter/sensor features ATC, low power consumption, and high integration. It can be widely used in monitoring pH levels in soil and water applications.
@@ -1755,7 +1752,7 @@
   product_page: "https://www.seeedstudio.com/RS485-S-PAR-02A-p-4829.html"
   vendor: "SeedStudio"
   vendor_website: "https://www.seeedstudio.com"
-  connectivity: ["sensecap_rs485", "rs485"]
+  connectivity: ["rs485"]
   tags: ["par"]
   description: >
     The MODBUS-RTU RS485 industrial-grade PAR sensor measures real-time photosynthetically active radiation across the radiation range from 400 to 700 nm. It contains a Silicon photodetector and generates a voltage signal directly proportional to the PAR under the light source.
@@ -1766,7 +1763,7 @@
   product_page: "https://www.seeedstudio.com/EC-RS485-p-4848.html"
   vendor: "SeedStudio"
   vendor_website: "https://www.seeedstudio.com"
-  connectivity: ["sensecap_rs485", "rs485"]
+  connectivity: ["rs485"]
   tags: ["ec", "tds"]
   description: >
     EC & TDS sensor measures Conductivity, Salinity, TDS with temperature compensation. The output signal can be RS485 and Analog Voltage. The sensor is applicable for industrial, water processing, sewerage system, irrigation, smart agriculture, etc.
@@ -1777,7 +1774,7 @@
   product_page: "https://www.seeedstudio.com/leaf-wetness-sensor-p-a-4861.html"
   vendor: "SeedStudio"
   vendor_website: "https://www.seeedstudio.com"
-  connectivity: ["sensecap_rs485", "rs485"]
+  connectivity: ["rs485"]
   tags: ["leaf_wetness", "leaf_temperature"]
   description: >
     S-YM-01 Sensor comes in the shape of a leaf, simulating the wetness and temperature of a real leaf. It measures leaf wetness and temperature, providing insights for pest control, irrigation, and other management that are optimal for plant and crop health. The sensor is IP68-rated and the output signal can be RS485.
@@ -1788,7 +1785,7 @@
   product_page: "https://www.seeedstudio.com/light-intensity-sensor-p-a-4863.html"
   vendor: "SeedStudio"
   vendor_website: "https://www.seeedstudio.com"
-  connectivity: ["sensecap_rs485", "rs485"]
+  connectivity: ["rs485"]
   tags: ["illuminance"]
   description: >
     S-Light-01 ambient light sensor, or illuminance sensor, measures the ambient illuminance. Each sensor is calibrated and offers excellent accuracy and consistency. Applications include scientific research, solar farms, greenhouses, weather stations, etc.
@@ -1799,8 +1796,8 @@
   product_page: "https://www.seeedstudio.com/RS485-Temperature-and-Humidity-Sensor-p-5235.html"
   vendor: "SeedStudio"
   vendor_website: "https://www.seeedstudio.com"
-  connectivity: ["sensecap_rs485", "rs485"]
-  tags: ["air_temperature", "humidity"]
+  connectivity: ["rs485"]
+  tags: ["temperature", "humidity"]
   description: >
     This S-TH-01 module provides industrial-grade sensing and compact air temperature and humidity sensing in one small-size sensor.
   product_image: "s-th-01.jpg"
@@ -1810,10 +1807,10 @@
   product_page: "https://www.seeedstudio.com/SenseCAPONE-S500-5in1-Compact-Weather-Sensor-p-4880.html"
   vendor: "SeedStudio"
   vendor_website: "https://www.seeedstudio.com"
-  connectivity: ["sensecap_rs485", "rs485", "rs232", "modbus_rtu", "sdi_12"]
+  connectivity: ["rs485", "rs232", "modbus", "sdi"]
   tags:
     [
-      "air_temperature",
+      "temperature",
       "humidity",
       "atmospheric_pressure",
       "wind_speed",
@@ -1828,10 +1825,10 @@
   product_page: "https://www.seeedstudio.com/SenseCAPONE-S700-7in1-Compact-Weather-Sensor-p-4879.html"
   vendor: "SeedStudio"
   vendor_website: "https://www.seeedstudio.com"
-  connectivity: ["sensecap_rs485", "rs485", "rs232", "modbus_rtu", "sdi_12"]
+  connectivity: ["rs485", "rs232", "modbus", "sdi"]
   tags:
     [
-      "air_temperature",
+      "temperature",
       "humidity",
       "atmospheric_pressure",
       "wind_speed",
@@ -1848,18 +1845,17 @@
   product_page: "https://www.seeedstudio.com/SenseCAPONE-S900-9in1-Compact-Weather-Sensor-p-4881.html"
   vendor: "SeedStudio"
   vendor_website: "https://www.seeedstudio.com"
-  connectivity: ["sensecap_rs485", "rs485", "rs232", "modbus_rtu", "sdi_12"]
+  connectivity: ["rs485", "rs232", "modbus", "sdi"]
   tags:
     [
-      "air_temperature",
+      "temperature",
       "humidity",
       "atmospheric_pressure",
       "wind_speed",
       "wind_direction",
       "illuminance",
       "rainfall",
-      "pm2.5",
-      "pm10",
+      "air_quality",
     ]
   description: >
     S900 9-in-1 Weather Sensor measures air temperature, relative humidity, barometric pressure, light intensity, rainfall (optical), PM2.5, PM10, wind speed, and wind direction (ultrasonic). It is ideal for applications in rough environments like outdoors, agriculture, or smart cities.
@@ -1870,18 +1866,17 @@
   product_page: "https://www.seeedstudio.com/SenseCAP-S1000-10-in-1-Compact-Weather-Sensor-with-CO2-Measurement-p-5362.html"
   vendor: "SeedStudio"
   vendor_website: "https://www.seeedstudio.com"
-  connectivity: ["sensecap_rs485", "rs485", "rs232", "modbus_rtu", "sdi_12"]
+  connectivity: ["rs485", "rs232", "modbus", "sdi"]
   tags:
     [
-      "air_temperature",
+      "temperature",
       "humidity",
       "atmospheric_pressure",
       "wind_speed",
       "wind_direction",
       "illuminance",
       "rainfall",
-      "pm2.5",
-      "pm10",
+      "air_quality",
       "co2",
     ]
   description: >
@@ -1896,7 +1891,7 @@
   connectivity: ["lorawan"]
   tags:
     [
-      "air_temperature",
+      "temperature",
       "humidity",
       "atmospheric_pressure",
       "wind_speed",
@@ -1914,8 +1909,8 @@
   product_page: "https://www.seeedstudio.com/Water-Leak-Detector-p-4620.html"
   vendor: "SeedStudio"
   vendor_website: "https://www.seeedstudio.com"
-  connectivity: ["sensecap_analog", "sensecap_gpio"]
-  tags: ["water_leak"]
+  connectivity: ["proprietary"]
+  tags: ["leak_detector"]
   description: >
     This industrial-grade water leak detector is IP66 rated, featuring waterproof, dustproof, and robustness. When detects a leakage, it will be triggered to turn on the alarm system or shut down the equipment, to ensure safety, lower risks, and minimized damages.
   product_image: "314990618.png"
@@ -1925,8 +1920,8 @@
   product_page: "https://www.seeedstudio.com/Liquid-Level-Sensor-p-4619.html"
   vendor: "SeedStudio"
   vendor_website: "https://www.seeedstudio.com"
-  connectivity: ["sensecap_analog"]
-  tags: ["water_level", "liquid_level"]
+  connectivity: ["proprietary"]
+  tags: ["liquid_level"]
   description: >
     The Liquid Level Sensor measures the height of water or other liquid and converts it to the voltage signal. It works with a data logger or other devices that have analog voltage input ports.
   product_image: "314990619.png"
@@ -1936,8 +1931,8 @@
   product_page: "https://www.seeedstudio.com/Rain-Gauge-RG-15-p-4648.html"
   vendor: "SeedStudio"
   vendor_website: "https://www.seeedstudio.com"
-  connectivity: ["sensecap_gpio"]
-  tags: ["rainfall_volume", "rainfall_intensity"]
+  connectivity: ["proprietary"]
+  tags: ["rainfall"]
   description: >
     Industrial-Grade Optical Rain Gauge RG-15 measures rainfall volume and intensity accurately and reliably. It features easy installation and is maintenance-free, suitable for multiple applications that require rainfall data monitoring.
   product_image: "114992321.png"
@@ -1948,7 +1943,7 @@
   vendor: "SeedStudio"
   vendor_website: "https://www.seeedstudio.com"
   connectivity: ["lorawan"]
-  tags: ["vision_ai"]
+  tags: ["image_recogniticion", "ai"]
   description: >
     SenseCAP A1101 - LoRaWAN Vision AI Sensor is a TinyML Edge AI enabled smart image sensor. It supports a variety of AI models such as image recognition, people counting, target detection, meter recoignition etc. It also supports training models with TensorFlow Lite.
   product_image: "a1101.jpg"
@@ -1970,7 +1965,7 @@
   vendor: "SeedStudio"
   vendor_website: "https://www.seeedstudio.com"
   connectivity: ["lorawan"]
-  tags: ["air_temperature", "humidity"]
+  tags: ["temperature", "humidity"]
   description: >
     SenseCAP Wireless Air Temperature and Humidity Sensor measures temperature and humidity in the atmosphere. It's designed with a 2-in-1 sensor, a custom battery and an IP66 enclosure, optimized for outdoor use cases that need reliable data collection over years.
   product_image: "lora-th-01.png"
@@ -2003,7 +1998,7 @@
   vendor: "Milesight"
   vendor_website: "https://www.milesight-iot.com/"
   connectivity: ["lorawan"]
-  tags: ["air_temperature", "humidity"]
+  tags: ["temperature", "humidity"]
   description: >
     EM300-TH Temperature & Humidity Sensor is equipped with IP67 rated enclosure to fit into more application scenarios
   product_image: "em300th.jpg"
@@ -2025,7 +2020,7 @@
   vendor: "Milesight"
   vendor_website: "https://www.milesight-iot.com/"
   connectivity: ["lorawan"]
-  tags: ["water_leak"]
+  tags: ["leak_detector"]
   description: >
     The EM300-SLD IP67 Spot Water Leak Detector
   product_image: "em300-sld.png"
@@ -2036,7 +2031,7 @@
   vendor: "Milesight"
   vendor_website: "https://www.milesight-iot.com/"
   connectivity: ["lorawan"]
-  tags: ["water_leak"]
+  tags: ["leak_detector"]
   description: >
     The EM300-ZLD IP67 Spot Water Leak Detector
   product_image: "em300-zld.png"
@@ -2069,7 +2064,7 @@
   vendor: "Milesight"
   vendor_website: "https://www.milesight-iot.com/"
   connectivity: ["lorawan"]
-  tags: ["air_temperature", "humidity"]
+  tags: ["temperature", "humidity"]
   description: >
     The need for temperature and humidity monitoring never decreases. Widespread but essential, the temperature and humidity sensor serves applications across industries. Milesight introduces LoRaWAN® EM320-TH Temperature and Humidity Sensor to offer you the best price-performance ratio. Two optional versions can unleash the potential of EM320-TH sensor to the maximum.
   product_image: "em320-th.jpg"
@@ -2080,7 +2075,7 @@
   vendor: "Milesight"
   vendor_website: "https://www.milesight-iot.com/"
   connectivity: ["lorawan"]
-  tags: ["air_temperature", "humidity", "atmospheric_pressure", "co2"]
+  tags: ["temperature", "humidity", "atmospheric_pressure", "co2"]
   description: >
     EM500-CO2 is designed for measuring gaseous carbon dioxide (CO2) concentration in harsh environments. It is useful in the application where knowing CO2 level is important like greenhouse, building ventilation, fruit and vegetable storage. Besides, it also supports temperature, humidity and barometric pressure measurement.
   product_image: "em500-co.png"
@@ -2102,7 +2097,7 @@
   vendor: "Milesight"
   vendor_website: "https://www.milesight-iot.com/"
   connectivity: ["lorawan"]
-  tags: ["water_level"]
+  tags: ["liquid_level"]
   description: >
     EM500-SWL is designed to measure the tank level or open water applications while fully submerged in liquid. It is robust and sealed to prevent corrosion and failure.
   product_image: "em500-swl.png"
@@ -2167,7 +2162,7 @@
   product_page: "https://www.monnit.com/products/sensors/temperature/"
   vendor: "Monnit"
   vendor_website: "https://www.monnit.com/"
-  connectivity: ["monnit_wireless"]
+  connectivity: ["proprietary"]
   tags: ["temperature"]
   description: >
     ALTA wireless temperature sensors use a thermistor to accurately measure temperatures. These sensors are perfect for monitoring ambient temperatures around the sensors physical location.
@@ -2189,7 +2184,7 @@
   product_page: "https://www.monnit.com/products/sensors/gas-detection/"
   vendor: "Monnit"
   vendor_website: "https://www.monnit.com/"
-  connectivity: ["monnit_wireless"]
+  connectivity: ["proprietary"]
   tags: ["co2"]
   description: >
     The mems based wireless carbon dioxide sensor allows you to monitor the level of carbon dioxide (CO2) gas in the surrounding air. Monnit wireless CO2 sensors have a small footprint and low cost but boast industry leading, premium performance specifications and are the longest lifetime sensors in the industry and the only CO2 sensor on the market powered by a coin cell battery (battery lasts over a year at 1 hour heartbeat). User customization allows you to set the frequency of readings and the ability to set customized alerts via SMS text or email when the sensor detects CO2 levels outside of the user's defined safe levels.
@@ -2200,7 +2195,7 @@
   product_page: "https://www.monnit.com/products/sensors/water-detection/"
   vendor: "Monnit"
   vendor_website: "https://www.monnit.com/"
-  connectivity: ["monnit_wireless"]
+  connectivity: ["proprietary"]
   tags: ["water_detector"]
   description: >
     Monnit wireless water sensors alert you via SMS text and/or email when there is water detected, preventing potential property damage that results from flooding or leaks. Place this sensor anywhere flooding or faulty plumbing could cause a problem. This sensor can also be used to detect a lack of water, allowing you to know when a container is nearing empty.
@@ -2211,7 +2206,7 @@
   product_page: "https://www.monnit.com/products/sensors/water-detection/"
   vendor: "Monnit"
   vendor_website: "https://www.monnit.com/"
-  connectivity: ["monnit_wireless"]
+  connectivity: ["proprietary"]
   tags: ["water_detector"]
   description: >
     The Monnit Wireless Water Rope Sensor detects conductive liquids anywhere along the length of the detection rope by using two wires covered with conducting polymer. When water or conductive liquid contacts the rope, the sensor will immediately turn on the RF radio and transmit the data to the wireless gateway and iMonnit Online Sensor Monitoring and Notification System, allowing the user to immediately receive an alert by SMS text, email or voice call. The sensor rope dries quickly allowing the sensor to reset for next use. The sensor comes with an initial 10 foot section of water detection rope and can be expanded up to 100 feet by simply clicking additional 10 foot sections of detection rope together.
@@ -2222,7 +2217,7 @@
   product_page: "https://www.monnit.com/products/sensors/infrared-motion/"
   vendor: "Monnit"
   vendor_website: "https://www.monnit.com/"
-  connectivity: ["monnit_wireless"]
+  connectivity: ["proprietary"]
   tags: ["motion"]
   description: >
     Motion sensors use passive infra-red (PIR) technology to monitor for a variety of different needs. The 60° beam width is best for use in typical security types of monitoring. Human bodies or med/large sized animals can be detected at a range of up to 5 meters, alerting you when someone (or something) is where it shouldn’t be.
@@ -2233,7 +2228,7 @@
   product_page: "https://www.monnit.com/products/sensors/light-meter/"
   vendor: "Monnit"
   vendor_website: "https://www.monnit.com/"
-  connectivity: ["monnit_wireless"]
+  connectivity: ["proprietary"]
   tags: ["light"]
   description: >
     ALTA wireless light meters measure the intensity of light in lux (luminescence/unit area), from 0 – 83,000 lux (indoor range). Perfect for light sensitive applications like museum and art gallery light monitoring.
@@ -2244,7 +2239,7 @@
   product_page: "https://www.monnit.com/products/sensors/pulse-counter/single-input/"
   vendor: "Monnit"
   vendor_website: "https://www.monnit.com/"
-  connectivity: ["monnit_wireless"]
+  connectivity: ["proprietary"]
   tags: ["pulse_counter"]
   description: >
     Monnit wireless pulse counters can be integrated with a dry contact or mechanical switch to count the number of actuations occurring within a given time frame.
@@ -2255,7 +2250,7 @@
   product_page: "https://www.monnit.com/products/sensors/vehicle/detection-counting/"
   vendor: "Monnit"
   vendor_website: "https://www.monnit.com/"
-  connectivity: ["monnit_wireless"]
+  connectivity: ["proprietary"]
   tags: ["vehicle_counter"]
   description: >
     The Monnit wireless vehicle detect/counter sensor can be deployed to detect the presence of a vehicle or count oncoming traffic utilizing a 9 ft. pneumatic tube. Deployment is easy with the included hose anchor and mounting spikes. Simply turn the unit on with the included magnet, roll the hose out where you wish to record traffic data and pound the spikes into the asphalt.
@@ -2266,7 +2261,7 @@
   product_page: "https://www.monnit.com/products/sensors/ultrasonic-ranging/"
   vendor: "Monnit"
   vendor_website: "https://www.monnit.com/"
-  connectivity: ["monnit_wireless"]
+  connectivity: ["proprietary"]
   tags: ["ultrasound"]
   description: >
     Ultrasonic sensors use the speed of sound to determine the distance between themselves and an object. A high-frequency pulse is sent; the time it takes to receive an echo back is recorded, and the time difference determines distance (or tank level or an object’s presence). The sensors are impervious to target surface and color and compensate for temperature and humidity.
@@ -2277,7 +2272,7 @@
   product_page: "https://www.monnit.com/products/sensors/air-velocity/speed/"
   vendor: "Monnit"
   vendor_website: "https://www.monnit.com/"
-  connectivity: ["monnit_wireless"]
+  connectivity: ["proprietary"]
   tags: ["air_velocity"]
   description: >
     This air velocity/speed sensor measures the pressure difference between its two ports, accounts for ambient temperature and altitude, and determines system airflow speed in meters per second (m/s). The sensor is calibrated, temperature compensated, and has a -50 m/s to +50 m/s measurement range.
@@ -2288,7 +2283,7 @@
   product_page: "https://www.monnit.com/products/sensors/open-closed/status/"
   vendor: "Monnit"
   vendor_website: "https://www.monnit.com/"
-  connectivity: ["monnit_wireless"]
+  connectivity: ["proprietary"]
   tags: ["door_sensor", "window_sensor"]
   description: >
     The ALTA Open-Closed Sensor uses an external switch and trigger magnet to detect status—when the magnets meet, a door or window is closed. The sensor can be configured via iMonnit only to send notifications during specific dayparts, such as after-hours. Data also sheds light on access patterns—a boon for the foodservice, healthcare, and hospitality sectors.
@@ -2299,7 +2294,7 @@
   product_page: "https://www.monnit.com/products/sensors/wireless-pressure-meters/"
   vendor: "Monnit"
   vendor_website: "https://www.monnit.com/"
-  connectivity: ["monnit_wireless"]
+  connectivity: ["proprietary"]
   tags: ["pressure"]
   description: >
     Monnit’s Wireless 50 PSIG Pressure Meters keep lab managers, field service engineers, and other professionals connected to processes and machinery.
@@ -2310,7 +2305,7 @@
   product_page: "https://www.monnit.com/products/sensors/propane-tank-monitoring/lpg/"
   vendor: "Monnit"
   vendor_website: "https://www.monnit.com/"
-  connectivity: ["monnit_wireless"]
+  connectivity: ["proprietary"]
   tags: ["propane_level"]
   description: >
     The Wireless ALTA Propane Tank Level Monitor allows a user to remotely monitor the level of a propane tank by simply plugging in the R3D® (Remote ready) sensor into a pre-installed R3D tank gauge. As the propane level is decreased, the reading produced decreases as well. The monitor converts the reading into a percentage of propane remaining in the tank and transmits that percentage wirelessly to its connected ALTA Gateway.
@@ -2321,7 +2316,7 @@
   product_page: "https://www.monnit.com/products/sensors/food-probe/thermometer/"
   vendor: "Monnit"
   vendor_website: "https://www.monnit.com/"
-  connectivity: ["monnit_wireless"]
+  connectivity: ["proprietary"]
   tags: ["temperature", "food_temperature"]
   description: >
     Monnit’s ALTA® Wireless Food Probe replaces manual temperature checks with remote data collection for safety and quality. The Food Probe measures the internal temperature of food from -50°C to 260°C (-58°F to 500°F). Temperature is instantly displayed on an LCD; data can be automatically transmitted to iMonnit Sensor Software for compliance and analysis.
@@ -2332,7 +2327,7 @@
   product_page: "https://www.monnit.com/products/sensors/soil-moisture/cb/"
   vendor: "Monnit"
   vendor_website: "https://www.monnit.com/"
-  connectivity: ["monnit_wireless"]
+  connectivity: ["proprietary"]
   tags: ["soil_moisture"]
   description: >
     The Soil Moisture Sensor measures soil water tension (matric potential) and temperature. With a resistive granular matrix element, you can optimize your tension parameters to determine the earliest indication of water stress and make sure you irrigate before it reaches that point. The unique element feature delivers consistent calibration without needing to recalibrate for every installation.
@@ -2343,7 +2338,7 @@
   product_page: "https://www.monnit.com/products/sensors/air/differential-pressure/"
   vendor: "Monnit"
   vendor_website: "https://www.monnit.com/"
-  connectivity: ["monnit_wireless"]
+  connectivity: ["proprietary"]
   tags: ["air_pressure"]
   description: >
     This battery-powered pressure sensor measures the air pressure difference (with a range of -500 Pa to 500 Pa) between its dual ports. If, based on your parameters, the sensor measures a pressure differential between its ports, you’re alerted via text, email, or call. A difference likely points to a dirty filter or a machine/system that needs immediate service.
@@ -2354,8 +2349,8 @@
   product_page: "https://www.disruptive-technologies.com/products/wireless-sensors/wireless-temperature-sensor"
   vendor: "Disruptive"
   vendor_website: "https://www.disruptive-technologies.com/"
-  connectivity: ["disruptive_wireless"]
-  tags: ["air_temperature"]
+  connectivity: ["proprietary"]
+  tags: ["temperature"]
   description: >
     The Wireless Temperature Sensor measures the surrounding temperature and wirelessly transmits the result to a Cloud Connector (Gateway) via SecureDataShot™ technology. The Cloud Connector will relay the temperature reading to a Cloud service. The readings are performed at 15 minute heartbeat intervals. The Wireless Temperature Sensor has touch functionality for simple installation and use.
   product_image: "102058.png"
@@ -2365,7 +2360,7 @@
   product_page: "https://www.disruptive-technologies.com/products/wireless-sensors/wireless-touch-sensor"
   vendor: "Disruptive"
   vendor_website: "https://www.disruptive-technologies.com/"
-  connectivity: ["disruptive_wireless"]
+  connectivity: ["proprietary"]
   tags: ["touch_sensor"]
   description: >
     The Wireless Touch Sensor sends a message to the cloud every time it is touched. It also transmits a heartbeat message every 15 minutes to notify the system that it is within range and operational. Data is relayed to the cloud through Cloud Connectors (gateway), where it can be seen in Studio or exported to other services via developer APIs.
@@ -2376,7 +2371,7 @@
   product_page: "https://www.disruptive-technologies.com/products/wireless-sensors/wireless-proximity-sensor"
   vendor: "Disruptive"
   vendor_website: "https://www.disruptive-technologies.com/"
-  connectivity: ["disruptive_wireless"]
+  connectivity: ["proprietary"]
   tags: ["proximity"]
   description: >
     The Wireless Proximity Sensor can detect objects that are removed or placed in front of the sensor. In addition to periodic heartbeats every 15 minutes, the sensor transmits a message when an object is removed or placed in front of the sensor. Data is relayed to the cloud through Cloud Connectors (gateway), where it can be seen in Studio or exported to other services via developer APIs.
@@ -2387,7 +2382,7 @@
   product_page: "https://www.disruptive-technologies.com/products/wireless-sensors/wireless-water-sensor"
   vendor: "Disruptive"
   vendor_website: "https://www.disruptive-technologies.com/"
-  connectivity: ["disruptive_wireless"]
+  connectivity: ["proprietary"]
   tags: ["water_detector"]
   description: >
     The Wireless Water Detector detects if there is water in contact with the sensor The moment water comes in contact with the sensor, it wirelessly transmits the results to the cloud through Cloud Connectors (gateway). It also transmits a heartbeat message every 15-minute notifying the system that it is operational.
@@ -2398,7 +2393,7 @@
   product_page: "https://www.disruptive-technologies.com/products/wireless-sensors/wireless-humidity-sensor"
   vendor: "Disruptive"
   vendor_website: "https://www.disruptive-technologies.com/"
-  connectivity: ["disruptive_wireless"]
+  connectivity: ["proprietary"]
   tags: ["humidity"]
   description: >
     Relative humidity is useful in managing building and asset lifetime, HVAC (Heating Ventilation Air Conditioning) and comfort optimization. Especially important in legacy buildings and assets that require careful humidity monitoring and preservation.
@@ -2409,7 +2404,7 @@
   product_page: "https://www.disruptive-technologies.com/products/wireless-sensors/wireless-desk-occupancy-sensor"
   vendor: "Disruptive"
   vendor_website: "https://www.disruptive-technologies.com/"
-  connectivity: ["disruptive_wireless"]
+  connectivity: ["proprietary"]
   tags: ["desk_occupancy"]
   description: >
     The Desk Occupancy Sensor is tiny, non-invasive and has a long battery life (8 years). Finally a secure, long lasting solution that can accurately detect desk occupancy without using cameras or making occupants feel uncomfortable.
@@ -2420,8 +2415,8 @@
   product_page: "https://www.disruptive-technologies.com/products/wireless-co2-sensor"
   vendor: "Disruptive"
   vendor_website: "https://www.disruptive-technologies.com/"
-  connectivity: ["disruptive_wireless"]
-  tags: ["co2", "air_temperature", "humidity", "atmospheric_pressure"]
+  connectivity: ["proprietary"]
+  tags: ["co2", "temperature", "humidity", "atmospheric_pressure"]
   description: >
     The Wireless CO2 Sensor measures CO2 (ppm), Temperature (°C/°F), Relative Humidity (% RH), and Barometric Pressure (Pa) in the surrounding air and wirelessly transmits the result to nearby Cloud Connectors (gateways) via SecureDataShot™ protocol. Data is relayed to the cloud, where it can be seen in Studio or exported to other services via webhooks or developer APIs.
   product_image: "102521.png"
@@ -2431,7 +2426,7 @@
   product_page: "https://www.disruptive-technologies.com/products/wireless-motion-sensor"
   vendor: "Disruptive"
   vendor_website: "https://www.disruptive-technologies.com/"
-  connectivity: ["disruptive_wireless"]
+  connectivity: ["proprietary"]
   tags: ["motion"]
   description: >
     The Wireless Motion Sensor uses Quad-element Passive Infrared Sensor (PIR) technology to detect the presence of people in a room by measuring changes in infrared light intensity coming from a warm body moving into the sensor's field-of-view. Data is relayed to the cloud, where it can be seen in Studio or exported to other services via webhooks or developer APIs.
@@ -2476,7 +2471,7 @@
   vendor: "Shelly"
   vendor_website: "https://www.shelly.cloud"
   connectivity: ["wifi"]
-  tags: ["energy_meter", "contactor_control"]
+  tags: ["energy"]
   description: >
     Monitor the consumption of any home appliances, electric circuit and office equipment (lights, power lines, security systems, heating and cooling, etc.) individually. The consumption of your whole home or generated electricity from solar panels with the only one of its kind WiFi-operated Energy Meter with contactor control functionality in the world.
   product_image: "shelly-3em-wifi-smart-home-automation.jpg"
@@ -2498,7 +2493,7 @@
   vendor: "Shelly"
   vendor_website: "https://www.shelly.cloud"
   connectivity: ["wifi", "bluetooth"]
-  tags: ["relay", "energy_meter"]
+  tags: ["relay", "energy"]
   description: >
     Control and measure power consumption for wide range of home appliances and office equipment (lights, power lines, security systems, heating radiators, air conditioners, etc.) from anywhere with the smallest WiFi-operated relay switch, with Bluetooth connection
   product_image: "shelly-plus-1pm-wifi-smart-home-automation.jpg"
@@ -2509,7 +2504,7 @@
   vendor: "Shelly"
   vendor_website: "https://www.shelly.cloud"
   connectivity: ["wifi", "bluetooth"]
-  tags: ["relay", "energy_meter"]
+  tags: ["relay", "energy"]
   description: >
     Shelly Plus 2PM is a one-phase, two channel smart relay supporting up to 10A per channel and 16A total current (18A peak). It is equipped with two power meters for each channel and an overpower protection function to limit your energy consumption.
   product_image: "shelly-plus-2pm-wifi-smart-home-automation.jpg"
@@ -2553,7 +2548,7 @@
   vendor: "Shelly"
   vendor_website: "https://www.shelly.cloud"
   connectivity: ["wifi"]
-  tags: ["energy_meter", "contactor_control"]
+  tags: ["energy"]
   description: >
     Monitor the consumption of any home appliances, electric circuit and office equipment (lights, power lines, security systems, heating and cooling, etc.) individually. The consumption of your whole home or generated electricity from solar panels with the only one of its kind WiFi-operated Energy Meter with contactor control functionality in the world.
   product_image: "shelly-em-50a-clamp-wifi-smart-home-automation-1.jpg"
@@ -2575,7 +2570,7 @@
   vendor: "Shelly"
   vendor_website: "https://www.shelly.cloud"
   connectivity: ["wifi"]
-  tags: ["rgbw_controller"]
+  tags: ["rgbw"]
   description: >
     Make your LED strips smart in one easy step. Shelly RGBW2 can connect like any LED controller and allows you to control all your lighting directly from a mobile device or tablet.
   product_image: "shelly-rgbw2-wifi-smart-home-automation.jpg"
@@ -2619,7 +2614,7 @@
   vendor: "Elsys"
   vendor_website: "https://www.elsys.se/en"
   connectivity: ["lorawan"]
-  tags: ["air_temperature", "humidity", "light", "motion"]
+  tags: ["temperature", "humidity", "light", "motion"]
   description: >
     ERS is a sensor for measuring the indoor environment. It is enclosed in a room sensor box and is designed to be wall mounted. ERS is completely wireless and powered by two 3.6V AA lithium batteries. Inside you will find internal sensors for measuring temperature, humidity, light, and motion.
   product_image: "ers.png"
@@ -2630,7 +2625,7 @@
   vendor: "Elsys"
   vendor_website: "https://www.elsys.se/en"
   connectivity: ["lorawan"]
-  tags: ["co2", "air_temperature", "humidity", "light", "motion"]
+  tags: ["co2", "temperature", "humidity", "light", "motion"]
   description: >
     ERS CO2 has the capability of measuring everything regarding the indoor environment. You will have full control over the air quality, temperature, light, and humidity for either homes or workplaces. It also detects motion with a passive infrared camera and is our most powerful indoor climate sensor. This is a smart and professional LoRaWAN® device and very easy to configure. Its design is minimalistic which makes it ideal for mounting on walls in offices or in homes.
   product_image: "ers-co2.png"
@@ -2693,7 +2688,7 @@
   vendor: "Elsys"
   vendor_website: "https://www.elsys.se/en"
   connectivity: ["lorawan"]
-  tags: ["air_temperature", "humidity", "water_detector"]
+  tags: ["temperature", "humidity", "water_detector"]
   description: >
     This is an indoor LoRaWAN® sensor for measuring the indoor environment. It also has a water leak detector which makes it ideal to mount under a dishwasher, for example.
   product_image: "ems-lite.png"
@@ -2704,7 +2699,7 @@
   vendor: "Elsys"
   vendor_website: "https://www.elsys.se/en"
   connectivity: ["lorawan"]
-  tags: ["air_temperature", "humidity", "accelerometer"]
+  tags: ["temperature", "humidity", "accelerometer"]
   description: >
     EMS Desk is a sensor slightly larger than an AA-battery and ideal for mounting under desks. It can be used for measuring desk occupancy or as a discrete indoor environment sensor.
   product_image: "ems-desk.png"
@@ -2715,7 +2710,7 @@
   vendor: "Elsys"
   vendor_website: "https://www.elsys.se/en"
   connectivity: ["lorawan"]
-  tags: ["air_temperature", "accelerometer", "ultrasonic_sensor"]
+  tags: ["temperature", "accelerometer"]
   description: >
     The ELT Ultrasonic is designed for measuring the distance. It can be placed in various environments and can work as a bin level sensor, tank level sensor, or water level under bridges, for example. Not only can you measure distance with the ELT Ultrasonic, but it also has four internal sensors: temperature sensor, humidity sensor, accelerometer, and an atmospheric pressure sensor.It is enclosed in an IP67 box which makes it ideal for mounting outside or in extreme conditions.
   product_image: "elt-ultrasonic.png"
@@ -2742,7 +2737,7 @@
       "digital_input",
       "analog_input",
       "pulse_counter",
-      "air_temperature",
+      "temperature",
       "accelerometer",
       "atmospheric_pressure",
     ]
