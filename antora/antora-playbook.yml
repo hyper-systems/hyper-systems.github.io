@@ -9,12 +9,16 @@ content:
     branches: [HEAD]
     start_path: antora/sources/home
     edit_url: false
-  - url: ./sources/hyper-link-arduino
+  - url: ./sources/edge-server
+    branches: [development]
+    start_path: antora
+    edit_url: false
+  - url: ./sources/hyper-python-sdk
     branches: [master]
     start_path: antora
     edit_url: false
-  - url: ./sources/device-schemas
-    branches: [HEAD]
+  - url: ./sources/hyper-link-arduino
+    branches: [master]
     start_path: antora
     edit_url: false
 asciidoc:

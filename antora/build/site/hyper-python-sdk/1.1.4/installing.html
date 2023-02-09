@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Hyper Link Thread :: Hyper Developers</title>
-    <link rel="prev" href="configure-hyper-link-wifi-device.html">
+    <title>Installing the Hyper Python SDK package :: Hyper Developers</title>
+    <link rel="canonical" href="https://hyper.systems/developers/hyper-python-sdk/1.1.4/installing.html">
+    <link rel="prev" href="index.html">
+    <link rel="next" href="devices.html">
     <meta name="generator" content="Antora 3.1.0">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
@@ -51,29 +53,23 @@
     </div>
   </nav>
 </header><div class="body">
-<div class="nav-container" data-component="hyper-link-arduino" data-version="1.0">
+<div class="nav-container" data-component="hyper-python-sdk" data-version="1.1.4">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="index.html">Hyper Link Arduino</a></h3>
+    <h3 class="title"><a href="index.html">Hyper Python SDK</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="index.html">Overview</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="setup-arduino-development-kit.html">Setup Arduino development kit</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="integrate-hyper-arduino-library.html">Integrate the Hyper Arduino library</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="configure-hyper-link-wifi-device.html">Configure Hyper Link WiFi device</a>
-  </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="hyper-link-thread.html">Hyper Link Thread</a>
+    <a class="nav-link" href="installing.html">Installing the Python Package</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="devices.html">Devices</a>
   </li>
 </ul>
   </li>
@@ -82,8 +78,8 @@
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
-    <span class="title">Hyper Link Arduino</span>
-    <span class="version">1.0-beta.1</span>
+    <span class="title">Hyper Python SDK</span>
+    <span class="version">1.1.4</span>
   </div>
   <ul class="components">
     <li class="component">
@@ -102,19 +98,19 @@
         </li>
       </ul>
     </li>
-    <li class="component is-current">
-      <a class="title" href="index.html">Hyper Link Arduino</a>
+    <li class="component">
+      <a class="title" href="../../hyper-link-arduino/1.0/index.html">Hyper Link Arduino</a>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">1.0-beta.1</a>
+        <li class="version is-latest">
+          <a href="../../hyper-link-arduino/1.0/index.html">1.0-beta.1</a>
         </li>
       </ul>
     </li>
-    <li class="component">
-      <a class="title" href="../../hyper-python-sdk/1.1.4/index.html">Hyper Python SDK</a>
+    <li class="component is-current">
+      <a class="title" href="index.html">Hyper Python SDK</a>
       <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../hyper-python-sdk/1.1.4/index.html">1.1.4</a>
+        <li class="version is-current is-latest">
+          <a href="index.html">1.1.4</a>
         </li>
       </ul>
     </li>
@@ -129,8 +125,8 @@
   <a href="../../hyper-home/1.0/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="index.html">Hyper Link Arduino</a></li>
-    <li><a href="hyper-link-thread.html">Hyper Link Thread</a></li>
+    <li><a href="index.html">Hyper Python SDK</a></li>
+    <li><a href="installing.html">Installing the Python Package</a></li>
   </ul>
 </nav>
 </div>
@@ -139,33 +135,85 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Hyper Link Thread</h1>
-<div class="paragraph">
-<p>The Hyper Link Thread device is a custom board provided by Hyper for connectivity with the Thread mesh network protocol.</p>
-</div>
-<div class="paragraph">
-<p>Devices that implement the Hyper Link protocol and have an I2C connector can be connected to the Hyper Link Thread board to start publishing data to a cloud environment using the Thread mesh network.</p>
-</div>
-<div class="imageblock">
+<h1 class="page">Installing the Hyper Python SDK package</h1>
+<div class="sect1">
+<h2 id="installing-globally"><a class="anchor" href="#installing-globally"></a>Installing globally</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="using-pip"><a class="anchor" href="#using-pip"></a>Using pip</h3>
+<div class="listingblock">
 <div class="content">
-<img src="_images/hyper-link-thread-board.png" alt="Hyper Link Thread" width="800">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">pip install -U hyper-systems</code></pre>
 </div>
-<div class="title">Figure 1. Hyper Link Thread board</div>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The Hyper Link Thread device was originally called "Hyper Axon". Some development kits might included a board with the "Hyper Axon Board" label.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>Installing the latest development version of the package globally:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$ pip install -U git+https://github.com/hyper-systems/hyper-python-sdk.git@master</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="adding-as-a-dependency-to-your-project"><a class="anchor" href="#adding-as-a-dependency-to-your-project"></a>Adding as a dependency to your project</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="using-pip-2"><a class="anchor" href="#using-pip-2"></a>Using pip</h3>
+<div class="paragraph">
+<p>Add the latest stable release to requirements.txt:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">echo "hyper-systems" &gt;&gt; requirements.txt</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also specify the version, for example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">echo "hyper-systems==1.1.4" &gt;&gt; requirements.txt</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Consider using venv, if you want to have an isolated environment for your project with pip.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="using-poetry"><a class="anchor" href="#using-poetry"></a>Using poetry</h3>
+<div class="paragraph">
+<p>Add the latest stable release to <code>pyproject.toml</code> with poetry:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">poetry add "hyper-systems"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also specify the version, for example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">poetry add "hyper-systems==1.1.4"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Add the latest development version to <code>pyproject.toml</code> with poetry:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$ poetry add git+https://github.com/hyper-systems/hyper-python-sdk.git@master</code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="configure-hyper-link-wifi-device.html">Configure Hyper Link WiFi device</a></span>
+  <span class="prev"><a href="index.html">Overview</a></span>
+  <span class="next"><a href="devices.html">Devices</a></span>
 </nav>
 </article>
   </div>

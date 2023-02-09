@@ -12,10 +12,13 @@ Hyper provides an end-to-end data infrastructure for industrial systems.
 
 [cols="1,2"]
 |===
-|xref:hyper-link-arduino::index.adoc[]
-|Arduino-compatible library for integration with the Hyper Link protocol and devices.
-
-|*Hyper Analytics*
+|xref:analytics-api::index.adoc[*Hyper Analytics API*]
 |Obtain computed metrics for your data.
+
+|xref:hyper-python-sdk::index.adoc[*Hyper Python SDK*]
+|Python SDK for interacting with the Hyper.systems platform.
+
+|xref:hyper-link-arduino::index.adoc[*Hyper Link Arduino SDK*]
+|Arduino-compatible library for integration with the Hyper Link protocol and devices.
 
 |=== 
