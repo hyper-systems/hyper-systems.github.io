@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Hyper Analytics API v3 :: Hyper Developers</title>
+    <title>Hyper Analytics API :: Hyper Developers</title>
     <link rel="canonical" href="https://hyper.systems/developers/analytics-api/3.1/index.html">
+    <link rel="next" href="device-metrics.html">
     <meta name="generator" content="Antora 3.1.0">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
@@ -63,6 +64,15 @@
   <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="index.html">Analytics API</a>
   </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="device-metrics.html">Device Metrics API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="device-attribute-metrics.html">Device Attribute Metrics API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="device-keyed-metrics.html">Device Keyed Metrics API</a>
+  </li>
 </ul>
   </li>
 </ul>
@@ -99,10 +109,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../hyper-python-sdk/1.1.4/index.html">Hyper Python SDK</a>
+      <a class="title" href="../../hyper-python-sdk/1.2.0/index.html">Hyper Python SDK</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../hyper-python-sdk/1.1.4/index.html">1.1.4</a>
+          <a href="../../hyper-python-sdk/1.2.0/index.html">1.2.0</a>
         </li>
       </ul>
     </li>
@@ -127,593 +137,33 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Hyper Analytics API v3</h1>
-<div id="preamble">
-<div class="sectionbody">
+<h1 class="page">Hyper Analytics API</h1>
 <div class="paragraph">
-<p>This document contains an overview of the Hyper Analytics API that can be used to fetch metrics.</p>
+<p>Obtain computed metrics for your data.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="authorization"><a class="anchor" href="#authorization"></a>Authorization</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>All of the requests to the API must contain a valid authorization token. New API tokens can be generated in the dashboard.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="get-metrics-series"><a class="anchor" href="#get-metrics-series"></a>Get metrics series</h2>
-<div class="sectionbody">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">GET /site/{site}/analytics/v3/device_metrics</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This endpoint can be used to obtain aggregated metric values for a list of devices for a given time interval.</p>
-</div>
-<div class="sect2">
-<h3 id="request"><a class="anchor" href="#request"></a>Request</h3>
-<div class="paragraph">
-<p>The request specifies the time interval, the metrics and the devices to be included in the response. All requests are scoped by a site identifier in the path parameter.</p>
-</div>
-<div class="sect3">
-<h4 id="path-parameters"><a class="anchor" href="#path-parameters"></a>Path Parameters</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 33.3333%;">
-<col style="width: 50.0001%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>site</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>integer</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The site identifier. Sites are deployments of independent devices.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="query-parameters"><a class="anchor" href="#query-parameters"></a>Query Parameters</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 60%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>site</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>integer</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The site identifier. Sites are deployments of independent devices.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>start_time</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string (ISO8601)</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The start time of the metrics timeseries. <strong>Example:</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>2022-06-30T12:45:00Z</code></p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>end_time</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string (ISO8601)</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The end time of the metrics timeseries.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>format</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>json|csv</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The format of the response data.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>device_ids</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array[string]</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The list of Hyper device identifiers to include in the response. The Hyper device identifiers are encoded as MAC addresses. <strong>Examples:</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>c4:93:00:10:10:f2</code></p>
-</li>
-<li>
-<p><code>c4:93:00:10:12:a1</code></p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>metadata</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bool</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Determines if the metadata for the metrics and devices should be included. This field is only applicable when the <code>json</code> format is used.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>metrics</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array[string]</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Comma separated list of metric identifiers to include in the response. <strong>Examples:</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>aranet_ambient_temperature</code></p>
-</li>
-<li>
-<p><code>aranet_relative_humidity</code></p>
-</li>
-<li>
-<p><code>aranet_co2</code></p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>resolution</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[0-9]+(m|h|d)</code> or <code>none</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The time resolution of the data. If <code>none</code>, the values will not be aggregated. <strong>Examples:</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>5s</code></p>
-</li>
-<li>
-<p><code>15m</code></p>
-</li>
-<li>
-<p><code>5h</code></p>
-</li>
-<li>
-<p><code>30d</code></p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>statistics</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array[avg|min|max|sum]</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The list of deriving statistics to compute for the selected interval. <strong>Examples:</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>avg</code></p>
-</li>
-<li>
-<p><code>min</code></p>
-</li>
-<li>
-<p><code>max</code></p>
-</li>
-<li>
-<p><code>sum</code></p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>missing</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nan|null|zero</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Determines how missing values are represented.</p></td>
-</tr>
-</tbody>
-</table>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
-<col style="width: 50%;">
-<col style="width: 16.6667%;">
+<col style="width: 66.6667%;">
 </colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Metric identifier</th>
-<th class="tableblock halign-left valign-top">Quantity</th>
-<th class="tableblock halign-left valign-top">Unit</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aranet_ambient_temperature</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Temperature</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>°C</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="device-metrics.html" class="xref page">Device Metrics API</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get aggregated device metrics.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aranet_battery</code></p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>%</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="device-attribute-metrics.html" class="xref page">Device Attribute Metrics API</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get device attribute metrics.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aranet_co2</code></p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ppm</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aranet_current_derived</code></p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aranet_current</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Electric current</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>A</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aranet_ppfd</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Photosynthetically active radiation</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>umol/(m²s)</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aranet_relative_humidity</code></p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>%</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aranet_atmospheric_pressure</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Pressure</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mbar</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aranet_rssi</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Humidity</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dBm</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aegis_ii_conductivity</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Electrical conductance</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>µS</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aegis_ii_disolved_oxygen</code></p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>%</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aegis_ii_ph</code></p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aegis_ii_temperature</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Temperature</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>°C</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aegis_ii_turbidity_ntu</code></p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>NTU</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aegis_ii_peroxide</code></p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ppm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="device-keyed-metrics.html" class="xref page">Device Keyed Metrics API</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get device metrics aggregated by key.</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="response"><a class="anchor" href="#response"></a>Response</h3>
-<div class="paragraph">
-<p>Returns a JSON object containing the metric series, time labels and metadata for metrics and devices. Each series object is annotated with the metric and device it belongs too. The interval will contain JSON <code>null</code> values when the data is missing for any metric and device combination.
-In addition to computing the metrics over time, aggregated statistics for the entire time interval can be computed. The supported statistics are: average, minimum, maximum and sum.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">200 Body</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "metadata": {
-    "metrics": {
-      "$metric_id": {
-        "name": string,
-        "quantity": string,
-        "unit": string,
-        "symbol": string,
-      }
-    },
-    "devices": {
-      "$device_id": {
-        "name": string,
-        "vendor_device_id": string,
-      }
-    }
-  },
-  "labels": array[string],
-  "series": array[{
-    "metric": string,
-    "device_id": string,
-    "values": array[float]
-  }]
-}</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="examples"><a class="anchor" href="#examples"></a>Examples</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$ curl -H "Authorization: Bearer ${access_token}" "https://${organization_name}.hyper.ag/api/sites/1/analytics/v3/device_metrics?start_time=2022-06-30T10:46:03Z&amp;end_time=2022-07-02T10:46:03Z&amp;metrics=aranet_ambient_temperature,aranet_relative_humidity&amp;resolution=1d&amp;metadata=true"
-
-{
-  "metadata": {
-    "metrics": {
-      "aranet_relative_humidity": {
-        "unit": "percent",
-        "symbol": "%",
-        "quantity": "Humidity",
-        "name": "Aranet relative humidity"
-      },
-      "aranet_ambient_temperature": {
-        "unit": "degree Celsius",
-        "symbol": "°C",
-        "quantity": "Temperature",
-        "name": "Aranet ambient temperature"
-      }
-    },
-    "devices": {
-      "c4:93:00:10:12:ab": {
-        "name": "Farm_T/RH_29B2",
-        "vendor_device_id": "1053355"
-      },
-      "c4:93:00:10:26:9b": {
-        "name": "R&amp;D_T/RH_4",
-        "vendor_device_id": "1058459"
-      },
-      "c4:93:00:10:33:30": {
-        "name": "Lobby1_T/RH_1",
-        "vendor_device_id": "1061680"
-      },
-      "c4:93:00:10:12:95": {
-        "name": "Farm_T/RH_16B4",
-        "vendor_device_id": "1053333"
-      },
-      "c4:93:00:10:10:f2": {
-        "name": "Propagation_T/RH_1",
-        "vendor_device_id": "1052914"
-      },
-      "c4:93:00:10:0d:03": {
-        "name": "Farm_T/RH_1B2",
-        "vendor_device_id": "1051907"
-      },
-      "c4:93:00:10:0d:a2": {
-        "name": "Farm_T/RH_16B2",
-        "vendor_device_id": "1052066"
-      },
-      "c4:93:00:10:26:b5": {
-        "name": "Propagation_T/RH_2",
-        "vendor_device_id": "1058485"
-      },
-      "c4:93:00:10:12:e2": {
-        "name": "Tunnel7_T/RH_1",
-        "vendor_device_id": "1053410"
-      },
-      "c4:93:00:10:09:e5": {
-        "name": "Farm_T/RH_16B1",
-        "vendor_device_id": "1051109"
-      }
-    }
-  },
-  "labels": [
-    "2022-06-30T00:00:00-00:00",
-    "2022-07-01T00:00:00-00:00",
-    "2022-07-02T00:00:00-00:00"
-  ],
-  "series": [
-    {
-      "metric": "relative_humidity",
-      "device_id": "c4:93:00:10:09:e5",
-      "values": [
-        73.1625,
-        71.74626865671642,
-        71.578125
-      ]
-    },
-    {
-      "metric": "relative_humidity",
-      "device_id": "c4:93:00:10:0d:03",
-      "values": [
-        67.40506329113924,
-        65.54814814814814,
-        68.07692307692308
-      ]
-    },
-    {
-      "metric": "relative_humidity",
-      "device_id": "c4:93:00:10:0d:a2",
-      "values": [
-        72.59493670886076,
-        68.37777777777778,
-        67.56923076923077
-      ]
-    },
-    {
-      "metric": "relative_humidity",
-      "device_id": "c4:93:00:10:10:f2",
-      "values": [
-        68.725,
-        64.01492537313433,
-        63.984375
-      ]
-    },
-    {
-      "metric": "relative_humidity",
-      "device_id": "c4:93:00:10:12:95",
-      "values": [
-        76.35,
-        70.71851851851852,
-        69.09375
-      ]
-    },
-    {
-      "metric": "relative_humidity",
-      "device_id": "c4:93:00:10:12:ab",
-      "values": [
-        85.0875,
-        78.18045112781955,
-        72.81538461538462
-      ]
-    },
-    {
-      "metric": "relative_humidity",
-      "device_id": "c4:93:00:10:12:e2",
-      "values": [
-        68.82278481012658,
-        74.84444444444445,
-        73.28125
-      ]
-    },
-    {
-      "metric": "relative_humidity",
-      "device_id": "c4:93:00:10:26:9b",
-      "values": [
-        70.24683544303794,
-        67.22164179104477,
-        67.84307692307694
-      ]
-    },
-    {
-      "metric": "relative_humidity",
-      "device_id": "c4:93:00:10:26:b5",
-      "values": [
-        83.07249999999999,
-        84.48270676691736,
-        89.26562500000001
-      ]
-    },
-    {
-      "metric": "relative_humidity",
-      "device_id": "c4:93:00:10:33:30",
-      "values": [
-        null,
-        51.1379746835443,
-        60.121875
-      ]
-    },
-    {
-      "metric": "relative_humidity",
-      "device_id": "c4:93:00:10:09:e5",
-      "values": [
-        22.46875,
-        21.22425373134328,
-        19.332812500000006
-      ]
-    },
-    {
-      "metric": "ambient_temperature",
-      "device_id": "c4:93:00:10:0d:03",
-      "values": [
-        19.460126582278484,
-        19.111111111111107,
-        18.058461538461543
-      ]
-    },
-    {
-      "metric": "ambient_temperature",
-      "device_id": "c4:93:00:10:0d:a2",
-      "values": [
-        22.254430379746843,
-        21.59481481481481,
-        19.889230769230778
-      ]
-    },
-    {
-      "metric": "ambient_temperature",
-      "device_id": "c4:93:00:10:10:f2",
-      "values": [
-        21.197499999999998,
-        20.338432835820882,
-        20.34921875
-      ]
-    },
-    {
-      "metric": "ambient_temperature",
-      "device_id": "c4:93:00:10:12:95",
-      "values": [
-        21.521874999999987,
-        21.450740740740752,
-        19.985156250000003
-      ]
-    },
-    {
-      "metric": "ambient_temperature",
-      "device_id": "c4:93:00:10:12:ab",
-      "values": [
-        22.135625000000005,
-        21.67105263157896,
-        20.383076923076928
-      ]
-    },
-    {
-      "metric": "temperature",
-      "device_id": "c4:93:00:10:12:e2",
-      "values": [
-        18.678481012658235,
-        19.248518518518505,
-        20.0078125
-      ]
-    },
-    {
-      "metric": "ambient_temperature",
-      "device_id": "c4:93:00:10:26:9b",
-      "values": [
-        19.483544303797462,
-        19.569776119402977,
-        18.599230769230772
-      ]
-    },
-    {
-      "metric": "ambient_temperature",
-      "device_id": "c4:93:00:10:26:b5",
-      "values": [
-        18.890625,
-        18.22142857142857,
-        18.007031249999986
-      ]
-    },
-    {
-      "metric": "ambient_temperature",
-      "device_id": "c4:93:00:10:33:30",
-      "values": [
-        null,
-        18.91392405063291,
-        17.495312500000004
-      ]
-    }
-  ]
-}</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
+<nav class="pagination">
+  <span class="next"><a href="device-metrics.html">Device Metrics API</a></span>
+</nav>
 </article>
   </div>
 </main>

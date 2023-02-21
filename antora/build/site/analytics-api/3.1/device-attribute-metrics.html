@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hyper Device Attribute Metrics API v3 :: Hyper Developers</title>
+    <link rel="canonical" href="https://hyper.systems/developers/analytics-api/3.1/device-attribute-metrics.html">
+    <link rel="prev" href="device-metrics.html">
+    <link rel="next" href="device-keyed-metrics.html">
+    <meta name="generator" content="Antora 3.1.0">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://hyper.systems/">
+        <svg height="26" viewBox="0 0 94 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M18.0429 27.851H12.8651V16.8414H5.1955V27.851H0V2.12085H5.1955V12.5295H12.8651V2.12085H18.0429V27.851Z"
+            fill="#4C4859" />
+          <path d="M44.1088 18.803V27.851H38.9133V2.12085H47.6785C50.2232 2.12085 52.2496 2.91019 53.7576 4.48887C55.2773 
+                6.06755 56.0372 8.11747 56.0372 10.6386C56.0372 13.1598 55.2891 15.1508 53.7929 16.6117C52.2967 18.0726 
+                50.2232 18.803 47.5724 18.803H44.1088ZM44.1088 14.4734H47.6785C48.6681 14.4734 49.4339 14.1494 49.9758 
+                13.5015C50.5177 12.8535 50.7887 11.911 50.7887 10.674C50.7887 9.38984 50.5118 8.37077 49.9581 7.61677C49.4044 
+                6.851 48.6622 6.46222 47.7315 6.45044H44.1088V14.4734Z" fill="#4C4859" />
+          <path
+            d="M72.0839 16.7177H63.9902V23.5391H73.5683V27.851H58.7947V2.12085H73.533V6.45044H63.9902V12.5295H72.0839V16.7177Z"
+            fill="#4C4859" />
+          <path d="M84.3658 18.4496H81.7857V27.851H76.5902V2.12085H84.8783C87.4819 2.12085 89.4906 2.79827 90.9044 4.1531C92.3299 
+                5.49616 93.0426 7.4106 93.0426 9.89643C93.0426 13.313 91.7997 15.7046 89.3139 17.0712L93.8202 27.6036V27.851H88.2359L84.3658
+                 18.4496ZM81.7857 14.12H84.7369C85.7737 14.12 86.5512 13.7783 87.0696 13.095C87.588 12.3999 87.8471 11.4751 87.8471 
+                 10.3206C87.8471 7.74048 86.8399 6.45044 84.8253 6.45044H81.7857V14.12Z" fill="#4C4859" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M33.2854 1.03077C33.5216 0.255676 32.4718 -0.234317 32.0294 0.444521L20.7397 
+                17.7669C20.4506 18.2105 20.7396 18.802 21.2671 18.8466L26.6746 19.3039L23.0044 30.9381C22.7651 31.6969 23.7757 
+                32.2034 24.2403 31.5575L36.4959 14.5186C36.8113 14.08 36.5321 13.4645 35.9943 13.4131L29.696 12.8103L33.2854 1.03077Z" fill="#2EDBAC" />
+        </svg>
+      </a>
+      <a class="navbar-sub_logo" href="https://hyper.systems/developers">Developers</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" target="_blank" href="https://github.com/hyper-systems/">GitHub</a>
+        <a class="navbar-item" href="mailto:support@hyper.systems">Support</a>
+      </div>
+    </div>
+  </nav>
+</header><div class="body">
+<div class="nav-container" data-component="analytics-api" data-version="3.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Hyper Analytics API</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Analytics API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="device-metrics.html">Device Metrics API</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="device-attribute-metrics.html">Device Attribute Metrics API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="device-keyed-metrics.html">Device Keyed Metrics API</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Hyper Analytics API</span>
+    <span class="version">3.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../hyper-home/1.0/index.html">Home</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../hyper-home/1.0/index.html">1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Hyper Analytics API</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">3.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../hyper-link-arduino/1.0/index.html">Hyper Link Arduino</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../hyper-link-arduino/1.0/index.html">1.0-beta.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../hyper-python-sdk/1.2.0/index.html">Hyper Python SDK</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../hyper-python-sdk/1.2.0/index.html">1.2.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../hyper-home/1.0/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Hyper Analytics API</a></li>
+    <li><a href="device-attribute-metrics.html">Device Attribute Metrics API</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Hyper Device Attribute Metrics API v3</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This document contains an overview of the Hyper Device Attribute Metrics API that can be used to fetch device attribute metrics.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="authorization"><a class="anchor" href="#authorization"></a>Authorization</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>All of the requests to the API must contain a valid authorization token. New API tokens can be generated in the dashboard.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Header</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Authorization</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bearer $access_token</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="get-attribute-metrics-series"><a class="anchor" href="#get-attribute-metrics-series"></a>Get attribute metrics series</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">GET /site/{site}/analytics/v3/device_attribute_metrics</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This endpoint can be used to obtain aggregated metric values for a list of devices for a given time interval.</p>
+</div>
+<div class="sect2">
+<h3 id="request"><a class="anchor" href="#request"></a>Request</h3>
+<div class="paragraph">
+<p>The request specifies the time interval, the metrics and the devices to be included in the response. All requests are scoped by a site identifier in the path parameter.</p>
+</div>
+<div class="sect3">
+<h4 id="path-parameters"><a class="anchor" href="#path-parameters"></a>Path Parameters</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 33.3333%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>site</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>integer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The site identifier. Sites are deployments of independent devices.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="query-parameters"><a class="anchor" href="#query-parameters"></a>Query Parameters</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>site</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>integer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The site identifier. Sites are deployments of independent devices.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>start_time</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string (ISO8601)</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The start time of the metrics timeseries. <strong>Example:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>2022-06-30T12:45:00Z</code></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>end_time</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string (ISO8601)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The end time of the metrics timeseries.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>format</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>json|csv</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The format of the response data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>device_ids</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array[string]</code> or <code>none</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The list of Hyper device identifiers to include in the response. The Hyper device identifiers are encoded as MAC addresses. If <code>none</code>, all the devices with be shown. <strong>Examples:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>c4:93:00:10:10:f2</code></p>
+</li>
+<li>
+<p><code>c4:93:00:10:12:a1</code></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>metadata</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bool</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Determines if the metadata for the metrics and devices should be included. This field is only applicable when the <code>json</code> format is used.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>metrics</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array[string]</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Comma separated list of metric identifiers to include in the response. <strong>Examples:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>aranet_ambient_temperature</code></p>
+</li>
+<li>
+<p><code>aranet_relative_humidity</code></p>
+</li>
+<li>
+<p><code>aranet_co2</code></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>resolution</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[0-9]+(m|h|d)</code> or <code>none</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The time resolution of the data. If <code>none</code>, the values will not be aggregated. <strong>Examples:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>5s</code></p>
+</li>
+<li>
+<p><code>15m</code></p>
+</li>
+<li>
+<p><code>5h</code></p>
+</li>
+<li>
+<p><code>30d</code></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>statistics</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array[avg|min|max|sum]</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The list of deriving statistics to compute for the selected interval. <strong>Examples:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>avg</code></p>
+</li>
+<li>
+<p><code>min</code></p>
+</li>
+<li>
+<p><code>max</code></p>
+</li>
+<li>
+<p><code>sum</code></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>missing</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nan|null|zero</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Determines how missing values are represented.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="response"><a class="anchor" href="#response"></a>Response</h3>
+<div class="paragraph">
+<p>Returns a JSON object containing the metric series, time labels and metadata for metrics and devices. Each series object is annotated with the metric and device it belongs too. The interval will contain JSON <code>null</code> values when the data is missing for any metric and device combination.
+In addition to computing the metrics over time, aggregated statistics for the entire time interval can be computed. The supported statistics are: average, minimum, maximum and sum.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">200 Body</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "metadata": {
+    "metrics": {
+      "$metric_id": {
+        "name": string,
+        "quantity": string,
+        "unit": string,
+        "symbol": string,
+      }
+    },
+    "devices": {
+      "$device_id": {
+        "name": string,
+        "vendor_device_id": string,
+      }
+    }
+  },
+  "labels": array[string],
+  "series": array[{
+    "metric": string,
+    "device_id": string,
+    "attribute_index": int,
+    "values": array[float]
+  }]
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="examples"><a class="anchor" href="#examples"></a>Examples</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$ curl -H "Authorization: Bearer ${access_token}" "https://${organization_name}.hyper.ag/api/sites/1/analytics/v3/device_attribute_metrics?start_time=2023-02-13T00:00:00.000Z&amp;end_time=2023-02-17T23:59:59.154Z&amp;metrics=hyper_ambient_temperature,hyper_relative_humidity,hyper_ph&amp;resolution=10d&amp;format=json&amp;metadata=true" | jq
+
+{
+  "metadata": {
+    "metrics": {
+      "hyper_relative_humidity": {
+        "unit": "percent",
+        "symbol": "%",
+        "quantity": "Temperature",
+        "name": "Hyper relative humidity"
+      },
+      "hyper_ph": {
+        "name": "Hyper pH"
+      },
+      "hyper_ambient_temperature": {
+        "unit": "degrees Celsius",
+        "symbol": "°C",
+        "quantity": "Temperature",
+        "name": "Hyper ambient temperature"
+      }
+    },
+    "devices": {
+      "E8:EB:1B:32:31:B4": {
+        "name": "",
+        "vendor_device_id": "E8:EB:1B:32:31:B4"
+      },
+      "36:08:94:9A:04:D4": {
+        "name": "",
+        "vendor_device_id": "36:08:94:9A:04:D4"
+      }
+    }
+  },
+  "labels": [
+    "2023-02-12T00:00:00-00:00"
+  ],
+  "series": [
+    {
+      "metric": "hyper_ambient_temperature",
+      "device_id": "36:08:94:9A:04:D4",
+      "attribute_index": 0,
+      "values": [
+        8.6534505
+      ]
+    },
+    {
+      "metric": "hyper_ph",
+      "device_id": "E8:EB:1B:32:31:B4",
+      "attribute_index": 0,
+      "values": [
+        0.9595640419060487
+      ]
+    },
+    {
+      "metric": "hyper_relative_humidity",
+      "device_id": "36:08:94:9A:04:D4",
+      "attribute_index": 1,
+      "values": [
+        22.213393500000006
+      ]
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="device-metrics.html">Device Metrics API</a></span>
+  <span class="next"><a href="device-keyed-metrics.html">Device Keyed Metrics API</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer"></footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
