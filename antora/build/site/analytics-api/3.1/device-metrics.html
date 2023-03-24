@@ -110,9 +110,12 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../hyper-python-sdk/1.2.0/index.html">Hyper Python SDK</a>
+      <a class="title" href="../../hyper-python-sdk/1.3.0/index.html">Hyper Python SDK</a>
       <ul class="versions">
         <li class="version is-latest">
+          <a href="../../hyper-python-sdk/1.3.0/index.html">1.3.0</a>
+        </li>
+        <li class="version">
           <a href="../../hyper-python-sdk/1.2.0/index.html">1.2.0</a>
         </li>
       </ul>
@@ -398,7 +401,7 @@ In addition to computing the metrics over time, aggregated statistics for the en
 <h3 id="examples"><a class="anchor" href="#examples"></a>Examples</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$ curl -H "Authorization: Bearer ${access_token}" "https://${organization_name}.hyper.ag/api/sites/1/analytics/v3/device_metrics?start_time=2022-06-30T10:46:03Z&amp;end_time=2022-07-02T10:46:03Z&amp;metrics=aranet_ambient_temperature,aranet_relative_humidity&amp;resolution=1d&amp;metadata=true"
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$ curl -H "Authorization: Bearer ${access_token}" "https://${organization_name}.hyper.systems/api/sites/1/analytics/v3/device_metrics?start_time=2022-06-30T10:46:03Z&amp;end_time=2022-07-02T10:46:03Z&amp;metrics=aranet_ambient_temperature,aranet_relative_humidity&amp;resolution=1d&amp;metadata=true"
 
 {
   "metadata": {

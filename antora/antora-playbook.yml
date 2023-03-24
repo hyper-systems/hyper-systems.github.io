@@ -14,7 +14,8 @@ content:
     start_path: antora
     edit_url: false
   - url: ./sources/hyper-python-sdk
-    branches: [master]
+    tags: [1.3.0, 1.2.0]
+    branches: ~
     start_path: antora
     edit_url: false
   - url: ./sources/hyper-link-arduino
