@@ -95,3 +95,6 @@ Thumbs.db
 /antora/sources
 
 /.vscode
+
+# caches
+.cache
