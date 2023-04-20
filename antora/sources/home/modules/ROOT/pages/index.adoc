@@ -12,8 +12,8 @@ Hyper provides an end-to-end data infrastructure for industrial systems.
 
 [cols="1,2"]
 |===
-|xref:analytics-api::index.adoc[*Hyper Analytics API*]
-|Obtain computed metrics for your data.
+|xref:hyper-platform-api::index.adoc[*Hyper Platform API*]
+|Obtain computed metrics for your data and publish Device Messages.
 
 |xref:hyper-python-sdk::index.adoc[*Hyper Python SDK*]
 |Python SDK for interacting with the Hyper.systems platform.
