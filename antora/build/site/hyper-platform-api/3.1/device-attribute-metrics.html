@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Hyper Device Metrics API v3 :: Hyper Developers</title>
-    <link rel="canonical" href="https://hyper.systems/developers/analytics-api/3.1/device-metrics.html">
-    <link rel="prev" href="index.html">
-    <link rel="next" href="device-attribute-metrics.html">
-    <meta name="generator" content="Antora 3.1.0">
+    <title>Hyper Device Attribute Metrics API v3 :: Hyper Developers</title>
+    <link rel="canonical" href="https://hyper.systems/developers/hyper-platform-api/3.1/device-attribute-metrics.html">
+    <link rel="prev" href="device-metrics.html">
+    <link rel="next" href="device-keyed-metrics.html">
+    <meta name="generator" content="Antora 3.1.3">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
   </head>
@@ -53,26 +53,29 @@
     </div>
   </nav>
 </header><div class="body">
-<div class="nav-container" data-component="analytics-api" data-version="3.1">
+<div class="nav-container" data-component="hyper-platform-api" data-version="3.1">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="index.html">Hyper Analytics API</a></h3>
+    <h3 class="title"><a href="index.html">Hyper Platform API</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="index.html">Analytics API</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="device-metrics.html">Device Metrics API</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="device-attribute-metrics.html">Device Attribute Metrics API</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="device-keyed-metrics.html">Device Keyed Metrics API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="device-messages.html">Device Messages API</a>
   </li>
 </ul>
   </li>
@@ -81,7 +84,7 @@
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
-    <span class="title">Hyper Analytics API</span>
+    <span class="title">Hyper Platform API</span>
     <span class="version">3.1</span>
   </div>
   <ul class="components">
@@ -93,14 +96,6 @@
         </li>
       </ul>
     </li>
-    <li class="component is-current">
-      <a class="title" href="index.html">Hyper Analytics API</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">3.1</a>
-        </li>
-      </ul>
-    </li>
     <li class="component">
       <a class="title" href="../../hyper-link-arduino/1.0/index.html">Hyper Link Arduino</a>
       <ul class="versions">
@@ -109,10 +104,21 @@
         </li>
       </ul>
     </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Hyper Platform API</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">3.1</a>
+        </li>
+      </ul>
+    </li>
     <li class="component">
-      <a class="title" href="../../hyper-python-sdk/1.3.0/index.html">Hyper Python SDK</a>
+      <a class="title" href="../../hyper-python-sdk/1.4.0/index.html">Hyper Python SDK</a>
       <ul class="versions">
         <li class="version is-latest">
+          <a href="../../hyper-python-sdk/1.4.0/index.html">1.4.0</a>
+        </li>
+        <li class="version">
           <a href="../../hyper-python-sdk/1.3.0/index.html">1.3.0</a>
         </li>
         <li class="version">
@@ -131,8 +137,8 @@
   <a href="../../hyper-home/1.0/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="index.html">Hyper Analytics API</a></li>
-    <li><a href="device-metrics.html">Device Metrics API</a></li>
+    <li><a href="index.html">Hyper Platform API</a></li>
+    <li><a href="device-attribute-metrics.html">Device Attribute Metrics API</a></li>
   </ul>
 </nav>
 </div>
@@ -141,11 +147,11 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Hyper Device Metrics API v3</h1>
+<h1 class="page">Hyper Device Attribute Metrics API v3</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This document contains an overview of the Hyper Device Metrics API that can be used to fetch device metrics.</p>
+<p>This document contains an overview of the Hyper Device Attribute Metrics API that can be used to fetch device attribute metrics.</p>
 </div>
 </div>
 </div>
@@ -176,11 +182,11 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="get-metrics-series"><a class="anchor" href="#get-metrics-series"></a>Get metrics series</h2>
+<h2 id="get-attribute-metrics-series"><a class="anchor" href="#get-attribute-metrics-series"></a>Get attribute metrics series</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">GET /site/{site}/analytics/v3/device_metrics</code></pre>
+<pre class="highlightjs highlight"><code class="language-none hljs">GET /sites/{site}/analytics/v3/device_attribute_metrics</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -261,10 +267,10 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">The format of the response data.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>device_ids</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>vendor_device_ids</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>array[string]</code> or <code>none</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The list of Hyper device identifiers to include in the response. The Hyper device identifiers are encoded as MAC addresses. If <code>none</code>, all the devices with be shown. <strong>Examples:</strong></p>
+<p>The list of Hyper device identifiers to include in the response. The Hyper device identifiers are encoded as MAC addresses, Decimal, IMEI or Serial numbers. If <code>none</code>, all the devices with be shown. <strong>Examples:</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -391,6 +397,7 @@ In addition to computing the metrics over time, aggregated statistics for the en
   "series": array[{
     "metric": string,
     "device_id": string,
+    "attribute_index": int,
     "values": array[float]
   }]
 }</code></pre>
@@ -401,251 +408,64 @@ In addition to computing the metrics over time, aggregated statistics for the en
 <h3 id="examples"><a class="anchor" href="#examples"></a>Examples</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$ curl -H "Authorization: Bearer ${access_token}" "https://${organization_name}.hyper.systems/api/sites/1/analytics/v3/device_metrics?start_time=2022-06-30T10:46:03Z&amp;end_time=2022-07-02T10:46:03Z&amp;metrics=aranet_ambient_temperature,aranet_relative_humidity&amp;resolution=1d&amp;metadata=true"
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$ curl -H "Authorization: Bearer ${access_token}" "https://${organization_name}.hyper.systems/api/sites/1/analytics/v3/device_attribute_metrics?start_time=2023-02-13T00:00:00.000Z&amp;end_time=2023-02-17T23:59:59.154Z&amp;metrics=hyper_ambient_temperature,hyper_relative_humidity,hyper_ph&amp;resolution=10d&amp;format=json&amp;metadata=true" | jq
 
 {
   "metadata": {
     "metrics": {
-      "aranet_relative_humidity": {
+      "hyper_relative_humidity": {
         "unit": "percent",
         "symbol": "%",
-        "quantity": "Humidity",
-        "name": "Aranet relative humidity"
+        "quantity": "Temperature",
+        "name": "Hyper relative humidity"
       },
-      "aranet_ambient_temperature": {
-        "unit": "degree Celsius",
+      "hyper_ph": {
+        "name": "Hyper pH"
+      },
+      "hyper_ambient_temperature": {
+        "unit": "degrees Celsius",
         "symbol": "°C",
         "quantity": "Temperature",
-        "name": "Aranet ambient temperature"
+        "name": "Hyper ambient temperature"
       }
     },
     "devices": {
-      "c4:93:00:10:12:ab": {
-        "name": "Farm_T/RH_29B2",
-        "vendor_device_id": "1053355"
+      "E8:EB:1B:32:31:B4": {
+        "name": "",
+        "vendor_device_id": "E8:EB:1B:32:31:B4"
       },
-      "c4:93:00:10:26:9b": {
-        "name": "R&amp;D_T/RH_4",
-        "vendor_device_id": "1058459"
-      },
-      "c4:93:00:10:33:30": {
-        "name": "Lobby1_T/RH_1",
-        "vendor_device_id": "1061680"
-      },
-      "c4:93:00:10:12:95": {
-        "name": "Farm_T/RH_16B4",
-        "vendor_device_id": "1053333"
-      },
-      "c4:93:00:10:10:f2": {
-        "name": "Propagation_T/RH_1",
-        "vendor_device_id": "1052914"
-      },
-      "c4:93:00:10:0d:03": {
-        "name": "Farm_T/RH_1B2",
-        "vendor_device_id": "1051907"
-      },
-      "c4:93:00:10:0d:a2": {
-        "name": "Farm_T/RH_16B2",
-        "vendor_device_id": "1052066"
-      },
-      "c4:93:00:10:26:b5": {
-        "name": "Propagation_T/RH_2",
-        "vendor_device_id": "1058485"
-      },
-      "c4:93:00:10:12:e2": {
-        "name": "Tunnel7_T/RH_1",
-        "vendor_device_id": "1053410"
-      },
-      "c4:93:00:10:09:e5": {
-        "name": "Farm_T/RH_16B1",
-        "vendor_device_id": "1051109"
+      "36:08:94:9A:04:D4": {
+        "name": "",
+        "vendor_device_id": "36:08:94:9A:04:D4"
       }
     }
   },
   "labels": [
-    "2022-06-30T00:00:00-00:00",
-    "2022-07-01T00:00:00-00:00",
-    "2022-07-02T00:00:00-00:00"
+    "2023-02-12T00:00:00-00:00"
   ],
   "series": [
     {
-      "metric": "relative_humidity",
-      "device_id": "c4:93:00:10:09:e5",
+      "metric": "hyper_ambient_temperature",
+      "device_id": "36:08:94:9A:04:D4",
+      "attribute_index": 0,
       "values": [
-        73.1625,
-        71.74626865671642,
-        71.578125
+        8.6534505
       ]
     },
     {
-      "metric": "relative_humidity",
-      "device_id": "c4:93:00:10:0d:03",
+      "metric": "hyper_ph",
+      "device_id": "E8:EB:1B:32:31:B4",
+      "attribute_index": 0,
       "values": [
-        67.40506329113924,
-        65.54814814814814,
-        68.07692307692308
+        0.9595640419060487
       ]
     },
     {
-      "metric": "relative_humidity",
-      "device_id": "c4:93:00:10:0d:a2",
+      "metric": "hyper_relative_humidity",
+      "device_id": "36:08:94:9A:04:D4",
+      "attribute_index": 1,
       "values": [
-        72.59493670886076,
-        68.37777777777778,
-        67.56923076923077
-      ]
-    },
-    {
-      "metric": "relative_humidity",
-      "device_id": "c4:93:00:10:10:f2",
-      "values": [
-        68.725,
-        64.01492537313433,
-        63.984375
-      ]
-    },
-    {
-      "metric": "relative_humidity",
-      "device_id": "c4:93:00:10:12:95",
-      "values": [
-        76.35,
-        70.71851851851852,
-        69.09375
-      ]
-    },
-    {
-      "metric": "relative_humidity",
-      "device_id": "c4:93:00:10:12:ab",
-      "values": [
-        85.0875,
-        78.18045112781955,
-        72.81538461538462
-      ]
-    },
-    {
-      "metric": "relative_humidity",
-      "device_id": "c4:93:00:10:12:e2",
-      "values": [
-        68.82278481012658,
-        74.84444444444445,
-        73.28125
-      ]
-    },
-    {
-      "metric": "relative_humidity",
-      "device_id": "c4:93:00:10:26:9b",
-      "values": [
-        70.24683544303794,
-        67.22164179104477,
-        67.84307692307694
-      ]
-    },
-    {
-      "metric": "relative_humidity",
-      "device_id": "c4:93:00:10:26:b5",
-      "values": [
-        83.07249999999999,
-        84.48270676691736,
-        89.26562500000001
-      ]
-    },
-    {
-      "metric": "relative_humidity",
-      "device_id": "c4:93:00:10:33:30",
-      "values": [
-        null,
-        51.1379746835443,
-        60.121875
-      ]
-    },
-    {
-      "metric": "relative_humidity",
-      "device_id": "c4:93:00:10:09:e5",
-      "values": [
-        22.46875,
-        21.22425373134328,
-        19.332812500000006
-      ]
-    },
-    {
-      "metric": "ambient_temperature",
-      "device_id": "c4:93:00:10:0d:03",
-      "values": [
-        19.460126582278484,
-        19.111111111111107,
-        18.058461538461543
-      ]
-    },
-    {
-      "metric": "ambient_temperature",
-      "device_id": "c4:93:00:10:0d:a2",
-      "values": [
-        22.254430379746843,
-        21.59481481481481,
-        19.889230769230778
-      ]
-    },
-    {
-      "metric": "ambient_temperature",
-      "device_id": "c4:93:00:10:10:f2",
-      "values": [
-        21.197499999999998,
-        20.338432835820882,
-        20.34921875
-      ]
-    },
-    {
-      "metric": "ambient_temperature",
-      "device_id": "c4:93:00:10:12:95",
-      "values": [
-        21.521874999999987,
-        21.450740740740752,
-        19.985156250000003
-      ]
-    },
-    {
-      "metric": "ambient_temperature",
-      "device_id": "c4:93:00:10:12:ab",
-      "values": [
-        22.135625000000005,
-        21.67105263157896,
-        20.383076923076928
-      ]
-    },
-    {
-      "metric": "temperature",
-      "device_id": "c4:93:00:10:12:e2",
-      "values": [
-        18.678481012658235,
-        19.248518518518505,
-        20.0078125
-      ]
-    },
-    {
-      "metric": "ambient_temperature",
-      "device_id": "c4:93:00:10:26:9b",
-      "values": [
-        19.483544303797462,
-        19.569776119402977,
-        18.599230769230772
-      ]
-    },
-    {
-      "metric": "ambient_temperature",
-      "device_id": "c4:93:00:10:26:b5",
-      "values": [
-        18.890625,
-        18.22142857142857,
-        18.007031249999986
-      ]
-    },
-    {
-      "metric": "ambient_temperature",
-      "device_id": "c4:93:00:10:33:30",
-      "values": [
-        null,
-        18.91392405063291,
-        17.495312500000004
+        22.213393500000006
       ]
     }
   ]
@@ -656,8 +476,8 @@ In addition to computing the metrics over time, aggregated statistics for the en
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="index.html">Analytics API</a></span>
-  <span class="next"><a href="device-attribute-metrics.html">Device Attribute Metrics API</a></span>
+  <span class="prev"><a href="device-metrics.html">Device Metrics API</a></span>
+  <span class="next"><a href="device-keyed-metrics.html">Device Keyed Metrics API</a></span>
 </nav>
 </article>
   </div>
