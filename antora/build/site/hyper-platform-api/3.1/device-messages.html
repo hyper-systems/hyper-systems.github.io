@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Hyper Python SDK :: Hyper Developers</title>
-    <link rel="canonical" href="https://hyper.systems/developers/hyper-python-sdk/1.4.0/index.html">
-    <link rel="next" href="installing.html">
+    <title>Hyper – Device Messages API v3 :: Hyper Developers</title>
+    <link rel="canonical" href="https://hyper.systems/developers/hyper-platform-api/3.1/device-messages.html">
+    <link rel="prev" href="device-keyed-metrics.html">
     <meta name="generator" content="Antora 3.1.3">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
@@ -52,23 +52,29 @@
     </div>
   </nav>
 </header><div class="body">
-<div class="nav-container" data-component="hyper-python-sdk" data-version="1.2.0">
+<div class="nav-container" data-component="hyper-platform-api" data-version="3.1">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="index.html">Hyper Python SDK</a></h3>
+    <h3 class="title"><a href="index.html">Hyper Platform API</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Analytics API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="device-metrics.html">Device Metrics API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="device-attribute-metrics.html">Device Attribute Metrics API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="device-keyed-metrics.html">Device Keyed Metrics API</a>
+  </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="index.html">Overview</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="installing.html">Installing the Python Package</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="devices.html">Devices</a>
+    <a class="nav-link" href="device-messages.html">Device Messages API</a>
   </li>
 </ul>
   </li>
@@ -77,8 +83,8 @@
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
-    <span class="title">Hyper Python SDK</span>
-    <span class="version">1.2.0</span>
+    <span class="title">Hyper Platform API</span>
+    <span class="version">3.1</span>
   </div>
   <ul class="components">
     <li class="component">
@@ -97,25 +103,25 @@
         </li>
       </ul>
     </li>
-    <li class="component">
-      <a class="title" href="../../hyper-platform-api/3.1/index.html">Hyper Platform API</a>
+    <li class="component is-current">
+      <a class="title" href="index.html">Hyper Platform API</a>
       <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../hyper-platform-api/3.1/index.html">3.1</a>
+        <li class="version is-current is-latest">
+          <a href="index.html">3.1</a>
         </li>
       </ul>
     </li>
-    <li class="component is-current">
-      <a class="title" href="../1.4.0/index.html">Hyper Python SDK</a>
+    <li class="component">
+      <a class="title" href="../../hyper-python-sdk/1.4.0/index.html">Hyper Python SDK</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../1.4.0/index.html">1.4.0</a>
+          <a href="../../hyper-python-sdk/1.4.0/index.html">1.4.0</a>
         </li>
         <li class="version">
-          <a href="../1.3.0/index.html">1.3.0</a>
+          <a href="../../hyper-python-sdk/1.3.0/index.html">1.3.0</a>
         </li>
-        <li class="version is-current">
-          <a href="index.html">1.2.0</a>
+        <li class="version">
+          <a href="../../hyper-python-sdk/1.2.0/index.html">1.2.0</a>
         </li>
       </ul>
     </li>
@@ -130,67 +136,118 @@
   <a href="../../hyper-home/1.0/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="index.html">Hyper Python SDK</a></li>
-    <li><a href="index.html">Overview</a></li>
+    <li><a href="index.html">Hyper Platform API</a></li>
+    <li><a href="device-messages.html">Device Messages API</a></li>
   </ul>
 </nav>
-<div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">1.2.0</button>
-  <div class="version-menu">
-    <a class="version" href="../1.4.0/index.html">1.4.0</a>
-    <a class="version" href="../1.3.0/index.html">1.3.0</a>
-    <a class="version is-current" href="index.html">1.2.0</a>
-  </div>
-</div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Hyper Python SDK</h1>
+<h1 class="page">Hyper – Device Messages API v3</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Python SDK for interacting with the Hyper.systems platform.</p>
+<p>This document contains an overview of the Hyper Device Messages API that can be used to publish device messages.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="setup"><a class="anchor" href="#setup"></a>Setup</h2>
+<h2 id="device-messages-incoming"><a class="anchor" href="#device-messages-incoming"></a>Device Messages - Incoming</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="authorization"><a class="anchor" href="#authorization"></a>Authorization</h3>
 <div class="paragraph">
-<p><a href="installing.html" class="xref page"><strong>Installing the Hyper Python SDK package</strong></a></p>
+<p>All of the requests to the API must contain a valid authorization token. New API tokens can be generated in the dashboard.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="usage"><a class="anchor" href="#usage"></a>Usage</h2>
-<div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 66.6667%;">
+<col style="width: 50%;">
+<col style="width: 50%;">
 </colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Header</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="devices.html" class="xref page"><strong>Devices</strong></a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Publishing and receiving messages to and from Devices.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Analytics</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Obtain computed metrics for your data.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Automations</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Create and manage automations.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Authorization</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bearer $access_token</code></p></td>
 </tr>
 </tbody>
 </table>
 </div>
+<div class="sect2">
+<h3 id="publish-device-messages"><a class="anchor" href="#publish-device-messages"></a>Publish device messages</h3>
+<div class="paragraph">
+<p>The following endpoint can be used to publish device messages:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">POST /sites/{site}/device_messages/v3/incoming</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="payload-schema"><a class="anchor" href="#payload-schema"></a>Payload schema</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[
+  {
+    "message_uuid":  string,
+    "created_time": string,
+    "vendor_device_id": string,
+    "device_class_id": int,
+    "values": { "$attribute_slot": any }
+  }
+]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>values</code> field contains an object with attribute values indexed by their attribute slot. The type of each value depends on the device schema.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="examples"><a class="anchor" href="#examples"></a>Examples</h3>
+<div class="paragraph">
+<p>The following example request publishes device attribute values using cURL. The payload is loaded from the <code>messages.json`</code> file.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$ cat messages.json
+[
+  {
+    "message_uuid": "6b16340e-a43d-404e-b115-b236ca9273fe",
+    "created_time": "2023-04-20T14:17:51Z",
+    "vendor_device_id": "DE:AD:BE:EF:FF:00",
+    "device_class_id": 12,
+    "values": {
+        "5": 1000
+    }
+  },
+  {
+    "message_uuid": "3d92282f-5fcf-465d-b617-0ccffe119d57",
+    "created_time": "2023-04-20T15:42:32Z",
+    "vendor_device_id": "00:11:22:33:44:55",
+    "device_class_id": 451,
+    "values": {
+        "0": 42,
+        "1": 3.14
+    }
+  },
+]
+$ curl -H "Authorization: Bearer ${access_token}" -X POST -d @messages.json "https://${organization_name}.hyper.systems/api/sites/1/device_messages/v3/incoming"</code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <nav class="pagination">
-  <span class="next"><a href="installing.html">Installing the Python Package</a></span>
+  <span class="prev"><a href="device-keyed-metrics.html">Device Keyed Metrics API</a></span>
 </nav>
 </article>
   </div>

@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Hyper Device Attribute Metrics API v3 :: Hyper Developers</title>
-    <link rel="canonical" href="https://hyper.systems/developers/analytics-api/3.1/device-attribute-metrics.html">
-    <link rel="prev" href="device-metrics.html">
-    <link rel="next" href="device-keyed-metrics.html">
-    <meta name="generator" content="Antora 3.1.0">
+    <title>Hyper Device Keyed Metrics API v3 :: Hyper Developers</title>
+    <link rel="canonical" href="https://hyper.systems/developers/hyper-platform-api/3.1/device-keyed-metrics.html">
+    <link rel="prev" href="device-attribute-metrics.html">
+    <link rel="next" href="device-messages.html">
+    <meta name="generator" content="Antora 3.1.3">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
   </head>
@@ -53,12 +53,12 @@
     </div>
   </nav>
 </header><div class="body">
-<div class="nav-container" data-component="analytics-api" data-version="3.1">
+<div class="nav-container" data-component="hyper-platform-api" data-version="3.1">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="index.html">Hyper Analytics API</a></h3>
+    <h3 class="title"><a href="index.html">Hyper Platform API</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
@@ -68,11 +68,14 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="device-metrics.html">Device Metrics API</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="device-attribute-metrics.html">Device Attribute Metrics API</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="device-keyed-metrics.html">Device Keyed Metrics API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="device-messages.html">Device Messages API</a>
   </li>
 </ul>
   </li>
@@ -81,7 +84,7 @@
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
-    <span class="title">Hyper Analytics API</span>
+    <span class="title">Hyper Platform API</span>
     <span class="version">3.1</span>
   </div>
   <ul class="components">
@@ -93,14 +96,6 @@
         </li>
       </ul>
     </li>
-    <li class="component is-current">
-      <a class="title" href="index.html">Hyper Analytics API</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">3.1</a>
-        </li>
-      </ul>
-    </li>
     <li class="component">
       <a class="title" href="../../hyper-link-arduino/1.0/index.html">Hyper Link Arduino</a>
       <ul class="versions">
@@ -109,10 +104,21 @@
         </li>
       </ul>
     </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Hyper Platform API</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">3.1</a>
+        </li>
+      </ul>
+    </li>
     <li class="component">
-      <a class="title" href="../../hyper-python-sdk/1.3.0/index.html">Hyper Python SDK</a>
+      <a class="title" href="../../hyper-python-sdk/1.4.0/index.html">Hyper Python SDK</a>
       <ul class="versions">
         <li class="version is-latest">
+          <a href="../../hyper-python-sdk/1.4.0/index.html">1.4.0</a>
+        </li>
+        <li class="version">
           <a href="../../hyper-python-sdk/1.3.0/index.html">1.3.0</a>
         </li>
         <li class="version">
@@ -131,8 +137,8 @@
   <a href="../../hyper-home/1.0/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="index.html">Hyper Analytics API</a></li>
-    <li><a href="device-attribute-metrics.html">Device Attribute Metrics API</a></li>
+    <li><a href="index.html">Hyper Platform API</a></li>
+    <li><a href="device-keyed-metrics.html">Device Keyed Metrics API</a></li>
   </ul>
 </nav>
 </div>
@@ -141,11 +147,11 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Hyper Device Attribute Metrics API v3</h1>
+<h1 class="page">Hyper Device Keyed Metrics API v3</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This document contains an overview of the Hyper Device Attribute Metrics API that can be used to fetch device attribute metrics.</p>
+<p>This document contains an overview of the Hyper Device Keyed Metrics API that can be used to fetch metrics aggregated by key.</p>
 </div>
 </div>
 </div>
@@ -176,11 +182,11 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="get-attribute-metrics-series"><a class="anchor" href="#get-attribute-metrics-series"></a>Get attribute metrics series</h2>
+<h2 id="get-keyed-metrics-series"><a class="anchor" href="#get-keyed-metrics-series"></a>Get keyed metrics series</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">GET /site/{site}/analytics/v3/device_attribute_metrics</code></pre>
+<pre class="highlightjs highlight"><code class="language-none hljs">GET /sites/{site}/analytics/v3/device_keyed_metrics</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -261,10 +267,10 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">The format of the response data.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>device_ids</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>vendor_device_ids</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>array[string]</code> or <code>none</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The list of Hyper device identifiers to include in the response. The Hyper device identifiers are encoded as MAC addresses. If <code>none</code>, all the devices with be shown. <strong>Examples:</strong></p>
+<p>The list of Hyper device identifiers to include in the response. The Hyper device identifiers are encoded as MAC addresses, Decimal, IMEI or Serial numbers. If <code>none</code>, all the devices with be shown. <strong>Examples:</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -383,15 +389,15 @@ In addition to computing the metrics over time, aggregated statistics for the en
     "devices": {
       "$device_id": {
         "name": string,
-        "vendor_device_id": string,
+        "device_id": string,
       }
     }
   },
   "labels": array[string],
   "series": array[{
     "metric": string,
+    "key": string,
     "device_id": string,
-    "attribute_index": int,
     "values": array[float]
   }]
 }</code></pre>
@@ -402,64 +408,96 @@ In addition to computing the metrics over time, aggregated statistics for the en
 <h3 id="examples"><a class="anchor" href="#examples"></a>Examples</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$ curl -H "Authorization: Bearer ${access_token}" "https://${organization_name}.hyper.systems/api/sites/1/analytics/v3/device_attribute_metrics?start_time=2023-02-13T00:00:00.000Z&amp;end_time=2023-02-17T23:59:59.154Z&amp;metrics=hyper_ambient_temperature,hyper_relative_humidity,hyper_ph&amp;resolution=10d&amp;format=json&amp;metadata=true" | jq
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$ curl -H "Authorization: Bearer ${access_token}" "https://${organization_name}.hyper.systems/api/sites/1/analytics/v3/device_keyed_metrics?start_time=2023-02-14T00:00:00Z&amp;end_time=2023-02-14T23:00:00Z&amp;metadata=true&amp;resolution=10m&amp;metrics=greyparrot_weight,greyparrot_number_of_items"
 
 {
   "metadata": {
     "metrics": {
-      "hyper_relative_humidity": {
-        "unit": "percent",
-        "symbol": "%",
-        "quantity": "Temperature",
-        "name": "Hyper relative humidity"
+      "greyparrot_weight": {
+        "quantity": "mass",
+        "unit": "kilogram",
+        "device_schema_id": "39"
       },
-      "hyper_ph": {
-        "name": "Hyper pH"
-      },
-      "hyper_ambient_temperature": {
-        "unit": "degrees Celsius",
-        "symbol": "°C",
-        "quantity": "Temperature",
-        "name": "Hyper ambient temperature"
+      "greyparrot_number_of_items": {
+        "quantity": "Count",
+        "device_schema_id": "39"
       }
     },
     "devices": {
-      "E8:EB:1B:32:31:B4": {
-        "name": "",
-        "vendor_device_id": "E8:EB:1B:32:31:B4"
+      "64:4B:F0:12:74:C5": {
+        "device_id": "64:4B:F0:12:74:C5"
       },
-      "36:08:94:9A:04:D4": {
-        "name": "",
-        "vendor_device_id": "36:08:94:9A:04:D4"
+      "99:AA:BB:CC:DD:11": {
+        "device_id": "99:AA:BB:CC:DD:11"
       }
     }
   },
   "labels": [
-    "2023-02-12T00:00:00-00:00"
+    "2023-02-08T09:50:00-00:00"
   ],
   "series": [
     {
-      "metric": "hyper_ambient_temperature",
-      "device_id": "36:08:94:9A:04:D4",
-      "attribute_index": 0,
+      "metric": "greyparrot_number_of_items",
+      "key": "aluminium_can",
+      "device_id": "64:4B:F0:12:74:C5",
       "values": [
-        8.6534505
+        2
       ]
     },
     {
-      "metric": "hyper_ph",
-      "device_id": "E8:EB:1B:32:31:B4",
-      "attribute_index": 0,
+      "metric": "greyparrot_number_of_items",
+      "key": "aluminium_other",
+      "device_id": "64:4B:F0:12:74:C5",
       "values": [
-        0.9595640419060487
+        8
       ]
     },
     {
-      "metric": "hyper_relative_humidity",
-      "device_id": "36:08:94:9A:04:D4",
-      "attribute_index": 1,
+      "metric": "greyparrot_number_of_items",
+      "key": "paper_glossygraphic_coloured",
+      "device_id": "64:4B:F0:12:74:C5",
       "values": [
-        22.213393500000006
+        448
+      ]
+    },
+    {
+      "metric": "greyparrot_number_of_items",
+      "key": "paper_kraft_brown",
+      "device_id": "64:4B:F0:12:74:C5",
+      "values": [
+        152
+      ]
+    },
+    {
+      "metric": "greyparrot_number_of_items",
+      "key": "paper_office_white",
+      "device_id": "64:4B:F0:12:74:C5",
+      "values": [
+        416
+      ]
+    },
+    {
+      "metric": "greyparrot_number_of_items",
+      "key": "aluminium_can",
+      "device_id": "99:AA:BB:CC:DD:11",
+      "values": [
+        1
+      ]
+    },
+    {
+      "metric": "greyparrot_weight",
+      "key": "paper_kraft_brown",
+      "device_id": "64:4B:F0:12:74:C5",
+      "values": [
+        0.2016
+      ]
+    },
+    {
+      "metric": "greyparrot_weight",
+      "key": "paper_office_white",
+      "device_id": "99:AA:BB:CC:DD:11",
+      "values": [
+        0.3214
       ]
     }
   ]
@@ -470,8 +508,8 @@ In addition to computing the metrics over time, aggregated statistics for the en
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="device-metrics.html">Device Metrics API</a></span>
-  <span class="next"><a href="device-keyed-metrics.html">Device Keyed Metrics API</a></span>
+  <span class="prev"><a href="device-attribute-metrics.html">Device Attribute Metrics API</a></span>
+  <span class="next"><a href="device-messages.html">Device Messages API</a></span>
 </nav>
 </article>
   </div>
