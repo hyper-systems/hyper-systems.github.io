@@ -244,22 +244,46 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>start_time</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string (ISO8601)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The start time of the metrics timeseries. <strong>Example:</strong></p>
+<p>The start time of the metrics timeseries. Strings mus be in the <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO8601</a> string format with time offset or <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO8601</a> requiring the <code>tz</code> parameter.
+<strong>Example:</strong></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>2022-06-30T12:45:00Z</code></p>
+<p><code>2021-12-03T09:10:02Z</code></p>
+</li>
+<li>
+<p><code>2021-12-03T09:10:02-12:00</code></p>
+</li>
+<li>
+<p><code>2022-06-30T12:45:00</code></p>
 </li>
 </ul>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>end_time</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string (ISO8601)</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The end time of the metrics timeseries.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The end time of the metrics timeseries. Same format as the <code>start_time</code> parameter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tz</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">Time Zone Identifier</a> string for the <code>start_time</code> and <code>end_time</code> parameters. <strong>Example:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Europe/London</code></p>
+</li>
+<li>
+<p><code>Australia/Lord_Howe</code></p>
+</li>
+</ul>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>format</code></p></td>
@@ -362,6 +386,34 @@
 </tbody>
 </table>
 </div>
+<div class="sect3">
+<h4 id="timezone-handling"><a class="anchor" href="#timezone-handling"></a>Timezone handling</h4>
+<div class="paragraph">
+<p>The timeseries data produced by the API will respect the timezone information provided by the combination of the <code>start_time</code>, <code>end_time</code> and <code>tz</code> query parameters.</p>
+</div>
+<div class="paragraph">
+<p>It is required that the time zone information is provided in one of two possible ways:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The time zone identifier information is provided in the <code>tz</code> query parameter as a <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">Time Zone Identifier</a> string. When the <code>tz</code> query parameter is provided the <code>start_time</code> and <code>end_time</code> values <strong>MUST NOT</strong> include the time zone offset in the <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO8601</a> format. The start and end time will be localised according to the <code>tz</code> parameter.</p>
+</li>
+<li>
+<p>The time zone offset is provided in both <code>start_time</code> and <code>end_time</code> query parameters in accordance with the <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO8601</a> format. The offset <strong>MUST</strong> be the same for both <code>start_time</code> and <code>end_time</code>, and the tq query parameter <strong>MUST NOT</strong> be provided in this case.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This ensures that the produced timeseries interval is correctly adjusted for the requested time zone.</p>
+</div>
+<div class="paragraph">
+<p>All value aggregations performed by the API will take in consideration the provided time zone information. This means that the aggregated values that span multiple days will be computed for dates in the requested time zone.</p>
+</div>
+<div class="paragraph">
+<p>For daylight saving time (DST) the necessary adjustments will only be performed when the <code>tz</code> query parameter is passed. Proper DST computation requires specific information that is country specific.</p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="response"><a class="anchor" href="#response"></a>Response</h3>
@@ -408,7 +460,7 @@ In addition to computing the metrics over time, aggregated statistics for the en
 <h3 id="examples"><a class="anchor" href="#examples"></a>Examples</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$ curl -H "Authorization: Bearer ${access_token}" "https://${organization_name}.hyper.systems/api/sites/1/analytics/v3/device_keyed_metrics?start_time=2023-02-14T00:00:00Z&amp;end_time=2023-02-14T23:00:00Z&amp;metadata=true&amp;resolution=10m&amp;metrics=greyparrot_weight,greyparrot_number_of_items"
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$ curl -H "Authorization: Bearer ${access_token}" "https://${organization_name}.hyper.systems/api/sites/1/analytics/v3/device_keyed_metrics?start_time=2023-02-14T00:00:00&amp;end_time=2023-02-14T23:00:00&amp;tz=Europe/London&amp;metadata=true&amp;resolution=10m&amp;metrics=greyparrot_weight,greyparrot_number_of_items"
 
 {
   "metadata": {
@@ -433,7 +485,7 @@ In addition to computing the metrics over time, aggregated statistics for the en
     }
   },
   "labels": [
-    "2023-02-08T09:50:00-00:00"
+    "2023-02-08T09:50:00.000+01:00"
   ],
   "series": [
     {
