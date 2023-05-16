@@ -334,23 +334,26 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>resolution</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[0-9]+(m|h|d)</code> or <code>none</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[0-9]+(seconds|minutes|hours)</code> or <code>(second|minute|hour|day|week|month|quarter|year)</code> or <code>none</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>The time resolution of the data. If <code>none</code>, the values will not be aggregated. <strong>Examples:</strong></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>5s</code></p>
+<p><code>day</code></p>
 </li>
 <li>
-<p><code>15m</code></p>
+<p><code>5seconds</code></p>
 </li>
 <li>
-<p><code>5h</code></p>
+<p><code>15minutes</code></p>
 </li>
 <li>
-<p><code>30d</code></p>
+<p><code>5hours</code></p>
+</li>
+<li>
+<p><code>week</code></p>
 </li>
 </ul>
 </div></div></td>
@@ -460,7 +463,7 @@ In addition to computing the metrics over time, aggregated statistics for the en
 <h3 id="examples"><a class="anchor" href="#examples"></a>Examples</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$ curl -H "Authorization: Bearer ${access_token}" "https://${organization_name}.hyper.systems/api/sites/1/analytics/v3/device_keyed_metrics?start_time=2023-02-14T00:00:00&amp;end_time=2023-02-14T23:00:00&amp;tz=Europe/London&amp;metadata=true&amp;resolution=10m&amp;metrics=greyparrot_weight,greyparrot_number_of_items"
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$ curl -H "Authorization: Bearer ${access_token}" "https://${organization_name}.hyper.systems/api/sites/1/analytics/v3/device_keyed_metrics?start_time=2023-02-14T00:00:00&amp;end_time=2023-02-14T23:00:00&amp;tz=Europe/London&amp;metadata=true&amp;resolution=10minutes&amp;metrics=greyparrot_weight,greyparrot_number_of_items"
 
 {
   "metadata": {
