@@ -1,7 +1,8 @@
-<div class="relative" id="applications-menu-container">
+<div class="relative"
+  id="applications-menu-container">
   <button type="button"
     class="text-slate-800 group inline-flex items-center text-base hover:text-slate-500 cursor-default">
-    <span>Applications</span>
+    <span>Industries</span>
     <!-- {% include icons/caret-down.svg %} -->
   </button>
   <div class="absolute z-20 pt-3  w-screen max-w-md transform px-2 sm:px-0 left-1/2 -translate-x-1/2"
@@ -10,7 +11,7 @@
       <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
 
         {% for page in site.pages %}
-        {% if page.categories contains 'applications' %}
+        {% if page.categories contains 'industries' %}
 
         <a href="{{ page.url}}"
           class="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50">

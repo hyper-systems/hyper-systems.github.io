@@ -6,15 +6,25 @@
       <div class="flex flex-1 items-center">
         <div class="flex w-full items-center justify-between md:w-auto">
           <a href="/">
-            <img class="h-8 w-auto sm:h-10" src="{{site.url}}/assets/img/hyper_logo.svg" alt="Hyper Systems">
+            <img class="h-8 w-auto sm:h-10"
+              src="{{site.url}}/assets/img/hyper_logo.svg"
+              alt="Hyper Systems">
           </a>
           <div class="-mr-2 flex items-center md:hidden">
-            <button type="button" id="openMenuBtn"
+            <button type="button"
+              id="openMenuBtn"
               class="focus-ring-inset inline-flex items-center justify-center rounded-md p-2 text-slate-400 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-white"
               aria-expanded="false">
-              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              <svg class="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true">
+                <path stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
               </svg>
             </button>
           </div>
@@ -23,9 +33,14 @@
       <div class="hidden md:flex md:items-center md:space-x-6">
 
         {% include dropdown_applications.html %}
-        <a href="/integrations.html" class="text-base text-slate-800 hover:text-slate-500">Integrations</a>
-        <a href="/company.html" class="text-base text-slate-800 hover:text-slate-500">Company</a>
-        <a href="https://demo.hyper.systems" target="_blank"
+        <!-- <a href="/integrations.html"
+          class="text-base text-slate-800 hover:text-slate-500">Integrations</a> -->
+        <a href="/services.html"
+          class="text-base text-slate-800 hover:text-slate-500">Services</a>
+        <a href="/company.html"
+          class="text-base text-slate-800 hover:text-slate-500">Company</a>
+        <a href="https://demo.hyper.systems"
+          target="_blank"
           class="rounded-sm bg-slate-800 px-4 py-2 text-base font-medium text-white hover:bg-slate-700">
           Sign in
         </a>
@@ -33,19 +48,30 @@
     </nav>
   </div>
   <!-- Mobile Menu -->
-  <div class="absolute inset-x-0 top-0 z-30 origin-top p-2 md:hidden" style="display: none;" id="mobileMenu">
+  <div class="absolute inset-x-0 top-0 z-30 origin-top p-2 md:hidden"
+    style="display: none;"
+    id="mobileMenu">
     <div class="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-1">
       <div class="flex items-center justify-between px-5 pt-4">
         <div>
-          <img src="{{site.url}}/assets/img/hyper_logo.svg" alt="Hyper Systems">
+          <img src="{{site.url}}/assets/img/hyper_logo.svg"
+            alt="Hyper Systems">
         </div>
         <div class="-mr-2">
-          <button type="button" id="closeMenuBtn"
+          <button type="button"
+            id="closeMenuBtn"
             class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
             <span class="sr-only">Close menu</span>
-            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            <svg class="h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
@@ -54,10 +80,11 @@
         <div class="space-y-1 px-2">
 
           <div class="bg-gray-50 p-4 sm:p-6">
-            <h3 class="text-base font-medium text-gray-500">Applications</h3>
-            <ul role="list" class="mt-6 space-y-6">
+            <h3 class="text-base font-medium text-gray-500">Industries</h3>
+            <ul role="list"
+              class="mt-6 space-y-6">
               {% for page in site.pages %}
-              {% if page.categories contains 'applications' %}
+              {% if page.categories contains 'industries' %}
               <li class="flow-root">
                 <a href="{{ page.url}}"
                   class="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50">
@@ -76,13 +103,16 @@
             </ul>
           </div>
 
-          <a href="/integrations.html"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">Integrations</a>
+          <!-- <a href="/integrations.html"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">Integrations</a> -->
+          <a href="/services.html"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">Services</a>
           <a href="/company.html"
             class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50">Company</a>
         </div>
         <div class="mt-6 px-5">
-          <a href="https://demo.hyper.systems" target="_blank"
+          <a href="https://demo.hyper.systems"
+            target="_blank"
             class="block w-full rounded-sm bg-slate-800 py-3 px-4 text-center font-medium text-white shadow hover:bg-slate-700">
             Sign in
           </a>
