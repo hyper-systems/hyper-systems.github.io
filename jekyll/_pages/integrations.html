@@ -1,11 +1,13 @@
 ---
 layout: default
+hide_from_nav: true
 ---
 <div class="sm:px-6 lg:px-8 mt-8">
     <div class="mx-auto max-w-8xl">
         <div class="relative sm:overflow-hidden sm:rounded">
             <div class="absolute inset-0">
-                <img class="h-full w-full object-cover" src="{{site.url}}/assets/img/integrations_fold.png" />
+                <img class="h-full w-full object-cover"
+                    src="{{site.url}}/assets/img/integrations_fold.png" />
                 <div class="absolute inset-0 bg-gray-500 mix-blend-multiply lg:hidden"></div>
             </div>
             <div class="relative px-4 py-16 sm:px-6 sm:py-20 lg:pt-22 lg:pb-24 lg:px-16 lg:max-w-3xl">
@@ -53,15 +55,20 @@ layout: default
                                     uniq %}
 
                                     {% for tag in tags %}
-                                    <div {% if forloop.index> 8 %}
+                                    <div {%
+                                        if
+                                        forloop.index> 8 %}
                                         class="hidden flex items-center hiddenListItem"
                                         {% else %}
                                         class="flex items-center"
                                         {% endif %}
                                         >
-                                        <input id="{{ tag }}" value=".{{ tag }}" type="checkbox"
+                                        <input id="{{ tag }}"
+                                            value=".{{ tag }}"
+                                            type="checkbox"
                                             class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
-                                        <label for="{{ tag }}" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                        <label for="{{ tag }}"
+                                            class="ml-3 text-sm text-gray-600 cursor-pointer">
                                             {{ tag | replace: '_', ' ' }}
                                         </label>
                                     </div>
@@ -76,9 +83,15 @@ layout: default
                                     Show all {{ tags.size }} tags
                                 </span>
 
-                                <svg class="h-5 w-5 transform" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                <svg class="h-5 w-5 transform"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    aria-hidden="true">
+                                    <path stroke-linecap="round"
+                                        stroke-linejoin="round"
                                         d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
                                 </svg>
                             </button>
@@ -91,7 +104,8 @@ layout: default
                                     {% assign vendors = site.data.devices | group_by: "vendor" %}
                                     {% for v in vendors %}
                                     <div class="flex items-center">
-                                        <input id="{{ v.name | replace: ' ', '-' | downcase }}" type="checkbox"
+                                        <input id="{{ v.name | replace: ' ', '-' | downcase }}"
+                                            type="checkbox"
                                             value=".{{ v.name | replace: ' ', '-' | downcase }}"
                                             class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
                                         <label for="{{ v.name | replace: ' ', '-' | downcase }}"
@@ -117,9 +131,12 @@ layout: default
 
                                     {% for conn in conns %}
                                     <div class="flex items-center">
-                                        <input id="{{ conn }}" value=".{{ conn }}" type="checkbox"
+                                        <input id="{{ conn }}"
+                                            value=".{{ conn }}"
+                                            type="checkbox"
                                             class="h-4 w-4 rounded-sm border-gray-300 text-gray-600 focus:ring-gray-500 cursor-pointer">
-                                        <label for="{{ conn }}" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                        <label for="{{ conn }}"
+                                            class="ml-3 text-sm text-gray-600 cursor-pointer">
                                             {{ conn | replace: '_', ' ' }}
                                         </label>
                                     </div>
@@ -145,8 +162,10 @@ layout: default
 
                 <!-- Product grid -->
                 <div class="mt-12 lg:col-span-2 lg:mt-0 xl:col-span-3">
-                    <section aria-labelledby="product-heading" class="mt-6 lg:col-span-2 lg:mt-0 xl:col-span-3">
-                        <h2 id="product-heading" class="sr-only">Products</h2>
+                    <section aria-labelledby="product-heading"
+                        class="mt-6 lg:col-span-2 lg:mt-0 xl:col-span-3">
+                        <h2 id="product-heading"
+                            class="sr-only">Products</h2>
 
                         <div
                             class="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:gap-x-8 xl:grid-cols-4 filterContainer">
@@ -154,10 +173,18 @@ layout: default
                             <div class="text-center sm:col-span-2 xl:col-span-4 bg-gray-50 rounded-md py-16 filterEmptySearch"
                                 style="display: none;">
 
-                                <svg class="mx-auto h-10 w-10  text-gray-400" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor" aria-hidden="true">
-                                    <circle cx="11" cy="11" r="8"></circle>
-                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                <svg class="mx-auto h-10 w-10  text-gray-400"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    aria-hidden="true">
+                                    <circle cx="11"
+                                        cy="11"
+                                        r="8"></circle>
+                                    <line x1="21"
+                                        y1="21"
+                                        x2="16.65"
+                                        y2="16.65"></line>
                                 </svg>
 
                                 <h3 class="mt-2 text-sm font-medium text-gray-900">No devices available.</h3>
@@ -165,8 +192,11 @@ layout: default
                                 <div class="mt-6">
                                     <a href="/company#contact"
                                         class="inline-flex items-center rounded-sm border border-transparent bg-gray-800 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
-                                        <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <svg class="-ml-1 mr-2 h-5 w-5"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            aria-hidden="true">
                                             <path
                                                 d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
                                         </svg>
@@ -189,7 +219,8 @@ layout: default
                                     <h3 class="text-sm font-medium text-gray-900">
                                         <a href="/integrations/{{ device.vendor | replace: ' ', '-' | downcase }}_{{
                                             device.product_code | replace: ' ', '-' | downcase }}.html">
-                                            <span aria-hidden="true" class="absolute inset-0"></span>
+                                            <span aria-hidden="true"
+                                                class="absolute inset-0"></span>
                                             {{ device.product_name }}
                                         </a>
                                     </h3>
