@@ -1,31 +1,60 @@
-<div class="py-12 px-4">
+<div class="py-12 px-4 lg:mt-12">
   <div class="mx-auto max-w-8xl">
-    <div
-      class="border divide-y divide-gray-200 overflow-hidden rounded-xl bg-gray-200 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-px sm:divide-y-0">
+    <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-4 sm:gap-4 sm:divide-y-0">
       {% for page in site.pages %}
       {% if page.categories contains 'industries' %}
+
       <div
-        class="relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500 hover:bg-gray-900 hover:text-white transition-all duration-200">
-        <div>
-          <span class="rounded-lg inline-flex p-3 bg-gradient-to-r from-blue-500 to-blue-400 text-white">
+        class="relative group flex flex-col justify-between bg-gray-100 rounded-xl p-6 hover:bg-gray-900 hover:text-white transition-all duration-200 min-h-[14rem] xl:min-h-[20rem] items-start overflow-hidden">
+
+
+        {% if page.feature_img == "farming_card.png" %}
+        <img class="block absolute bottom-0 right-0 w-full max-w-[16rem] xl:max-w-none xl:w-100"
+          src="{{site.url}}/assets/img/{{page.feature_img}}"
+          alt="">
+        {% elsif page.feature_img == "energy_card.png" %}
+        <img class="block absolute bottom-0 right-0 max-w-[10rem] lg:max-w-none lg:w-52"
+          src="{{site.url}}/assets/img/{{page.feature_img}}"
+          alt="">
+        {% elsif page.feature_img == "logistics_card.png" %}
+        <img class="block absolute bottom-0 right-0 w-52"
+          src="{{site.url}}/assets/img/{{page.feature_img}}"
+          alt="">
+        {% elsif page.feature_img == "recycling_card.png" %}
+        <img class="block absolute bottom-4 right-4 right-0 max-w-[6rem] lg:max-w-none lg:w-32"
+          src="{{site.url}}/assets/img/{{page.feature_img}}"
+          alt="">
+        {% else %}
+        <img class="block absolute bottom-0 right-0 w-52"
+          src="{{site.url}}/assets/img/{{page.feature_img}}"
+          alt="">
+        {% endif %}
+
+
+
+        <div class="flex justify-between w-full z-10">
+          <div class="grow max-w-[10rem]">
+            <h3 class="text-4xl font-bold">
+              <a href="{{ page.url}}"
+                class="focus:outline-none">
+                <!-- Extend touch target to entire panel -->
+                <span class="absolute inset-0"
+                  aria-hidden="true"></span>
+                {{ page.title}}
+              </a>
+            </h3>
+            <p class="mt-2 text-sm text-gray-500"> {{ page.description}} </p>
+          </div>
+
+          <span
+            class="inline-flex text-gray-900 group-hover:text-white  transition-all duration-200 [&>svg]:w-8 [&>svg]:h-8">
             {% include {{ page.feature_icon}} %}
           </span>
         </div>
-        <div class="mt-8">
-          <h3 class="text-lg font-medium">
-            <a href="{{ page.url}}"
-              class="focus:outline-none">
-              <!-- Extend touch target to entire panel -->
-              <span class="absolute inset-0"
-                aria-hidden="true"></span>
-              {{ page.title}}
-            </a>
-          </h3>
-          <p class="mt-2 text-sm text-gray-500"> {{ page.description}} </p>
-        </div>
-        <span class="pointer-events-none absolute top-6 right-6 text-gray-300 group-hover:text-gray-400"
+
+        <span class="pointer-events-none rounded-md p-2 top-6 right-6 text-gray-100 bg-gray-300/40"
           aria-hidden="true">
-          <svg class="h-6 w-6"
+          <svg class="h-4 w-4"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
             viewBox="0 0 24 24">
@@ -33,6 +62,7 @@
               d="M20 4h1a1 1 0 00-1-1v1zm-1 12a1 1 0 102 0h-2zM8 3a1 1 0 000 2V3zM3.293 19.293a1 1 0 101.414 1.414l-1.414-1.414zM19 4v12h2V4h-2zm1-1H8v2h12V3zm-.707.293l-16 16 1.414 1.414 16-16-1.414-1.414z" />
           </svg>
         </span>
+
       </div>
       {% endif %}
       {% endfor %}
