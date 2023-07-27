@@ -1,0 +1,17 @@
+---
+layout: blogindex
+title: "Blog"
+permalink: /blog/index.html
+---
+
+<ul class="list-none">
+    {% for post in site.blog %}
+    {% if post.url != page.url %}
+    <li>
+        <a class="text-base text-gray-500 text-lg hover:text-gray-900" href="{{ post.url }}">
+            {{ post.title }}</a>
+    </li>
+    {% endif %}
+    {% endfor %}
+
+</ul>

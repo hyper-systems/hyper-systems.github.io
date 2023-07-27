@@ -1,0 +1,40 @@
+---
+layout: default
+
+---
+<div class="overflow-hidden bg-white px-6 py-16 lg:px-8">
+    <div class="relative mx-auto max-w-8xl">
+        <div class="absolute bottom-0 left-3/4 top-0 hidden w-screen bg-gray-50 lg:block"></div>
+        <div class="relative max-w-prose text-base lg:max-w-none lg:mb-20">
+            <div>
+                <h2 class="text-lg font-semibold text-indigo-600">{{page.subject_matter}}</h2>
+                <h3 class="mt-2 text-3xl font-bold text-gray-900 sm:text-4xl lg:text-6xl max-w-6xl">
+                    {{page.title}}</h3>
+            </div>
+        </div>
+        <div class="mt-8 lg:grid lg:grid-cols-5 lg:gap-20">
+            <div class="relative lg:col-start-4 lg:col-span-2 lg:row-start-1">
+                <div class="relative mx-auto max-w-prose text-base lg:max-w-none">
+
+                    <div class="aspect-h-7 aspect-w-12 lg:aspect-none">
+                        <figure>
+                            <img class="rounded-lg object-cover object-center shadow-lg" src="{{page.main_image}}"
+                                alt="{{page.main_image_alt}}" width="1184" height="1376">
+                            <figcaption class="absolute bottom-0 px-3 z-90"><a
+                                    class="text-base  text-right text-xs text-gray-600"
+                                    href="{{page.main_image_rights_url}}">{{page.main_image_rights_text}}</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="mt-2 lg:mt-0 lg:col-span-3 mx-auto max-w-prose lg:max-w-none">
+                <div class="mt-6">
+                    {{content}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
