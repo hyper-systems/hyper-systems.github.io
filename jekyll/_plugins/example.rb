@@ -7,7 +7,7 @@ module Jekyll
 			@dir = dir
 			@name = name
 			self.process(@name)
-			self.data ||= {}
+			self.data ||= {} 
 			self.data['layout'] = 'default'
 			self.data['title'] = data
 		end
