@@ -8,7 +8,7 @@ permalink: /blog/index.html
     {% for post in site.blog %}
     {% if post.url != page.url %}
     <li>
-        <a class="text-base text-gray-500 text-lg hover:text-gray-900" href="{{ post.url }}">
+        <a class="underline text-base text-gray-600 text-xl hover:text-gray-400" href="{{ post.url }}">
             {{ post.title }}</a>
     </li>
     {% endif %}
