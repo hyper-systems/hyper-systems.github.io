@@ -18,20 +18,20 @@ update:
 
 .PHONY: build
 build:
-	nix-shell --command "jekyll build --destination ../docs"
+	nix-shell --command "jekyll build && cp -Ruf ./_site/* ../docs/"
 
 .PHONY: clean
 clean:
-	nix-shell --command "jekyll clean --destination ../docs"
+	nix-shell --command "jekyll clean"
 
 
 .PHONY: serve
 serve:
-	nix-shell --command "jekyll serve --destination ../docs"
+	nix-shell --command "jekyll"
 
 .PHONY: watch
 watch:
-	nix-shell --command "jekyll serve --watch --destination ../docs"
+	nix-shell --command "jekyll serve --watch"
 
 .PHONY: release
 release: build
