@@ -1,3 +1,11 @@
+/* Extra-small text */
+.text-2xs {
+    font-size: 0.625rem;
+    /* 10px */
+    line-height: 0.875rem;
+    /* 14px */
+}
+
 /* Stop slider from clipping shadow that overflows the container */
 .max-w-8xl {
     max-width: 84rem;

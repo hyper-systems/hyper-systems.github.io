@@ -16,11 +16,17 @@ Digital Twins have been bridging the gap between the physical and the digital wo
 This synergy is capable not only of providing enhanced monitoring but also of assuring improved incident reaction times. The factory-wide control that these connected systems provide allows for higher production efficiency and accurate sub-day reporting of activities and incidents. Factories also get a combined improvement in both quality and workers' safety: by moving workers from the factory floor and towards computer control and monitoring, they're effectively safely away from hazards, and additionally, these same systems will allow them to work more precisely and with better information, therefore, improving output quality.
 {: .mt-10 }
 
-So what is an AI Twin? Until now many cyber-digital systems would still take a toll on workers due to requiring deep knowledge of the systems being worked, constant attention to warnings, and plenty of manual input to achieve optimized control. This not only makes it harder to retrain workers for these tasks, but also increases the pressure on a scarce pool of highly skilled workers that instead of supervision, training, and expert tasks are many times required to run daily activities. Given recent developments in AI that provide highly optimized tools to process and query knowledge, it is effectively within the grasp of every factory to get synthetic expert systems to help their workers run their daily activities, freeing up their more expert resources for the tasks that actually require them. At Hyper we are working with partners to come up with solutions that fit industry needs for automation, monitoring, maintenance, and knowledge.
+So what is an AI Twin?
+{: .mt-14 .lg:mt-16 .text-3xl .font-bold .tracking-tight .text-gray-900 }
+
+Until now many cyber-digital systems would still take a toll on workers due to requiring deep knowledge of the systems being worked, constant attention to warnings, and plenty of manual input to achieve optimized control. This not only makes it harder to retrain workers for these tasks, but also increases the pressure on a scarce pool of highly skilled workers that instead of supervision, training, and expert tasks are many times required to run daily activities.
+{: .mt-6 }
+
+Given recent developments in AI that provide highly optimized tools to process and query knowledge, it is effectively within the grasp of every factory to get synthetic expert systems to help their workers run their daily activities, freeing up their more expert resources for the tasks that actually require them. At Hyper we are working with partners to come up with solutions that fit industry needs for automation, monitoring, maintenance, and knowledge.
 {: .mt-6 }
 
 The Knowledge Base
-{: .mt-16 .text-3xl .font-bold .tracking-tight .text-gray-900 }
+{: .mt-14 .lg:mt-16 .text-3xl .font-bold .tracking-tight .text-gray-900 }
 
 The first and more important component of an expert system is the knowledge that it has access to. From domain ontologies to repair manuals all of this information is required and used to tune operations in order to reduce downtime and waste and improve reliability, safety, and efficiency.
 {: .mt-6 }
@@ -35,7 +41,7 @@ Let's look at a specific example in waste processing. These kinds of operations 
 {: .mt-6 }
 
 Capabilities
-{: .mt-16 .text-3xl .font-bold .tracking-tight .text-gray-900 }
+{: .mt-14 .lg:mt-16 .text-3xl .font-bold .tracking-tight .text-gray-900 }
 
 Conversational Assistants
 {: .mt-10 .text-xl .font-bold .tracking-tight .text-gray-900 }
@@ -65,7 +71,7 @@ No industry is however purely operations, there are informational requirements f
 {: .mt-6 }
 
 What about [enter problem description]?
-{: .mt-16 .text-3xl .font-bold .tracking-tight .text-gray-900 }
+{: .mt-14 .lg:mt-16 .text-3xl .font-bold .tracking-tight .text-gray-900 }
 
 An AI Twins needs not to be a one size fits all solution, in reality, such implementation will be plagued with excessive generalizations that will often be a burden to operations. Much in the same way databases and ERP systems are often made to be tailored to specific sets of processes, an AI Twin should be built from a modular perspective and specifically tailored to the actual needs and problems it ought to solve. In such a manner a waste processing plant will probably not need the AI systems capabilities for simulation that a large-scale construction engineering operation might need for accurate predictions for sediment movements and weather pattern changes.  
 {: .mt-6 }
