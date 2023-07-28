@@ -20,6 +20,11 @@ update:
 build:
 	nix-shell --command "jekyll build --destination ../docs"
 
+.PHONY: clean
+clean:
+	nix-shell --command "jekyll clean --destination ../docs"
+
+
 .PHONY: serve
 serve:
 	nix-shell --command "jekyll serve --destination ../docs"

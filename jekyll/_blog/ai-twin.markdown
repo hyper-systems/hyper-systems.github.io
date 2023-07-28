@@ -7,6 +7,7 @@ main_image_rights_url: "https://www.freepik.com/free-photo/robot-handshake-human
 main_image_rights_text: "Image by rawpixel.com on Freepik"
 layout: blogpost
 tags: ai-twins industry artificial-intelligence digital-twins
+date: 2023-07-27
 ---
 
 Digital Twins have been bridging the gap between the physical and the digital world for a while now. Industry leaders have gladly taken the challenges of integrating legacy machinery with computers to forge new cyber-physical systems.
